@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Order;
+use App\User;
+use App\Shopping;
+use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
@@ -18,10 +19,10 @@ class OrderController extends Controller
         $orders = Order::orderBy('id','desc')
             ->where('price','like', '%'.request()->keywords.'%')
             ->paginate(1);
-
-
+        $users = User::all();
+        $shoppings = Shopping::all();
         //解析模板显示用户数据
-        return view('admin.order.index', compact('orders'));
+        return view('admin.order.index', compact('orders','users','shoppings'));
     }
 
     /**

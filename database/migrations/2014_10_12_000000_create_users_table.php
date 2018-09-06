@@ -19,7 +19,11 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('pic')->nullable();
             $table->string('phone');
-            $table->string('address')->comment('用户地址')->nullable();
+
+            
+
+            $table->string('address')->nullable()->comment('用户地址');
+
             $table->timestamps();
         });
     }

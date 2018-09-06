@@ -41,9 +41,13 @@
                         <div class="am-u-sm-9">
                             <div class="info">
                                 <div data-toggle="distpicker">
-                                    <select class="form-control" name="s_province" id="province2" data-province="{{$asd[0]}}"></select>
-                                    <select name="s_city" class="form-control" id="city2" data-city="{{$asd[1]}}"></select>
-                                    <select name="s_county" class="form-control" id="district2" data-district="{{$asd[2]}}"></select>
+
+                                    
+
+                                    <select class="form-control" id="province2" data-province="{{$asd[0]}}" name="s_province"></select>
+                                    <select class="form-control" id="city2" data-city="{{$asd[1]}}" name="s_city"></select>
+                                    <select class="form-control" id="district2" data-district="{{$asd[2]}}" name="s_county"></select>
+
                                     <textarea name="address" id="" cols="5" rows="1">{{$asd[3]}}</textarea>
                                 </div>
                             <div id="show"></div>

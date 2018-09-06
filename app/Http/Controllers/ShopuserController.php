@@ -120,7 +120,10 @@ class ShopuserController extends Controller
         // $shopuser -> password = $request -> password;
         $shopuser -> phone = $request -> phone;
         $shopuser -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request-> address;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4c3a370545057cfba324fa09b4d5a082a8736b77
        
         //文件上传
         if($request->hasFile('pic')){
