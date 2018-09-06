@@ -68,16 +68,16 @@
                         <li>
                             <a href="#" class="dropdown-toggle"><i class="icon-user"></i><span class="menu-text"> 商家管理 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">
-                                <li class="home"><a href="javascript:void(0)" name="user_list.html" title="会员列表" class="iframeurl"><i class="icon-double-angle-right"></i>商家列表</a></li>
-                                <li class="home"><a href="javascript:void(0)" name="member-Grading.html" title="等级管理" class="iframeurl"><i class="icon-double-angle-right"></i>商家添加</a></li>
+                                <li class="home"><a href="/shopuser" name="user_list.html" title="会员列表" class="iframeurl"><i class="icon-double-angle-right"></i>商家列表</a></li>
+                                <li class="home"><a href="/shopuser/create" name="member-Grading.html" title="等级管理" class="iframeurl"><i class="icon-double-angle-right"></i>商家添加</a></li>
                             </ul>
                         </li>
                         <!-- 商家管理  end-->
                         <!-- 行业管理 start -->
                         <li><a href="#" class="dropdown-toggle"><i class="icon-laptop"></i><span class="menu-text"> 行业管理 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">
-                                <li class="home"><a href="javascript:void(0)" name="Shop_list.html" title="行业列表" class="iframeurl"><i class="icon-double-angle-right"></i>行业列表</a></li>
-                                <li class="home"><a href="javascript:void(0)" name="Shops_Audit.html" title="行业添加" class="iframeurl"><i class="icon-double-angle-right"></i>行业添加<span class="badge badge-danger">5</span></a></li>
+                                <li class="home"><a href="/industry" name="Shop_list.html" title="行业列表" class="iframeurl"><i class="icon-double-angle-right"></i>行业列表</a></li>
+                                <li class="home"><a href="/industry/create" name="Shops_Audit.html" title="行业添加" class="iframeurl"><i class="icon-double-angle-right"></i>行业添加<span class=""></span></a></li>
                             </ul>
                         </li>
                         <!-- 行业管理 end -->

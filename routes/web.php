@@ -23,3 +23,10 @@ Route::resource('shopping','ShoppingController');
  * 评价管理
  */
 Route::resource('comment','CommentController');
+
+//行业管理
+Route::resource('industry','IndustryController');
+
+
+//商家管理
+Route::resource('shopuser','ShopuserController');

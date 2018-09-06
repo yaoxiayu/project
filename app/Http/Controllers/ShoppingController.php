@@ -58,16 +58,9 @@ class ShoppingController extends Controller
             $shopping->img = '/'.$request->img->store('uploads/'.date('Ymd'));
         }
 
-        
-
         //插入
         if($shopping->save()){
-            try{
-                $res = $shopping->tags()->sync($request->tag_id);
                 return redirect('/shopping')->with('success','添加成功');
-            }catch(\Exception $e){
-                return back()->with('error','添加失败!');
-            }
         }else{
             return back()->with('error','添加失败!');
         }
