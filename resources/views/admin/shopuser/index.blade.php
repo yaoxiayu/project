@@ -41,6 +41,7 @@
                                     <input type="checkbox" class="tpl-table-fz-check">
                                 </th>
                                 <th class="table-id">ID</th>
+                                <th class="table-title">商家</th>
                                 <th class="table-title">商家名称</th>
                                 <th class="table-title">商家行业</th>
                                 <th class="table-title">商家头像</th>
@@ -58,6 +59,7 @@
                                     <input type="checkbox">
                                 </td>
                                 <td>{{$v['id']}}</td>
+                                <td class="am-hide-sm-only">{{$v['name']}}</td>
                                 <td class="am-hide-sm-only">{{$v['username']}}</td>
                                 <td class="am-hide-sm-only">{{$v->industry['name']}}</td>
                                 <td><img src="{{$v['pic']}}" width="80" alt=""></td>

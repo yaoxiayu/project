@@ -22,7 +22,7 @@
                     <div class="am-form-group">
                         <label for="user-name" class="am-u-sm-3 am-form-label">网站标题 <span class="tpl-form-line-small-title"></span></label>
                         <div class="am-u-sm-9">
-                            <input type="text" name="title" class="tpl-form-input" id="user-name" placeholder="" value="{{$setting ?  $setting->title : ''}}">
+                            <input type="text" name="title" class="tpl-form-input" id="user-name" placeholder="" value="{{$setting ?  $setting->title : ''}}">{{$setting ? $setting->intro : ''}}
                             
                         </div>
                     </div>

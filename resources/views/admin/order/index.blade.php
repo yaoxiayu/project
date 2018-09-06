@@ -7,6 +7,7 @@
             <span class="am-icon-code"></span> 订单列表
         </div>
     </div>
+    @include('layouts._session')
     <div class="tpl-block">
         <div class="am-g">
             <div class="am-u-sm-12 am-u-md-6">
@@ -16,21 +17,7 @@
                     </div>
                 </div>
             </div>
-            @if(Session::has('success'))
-            <div class=" am-u-sm-12" style="padding:0px;margin:0px;">
-                <div class="dashboard-stat green">
-                        <div class="desc" style="text-align: center;line-height:95px;color:white">{{Session::get('success')}} </div>
-                </div>
-            </div>
-            @endif
-
-            @if(Session::has('error'))
-            <div class=" am-u-sm-12" style="padding:0px;margin:0px;">
-                <div class="dashboard-stat red">
-                        <div class="desc" style="text-align: center;line-height:95px;color:white">{{Session::get('error')}} </div>
-                </div>
-            </div>
-            @endif
+           
             <div class="am-u-sm-12 am-u-md-3">
                 <form action="/order" method="get">
                 <div class="am-input-group am-input-group-sm">
@@ -67,14 +54,13 @@
                             </td>
                             <td>{{$v['id']}}</td>
                             <td>{{$v->user->username}}</td>
-                            <td>商品名称</td>
+                            <td>{{$v->shopping->name}}</td>
                             <td>{{$v['price']}}</td>
                             <td>{{$v['counts']}}</td>
                             <td>{{$v['state']}}</td>
                             <td>
                                 <div class="am-btn-toolbar">
                                     <div class="am-btn-group am-btn-group-xs">
-                                        <a href="/order/{{$v['id']}}/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</a>
                                         <form style="float:left" action="/order/{{$v['id']}}" method="post">
                                             {{method_field('DELETE')}}
                                             {{csrf_field()}}

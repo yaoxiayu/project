@@ -85,7 +85,12 @@ class AdministratorController extends Controller
      */
     public function edit($id)
     {
-        //
+        
+         $admin = Admin::FindOrFail($id);
+        //dd($link);
+
+        return view('admin.editadmin',['admin'=>$admin]);
+
     }
 
     /**
@@ -97,7 +102,22 @@ class AdministratorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $admin = Admin::findOrFail($id);
+
+        $admin-> username = $request->username;
+        //$res-> pic = $request->pic;
+        $admin-> phone = $request->phone;
+       
+        if($admin -> save()){
+            return redirect('/administrator')->with('success','更新成功');
+        }else{
+            return back()->with('error','更新失败');
+        }
+
+        //检测是否有文件上传
+         if ($request->hasFile('pic')) {
+            $admin-> pic = '/'.$request->pic->store('uploads/'.date('Ymd'));
+         }
     }
 
     /**
@@ -108,6 +128,10 @@ class AdministratorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $res = Admin::destroy($id);
+
+        if($res){
+            return back()->with('success','删除成功');
+        }
     }
 }

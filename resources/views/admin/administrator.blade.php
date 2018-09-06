@@ -8,6 +8,7 @@
             <span class="am-icon-code"></span> 列表
         </div>
     </div>
+    @include('layouts._session')
     <div class="tpl-block">
         <div class="am-g">
             <div class="am-u-sm-12 am-u-md-6">
@@ -57,8 +58,8 @@
                             <td>
                                 <div class="am-btn-toolbar">
                                     <div class="am-btn-group am-btn-group-xs">
-                                        <a href="" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</a>
-                                        <form style="float:left" action="" method="post">
+                                        <a href="/administrator/{{$v['id']}}/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</a>
+                                        <form style="float:left" action="/administrator/{{$v['id']}}" method="post">
                                             {{method_field('DELETE')}} 
                                             {{csrf_field()}}
                                             <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
