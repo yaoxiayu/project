@@ -1,6 +1,5 @@
 @extends('layouts.index') 
-@section('title') {{$setting->title}} @endsection
-@section('title','$setting->title') 
+@section('title') @if($setting['title']=='') 黑米网站后台系统 @else {{$setting['title']}} @endif @endsection 
 @section('content')
 @include('layouts._head')
 <hr>
@@ -22,7 +21,7 @@
                     <div class="am-form-group">
                         <label for="user-name" class="am-u-sm-3 am-form-label">网站标题 <span class="tpl-form-line-small-title"></span></label>
                         <div class="am-u-sm-9">
-                            <input type="text" name="title" class="tpl-form-input" id="user-name" placeholder="" value="{{$setting ?  $setting->title : ''}}">{{$setting ? $setting->intro : ''}}
+                            <input type="text" name="title" class="tpl-form-input" id="user-name" placeholder="" value="{{$setting ?  $setting->title : ''}}">
                             
                         </div>
                     </div>
@@ -35,7 +34,6 @@
                             <small></small>
                         </div>
                     </div>
-                     
                   
                     <script>
                         var ue = UE.getEditor('editor');
