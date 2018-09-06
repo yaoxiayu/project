@@ -40,10 +40,10 @@
                         <li>
                             <a href="#" class="dropdown-toggle"><i class="icon-list"></i><span class="menu-text"> 订单管理 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">
-                                <li class="home"><a href="javascript:void(0)" name="transaction.html" title="交易信息" class="iframeurl"><i class="icon-double-angle-right"></i>订单列表</a></li>
-                                <li class="home"><a href="javascript:void(0)" name="Order_Chart.html" title="交易订单（图）" class="iframeurl"><i class="icon-double-angle-right"></i>订单修改</a></li>
+                                <li class="home"><a href="/order" name="transaction.html" title="交易信息" class="iframeurl"><i class="icon-double-angle-right"></i>订单列表</a></li>
                             </ul>
                         </li>
+                        <!-- 订单管理 start -->
                         <!-- 订单管理 start -->
                         <!-- 支付管理 start -->
                         <li>
@@ -59,8 +59,8 @@
                         <li>
                             <a href="#" class="dropdown-toggle"><i class="icon-user"></i><span class="menu-text"> 用户管理 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">
-                                <li class="home"><a href="javascript:void(0)" name="user_list.html" title="会员列表" class="iframeurl"><i class="icon-double-angle-right"></i>用户列表</a></li>
-                                <li class="home"><a href="javascript:void(0)" name="member-Grading.html" title="等级管理" class="iframeurl"><i class="icon-double-angle-right"></i>用户添加</a></li>
+                                <li class="home"><a href="/user" name="user_list.html" title="会员列表" class="iframeurl"><i class="icon-double-angle-right"></i>用户列表</a></li>
+                                <li class="home"><a href="/user/create" name="member-Grading.html" title="等级管理" class="iframeurl"><i class="icon-double-angle-right"></i>用户添加</a></li>
                             </ul>
                         </li>
                         <!-- 用户管理  end-->
@@ -105,15 +105,15 @@
 						<!-- 友情链接管理 start -->
                         <li><a href="#" class="dropdown-toggle"><i class="icon-bookmark"></i><span class="menu-text"> 友情链接管理 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">
-                                <li class="home"><a href="javascript:void(0)" name="article_list.html" title="友情链接列表" class="iframeurl"><i class="icon-double-angle-right"></i>友情链接列表</a></li>
-                                <li class="home"><a href="javascript:void(0)" name="article_list.html" title="友情链接添加" class="iframeurl"><i class="icon-double-angle-right"></i>友情链接添加</a></li>
+                                <li class="home"><a href="/link" name="article_list.html" title="友情链接列表" class="iframeurl"><i class="icon-double-angle-right"></i>友情链接列表</a></li>
+                                <li class="home"><a href="/link/create" name="article_list.html" title="友情链接添加" class="iframeurl"><i class="icon-double-angle-right"></i>友情链接添加</a></li>
                             </ul>
                         </li>
 						<!-- 友情链接管理 end -->
 
 
 						<!-- 网站管理 start -->
-                        <li><a href="#" class="dropdown-toggle"><i class="icon-cogs"></i><span class="menu-text"> 网站管理 </span><b class="arrow icon-angle-down"></b></a>
+                       <li><a href="/admin/setting" class="dropdown-toggle"><i class="icon-cogs"></i><span class="menu-text"> 网站管理 </span><b class="arrow icon-angle-down"></b></a>
                         </li>
 						<!-- 网站管理 end -->
 
@@ -121,8 +121,8 @@
                         <!-- 管理员管理 start -->
                         <li><a href="#" class="dropdown-toggle"><i class="icon-group"></i><span class="menu-text"> 管理员管理 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">
-                                <li class="home"><a href="javascript:void(0)" name="admin_Competence.html" title="权限管理" class="iframeurl"><i class="icon-double-angle-right"></i>权限管理</a></li>
-                                <li class="home"><a href="javascript:void(0)" name="administrator.html" title="管理员列表" class="iframeurl"><i class="icon-double-angle-right"></i>管理员列表</a></li>
+                                <li class="home"><a href="/administrator/create" name="admin_Competence.html" title="权限管理" class="iframeurl"><i class="icon-double-angle-right"></i>管理员添加</a></li>
+                                <li class="home"><a href="/administrator" name="administrator.html" title="管理员列表" class="iframeurl"><i class="icon-double-angle-right"></i>管理员列表</a></li>
                                 <li class="home"><a href="javascript:void(0)" name="admin_info.html" title="个人信息" class="iframeurl"><i class="icon-double-angle-right"></i>个人信息</a></li>
                             </ul>
                         </li>

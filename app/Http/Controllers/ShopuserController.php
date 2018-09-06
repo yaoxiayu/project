@@ -117,7 +117,7 @@ class ShopuserController extends Controller
         $shopuser -> username = $request -> username;
         $shopuser -> industry_id = $request -> industry_id;
         $shopuser -> intro = $request -> intro;
-        $shopuser -> password = $request -> password;
+        // $shopuser -> password = $request -> password;
         $shopuser -> phone = $request -> phone;
         $shopuser -> address = $request -> s_province.$request -> s_city.$request -> s_county.$request -> address;
        
