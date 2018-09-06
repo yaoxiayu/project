@@ -16,7 +16,7 @@
     <div class="tpl-block">
         <div class="am-g">
             <div class="tpl-form-body tpl-form-line">
-                <form class=" tpl-form-line-form" method="post" action="/comment" enctype="multipart/form-data">
+                <form class=" tpl-form-line-form" method="post" action="/comment/{{$comment['id']}}" enctype="multipart/form-data">
                     <div class="am-form-group">
                         <label for="user-name" class="am-u-sm-3 am-form-label">评价分值 <span class="tpl-form-line-small-title"></span></label>
                         <div class="am-u-sm-9">
@@ -44,7 +44,15 @@
                     <div class="am-form-group">
                         <label for="user-name" class="am-u-sm-3 am-form-label">评论人id <span class="tpl-form-line-small-title"></span></label>
                         <div class="am-u-sm-9">
-                            <input type="text" name="user_id" class="tpl-form-input" value="{{$comment['user_id']}}">
+                            <!-- <input type="text" name="user_id" class="tpl-form-input" value="{{$comment['user_id']}}"> -->
+                            <select name="user_id">
+                            @foreach($user as $v)
+                                <option value="{{$v['id']}}" @if($v['id']==$comment['user_id']) 
+                                                                selected 
+                                                            @endif>
+                                {{$v['username']}}</option>
+                            @endforeach
+                            </select>
                         </div>
                     </div>
 
@@ -58,6 +66,8 @@
                     </div>
 
 					{{csrf_field()}}
+                    {{method_field('PUT')}}
+                    
                     <div class="am-form-group">
                         <div class="am-u-sm-9 am-u-sm-push-3">
                             <button class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>

@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Shopping;
 use App\Comment;
+use App\Shopping;
+use App\User;
 use Illuminate\Http\Request;
 
 class CommentController extends Controller
@@ -32,8 +33,9 @@ class CommentController extends Controller
     public function create()
     {
         $shopping = Shopping::all();
+        $user = User::all();
         // dd($shopping);
-        return view('admin.comment.create',compact('shopping'));
+        return view('admin.comment.create',compact('shopping','user'));
     }
 
     /**
@@ -82,9 +84,11 @@ class CommentController extends Controller
     {
         $shopping = Shopping::all();
         $comment = Comment::findOrFail($id);
+        $user = User::all();
+
         // dd($comment);
         // dd($shopping);
-        return view('admin.comment.edit',compact('shopping','comment'));
+        return view('admin.comment.edit',compact('shopping','comment','user'));
     }
 
     /**
@@ -97,7 +101,7 @@ class CommentController extends Controller
     public function update(Request $request, $id)
     {
         //插入数据
-        $comment = new Comment;
+        $comment = Comment::findOrFail($id);
 
         $comment -> values = $request -> values;
         $comment -> user_id = $request -> user_id;
@@ -106,9 +110,9 @@ class CommentController extends Controller
 
          //插入
         if($comment->save()){
-                return redirect('/comment')->with('success','添加成功');
+                return redirect('/comment')->with('success','更新成功');
         }else{
-            return back()->with('error','添加失败!');
+            return back()->with('error','更新失败!');
         }
     }
 

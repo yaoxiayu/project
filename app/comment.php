@@ -10,4 +10,8 @@ class comment extends Model
     {
     	return $this->belongsTo('App\Shopping');
     }
+    public function user()
+    {
+    	return $this->belongsTo('App\User');
+    }
 }

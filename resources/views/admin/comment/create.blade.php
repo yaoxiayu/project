@@ -41,7 +41,12 @@
                     <div class="am-form-group">
                         <label for="user-name" class="am-u-sm-3 am-form-label">评论人id <span class="tpl-form-line-small-title"></span></label>
                         <div class="am-u-sm-9">
-                            <input type="text" name="user_id" class="tpl-form-input">
+                            <!-- <input type="text" name="user_id" class="tpl-form-input"> -->
+                            <select name="user_id">
+                            @foreach($user as $v)
+                                <option value="{{$v['id']}}">{{$v['username']}}</option>
+                            @endforeach
+                            </select>
                         </div>
                     </div>
 
