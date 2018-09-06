@@ -17,9 +17,9 @@ class order extends Model
     	return $this->belongsTo('App\User');
     }
 
-    //订单跟商品的模型关系  一对多
+    //订单跟商品的模型关系  属于
     public function shopping()
     {
-    	return $this->hasMany('App\Shopping');
+    	return $this->belongsTo('App\Shopping');
     }
 }
