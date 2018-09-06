@@ -13,6 +13,14 @@
             <div class="tpl-form-body tpl-form-line">
                 <form class="am-form tpl-form-line-form" method="post" action="/shopuser/{{$shopuser['id']}}" enctype="multipart/form-data">
                     <div class="am-form-group">
+                        <label for="user-name" class="am-u-sm-3 am-form-label">商家 <span class="tpl-form-line-small-title"></span></label>
+                        <div class="am-u-sm-9">
+                            <input type="text" name="name" class="tpl-form-input" id="user-name" placeholder="" value="{{$shopuser['name']}}">
+                            <small>用户名为6-20位字母数字下划线</small>
+                        </div>
+                    </div>
+
+                    <div class="am-form-group">
                         <label for="user-name" class="am-u-sm-3 am-form-label">商家名称 <span class="tpl-form-line-small-title"></span></label>
                         <div class="am-u-sm-9">
                             <input type="text" name="username" class="tpl-form-input" id="user-name" placeholder="" value="{{$shopuser['username']}}">
@@ -63,9 +71,9 @@
                         <div class="am-u-sm-9">
                             <div class="info">
                                 <div data-toggle="distpicker">
-                                    <select class="form-control" id="province2" data-province="{{$asd[0]}}"></select>
-                                    <select class="form-control" id="city2" data-city="{{$asd[1]}}"></select>
-                                    <select class="form-control" id="district2" data-district="{{$asd[2]}}"></select>
+                                    <select name="s_province" class="form-control" id="province2" data-province="{{$asd[0]}}"></select>
+                                    <select name="s_city" class="form-control" id="city2" data-city="{{$asd[1]}}"></select>
+                                    <select name="s_county" class="form-control" id="district2" data-district="{{$asd[2]}}"></select>
                                     <textarea name="address" id="" cols="5" rows="1">{{$asd[3]}}</textarea>
                                 </div>
                             <div id="show"></div>

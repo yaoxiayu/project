@@ -102,7 +102,7 @@ class UserController extends Controller
 
         $user -> username = $request->username;
         $user -> phone = $request -> phone;
-        $user -> address = $request -> s_province.$request -> s_city.$request -> s_county.$request -> address;
+         $user -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request-> address;
         
         //文件上传
          if ($request->hasFile('pic')) {
