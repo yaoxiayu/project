@@ -52,6 +52,7 @@ class ShopuserController extends Controller
         $shopuser = new Shopuser;
         $shopuser -> name = $request -> name;
         $shopuser -> username = $request -> username;
+        $shopuser -> name = $request -> name;
         $shopuser -> industry_id = $request -> industry_id;
         $shopuser -> intro = $request -> intro;
         $shopuser -> password = $request -> password;
@@ -113,8 +114,14 @@ class ShopuserController extends Controller
     {
         //
         $shopuser = Shopuser::findOrFail($id);
+
          $shopuser -> name = $request -> name;
+
+       
+        
+
         $shopuser -> username = $request -> username;
+        $shopuser -> name = $request -> name;
         $shopuser -> industry_id = $request -> industry_id;
         $shopuser -> intro = $request -> intro;
         // $shopuser -> password = $request -> password;
