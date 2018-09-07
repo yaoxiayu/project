@@ -62,7 +62,7 @@
                             <td>{{$v['price']}}</td>
                             <td>{{$v['shopUser_id']}}</td>
                             <td><img src="{{$v['img']}}" width="80" alt=""></td>
-                            <td>{{$v['content']}}</td>
+                            <td>{$v['content']}}</td>
                             <td>{{$v['counts']}}</td>
                             <td>{{$v['created_at']}}</td>
                             <td>{{$v['updated_at']}}</td>
