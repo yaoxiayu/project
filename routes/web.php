@@ -11,10 +11,24 @@
 |
 */
 
+
+//前台首页
+Route::get('/','HomeController@index');
+//注册
+Route::get('/zhuce','HomeController@reg');
+
+//登录
+Route::get('/login','HomeController@login');
+
+Route::post('/home/index','HomeController@dologin');
+
+
 /**
  * 后台首页
  */
+
 Route::get('/houtai', 'AdminController@show');
+
 /**
  * 商品管理
  */
@@ -23,7 +37,7 @@ Route::resource('shopping','ShoppingController');
  * 评价管理
  */
 Route::resource('comment','CommentController');
-// 
+//
 //行业管理
 Route::resource('industry','IndustryController');
 
@@ -31,6 +45,8 @@ Route::resource('industry','IndustryController');
 //商家管理
 Route::resource('shopuser','ShopuserController');
 
+//地址管理
+Route::get('/address','ShopuserController@aindex');
 
 //用户管理
 Route::resource('user','UserController');
@@ -88,3 +104,5 @@ Route::get('/person/delete/{id}','PersonController@delete');
  */
 Route::get('/person/order/3','PersonController@pindex');
 
+
+Route::resource('administrator','AdministratorController');

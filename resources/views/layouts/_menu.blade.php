@@ -28,7 +28,7 @@
                 <div id="menu_style" class="menu_style">
                     <ul class="nav nav-list" id="nav_list">
                         <!-- 商品管理 start -->
-                        <li class="home"><a href="/index"class="iframeurl" title=""><i class="icon-home"></i><span class="menu-text"> 系统首页 </span></a></li>
+                        <li class="home"><a href="/admi"class="iframeurl" title=""><i class="icon-home"></i><span class="menu-text"> 系统首页 </span></a></li>
                         <li><a href="#" class="dropdown-toggle"><i class="icon-desktop"></i><span class="menu-text"> 商品管理 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">
                                 <li class="home"><a href="/shopping" title="产品类表" class="iframeurl"><i class="icon-double-angle-right"></i>商品类表</a></li>
@@ -81,17 +81,16 @@
                             </ul>
                         </li>
                         <!-- 行业管理 end -->
-                        
+
 
                         <!-- 地址管理 start -->
                         <li><a href="#" class="dropdown-toggle"><i class="icon-comments-alt"></i><span class="menu-text"> 地址管理 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">
-                                <li class="home"><a href="javascript:void(0)" name="Guestbook.html" title="留言列表" class="iframeurl"><i class="icon-double-angle-right"></i>地址列表</a></li>
-                                <li class="home"><a href="javascript:void(0)" name="Feedback.html" title="意见反馈" class="iframeurl"><i class="icon-double-angle-right"></i>添加地址</a></li>
+                                <li class="home"><a href="/address"  class="iframeurl"><i class="icon-double-angle-right"></i>地址列表</a></li>
                             </ul>
                         </li>
                         <!-- 地址管理 end -->
-						
+
 						<!-- 评价管理 start -->
                         <li><a href="#" class="dropdown-toggle"><i class="icon-bookmark"></i><span class="menu-text"> 评价管理 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">
@@ -100,7 +99,7 @@
                             </ul>
                         </li>
 						<!-- 评价管理 end -->
-						
+
 
 						<!-- 友情链接管理 start -->
                         <li><a href="#" class="dropdown-toggle"><i class="icon-bookmark"></i><span class="menu-text"> 友情链接管理 </span><b class="arrow icon-angle-down"></b></a>

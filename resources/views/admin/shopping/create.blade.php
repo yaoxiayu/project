@@ -23,7 +23,7 @@
                             <input type="text" name="name" class="tpl-form-input" placeholder="">
                         </div>
                     </div>
-	
+
                     <div class="am-form-group">
                         <label for="user-name" class="am-u-sm-3 am-form-label">商品价格 <span class="tpl-form-line-small-title"></span></label>
                         <div class="am-u-sm-9">
@@ -37,21 +37,21 @@
                             <input type="text" name="counts" class="tpl-form-input"  placeholder="">
                         </div>
                     </div>
-					
 
-                    
-					
+
+
 					<div class="am-form-group">
                         <label for="user-name" class="am-u-sm-3 am-form-label">商家ID <span class="tpl-form-line-small-title"></span></label>
                         <div class="am-u-sm-9">
                             <select name="shopUser_id">
-								<option value="1">1</option>
-								<option value="2">2</option>
+                                @foreach($shopUser as $v)
+								<option value="{{$v['id']}}">{{$v['name']}}</option>
+                                @endforeach
                             </select>
-                            
+
                         </div>
                     </div>
-					
+
 					<div class="am-form-group">
                         <label for="user-weibo" class="am-u-sm-3 am-form-label">主图</label>
                         <div class="am-u-sm-9">
@@ -64,7 +64,7 @@
                             </div>
                         </div>
                     </div>
-					
+
 
 					<div class="am-form-group">
                         <label class="am-u-sm-3 am-form-label">内容</label>

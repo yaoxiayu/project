@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="am-u-sm-12 am-u-md-3">
                 <form action="/shopping" method="get">
                 <div class="am-input-group am-input-group-sm">
@@ -60,7 +60,7 @@
                             <td>{{$v['id']}}</td>
                             <td>{{$v['name']}}</td>
                             <td>{{$v['price']}}</td>
-                            <td>{{$v['shopUser_id']}}</td>
+                            <td>{{$v->shopuser->name}}</td>
                             <td><img src="{{$v['img']}}" width="80" alt=""></td>
                             <td>{$v['content']}}</td>
                             <td>{{$v['counts']}}</td>
