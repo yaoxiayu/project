@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+
+    //后台首页
+    public function show()
+    {
+        $setting = Setting::first();
+        return view('admin.index',compact('setting'));
+    }
+
     public function index()
     {
         $setting = Setting::first();
@@ -34,26 +42,28 @@ class AdminController extends Controller
         if(!$setting){
             $setting = new Setting;
         }
-       
+
         $setting-> title = $request->title;
         $setting-> logo = 1;
         $setting-> keywords = $request->keywords;
-             
+
         if($setting->save()){
             return back()->with('success','设置成功');
         }else{
             return back()->with('error','设置失败');
         }
 
+
+
     }
 
 
-   
-
-  
 
 
-  
 
-  
+
+
+
+
+
 }

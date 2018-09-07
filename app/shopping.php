@@ -9,4 +9,9 @@ class shopping extends Model
 {
     use SoftDeletes;
     protected $dates = ['deleted_at'];
+
+   public function shopuser()
+    {
+    	return $this->belongsTo('App\shopUser','shopUser_id','id');
+    }
 }

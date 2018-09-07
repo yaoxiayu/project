@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Shopping;
+use App\ShopUser;
+use App\Industry;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -21,7 +23,7 @@ class ShoppingController extends Controller
             ->paginate(10);
         //解析模板显示用户数据
         return view('admin.shopping.index',compact('shopping'));
-        
+
     }
 
     /**
@@ -31,8 +33,10 @@ class ShoppingController extends Controller
      */
     public function create()
     {
-
-        return view('admin.shopping.create');
+        $shopUser = ShopUser::all();
+        $industry = Industry::all();
+        // "酒店":["壹佰","旅馆",],"美食":["吃的","喝的",
+        return view('admin.shopping.create',compact('shopUser','industry'));
     }
 
     /**
@@ -86,7 +90,9 @@ class ShoppingController extends Controller
     public function edit($id)
     {
         $shopping = Shopping::findOrFail($id);
-        return view('admin.shopping.edit',compact('shopping'));
+        $shopUser = ShopUser::all();
+
+        return view('admin.shopping.edit',compact('shopping','shopUser'));
     }
 
     /**
@@ -106,14 +112,14 @@ class ShoppingController extends Controller
         $shopping -> shopUser_id = $request -> shopUser_id;
         $shopping -> content = $request -> content;
         $shopping -> counts = $request -> counts;
-
+        // dd($request -> shopUser_id);
          //文件上传
         //检测是否有文件上传
         if ($request->hasFile('img')) {
             $shopping->img = '/'.$request->img->store('uploads/'.date('Ymd'));
         }
 
-        
+
 
         //插入
         if($shopping->save()){

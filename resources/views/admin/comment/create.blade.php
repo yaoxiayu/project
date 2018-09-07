@@ -1,4 +1,5 @@
 @extends('layouts.index')
+
 @section('content')
 <hr>
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>

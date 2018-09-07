@@ -14,7 +14,7 @@
 /**
  * 后台首页
  */
-Route::get('/admi', 'HomeController@index');
+Route::get('/houtai', 'AdminController@show');
 /**
  * 商品管理
  */
@@ -31,6 +31,8 @@ Route::resource('industry','IndustryController');
 //商家管理
 Route::resource('shopuser','ShopuserController');
 
+//地址管理
+Route::get('/address','ShopuserController@aindex');
 
 //用户管理
 Route::resource('user','UserController');

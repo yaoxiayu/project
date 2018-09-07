@@ -70,9 +70,9 @@
                                     <div class="am-btn-toolbar">
                                         <div class="am-btn-group am-btn-group-xs">
                                             
-                                            <a href="/shopuser/{{$v['id']}}/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</a>
+                                            <a href="/shopuser/{{$v['id']}}/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="float:left"><span class="am-icon-pencil-square-o"></span> 编辑</a>
 
-                                            <form action="/shopuser/{{$v['id']}}" method="post">  
+                                            <form action="/shopuser/{{$v['id']}}" method="post" style="float:left">  
                                                 <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
                                                 {{csrf_field()}}
                                                 {{method_field('DELETE')}}

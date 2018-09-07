@@ -8,7 +8,7 @@ class shopUser extends Model
 {
 	use SoftDeletes;
     protected $dates = ['deleted_at'];
-
+    protected $table = 'shop_users';
      public function industry()
     {
     	return $this->belongsTo('App\Industry');
