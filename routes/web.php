@@ -23,12 +23,6 @@ Route::get('/login','HomeController@login');
 Route::post('/home/index','HomeController@dologin');
 
 
-
-
-
-
-
-
 /**
  * 后台首页
  */

@@ -51,11 +51,7 @@ class ShopuserController extends Controller
 
         //插入数据
         $shopuser = new Shopuser;
-<<<<<<< HEAD
 
-=======
-        $shopuser -> name = $request -> name;
->>>>>>> 6e0acc4bad8f744a21ca0ef92f835b5eaa055784
         $shopuser -> username = $request -> username;
         $shopuser -> name = $request -> name;
         $shopuser -> industry_id = $request -> industry_id;
