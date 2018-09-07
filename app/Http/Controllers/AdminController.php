@@ -13,10 +13,6 @@ class AdminController extends Controller
         return view('admin.index');
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 8fa326108702b7cc5c91cebf256f345ae4c2c4bf
     public function index()
     {
         $setting = Setting::first();
