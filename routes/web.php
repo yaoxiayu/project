@@ -110,7 +110,5 @@ Route::get('/person/delete/{id}','PersonController@delete');
  */
 Route::get('/person/order/3','PersonController@pindex');
 
-<<<<<<< HEAD
+
 Route::resource('administrator','AdministratorController');
-=======
->>>>>>> 6e0acc4bad8f744a21ca0ef92f835b5eaa055784
