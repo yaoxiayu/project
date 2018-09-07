@@ -1,0 +1,1 @@
+!function(){var o=!0;window.console=window.console||{},o?window.console.log||(window.console.log=function(){}):window.console.log=function(){}}();

@@ -37,19 +37,7 @@
                             <input type="text" name="counts" class="tpl-form-input"  value="{{$shopping['counts']}}">
                         </div>
                     </div>
-					
-
-                    <div class="am-form-group">
-                        <label for="user-name" class="am-u-sm-3 am-form-label">行业ID <span class="tpl-form-line-small-title"></span></label>
-                        <div class="am-u-sm-9">
-                            <select name="industry_id">
-								<option value="1">1</option>
-								<option value="2">2</option>
-                            </select>
-                            
-                        </div>
-                    </div>
-					
+									
 					<div class="am-form-group">
                         <label for="user-name" class="am-u-sm-3 am-form-label">商家ID <span class="tpl-form-line-small-title"></span></label>
                         <div class="am-u-sm-9">
