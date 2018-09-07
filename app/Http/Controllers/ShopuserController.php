@@ -50,7 +50,7 @@ class ShopuserController extends Controller
         
         //插入数据
         $shopuser = new Shopuser;
-        
+        $shopuser -> name = $request -> name;
         $shopuser -> username = $request -> username;
         $shopuser -> industry_id = $request -> industry_id;
         $shopuser -> intro = $request -> intro;
@@ -113,7 +113,7 @@ class ShopuserController extends Controller
     {
         //
         $shopuser = Shopuser::findOrFail($id);
-        
+         $shopuser -> name = $request -> name;
         $shopuser -> username = $request -> username;
         $shopuser -> industry_id = $request -> industry_id;
         $shopuser -> intro = $request -> intro;

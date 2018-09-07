@@ -11,10 +11,29 @@
 |
 */
 
+
+//前台首页
+Route::get('/','HomeController@index');
+//注册
+Route::get('/zhuce','HomeController@reg');
+
+//登录
+Route::get('/login','HomeController@login');
+
+Route::post('/home/index','HomeController@dologin');
+
+
+
+
+
+
+
+
 /**
  * 后台首页
  */
-Route::get('/admi', 'HomeController@index');
+Route::get('/admi', 'AdminController@show');
+
 /**
  * 商品管理
  */

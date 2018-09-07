@@ -7,6 +7,15 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+
+    public function show()
+    {
+
+        return view('admin.index');
+
+    }
+
+
     public function index()
     {
         $setting = Setting::first();
