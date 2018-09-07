@@ -10,11 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//前台首页
+Route::get('/', 'HomeController@index');
 /**
  * 后台首页
  */
-Route::get('/admi', 'HomeController@index');
+Route::get('/houtai', 'AdminController@show');
 /**
  * 商品管理
  */
@@ -23,7 +24,7 @@ Route::resource('shopping','ShoppingController');
  * 评价管理
  */
 Route::resource('comment','CommentController');
-
+// 
 //行业管理
 Route::resource('industry','IndustryController');
 
@@ -50,3 +51,16 @@ Route::post('/admin/setting','AdminController@update');
 //超级管理员
 
 Route::resource('administrator','AdministratorController');
+
+
+
+
+//美食
+Route::resource('food', 'FoodController');
+//酒店
+Route::resource('hotel', 'HotelController');
+//娱乐
+Route::resource('play', 'PlayController');
+//结婚
+Route::resource('marry', 'MarryController');
+
