@@ -62,6 +62,8 @@ class ShopuserController extends Controller
 
         $address = new Address;
         $address -> province = $request->s_province;
+
+        $address -> province = $request->s_province;
         $address -> city = $request->s_city;
         $address -> county = $request->s_county;
         //文件上传
