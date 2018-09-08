@@ -102,7 +102,7 @@ Route::get('/person/delete/{id}','PersonController@delete');
 /**
  * 评价
  */
-Route::get('/person/order/3','PersonController@pindex');
+Route::get('/person/order/3','CommentController@show');
 
 
 Route::resource('administrator','AdministratorController');

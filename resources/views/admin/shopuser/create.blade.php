@@ -13,10 +13,10 @@
             <div class="tpl-form-body tpl-form-line">
                 <form class="form-inline am-form tpl-form-line-form" method="post" action="/shopuser" enctype="multipart/form-data">
                     <div class="am-form-group">
-                        <label for="user-name" class="am-u-sm-3 am-form-label">商家 <span class="tpl-form-line-small-title"></span></label>
+                        <label for="user-name" class="am-u-sm-3 am-form-label">店铺名 <span class="tpl-form-line-small-title"></span></label>
                         <div class="am-u-sm-9">
                             <input type="text" name="name" class="tpl-form-input" id="user-name" placeholder="">
-                            <small>用户名为6-20位字母数字下划线</small>
+                            <small>输入您的店铺名</small>
                         </div>
                     </div>
 

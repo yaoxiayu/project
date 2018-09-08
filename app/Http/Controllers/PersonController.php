@@ -38,15 +38,4 @@ class PersonController extends Controller
     	return view('home.person.order',compact('order'));
     }
 
-    /**
-  	 * 我的评价
-  	 */
-  	public function pindex()
-    {
-    	/*$order = order::all();
-
-    	$comment = Comment::all();
-    	return view('home.person.comment',compact('order','comment'));*/
-    }
-
 }

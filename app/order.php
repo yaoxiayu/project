@@ -20,6 +20,6 @@ class order extends Model
     //订单跟商品的模型关系  属于
     public function shopping()
     {
-    	return $this->belongsTo('App\Shopping');
+    	return $this->belongsTo('App\Shopping','shopping_id','id');
     }
 }

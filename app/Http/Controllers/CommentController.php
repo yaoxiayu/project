@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Comment;
 use App\Shopping;
 use App\User;
+use App\order;
 use Illuminate\Http\Request;
 
 class CommentController extends Controller
@@ -69,9 +70,16 @@ class CommentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    
+     /**
+     * 我的评价
+     */
+    public function show()
     {
-        //
+        $order = order::all();
+
+        $comment = Comment::all();
+        return view('home.person.comment',compact('order','comment'));
     }
 
     /**
