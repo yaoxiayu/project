@@ -3,10 +3,20 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>黑米后台管理系统 </title>
+    <title>@yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/admin/assets/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/admin/assets/css/font-awesome.min.css" />
+
+    <!-- 城市三级联动 stant -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://www.jq22.com/jquery/bootstrap-3.3.4.css" rel="stylesheet">
+    <script src="http://www.jq22.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+    <script src="/dizhi/js/distpicker.data.js"></script>
+    <script src="/dizhi/js/distpicker.js"></script>
+    <script src="/dizhi/js/main.js"></script>
+    <!-- 城市三级联动 end -->
     <!--[if IE 7]>
           <link rel="stylesheet" href="/admin/assets/css/font-awesome-ie7.min.css" />
         <![endif]-->
