@@ -59,6 +59,7 @@ class ShopuserController extends Controller
         $shopuser -> password = $request -> password;
         $shopuser -> phone = $request -> phone;
         $shopuser -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request-> address;
+
         $address = new Address;
         $address -> province = $request->s_province;
         $address -> city = $request->s_city;
@@ -126,6 +127,7 @@ class ShopuserController extends Controller
         // $shopuser -> password = $request -> password;
         $shopuser -> phone = $request -> phone;
         $shopuser -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request-> address;
+        
         $address = Address::findOrFail($id);
         $address -> province = $request->s_province;
         $address -> city = $request->s_city;
