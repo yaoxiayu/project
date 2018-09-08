@@ -14,16 +14,16 @@
     window.wpo = { start: new Date * 1, pid: 109, page: 'passport' };
     var _hmt = _hmt || [];
     </script>
-    <link href="/zhuce/static/css/base.css" type="text/css" rel="stylesheet" />
-    <link href="/zhuce/static/css/ui.css" type="text/css" rel="stylesheet" />
-    <link href="/zhuce/static/css/boot_reg_a416b96.css" type="text/css" rel="stylesheet" />
+    <link href="static/css/base.css" type="text/css" rel="stylesheet" />
+    <link href="static/css/ui.css" type="text/css" rel="stylesheet" />
+    <link href="static/css/boot_reg_a416b96.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
     <div id="wrapper" class="">
         <div id="head">
             <div class="mod-header">
-                <a href="http://www.baidu.com/"><img src="/zhuce/static/picture/baidu.gif" alt="logo"></a>
+                <a href="http://www.baidu.com/"><img src="static/picture/baidu.gif" alt="logo"></a>
             </div>
         </div>
         <div id="nav">
@@ -45,7 +45,7 @@
                         <p class="reg-sms-p reg-sms-p-warn">1069 0691 036590</p>
                         <p class="reg-sms-p reg-sms-p-last">即可注册成功，手机号即为登录帐号。</p>
                         <p class="reg-sms-qrcode">
-                            <img src="/zhuce/static/picture/upreg.png" />
+                            <img src="static/picture/upreg.png" />
                             <br/>
                             <span>请使用手机百度进行扫码</span>
                         </p>
@@ -60,8 +60,8 @@
             <input type="hidden" value="" id="jsU" />
             <input type="hidden" value="pink" id="jsColor" />
             <input type="hidden" value="" id="jsSubpro" />
-            <input type="hidden" value="https://bj.nuomi.com/" id="jsNorealU" />
-            <input type="hidden" value="https://bj.nuomi.com/" id="jsRetu" />
+            <input type="hidden" value="https://sh.nuomi.com/?lf=1&ipd=bj" id="jsNorealU" />
+            <input type="hidden" value="https://sh.nuomi.com/?lf=1&ipd=bj" id="jsRetu" />
             <input type="hidden" value="1" id="jsnoUsername" />
             <input type="hidden" value="" id="jsdefaultAccount" />
             <input type="hidden" value="" id="isSchoolReg" />
@@ -73,10 +73,10 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="/zhuce/static/js/uni_wrapper.js"></script>
-    <script type="text/javascript" src="/zhuce/static/js/core.js"></script>
-    <script type="text/javascript" src="/zhuce/static/js/ui.js"></script>
-    <script type="text/javascript" src="/zhuce/static/js/wrapper.js"></script>
+    <script type="text/javascript" src="static/js/uni_wrapper.js"></script>
+    <script type="text/javascript" src="static/js/core.js"></script>
+    <script type="text/javascript" src="static/js/ui.js"></script>
+    <script type="text/javascript" src="static/js/wrapper.js"></script>
     <script type="text/javascript">
     var sms = !1;
     </script>
@@ -94,9 +94,9 @@
             d = "/v2/?reg&u=" + l + "&tpl=" + o;
         t.options = { product: o, u: s, userName: !0, isPhone: !0, color: u, subpro: n, noreal_u: a, retu: l, staticPage: document.location.protocol + "//" + document.location.host + "/static/passpc-account/html/v3Jump.html", noUsername: c, registerLink: d, qrcode: 2, sms: sms, regMerge: !1, regMergeUserName: !1, hasPlaceholder: !0, hasPasswordcheck: !0, isexchangeable: 1, overseas: overseas }, t.defaultAccount = document.getElementById("jsdefaultAccount").value, t.isSchoolReg = document.getElementById("isSchoolReg").value, t.hasAuthsite = document.getElementById("hasAuthsite").value }(baidu, window.Pass);
     </script>
-    <script type="text/javascript" src="/zhuce/static/js/tpl2logourl.js"></script>
-    <script type="text/javascript" src="/zhuce/static/js/nocaptcha.js"></script>
-    <script type="text/javascript" src="/zhuce/static/js/boot_reg_c6d49e2.js"></script>
+    <script type="text/javascript" src="static/js/tpl2logourl.js"></script>
+    <script type="text/javascript" src="static/js/nocaptcha.js"></script>
+    <script type="text/javascript" src="static/js/boot_reg_c6d49e2.js"></script>
     <script type="text/javascript">
     (function($, ns) {
         var require = ns.require;

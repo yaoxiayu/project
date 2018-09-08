@@ -21,7 +21,7 @@ class HomeController extends Controller
     public function reg()
 
     {
-    	//echo  'aa';
+	echo  'aa';
 
     	// return view('home.zhuce');
     }
@@ -54,8 +54,6 @@ class HomeController extends Controller
     	// }else{
     	// 	return back()
     	// }
-
-
 
     	return view('home.index');
     }
