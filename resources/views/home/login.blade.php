@@ -113,7 +113,7 @@
                             <p id="TANGRAM__PSP_4__errorWrapper" class="pass-generalErrorWrapper"><span id="TANGRAM__PSP_4__error" class="pass-generalError pass-generalError-error"></span></p>
                             <p id="TANGRAM__PSP_4__MakeTextWrapper" class="pass-make-text" style="display:none;"></p>
                             <p id="TANGRAM__PSP_4__userNameWrapper" class="pass-form-item pass-form-item-userName" style="display:">
-                            <label for="TANGRAM__PSP_4__userName" id="TANGRAM__PSP_4__userNameLabel" class="pass-label pass-label-userName">手机</label>
+                           
                                 <input type="text" style="display:none;">
                                 <input id="TANGRAM__PSP_4__userName" type="text" name="username" class="pass-text-input pass-text-input-userName" autocomplete="off" value="" placeholder="手机/邮箱/用户名/糯米帐号">
                             </p>
