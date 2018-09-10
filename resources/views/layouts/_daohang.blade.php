@@ -100,10 +100,13 @@
     <div class="header-bar static-hook-real static-hook-id-1" mon="area=navigation" id="header-bar">
         <div class="header-inner clearfix flexible ">
             <ul class="left-city first-level" id="j-ucLoginList">
+                @if(!Session::has('username'))
                 <li class="welcome-text"><span class="welcome-tag" id="j-welcomeTag">Hi，欢迎来到百度糯米</span></li>
-                <li class="login"><a href="/login" id="j-barLoginBtn" class="pad-left" mon="element=login">请登录</a></li>
-                <li class="reg"><a href="/zhuce" id="j-barRegBtn" class="pad-left" mon="element=register">免费注册</a></li>
-                <li class="logout"><a id="j-logout" href="https://passport.baidu.com/?logout" class="pad-left" mon="element=logout">退出</a></li>
+                <li class="login"><a href="/login" id="j-barLoginBtn" class="pad-left">请登录</a></li>
+                <li class="reg"><a href="/home/zhuce" class="pad-left">免费注册</a></li>
+                @endif @if(Session::has('username'))
+                <li class="welcome-text"><span class="welcome-tag" id="j-welcomeTag">Hi，{{Session::get('username')}}</span></li>
+                <li class="reg"><a href="/logoutt" class="pad-left">退出</a></li> @endif
             </ul>
             <ul class="right-util first-level">
                 <li><a href="/person" class="pad-right" mon="element=my_order">个人中心</a></li>

@@ -15,13 +15,17 @@
 //前台首页
 Route::get('/','HomeController@index');
 //注册
-Route::get('/zhuce','HomeController@reg');
+Route::get('/home/zhuce','HomeController@zhuce');
+Route::post('/home/zhuce','HomeController@zhucewan');
+
 
 //登录
 Route::get('/login','HomeController@login');
 
 Route::post('/home/index','HomeController@dologin');
 
+//退出登录
+Route::get('/logoutt/','HomeController@logoutt');
 
 /**
  * 后台首页

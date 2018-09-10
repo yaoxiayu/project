@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/admin/assets/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/admin/assets/css/font-awesome.min.css" />
-
     <!-- 城市三级联动 stant -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="http://www.jq22.com/jquery/bootstrap-3.3.4.css" rel="stylesheet">
@@ -237,9 +236,7 @@
                     <span class="menu-text"></span>
                 </a> @include('layouts._menu')
             <div class="main-content">
-                @section('content')
-                    
-                @show
+                @section('content') @show
             </div>
             <!-- /.main-content -->
             <div class="ace-settings-container" id="ace-settings-container">
