@@ -15,13 +15,17 @@
 //前台首页
 Route::get('/','HomeController@index');
 //注册
-Route::get('/zhuce','HomeController@reg');
+Route::get('/home/zhuce','HomeController@zhuce');
+Route::post('/home/zhuce','HomeController@zhucewan');
+
 
 //登录
 Route::get('/login','HomeController@login');
 
 Route::post('/home/index','HomeController@dologin');
 
+//退出登录
+Route::get('/logoutt/','HomeController@logoutt');
 
 /**
  * 后台首页
@@ -82,27 +86,17 @@ Route::resource('play', 'PlayController');
 //结婚
 Route::resource('marry', 'MarryController');
 
+
 //个人中心
-/**
- * 首页
- */
-Route::get('/person','PersonController@index');
+Route::resource('person','PersonController');
 
-/**
- * 订单
- */
-Route::get('/person/order/1','PersonController@index');
-/**
- * 储值卡
- */
-Route::get('/person/order/2','PersonController@cindex');
-//订单删除
-Route::get('/person/delete/{id}','PersonController@delete');
+//前台评价
+Route::resource('hcomment','HcommentController');
+//账户设置
+Route::resource('zhanghu','ZhanghuController');
+//购物车
+Route::get('/shopcar','HomeController@show');
 
-/**
- * 评价
- */
-Route::get('/person/order/3','PersonController@pindex');
 
 
 Route::resource('administrator','AdministratorController');

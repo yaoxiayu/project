@@ -3,6 +3,7 @@
 <link rel="stylesheet" type="text/css" href="/home/pstatic/css/common_d7fb37f.css" />
 <link rel="stylesheet" type="text/css" href="/home/pstatic/css/header_8e018e5.css" />
 <link rel="stylesheet" type="text/css" href="/home/pstatic/css/user_0d53ca2.css" />
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <div class="nav-bar-header nav-area-index static-hook-real static-hook-id-3">
     <div class="nav-inner flexible clearfix">
         <ul class="nav-list clearfix" mon="area=nav&element_type=nav" id="j-catg">
@@ -69,25 +70,24 @@
                 <div class="uc p-order-list clearfix" style="margin-left:100px">
                     <div class="w-user-info" style="margin-top:60px">
                         <div class="user-name-wrap fl">
-                            <span class="user-name">yaoxiayu125</span>
+                            <span class="user-name">yaoxiayu</span>
                             <span class="tit">手机已绑定</span>
                             <span class="account-info-con">
-134****2580
-</span>
-                            <span class="account-info-btn">
-<a class="link" href="###" id="j-uc-bind-phone">修改</a>
-</span>
+                            134****2580
+                            </span>
                         </div>
                         <ul class="user-money-wrap fr">
                             <li>
                                 <span class="tit">我的余额</span>
                                 <span class="org">
-&nbsp;&yen;0</span>
+                                &nbsp;&yen;0
+                                </span>
                             </li>
                             <li class="last">
                                 <span class="tit">优惠券</span>
                                 <span class="org">
-&nbsp;0</span>
+                                    &nbsp;0
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -95,62 +95,62 @@
                         <div class="uc-side fl">
                             <ul class="w-nav clearfix" id="j-uc-nav" mon="element_type=nav" alog-alias="bainuo-user-pagetab" alog-group="bainuo-user-pagetab">
                                 <li class="nav-active nav-current">
-                                    <a class="nav-txt j-nav" href="/person/order/1">我的订单</a>
+                                    <a class="nav-txt j-nav" href="/person" style="color: #666">我的订单</a>
                                     <ul class="sub-nav" mon="area=subNav">
                                      
                                         <li>
-                                            <a href="/person/order/2" class="">
+                                            <a href="" class="">
 												<span class="sub-nav-ico">&#149;</span>储值卡
 											</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="nav-active">
-                                    <a class="nav-txt j-nav" href="/person/order/3">
+                                    <a class="nav-txt j-nav" href="/hcomment">
 										我的评价
 									</a>
                                     <ul class="sub-nav" mon="area=subNav">
                                         <li>
                                             <a href="/uc/comment/not" class="">
-<span class="sub-nav-ico">&#149;</span>待评价
-</a>
+                                                <span class="sub-nav-ico">&#149;</span>待评价
+                                            </a>
                                         </li>
                                         <li>
                                             <a href="/uc/comment/already" class="">
-<span class="sub-nav-ico">&#149;</span>已评价
-</a>
+                                                <span class="sub-nav-ico">&#149;</span>已评价
+                                            </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="nav-active">
                                     <a class="nav-txt nav-link" href="/uc/collection/online">
-我的收藏
-</a>
+                                        我的收藏
+                                    </a>
                                 </li>
                                 <li class="nav-active last">
-                                    <a class="nav-txt j-nav" href="javascript:;">
-我的账户
-</a>
+                                    <a class="nav-txt j-nav" href="/zhanghu">
+                                        我的账户
+                                    </a>
                                     <ul class="sub-nav" mon="area=subNav">
                                         <li>
                                             <a href="/uc/user/userinfo" class="">
-<span class="sub-nav-ico">&#149;</span>账户设置
-</a>
+                                                <span class="sub-nav-ico">&#149;</span>账户设置
+                                            </a>
                                         </li>
                                         <li>
                                             <a href="/uc/hongbao/list?status=1&type=2" class="">
-<span class="sub-nav-ico">&#149;</span>余额(充值卡兑换)
-</a>
+                                                <span class="sub-nav-ico">&#149;</span>余额(充值卡兑换)
+                                            </a>
                                         </li>
                                         <li>
                                             <a href="/uc/giftcard/find?status=1" class="">
-<span class="sub-nav-ico">&#149;</span>优惠券
-</a>
+                                                <span class="sub-nav-ico">&#149;</span>优惠券
+                                            </a>
                                         </li>
                                         <li>
                                             <a href="//baifubao.baidu.com/jump?uri=%2Fuser%2F0%2Fmy_bfb%2F0&domain=https%3A%2F%2Fwww.baifubao.com" class="" target="_blank">
-<span class="sub-nav-ico">&#149;</span>百度钱包余额
-</a>
+                                                <span class="sub-nav-ico">&#149;</span>百度钱包余额
+                                            </a>
                                         </li>
                                     </ul>
                                 </li>
@@ -174,6 +174,7 @@
                                         <th>操作</th>
                                     </tr>
                                     <tr>
+
                                         @foreach($order as $v)
                                         <td class="goods-info left">
                                             <div class="goods-img fl">
@@ -181,7 +182,7 @@
                                             </div>
                                             <div class="goods-name fl">
                                                 <h6>
-													<a href="//www.nuomi.com/deal/y00vah1a3.html" target="_blank" mon="element=2282279537&element_type=nav">{{$v->shopping->content}}</a>
+													<a href="//www.nuomi.com/deal/y00vah1a3.html" target="_blank" mon="element=2282279537&element_type=nav"><p style="margin-top: 5px">{{$v->shopping->content}}</p></a>
 												</h6>
                                             </div>
                                         </td>
@@ -190,22 +191,86 @@
                                         </td>
                                         <td class="font14 total-amount">{{$v['counts']}}</td>
                                         <td style="margin-top: 0px">
-                                            <!-- {{$v['state']}} -->
                                             @if($v['state']==1) 未使用 @elseif($v['state']==2) 已使用 @endif
                                         </td>
                                         <td class="blank-10">
                                             <a class="btn-s btn-org" href="javascript:;" data-id="2282279537" data-target="pay" mon="element=2282279537&element_type=nav">订单退款</a>
-                                            <a class="link" href="/person/delete/{{$v['id']}}" data-id="2282279537" data-target="delete" mon="element=2282279537&element_type=nav">删除订单</a>
+                                            <form action="/person/{{$v['id']}}" method="post"> 
+                                                <button style="background:RGB(217,83,79);width: 74px;color: white;border: none;margin: 2px;height: 22px">订单删除</button>
+                                                {{csrf_field()}}
+                                                {{method_field('DELETE')}}
+                                            </form>
                                         </td>
                                     </tr>
                                     @endforeach
+                                    
                                 </table>
                                 <div id="J-pager" class="uc-pager" data-p="1" data-pn="20" data-total="1" data-status="all" mon="area=pageNum"></div>
                             </div>
                         </div>
                         @show
+
+                        <style>
+                    .am-cf{
+                        float: right;
+                    }
+                    .pagination{
+                        padding-left: 0;
+                        margin: 1.5rem 0;
+                        list-style: none;
+                        color: #999;
+                        text-align: left;
+                        padding: 0;
+                    }
+
+                    .pagination li{
+                        display: inline-block;
+                    }
+
+                    .pagination li a, .pagination li span{
+                        color: #23abf0;
+                        border-radius: 3px;
+                        padding: 6px 12px;
+                        position: relative;
+                        display: block;
+                        text-decoration: none;
+                        line-height: 1.2;
+                        background-color: #fff;
+                        border: 1px solid #ddd;
+                        border-radius: 0;
+                        margin-bottom: 5px;
+                        margin-right: 5px;
+                    }
+
+                    .pagination .active span{
+                        color: #23abf0;
+                        border-radius: 3px;
+                        padding: 6px 12px;
+                        position: relative;
+                        display: block;
+                        text-decoration: none;
+                        line-height: 1.2;
+                        background-color: #fff;
+                        border: 1px solid #ddd;
+                        border-radius: 0;
+                        margin-bottom: 5px;
+                        margin-right: 5px;
+                        background: #23abf0;
+                        color: #fff;
+                        border: 1px solid #23abf0;
+                        padding: 6px 12px;
+                    }
+                </style>
+                <div class="am-cf">
+                    <div class="am-fr">
+                        {{$order->appends(request()->all())->links()}}
                     </div>
                 </div>
+                    </div>
+                </div>
+
+
+
                 <div class="re-footer-content">
                     <div id="footer" class="footer">
                         <div class="re-footer-inner clearfix flexible">
@@ -513,3 +578,5 @@
                 <script>
                 var _trace_page_logid = 2051474241;
                 </script>
+
+                

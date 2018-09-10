@@ -2,51 +2,94 @@
 
 namespace App\Http\Controllers;
 
-use App\Shopping;
-use App\order;
-use App\Comment;
+use App\Order;
 use Illuminate\Http\Request;
 
 class PersonController extends Controller
 {
-	//个人中心
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-    	//获取订单信息
-    	$order = order::all();
-    	return view('home.person.index',compact('order'));
-    }
+        $order = Order::orderBy('id','desc')
+         ->paginate(3);
+        
 
-    //订单删除
-    public function delete($id)
-    {
-    	$order = Order::findOrFail($id);
-
-        if($order->delete()){
-            return back()->with('success','删除成功');
-        }else{
-            return back()->with('success','删除失败');
-        }
-    }
-
-  	/**
-  	 * 储值卡
-  	 */
-  	public function cindex()
-    {
-    	$order = order::all();
-    	return view('home.person.order',compact('order'));
+        return view('home.person.index',compact('order'));
     }
 
     /**
-  	 * 我的评价
-  	 */
-  	public function pindex()
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
     {
-    	/*$order = order::all();
-
-    	$comment = Comment::all();
-    	return view('home.person.comment',compact('order','comment'));*/
+        //
     }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        
+        $order = Order::find($id);
+        if($order->delete()){
+            return redirect('/person')->with('success','删除成功');
+        }else{
+            return back()->with('error','删除失败');
+        }
+    }
 }
