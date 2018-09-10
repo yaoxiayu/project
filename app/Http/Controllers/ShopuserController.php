@@ -61,7 +61,7 @@ class ShopuserController extends Controller
         $shopuser -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request-> address;
 
         $address = new Address;
-        $address -> province = $request->s_province;
+        
 
         $address -> province = $request->s_province;
         $address -> city = $request->s_city;

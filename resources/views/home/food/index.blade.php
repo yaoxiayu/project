@@ -101,12 +101,16 @@
         <div class="page-body-left">
             <div class="filter-bg">
                 <div alog-alias="bainuo-channel-filter-wrap" alog-group="bainuo-channel-filter-wrap" class="filter-wrap">
-                    <div class="w-filter-ab-test">
+
+                    <div class="w-filter-ab-test" style="position:relative">
                         <div class="filter-breadcrumb">
                             <a class="filter-breadcrumb-link" href="/meishi">
                                 美食
                             </a>
                         </div>
+                        <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208"/ style="position:absolute;right:20px;">
+                        <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208"/ style="position:absolute;right:20px;top: 174px;">
+                        
                         <div class="filter-wrapper">
                             <div class="normal-filter ">
                                 <div alog-alias="bainuo-filter-section" alog-group="bainuo-filter-section" class="w-filter-normal-ab filter-list-ab clearfix" mon="area=filterCatg">
@@ -126,182 +130,7 @@
                                                 <span class="item-content ">
                                                     今日新单
                                                 </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/962" mon="element=962&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    中餐/家常菜
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/881" mon="element=881&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    蛋糕
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/380" mon="element=380&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    小吃快餐
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/364" mon="element=364&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    火锅
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/389" mon="element=389&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    日韩料理
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/460" mon="element=460&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    烧烤/烤肉
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/439" mon="element=439&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    海鲜
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/2049" mon="element=2049&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    夏日饮品
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/393" mon="element=393&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    川湘菜
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/450" mon="element=450&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    北京菜
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/392" mon="element=392&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    自助餐
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/391" mon="element=391&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    西餐
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/878" mon="element=878&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    烤鱼
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/880" mon="element=880&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    甜品
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/2016" mon="element=2016&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    婚宴
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/692" mon="element=692&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    创意菜/私房菜
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/884" mon="element=884&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    麻辣烫/冒菜
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/954" mon="element=954&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    咖啡
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/504" mon="element=504&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    东北菜
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/883" mon="element=883&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    烤鸭
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/690" mon="element=690&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    干锅/香锅
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/2051" mon="element=2051&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    酒吧
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/451" mon="element=451&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    新疆菜
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/388" mon="element=388&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    粤菜
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/653" mon="element=653&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    西北菜
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/509" mon="element=509&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    云贵菜
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/390" mon="element=390&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    东南亚菜
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/424" mon="element=424&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    江浙菜
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/652" mon="element=652&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    鲁菜
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/874" mon="element=874&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    徽菜
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/2052" mon="element=2052&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    粥店
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/655" mon="element=655&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    素食
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/696" mon="element=696&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    台湾菜/客家菜
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/2050" mon="element=2050&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    小龙虾
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/327" mon="element=327&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    其他美食
-                                                </span>
-                                            </a>
+                                            </a>                                          
                                         </div>
                                     </div>
                                     <a class="show-more j-more-button" mon="element=showMore">
@@ -1729,49 +1558,16 @@
                         </span>
                         条
                     </div>
-                    <div alog-alias="bainuo-goods-pager" alog-group="bainuo-goods-pager" class="pager-wrap" id="j-pager" mon="area=pageNum">
-                        <div class="ui-pager">
-                            <span class="ui-pager-current">
-                                1
-                            </span>
-                            <a class="ui-pager-normal" data-pagenum="2" href="//bj.nuomi.com/326-page2?#j-sort-bar" mon="element=2">
-                                2
-                            </a>
-                            <a class="ui-pager-normal" data-pagenum="3" href="//bj.nuomi.com/326-page3?#j-sort-bar" mon="element=3">
-                                3
-                            </a>
-                            <a class="ui-pager-normal" data-pagenum="4" href="//bj.nuomi.com/326-page4?#j-sort-bar" mon="element=4">
-                                4
-                            </a>
-                            <a class="ui-pager-normal" data-pagenum="5" href="//bj.nuomi.com/326-page5?#j-sort-bar" mon="element=5">
-                                5
-                            </a>
-                            <a class="ui-pager-normal" data-pagenum="6" href="//bj.nuomi.com/326-page6?#j-sort-bar" mon="element=6">
-                                6
-                            </a>
-                            <a class="ui-pager-normal" data-pagenum="7" href="//bj.nuomi.com/326-page7?#j-sort-bar" mon="element=7">
-                                7
-                            </a>
-                            <a class="ui-pager-normal" data-pagenum="8" href="//bj.nuomi.com/326-page8?#j-sort-bar" mon="element=8">
-                                8
-                            </a>
-                            <a class="ui-pager-normal" data-pagenum="9" href="//bj.nuomi.com/326-page9?#j-sort-bar" mon="element=9">
-                                9
-                            </a>
-                            <a class="ui-pager-normal" data-pagenum="10" href="//bj.nuomi.com/326-page10?#j-sort-bar" mon="element=10">
-                                10
-                            </a>
-                            <a class="ui-pager-next" data-pagenum="2" href="//bj.nuomi.com/326-page2?#j-sort-bar" mon="element=next">
-                                <div class="ico-next">
-                                </div>
-                            </a>
+                    <div class="am-cf">
+                        <div class="am-fr">
+                            {{ $shopping->appends(request()->all())->links() }}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="page-body-right">
-            <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208"/>
+            
         </div>
     </div>
 </div>

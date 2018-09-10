@@ -28,15 +28,7 @@
           <link rel="stylesheet" href="/admin/assets/css/ace-ie.min.css" />
         <![endif]-->
 
-        <!-- 城市三级联动 stant -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="http://www.jq22.com/jquery/bootstrap-3.3.4.css" rel="stylesheet">
-    <script src="http://www.jq22.com/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
-    <script src="/dizhi/js/distpicker.data.js"></script>
-    <script src="/dizhi/js/distpicker.js"></script>
-    <script src="/dizhi/js/main.js"></script>
-    <!-- 城市三级联动 end -->
+
     <script src="/admin/assets/js/ace-extra.min.js"></script>
     <!--[if lt IE 9]>
         <script src="/admin/assets/js/html5shiv.js"></script>

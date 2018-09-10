@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Industry;
 use Illuminate\Http\Request;
 use App\Setting;
 class HomeController extends Controller
@@ -12,8 +13,11 @@ class HomeController extends Controller
 
     public function index()
     {
-
-    	return view('home.index');
+        $industry = Industry::all()
+        ->where('name', 'like' , '%'.request()->keywords.'%');
+    	return view('home.index',compact('industry'));
+       
+        
     }
 
 
