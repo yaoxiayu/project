@@ -70,17 +70,7 @@ class CommentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    
-     /**
-     * 我的评价
-     */
-    public function show()
-    {
-        $order = order::all();
 
-        $comment = Comment::all();
-        return view('home.person.comment',compact('order','comment'));
-    }
 
     /**
      * Show the form for editing the specified resource.

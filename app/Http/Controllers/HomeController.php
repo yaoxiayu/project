@@ -55,9 +55,12 @@ class HomeController extends Controller
     	// 	return back()
     	// }
 
-
-
     	return view('home.index');
+    }
+
+    public function show()
+    {
+        
     }
 
 }

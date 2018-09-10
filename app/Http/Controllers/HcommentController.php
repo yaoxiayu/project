@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Order;
+use App\Comment;
+use App\order;
 use Illuminate\Http\Request;
-
-class PersonController extends Controller
+class HcommentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +14,12 @@ class PersonController extends Controller
      */
     public function index()
     {
-        $order = Order::orderBy('id','desc')
-         ->paginate(3);
-        
+        //前台获取评价
+        $order = order::all();
 
-        return view('home.person.index',compact('order'));
+        $comment = Comment::orderBy('id','desc')
+         ->paginate(3);
+        return view('home.person.comment',compact('order','comment'));
     }
 
     /**
@@ -84,10 +85,11 @@ class PersonController extends Controller
      */
     public function destroy($id)
     {
-        
-        $order = Order::find($id);
-        if($order->delete()){
-            return redirect('/person')->with('success','删除成功');
+
+        $comment = Comment::find($id);
+
+        if($comment->delete()){
+            return redirect('/hcomment')->with('success','删除成功');
         }else{
             return back()->with('error','删除失败');
         }
