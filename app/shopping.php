@@ -9,6 +9,7 @@ class shopping extends Model
 {
     use SoftDeletes;
     protected $dates = ['deleted_at'];
+    protected $table = 'shoppings';
 
    public function shopuser()
     {

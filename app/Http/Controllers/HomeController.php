@@ -77,6 +77,7 @@ class HomeController extends Controller
     }
 
 
+
     //退出
     public function logoutt(Request $request)
     {
@@ -84,4 +85,13 @@ class HomeController extends Controller
          return redirect('/login')->with('success','退出成功');
 
     }
+
+    	return view('home.index');
+    }
+
+    public function show()
+    {
+        
+    }
+
 }

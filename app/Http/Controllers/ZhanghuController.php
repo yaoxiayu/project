@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Order;
+use App\User;
+use App\order;
 use Illuminate\Http\Request;
 
-class PersonController extends Controller
+class ZhanghuController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +15,10 @@ class PersonController extends Controller
      */
     public function index()
     {
-        $order = Order::orderBy('id','desc')
-         ->paginate(3);
-        
-
-        return view('home.person.index',compact('order'));
+        //获取个人信息
+        $user = User::all();
+        $order = order::all();
+        return view('home.person.zhanghu',compact('user','order'));
     }
 
     /**
@@ -61,7 +61,10 @@ class PersonController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail($id); 
+        $asd = explode('-', $user->address);
+        $order = Order::all();
+        return view('home.person.zhanghuedit',compact('user','asd','order'));
     }
 
     /**
@@ -73,7 +76,22 @@ class PersonController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //更新数据
+        $user = User::findOrFail($id);
+
+        $user -> phone = $request -> phone;
+   
+        $user -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request-> address;
+        //插入
+        if($user -> save()){
+            try{
+                return redirect('/zhanghu')->with('success', '修改成功');
+            }catch(\Exception $e){
+                return back()->with('error','修改失败');
+            }
+        }else{
+            return back()->with('error','修改失败');
+        }
     }
 
     /**
@@ -84,12 +102,6 @@ class PersonController extends Controller
      */
     public function destroy($id)
     {
-        
-        $order = Order::find($id);
-        if($order->delete()){
-            return redirect('/person')->with('success','删除成功');
-        }else{
-            return back()->with('error','删除失败');
-        }
+        //
     }
 }
