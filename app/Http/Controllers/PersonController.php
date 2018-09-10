@@ -18,7 +18,7 @@ class PersonController extends Controller
          ->paginate(3);
         
 
-        return view('home.person.index',compact('order'));
+        return view('home.person.order',compact('order'));
     }
 
     /**
