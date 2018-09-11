@@ -77,7 +77,7 @@
         $(".submenu").height();
         $("#nav_list").children(".submenu").css("height", thisHeight);
 
-        //当文档窗口发生改变时 触发  
+        //当文档窗口发生改变时 触发
         $(window).resize(function() {
             $("#main-container").height($(window).height() - 76);
             $("#iframe").height($(window).height() - 140);
@@ -115,16 +115,16 @@
     //     $("input[type$='password']").each(function(n){
     //          if($(this).val()=="")
     //          {
-    //              // num++;
+    //              // nu.8m++;
     //             layer.alert(str+=""+$(this).attr("name")+"不能为空！\r\n",{
-    //                title: '提示框',             
-    //              icon:0,             
-    //          }); 
+    //                title: '提示框',
+    //              icon:0,
+    //          });
     //             // layer.msg(str+=""+$(this).attr("name")+"不能为空！\r\n");
     //             layer.close(index);
-    //          }         
-    //     });    
-    //})        
+    //          }
+    //     });
+    //})
     //  });
 
     /*********************点击事件*********************/

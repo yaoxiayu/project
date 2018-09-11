@@ -1,3 +1,4 @@
+@extends()
 @include('layouts._top')
 @include('layouts._menu')
 @section('content')
@@ -22,17 +23,17 @@
 		<script src="/admin/assets/js/respond.min.js"></script>
 		<![endif]-->
         		<!--[if !IE]> -->
-		<script src="/admin/assets/js/jquery.min.js"></script>        
+		<script src="/admin/assets/js/jquery.min.js"></script>
 		<!-- <![endif]-->
            	<script src="/admin/assets/dist/echarts.js"></script>
-        <script src="/admin/assets/js/bootstrap.min.js"></script>            
+        <script src="/admin/assets/js/bootstrap.min.js"></script>
        <title></title>
-       </head>		
+       </head>
 <body>
 <div class="page-content clearfix">
  <div class="alert alert-block alert-success">
   <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
-  <i class="icon-ok green"></i>欢迎使用<strong class="green">后台管理系统<small>(v1.2)</small></strong>,你本次登录时间为2016年7月12日13时34分，登录IP:192.168.1.110.	
+  <i class="icon-ok green"></i>欢迎使用<strong class="green">后台管理系统<small>(v1.2)</small></strong>,你本次登录时间为2016年7月12日13时34分，登录IP:192.168.1.110.
  </div>
  <div class="state-overview clearfix">
                   <div class="col-lg-3 col-sm-6">
@@ -95,7 +96,7 @@
            <tr><td class="name">交易失败：</td><td class="munber"><a href="#">26</a>&nbsp;个</td></tr>
            </tbody>
           </table>
-         </div> 
+         </div>
          <div class="Order_Statistics">
           <div class="title_name">商品统计信息</div>
            <table class="table table-bordered">
@@ -108,7 +109,7 @@
 
            </tbody>
           </table>
-         </div> 
+         </div>
          <div class="Order_Statistics">
           <div class="title_name">会员登录统计信息</div>
            <table class="table table-bordered">
@@ -119,9 +120,9 @@
            <tr><td class="name">QQ会员登录：</td><td class="munber"><a href="#">1130</a>&nbsp;次</td></tr>
            </tbody>
           </table>
-         </div> 
+         </div>
              <!--<div class="t_Record">
-               <div id="main" style="height:300px; overflow:hidden; width:100%; overflow:auto" ></div>     
+               <div id="main" style="height:300px; overflow:hidden; width:100%; overflow:auto" ></div>
               </div> -->
          <div class="news_style">
           <div class="title_name">最新消息</div>
@@ -132,7 +133,7 @@
            <li><i class="icon-bell red"></i><a href="#">后台系统找那个是开通了。</a></li>
            <li><i class="icon-bell red"></i><a href="#">后台系统找那个是开通了。</a></li>
           </ul>
-         </div> 
+         </div>
          </div>
  <!--记录-->
  <div class="clearfix">
@@ -168,9 +169,9 @@
      </a>
      </div>
   </div>
- 
+
  </div>
-   
+
      </div>
 </body>
 </html>
@@ -189,18 +190,18 @@ $('.no-radius').on('click', function(){
 	parent.$('.Current_page').attr({"name":herf,"href":"javascript:void(0)"}).css({"color":"#4c8fbd","cursor":"pointer"});
 	//parent.$('.Current_page').html("<a href='javascript:void(0)' name="+herf+" class='iframeurl'>" + cnames + "</a>");
     parent.layer.close(index);
-	
+
 });
      $(document).ready(function(){
-		 
+
 		  $(".t_Record").width($(window).width()-640);
-		  //当文档窗口发生改变时 触发  
+		  //当文档窗口发生改变时 触发
     $(window).resize(function(){
 		 $(".t_Record").width($(window).width()-640);
 		});
  });
-	 
-	 
- </script>   
+
+
+ </script>
 
  @endsection
