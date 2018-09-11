@@ -28,7 +28,7 @@
                 <div id="menu_style" class="menu_style">
                     <ul class="nav nav-list" id="nav_list">
                         <!-- 商品管理 start -->
-                        <li class="home"><a href="/admi"class="iframeurl" title=""><i class="icon-home"></i><span class="menu-text"> 系统首页 </span></a></li>
+                        <li class="home"><a href="/houtai"class="iframeurl" title=""><i class="icon-home"></i><span class="menu-text"> 系统首页 </span></a></li>
                         <li><a href="#" class="dropdown-toggle"><i class="icon-desktop"></i><span class="menu-text"> 商品管理 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">
                                 <li class="home"><a href="/shopping" title="产品类表" class="iframeurl"><i class="icon-double-angle-right"></i>商品类表</a></li>

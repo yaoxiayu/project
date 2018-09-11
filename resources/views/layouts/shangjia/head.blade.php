@@ -7,7 +7,7 @@
 				</a>
                 <a id="main-menu-toggle" class="hidden-phone open"><i class="icon-reorder"></i></a>
                 <div class="row-fluid">
-                    <a class="brand span2" href="index.html"><span>商家管理中心</span></a>
+                    <a class="brand span2" href="/shangjia"><span>商家管理中心</span></a>
                 </div>
                 <!-- start: Header Menu -->
                 <div class="nav-no-collapse header-nav">
@@ -24,70 +24,70 @@
                                     <a href="#">
 										<span class="icon blue"><i class="icon-user"></i></span>
 										<span class="message">New user registration</span>
-										<span class="time">1 min</span> 
+										<span class="time">1 min</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
 										<span class="icon green"><i class="icon-comment-alt"></i></span>
 										<span class="message">New comment</span>
-										<span class="time">7 min</span> 
+										<span class="time">7 min</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
 										<span class="icon green"><i class="icon-comment-alt"></i></span>
 										<span class="message">New comment</span>
-										<span class="time">8 min</span> 
+										<span class="time">8 min</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
 										<span class="icon green"><i class="icon-comment-alt"></i></span>
 										<span class="message">New comment</span>
-										<span class="time">16 min</span> 
+										<span class="time">16 min</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
 										<span class="icon blue"><i class="icon-user"></i></span>
 										<span class="message">New user registration</span>
-										<span class="time">36 min</span> 
+										<span class="time">36 min</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
 										<span class="icon yellow"><i class="icon-shopping-cart"></i></span>
 										<span class="message">2 items sold</span>
-										<span class="time">1 hour</span> 
+										<span class="time">1 hour</span>
                                     </a>
                                 </li>
                                 <li class="warning">
                                     <a href="#">
 										<span class="icon red"><i class="icon-user"></i></span>
 										<span class="message">User deleted account</span>
-										<span class="time">2 hour</span> 
+										<span class="time">2 hour</span>
                                     </a>
                                 </li>
                                 <li class="warning">
                                     <a href="#">
 										<span class="icon red"><i class="icon-shopping-cart"></i></span>
 										<span class="message">Transaction was canceled</span>
-										<span class="time">6 hour</span> 
+										<span class="time">6 hour</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
 										<span class="icon green"><i class="icon-comment-alt"></i></span>
 										<span class="message">New comment</span>
-										<span class="time">yesterday</span> 
+										<span class="time">yesterday</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
 										<span class="icon blue"><i class="icon-user"></i></span>
 										<span class="message">New user registration</span>
-										<span class="time">yesterday</span> 
+										<span class="time">yesterday</span>
                                     </a>
                                 </li>
                                 <li class="dropdown-menu-sub-footer">
@@ -110,7 +110,7 @@
 											<span class="title">iOS Development</span>
 											<span class="percent"></span>
 										</span>
-                                        <div class="taskProgress progressSlim progressBlue">80</div> 
+                                        <div class="taskProgress progressSlim progressBlue">80</div>
                                     </a>
                                 </li>
                                 <li>
@@ -119,7 +119,7 @@
 											<span class="title">Android Development</span>
 											<span class="percent"></span>
 										</span>
-                                        <div class="taskProgress progressSlim progressYellow">47</div> 
+                                        <div class="taskProgress progressSlim progressYellow">47</div>
                                     </a>
                                 </li>
                                 <li>
@@ -128,7 +128,7 @@
 											<span class="title">Django Project For Google</span>
 											<span class="percent"></span>
 										</span>
-                                        <div class="taskProgress progressSlim progressRed">32</div> 
+                                        <div class="taskProgress progressSlim progressRed">32</div>
                                     </a>
                                 </li>
                                 <li>
@@ -137,7 +137,7 @@
 											<span class="title">SEO for new sites</span>
 											<span class="percent"></span>
 										</span>
-                                        <div class="taskProgress progressSlim progressGreen">63</div> 
+                                        <div class="taskProgress progressSlim progressGreen">63</div>
                                     </a>
                                 </li>
                                 <li>
@@ -146,7 +146,7 @@
 											<span class="title">New blog posts</span>
 											<span class="percent"></span>
 										</span>
-                                        <div class="taskProgress progressSlim progressPink">80</div> 
+                                        <div class="taskProgress progressSlim progressPink">80</div>
                                     </a>
                                 </li>
                                 <li>
@@ -177,7 +177,7 @@
 										</span>
                                         <span class="message">
                                             Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>  
+                                        </span>
                                     </a>
                                 </li>
                                 <li>
@@ -193,7 +193,7 @@
 										</span>
                                         <span class="message">
                                             Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>  
+                                        </span>
                                     </a>
                                 </li>
                                 <li>
@@ -209,7 +209,7 @@
 										</span>
                                         <span class="message">
                                             Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>  
+                                        </span>
                                     </a>
                                 </li>
                                 <li>
@@ -225,7 +225,7 @@
 										</span>
                                         <span class="message">
                                             Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>  
+                                        </span>
                                     </a>
                                 </li>
                                 <li>
@@ -241,7 +241,7 @@
 										</span>
                                         <span class="message">
                                             Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                        </span>  
+                                        </span>
                                     </a>
                                 </li>
                                 <li>

@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="/admin/assets/css/ace.min.css" />
     <link rel="stylesheet" href="/admin/assets/css/ace-rtl.min.css" />
     <link rel="stylesheet" href="/admin/assets/css/ace-skins.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/admin/assets/css/style.css" />
     <!--[if lte IE 8]>
           <link rel="stylesheet" href="/admin/assets/css/ace-ie.min.css" />
         <![endif]-->
@@ -77,7 +77,7 @@
         $(".submenu").height();
         $("#nav_list").children(".submenu").css("height", thisHeight);
 
-        //当文档窗口发生改变时 触发  
+        //当文档窗口发生改变时 触发
         $(window).resize(function() {
             $("#main-container").height($(window).height() - 76);
             $("#iframe").height($(window).height() - 140);
@@ -115,16 +115,16 @@
     //     $("input[type$='password']").each(function(n){
     //          if($(this).val()=="")
     //          {
-    //              // num++;
+    //              // nu.8m++;
     //             layer.alert(str+=""+$(this).attr("name")+"不能为空！\r\n",{
-    //                title: '提示框',             
-    //              icon:0,             
-    //          }); 
+    //                title: '提示框',
+    //              icon:0,
+    //          });
     //             // layer.msg(str+=""+$(this).attr("name")+"不能为空！\r\n");
     //             layer.close(index);
-    //          }         
-    //     });    
-    //})        
+    //          }
+    //     });
+    //})
     //  });
 
     /*********************点击事件*********************/
@@ -205,7 +205,7 @@
                     icon: 2,
                 },
                 function() {
-                    location.href = "login.html";
+                    location.href = "/admin/login";
 
                 });
         });
@@ -237,9 +237,14 @@
             <a class="menu-toggler" id="menu-toggler" href="#">
                     <span class="menu-text"></span>
                 </a> @include('layouts._menu')
+
+                 @include('layouts._session')
             <div class="main-content">
+
+
                 @section('content') @show
             </div>
+           
             <!-- /.main-content -->
             <div class="ace-settings-container" id="ace-settings-container">
                 <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
