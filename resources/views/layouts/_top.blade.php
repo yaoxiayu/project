@@ -17,11 +17,11 @@
         <div class="navbar-header pull-right" role="navigation">
             <ul class="nav ace-nav">
                 <li class="light-blue open">
-                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                 <span  class="time"><em id="time"></em></span><span class="user-info"><small>欢迎光临,</small>超级管理员</span>
-                 <i class="icon-caret-down"></i>
-                </a>
-                    <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle" id="a">
+                     <span  class="time"><em id="time"></em></span><span class="user-info"><small>欢迎光临,</small>超级管理员</span>
+                     <i class="icon-caret-down"></i>
+                    </a>
+                    <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close" id="b" style="display: none;">
                         <li><a href="/admin/setting" title="系统设置" class="iframeurl"><i class="icon-cog"></i>网站设置</a></li>
                         <li><a href="/admin/geren" name="admin_info.html" title="个人信息" class="iframeurl"><i class="icon-user"></i>个人资料</a></li>
                         <li class="divider"></li>
