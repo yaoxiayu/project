@@ -9,6 +9,7 @@ class industry extends Model
 {
     use SoftDeletes;
     protected $dates = ['deleted_at'];
+    protected $table = 'industries';
 
 
     public function shopuser()

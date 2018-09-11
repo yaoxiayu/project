@@ -121,7 +121,7 @@
                     <div class="header-dropmenu">
                         <div class="drop-block"></div><a class="img" href="//d.nuomi.com/?1009764s" target="_blank">二维码</a></div>
                 </li>
-                <li class="j-bar-dropdown"><a href="#" class="pad-right"><span>我是商家</span><span class="arrow-down-logo"></span></a><span class="sep-lines"></span>
+                <li class="j-bar-dropdown"><a href="/shangjia" class="pad-right"><span>我是商家</span><span class="arrow-down-logo"></span></a><span class="sep-lines"></span>
                     <div class="merchant-list header-dropmenu">
                         <div class="drop-block"></div><a href="http://y.nuomi.com" class="link" target="_blank">商户中心</a><a href="https://mct.y.nuomi.com/sc/pc/guide/guideFlow?page=true" class="link" target="_blank">我想合作</a></div>
                 </li>

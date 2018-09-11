@@ -206,8 +206,83 @@
                     <p>已有账号？<a href="/login">立即登录</a></p>
                 </div>
             </div>
+
+            <input type="hidden" value="nuomi" id="jsProduct" />
+            <input type="hidden" value="" id="jsU" />
+            <input type="hidden" value="pink" id="jsColor" />
+            <input type="hidden" value="" id="jsSubpro" />
+            <input type="hidden" value="" id="jsNorealU" />
+            <input type="hidden" value="" id="jsRetu" />
+            <input type="hidden" value="1" id="jsnoUsername" />
+            <input type="hidden" value="" id="jsdefaultAccount" />
+            <input type="hidden" value="" id="isSchoolReg" />
+            <input type="hidden" value="" id="hasAuthsite" />
+        </div>
+       
+    </div>
+    <script type="text/javascript" src="/zhuce/static/js/uni_wrapper.js"></script>
+    <script type="text/javascript" src="/zhuce/static/js/core.js"></script>
+    <script type="text/javascript" src="/zhuce/static/js/ui.js"></script>
+    <script type="text/javascript" src="/zhuce/static/js/wrapper.js"></script>
+    <script type="text/javascript">
+    var sms = !1;
+    </script>
+    <script type="text/javascript">
+    var overseas = 0;
+    </script>
+    <script type="text/javascript">
+    ! function(e, t) { var o = document.getElementById("jsProduct").value,
+            s = document.getElementById("jsU").value,
+            u = document.getElementById("jsColor").value,
+            n = document.getElementById("jsSubpro").value,
+            a = document.getElementById("jsNorealU").value,
+            l = document.getElementById("jsRetu").value,
+            c = document.getElementById("jsnoUsername").value,
+            d = "/v2/?reg&u=" + l + "&tpl=" + o;
+        t.options = { product: o, u: s, userName: !0, isPhone: !0, color: u, subpro: n, noreal_u: a, retu: l, /zhuce/staticPage: document.location.protocol + "//" + document.location.host + "//zhuce/static/passpc-account/html/v3Jump.html", noUsername: c, registerLink: d, qrcode: 2, sms: sms, regMerge: !1, regMergeUserName: !1, hasPlaceholder: !0, hasPasswordcheck: !0, isexchangeable: 1, overseas: overseas }, t.defaultAccount = document.getElementById("jsdefaultAccount").value, t.isSchoolReg = document.getElementById("isSchoolReg").value, t.hasAuthsite = document.getElementById("hasAuthsite").value }(baidu, window.Pass);
+    </script>
+    <script type="text/javascript" src="/zhuce/static/js/tpl2logourl.js"></script>
+    <script type="text/javascript" src="/zhuce/static/js/nocaptcha.js"></script>
+    <script type="text/javascript" src="/zhuce/static/js/boot_reg_c6d49e2.js"></script>
+    <script type="text/javascript">
+    (function($, ns) {
+        var require = ns.require;
+        var feedback = require('ui/feedback/feedback');
+        var feed = new feedback();
+    })(window.baidu, window.Pass);
+    </script>
+    <script type="text/javascript">
+    _hmt.push(['_setAutoPageview', false]);
+    (function() {
+        try {
+            var tjstr = location.search,
+                tjarr2 = [],
+                tjresult = '';
+            if (tjstr) {
+                var tjarr = tjstr.slice(1).split('&');
+                for (var i = 0, len = tjarr.length; i < len; i++) {
+                    var query = tjarr[i].split('=')[0];
+                    if (query != 't' && query != '_t') {
+                        tjarr2.push(tjarr[i])
+                    }
+                }
+            }
+            tjresult = location.pathname + (tjarr2.length > 0 ? ('?' + tjarr2.join('&')) : '')
+        } catch (e) {
+            var tjresult = location.pathname
+        }
+        _hmt.push(['_trackPageview', tjresult]);
+    })()
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F90056b3f84f90da57dc0f40150f005d5' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    wpo.tti = new Date * 1;
+    </script>
+
         </div>
     </div>
+
 </body>
 
 </html>

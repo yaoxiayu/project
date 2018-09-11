@@ -27,12 +27,12 @@ class HomeController extends Controller
 
 
     //注册
+
     public function zhuce(Request $request)
 
     {
 	     
         return view('home.zhuce');
-
     }
 
    public function zhucewan(Request $request)
