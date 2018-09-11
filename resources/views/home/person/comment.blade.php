@@ -1,6 +1,7 @@
 @extends('home.person.index')
 
 @section('content')
+<script type="text/javascript" src="/js/jquery.min.js"></script>
        <div class="uc-main fr">
                             <div class="w-list" id="J-orders-wrap">
                                 <table class="order-list" mon="area=orderList">
@@ -10,12 +11,12 @@
                                         <th width="70">评论分值</th>                                 
                                         <th width="120">评论内容</th>
                                         <th width="70">评论人</th>
-                                        <th>操作</th>
+                                        <th style="padding-left:80px">操作</th>
                                     </tr>
 
                                     <tr>
                                         @foreach($comment as $v)
-
+                                        @if(Session::get('id') == $v['user_id'])
                                         <td class="font14 total-amount">{{$v->shopping->name}}</td>
                                         <td>
                                             <span class="font14">{{$v->shopping->shopuser->username}}</span>
@@ -43,15 +44,21 @@
                                         
                     
                                         <td class="blank-10">
-                                            <a class="btn-s btn-org" href="javascript:;" data-id="2282279537" data-target="pay" mon="element=2282279537&element_type=nav">订单退款</a>
-                                             <form action="/hcomment/{{$v['id']}}" method="post"> 
-                                                <button style="background:RGB(217,83,79);width: 74px;color: white;border: none;margin: 2px;height: 22px">订单删除</button>
-                                                {{csrf_field()}}
-                                                {{method_field('DELETE')}}
-                                            </form>
+                                             <p class="del"><button id="del{{$v['id']}}" class="btn btn-danger">删除评价</button></p>
+                                            <script>
+                                                $('#del{{$v['id']}}').click(function()
+                                                {
+                                                    if(confirm("确定要删除吗")){
+                                                        location.href="/hcomment/delete/{{$v['id']}}";
+                                                     }
+                                                })
+                                            </script>
                                         </td>
                                        
-                                    </tr> @endforeach
+                                    </tr>
+                                    @endif
+                                    @endforeach
+                                    
                                 </table>
                                  <div id="J-pager" class="uc-pager" data-p="1" data-pn="20" data-total="1" data-status="all" mon="area=pageNum"></div>
                             </div>

@@ -16,16 +16,16 @@
         </div>
         <div class="navbar-header pull-right" role="navigation">
             <ul class="nav ace-nav">
-                <li class="light-blue">
-                    <a data-toggle="dropdown" href="#" class="dropdown-toggle" id="a">
-                     <span  class="time"><em id="time"></em></span><span class="user-info"><small>欢迎光临,</small>超级管理员</span>
-                     <i class="icon-caret-down"></i>
-                    </a>
-                    <ul id="b" class="user-menu pull-right  dropdown-yellow dropdown-caret dropdown-close" style="background-color:#62a8d1;list-style:none;margin:0px auto;display:none">
-                        <li><a href="/admin/setting" title="系统设置" class="iframeurl"  style="color:#fff;"><i class="icon-cog"></i>网站设置</a></li>
-                        <li><a href="javascript:void(0)" name="admin_info.html" title="个人信息" class="iframeurl" style="color:#fff;"><i class="icon-user"></i>个人资料</a></li>
+                <li class="light-blue open">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                 <span  class="time"><em id="time"></em></span><span class="user-info"><small>欢迎光临,</small>超级管理员</span>
+                 <i class="icon-caret-down"></i>
+                </a>
+                    <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                        <li><a href="/admin/setting" title="系统设置" class="iframeurl"><i class="icon-cog"></i>网站设置</a></li>
+                        <li><a href="/admin/geren" name="admin_info.html" title="个人信息" class="iframeurl"><i class="icon-user"></i>个人资料</a></li>
                         <li class="divider"></li>
-                        <li><a href="javascript:ovid(0)" id="Exit_system" style="color:#fff;"><i class="icon-off"></i>退出</a></li>
+                        <li><a href="#" id="Exit_system">退出</a></li>
                     </ul>
 
                     <script>

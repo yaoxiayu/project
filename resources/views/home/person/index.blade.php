@@ -70,11 +70,13 @@
                 <div class="uc p-order-list clearfix" style="margin-left:100px">
                     <div class="w-user-info" style="margin-top:60px">
                         <div class="user-name-wrap fl">
-                            <span class="user-name">yaoxiayu</span>
+                            @if(Session::has('username'))   
+                            <span class="user-name">{{Session::get('username')}}</span>
                             <span class="tit">手机已绑定</span>
                             <span class="account-info-con">
-                            134****2580
+                            {{Session::get('phone')}}
                             </span>
+                            @endif
                         </div>
                         <ul class="user-money-wrap fr">
                             <li>

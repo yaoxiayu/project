@@ -19,7 +19,7 @@ Route::get('/home/zhuce','HomeController@zhuce');
 Route::post('/home/zhuce','HomeController@zhucewan');
 
 
-//登录
+//前台登录
 Route::get('/login','HomeController@login');
 
 Route::post('/home/index','HomeController@dologin');
@@ -27,11 +27,24 @@ Route::post('/home/index','HomeController@dologin');
 //退出登录
 Route::get('/logoutt/','HomeController@logoutt');
 
+
+
 /**
  * 后台首页
  */
 
 Route::get('/houtai', 'AdminController@show');
+
+//后台登录
+Route::get('/admin/login','AdminController@login');
+
+//登陆操作
+Route::post('/admin/login','AdminController@dologin');
+//退出
+Route::get('/admin/logout','AdminController@logout');
+
+
+
 
 /**
  * 商品管理
@@ -91,9 +104,11 @@ Route::resource('hcomment','HcommentController');
 //账户设置
 Route::resource('zhanghu','ZhanghuController');
 //购物车
-Route::get('/shopcar','HomeController@show');
-
-
+Route::get('/shopcart','HomeController@show');
+//订单删除
+Route::get('/order/delete/{id}','OrderController@shanchu');
+//评价删除
+Route::get('/hcomment/delete/{id}','CommentController@shanchu');
 
 Route::resource('administrator','AdministratorController');
 
