@@ -98,7 +98,7 @@
             <div class="wrap clearfix">
                 <div class="logo"><a href="/"></a></div>
                 <div class="login-text">登录</div>
-                <div class="reg-area">还没有百度糯米帐号<a href="//passport.baidu.com/v2/?reg&tpl=nuomi&color=pink&u=https%3A%2F%2Fpassport.baidu.com%2Fv3%2Flogin%2Fapi%2Fauth%3Ftpl%3Dnuomi%26return_type%3D5%26u%3Dhttps%253a%252f%252fm.nuomi.com%252fwebapp%252fuser%252fsetstoken%253fcallback%253dcb%2526redirect%253d1%26callback%3Dcb" class="reg-btn">注册</a></div>
+                <div class="reg-area">还没有百度糯米帐号<a href="/home/zhuce" class="reg-btn">注册</a></div>
             </div>
         </div>
         <div class="body">
@@ -113,8 +113,9 @@
                             <p id="TANGRAM__PSP_4__errorWrapper" class="pass-generalErrorWrapper"><span id="TANGRAM__PSP_4__error" class="pass-generalError pass-generalError-error"></span></p>
                             <p id="TANGRAM__PSP_4__MakeTextWrapper" class="pass-make-text" style="display:none;"></p>
                             <p id="TANGRAM__PSP_4__userNameWrapper" class="pass-form-item pass-form-item-userName" style="display:">
+                           
                                 <input type="text" style="display:none;">
-                                <input id="TANGRAM__PSP_4__userName" type="text" name="userName" class="pass-text-input pass-text-input-userName" autocomplete="off" value="" placeholder="手机/邮箱/用户名/糯米帐号">
+                                <input id="TANGRAM__PSP_4__userName" type="text" name="username" class="pass-text-input pass-text-input-userName" autocomplete="off" value="" placeholder="手机/邮箱/用户名/糯米帐号">
                             </p>
                             <br>
                             <br>

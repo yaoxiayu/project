@@ -89,16 +89,15 @@
                     background: red;
                 }
                 </style>
-                <span class="item-img">
-</span>
+                <span class="item-img"></span>
                 <div class="left-menu clearfix" id="j-catg-list">
                     <div catg-id="642" class="level-item">
                         <div class="first-level j-catg-row " data-index="0" mon="area=catg_642">
                             <dl>
                                 <dt class="title">
-                                    <a href="//t.nuomi.com" mon="element=酒店" target="_top">
-                        酒店
-                    </a>
+                                    <a href="/food/?industry_id=1" mon="element=酒店" target="_top">
+                                        酒店
+                                    </a>
                                 </dt>
                             </dl>
                         </div>
@@ -108,8 +107,8 @@
                             <dl>
                                 <dt class="title">
                                     <a href="https://lvyou.baidu.com/" mon="element=旅游" target="_top">
-                        旅游
-                    </a>
+                                        旅游
+                                    </a>
                                 </dt>
                             </dl>
                         </div>
@@ -119,8 +118,8 @@
                             <dl>
                                 <dt class="title">
                                     <a href="//dianying.nuomi.com?cityId=131" mon="element=电影" target="_top">
-                        电影
-                    </a>
+                                        电影
+                                    </a>
                                 </dt>
                             </dl>
                         </div>
@@ -130,8 +129,8 @@
                             <dl>
                                 <dt class="title">
                                     <a href="//bj.nuomi.com/320" mon="element=休闲娱乐" target="_top">
-                        休闲娱乐
-                    </a>
+                                        休闲娱乐
+                                    </a>
                                 </dt>
                             </dl>
                         </div>
@@ -141,8 +140,8 @@
                             <dl>
                                 <dt class="title">
                                     <a href="//bj.nuomi.com/pcindex/dipin#/list/565" mon="element=结婚" target="_top">
-                        结婚
-                    </a>
+                                        结婚
+                                    </a>
                                 </dt>
                             </dl>
                         </div>
@@ -152,8 +151,8 @@
                             <dl>
                                 <dt class="title">
                                     <a href="//bj.nuomi.com/316" mon="element=生活服务" target="_top">
-                        生活服务
-                    </a>
+                                        生活服务
+                                    </a>
                                 </dt>
                             </dl>
                         </div>
@@ -162,9 +161,9 @@
                         <div class="first-level j-catg-row " data-index="6" mon="area=catg_326">
                             <dl>
                                 <dt class="title">
-                                    <a href="//bj.nuomi.com/326" mon="element=美食" target="_top">
-                        美食
-                    </a>
+                                    <a href="/food/?industry_id=1" mon="element=美食" target="_top">
+                                        美食
+                                    </a>
                                 </dt>
                             </dl>
                         </div>
@@ -174,8 +173,8 @@
                             <dl>
                                 <dt class="title">
                                     <a href="//bj.nuomi.com/955" mon="element=丽人" target="_top">
-                        丽人
-                    </a>
+                                        丽人
+                                    </a>
                                 </dt>
                             </dl>
                         </div>
@@ -183,20 +182,20 @@
                 </div>
                 <li class="nav-item nav-item-first">
                     <a class="item first new-item" href="//www.nuomi.com" mon="element=首页" target="_top">
-        首页
-    </a>
+                        首页
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="item new-item " href="//t.nuomi.com" mon="element=酒店" target="_top">
-        酒店
-    </a>
+                        酒店
+                    </a>
                 </li>
                 <li class="nav-item item-dropdown">
                     <div class="item new-item">
                         出行
                     </div>
                     <i class="item-icon-arrowdown">
-    </i>
+                </i>
                     <ul class="item-arrowdown-container">
                         <div class="drop-block">
                         </div>
@@ -997,7 +996,7 @@
 <script type="text/javascript ">
     !function(){require.async(['common:widget/static/init.js'], function(init){});}();
 !function(){    F.context('staticController').run(function (data, tools) {
-        //   
+        //
             });
 }();
 !function(){        F.context('staticController').run(function () {
@@ -1012,8 +1011,8 @@
     }();
 !function(){F.context('staticController').run(function () {require.async(['common:widget/new_header/nav/nav.js'], function (Nav) {var nav = new Nav({selectedClass: 'selected',container:'#j-catg',navContainerClass:'all-cate',navClass:'j-catg-row'});});});}();
 !function(){        F.context({
-            isHotCity: '', // 
-            isIndex: '1', // 
+            isHotCity: '', //
+            isIndex: '1', //
             erweimaCurrentTime: new Date(1536236659 * 1000)
                 });
         F.context('staticController').run(function () {
@@ -1086,12 +1085,12 @@
                 });
             }
         })(
-            // 
+            //
             {"staticData ":{"page ":"index_new "},"dynamicData ":{"logInfoExt ":[]}}
         );
 
         function handleBaiduid(){
-            // 
+            //
             var getBaiduidUrl = '//nuomipassport.baidu.com/getbdid';
             var retryCount = 1;
             getBaiduid();

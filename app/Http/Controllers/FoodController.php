@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Shopping;
 class FoodController extends Controller
 {
     /**
@@ -14,7 +14,10 @@ class FoodController extends Controller
     public function index()
     {
         //
-        return view('home.food.index');
+        $shopping = Shopping::orderBy('id','desc')
+        ->where('name', 'like' , '%'.request()->keywords.'%')
+        ->paginate(15);
+        return view('home.food.index',compact('shopping'));
     }
 
     /**

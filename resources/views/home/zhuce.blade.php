@@ -1,61 +1,212 @@
-<!DOCTYPE html>
-<html>
-<!--STATUS OK-->
+<!doctype html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="百度帐号是登录所有百度系产品的通行证，登录后还可以在帐户管理页管理/修改您的个人信息，包括修改密码、绑定手机、身份认证等">
-    <title>
-        注册百度帐号
-    </title>
-    <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon" />
-    <link rel="icon" sizes="any" mask href="https://www.baidu.com/img/baidu.svg">
-    <script type="text/javascript">
-    window.wpo = { start: new Date * 1, pid: 109, page: 'passport' };
-    var _hmt = _hmt || [];
-    </script>
-    <link href="/zhuce/static/css/base.css" type="text/css" rel="stylesheet" />
-    <link href="/zhuce/static/css/ui.css" type="text/css" rel="stylesheet" />
-    <link href="/zhuce/static/css/boot_reg_a416b96.css" type="text/css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title> 黑米</title>
+    <meta name="keywords" content="黑米">
+    <meta name="content" content="黑米">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <link type="text/css" rel="stylesheet" href="/zhuce/css/login.css">
+    <script type="text/javascript" src="/zhuce/js/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-validate/1.9.0/localization/messages_cn.min.js"></script>
 </head>
 
-<body>
-    <div id="wrapper" class="">
-        <div id="head">
-            <div class="mod-header">
-                <a href="http://www.baidu.com/"><img src="/zhuce/static/picture/baidu.gif" alt="logo"></a>
-            </div>
-        </div>
-        <div id="nav">
-            <div class="nav-2">
-                <div class="mod-nav clearfix">
-                    <h1 class="page-type-notab"></h1>
+<body class="login_bj">
+    <div class="zhuce_body">
+        <div class="logo"><a href="#"></a></div>
+        <div class="zhuce_kong">
+            <div class="zc">
+                <div class="bj_bai" style="height:450px;">
+                    <h3>欢迎注册</h3>
+                    <form action="/home/zhuce" method="post">
+                        <input name="username" type="text" class="kuang_txt phone" placeholder="用户名" style="width:270px;"><span class="remind"></span>
+                        <input name="password" type="password" class="kuang_txt email" placeholder="密码" style="width:270px;"><span class="remind"></span>
+                        <input name="repassword" type="password" class="kuang_txt email" placeholder="确认密码" style="width:270px;"><span class="remind"></span>
+                        <input name="phone" type="text" class="kuang_txt possword" placeholder="手机号" style="width:270px;"><span class="remind"></span><br><br>
+
+                         {{csrf_field()}}
+                        <input type="submit" class="btn_zhuce" value="注册">
+                        <!-- <button class="btn_zhuce" value="注册">注册</button> -->
+                    </form>
+
+                     </div>
+                    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+                    <script>
+                    /**
+                                1. 布局
+                                2. 绑定事件
+                                    获得焦点
+                                    丧失焦点事件
+                                    表单提交事件
+                            */
+                    var CUSER = false;
+                    var CPHONE = false;
+                    var CPASS = false;
+                    var CREPASS = false;
+
+
+                    //用户名
+                    $('input[name=username]').focus(function() {
+                        //边框颜色
+                        $(this).addClass('active');
+                        //提示语显示
+                        $(this).next().show().html('输入8~18位字母数字下划线');
+                    }).blur(function() {
+                        //移出激活状态的class active
+                        $(this).removeClass('active');
+                        //正则判断
+                        var v = $(this).val();
+                        //声明正则
+                        var reg = /^\w{8,18}$/;
+                        //判断
+                        if (!reg.test(v)) {
+                            //边框
+                            $(this).addClass('error');
+                            //文字提醒
+                            $(this).next().html('<span style="color:red">格式不正确</span>').show();
+                            CUSER = false;
+                        } else {
+                            var input = $(this);
+                            //发送 AJAX 请求检测用户名是否已经存在
+                            // $.post('./check-user-exists.php', {username: v}, function(data){
+                            // })
+
+                            $.ajax({
+                                url: '/check-user-exists.php',
+                                type: 'post',
+                                data: { username: v },
+                                success: function(data) {
+                                    if (data != '1') {
+                                        //边框
+                                        input.addClass('error');
+                                        //文字提醒
+                                        input.next().html('<span style="color:red">该用户名太受欢迎, 请换一个!!</span>').show();
+                                        CUSER = false;
+                                    } else {
+                                        input.removeClass('error');
+                                        input.next().html('<span style="color:green;font-size:16px;font-weight:bold">&nbsp;&nbsp;√</span>').show();
+                                        CUSER = true;
+                                    }
+                                },
+                                async: false
+                            })
+
+
+
+                        }
+                    })
+
+                   
+
+                    //密码
+                    $('input[name=password]').focus(function() {
+                        //边框颜色
+                        $(this).addClass('active');
+                        //提示语显示
+                        $(this).next().show().html('6~20非空白字符');
+                    }).blur(function() {
+                        $(this).removeClass('active');
+                        //获取用户的输入值
+                        var v = $(this).val();
+                        //正则
+                        var reg = /^\S{6,20}$/;
+
+                        if (!reg.test(v)) {
+                            //边框
+                            $(this).addClass('error');
+                            //文字提醒
+                            $(this).next().html('<span style="color:red">格式不正确</span>').show();
+                            CPASS = false;
+                        } else {
+                            //边框
+                            $(this).removeClass('error');
+                            //文字提醒
+                            $(this).next().html('<span style="color:green;font-size:16px;font-weight:bold">&nbsp;&nbsp;√</span>').show();
+                            CPASS = true;
+
+                        }
+                    })
+
+                    //确认密码
+                    $('input[name=repassword]').focus(function() {
+                        //边框颜色
+                        $(this).addClass('active');
+                        //提示语显示
+                        $(this).next().show().html('再次输入密码');
+                    }).blur(function() {
+                        $(this).removeClass('active');
+                        //获取用户的输入值
+                        var v = $(this).val();
+
+                        if (v != $('input[name=password]').val()) {
+                            //边框
+                            $(this).addClass('error');
+                            //文字提醒
+                            $(this).next().html('<span style="color:red">两次密码不一致</span>').show();
+                            CREPASS = false;
+                        } else {
+                            //边框
+                            $(this).removeClass('error');
+                            //文字提醒
+                            $(this).next().html('<span style="color:green;font-size:16px;font-weight:bold">&nbsp;&nbsp;√</span>').show();
+                            CREPASS = true;
+
+                        }
+                    })
+                    //手机号
+                    $('input[name=phone]').focus(function() {
+                        //边框颜色
+                        $(this).addClass('active');
+                        //提示语显示
+                        $(this).next().show().html('输入您的手机号');
+                    }).blur(function() {
+                        $(this).removeClass('active');
+                        //获取用户的输入值
+                        var v = $('input[name=phone]').val();
+                        //正则
+                        var reg = /^1\d{10}$/;
+                        if (!reg.test(v)) {
+                            //边框
+                            $(this).addClass('error');
+                            //文字提醒
+                            $(this).next().html('<span style="color:red">格式不正确</span>').show();
+                            CPHONE = false;
+                        } else {
+                            //边框
+                            $(this).removeClass('error');
+                            //文字提醒
+                            $(this).next().html('<span style="color:green;font-size:16px;font-weight:bold">&nbsp;&nbsp;√</span>').show();
+                            CPHONE = true;
+
+                        }
+                    })
+                    //表单的提交事件
+                    $('form').submit(function() {
+                        
+                        //触发错误提醒
+                        $('input').trigger('blur');
+                        //console.log(CUSER);
+                        //判断输入值是否都正确
+                        if (CUSER && CPASS && CPHONE && CREPASS) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+                    </script>
+               
+                <div class="bj_right" style="height:450px;">
+                    <p>使用以下账号直接登录</p>
+                    <a href="/home/zhuce" class="zhuce_qq">QQ注册</a>
+                    <a href="/home/zhuce" class="zhuce_wb">微博注册</a>
+                    <a href="/home/zhuce" class="zhuce_wx">微信注册</a>
+                    <p>已有账号？<a href="/login">立即登录</a></p>
                 </div>
             </div>
-        </div>
-        <div id="content">
-            <div class="mod-reg clearfix mod-reg-pink">
-                <div class="reg-content" id="reg_content"></div>
-                <div class="reg-sms">
-                    <h3 class="reg-sms-title">手机快速注册</h3>
-                    <div class="reg-sms-content">
-                        <p class="reg-sms-p reg-sms-p-text">请使用中国大陆手机号，编辑短信：</p>
-                        <p class="reg-sms-p reg-sms-p-warn">6-14位字符（支持数字/字母/符号）</p>
-                        <p class="reg-sms-p reg-sms-p-text">作为登录密码，发送至：</p>
-                        <p class="reg-sms-p reg-sms-p-warn">1069 0691 036590</p>
-                        <p class="reg-sms-p reg-sms-p-last">即可注册成功，手机号即为登录帐号。</p>
-                        <p class="reg-sms-qrcode">
-                            <img src="/zhuce/static/picture/upreg.png" />
-                            <br/>
-                            <span>请使用手机百度进行扫码</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="login-link" id="login_link">
-                    <span>我已注册，现在就</span>
-                    <button class="login-btn" id="login_btn">登录</button>
-                </div>
-            </div>
+
             <input type="hidden" value="nuomi" id="jsProduct" />
             <input type="hidden" value="" id="jsU" />
             <input type="hidden" value="pink" id="jsColor" />
@@ -132,6 +283,10 @@
     <script type="text/javascript">
     wpo.tti = new Date * 1;
     </script>
+
+        </div>
+    </div>
+
 </body>
 
 </html>
