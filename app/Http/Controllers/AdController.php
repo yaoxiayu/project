@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Link;
 use Illuminate\Http\Request;
-use phpDocumentor\Reflection\DocBlock\Tags\Link;
-
-class LinkController extends Controller
+use App\Ad;
+class AdController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,12 +13,10 @@ class LinkController extends Controller
      */
     public function index()
     {
-
-        $links = Link::orderBy('id','desc')
-        ->where('name','like','%'.request()->keywords.'%')
-        ->get();
-        
-       return view('admin.link.index',['links'=>$links]);
+        $ads = Ad::orderBy('id','desc')
+            ->paginate(1);
+        //解析模板显示用户数据
+        return view('admin.ad.index', compact('ads'));
     }
 
     /**
@@ -30,9 +26,7 @@ class LinkController extends Controller
      */
     public function create()
     {
-        
-        return view('admin.link.create');
-
+        return view('admin.ad.create');
     }
 
     /**
@@ -43,14 +37,21 @@ class LinkController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $link = new Link;
-        $link -> name = $request ->name;
-        $link -> url = $request ->url;
-        // dd($link);
-
-        if($link -> save()){
-          return redirect('/link')->with('success','添加成功');
+        $ad = new Ad;
+        $ad -> name = $request->name;
+        // dd($request->hasFile('img'));
+         //文件上传
+        if ($request->hasFile('img')) {
+            $ad-> img = '/'.$request->img->store('uploads/'.date('Ymd'));
+        }
+        // $user -> save();
+    
+        if($ad -> save()){
+            try{
+                return redirect('/ad')->with('success', '添加成功');
+            }catch(\Exception $e){
+                return back()->with('error','添加失败');
+            }
         }else{
             return back()->with('error','添加失败');
         }
@@ -75,12 +76,8 @@ class LinkController extends Controller
      */
     public function edit($id)
     {
-        
-        $link = Link::FindOrFail($id);
-        //dd($link);
-
-        return view('admin.link.edit',['link'=>$link]);
-
+        $ad = Ad::findOrFail($id); 
+        return view('admin.ad.edit',compact('ad'));
     }
 
     /**
@@ -92,15 +89,24 @@ class LinkController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $res = Link::findOrFail($id);
+        //更新数据
+        $ad = Ad::findOrFail($id);
 
-        $res-> name = $request->name;
-        $res-> url = $request->url;
-       
-        if($res -> save()){
-            return redirect('/link')->with('success','更新成功');
+        $ad -> name = $request->name;
+        //文件上传
+        if ($request->hasFile('img')) {
+            $ad->img = '/'.$request->img->store('uploads/'.date('Ymd'));
+        }
+
+        //插入
+        if($ad -> save()){
+            try{
+                return redirect('/ad')->with('success', '修改成功');
+            }catch(\Exception $e){
+                return back()->with('error','修改失败');
+            }
         }else{
-            return back()->with('error','更新失败');
+            return back()->with('error','修改失败');
         }
     }
 
@@ -112,10 +118,12 @@ class LinkController extends Controller
      */
     public function destroy($id)
     {
-        $link = Link::destroy($id);
-       
-        if($link){
+        $ad = Ad::findOrFail($id);
+
+        if($ad->delete()){
             return back()->with('success','删除成功');
+        }else{
+            return back()->with('success','删除失败');
         }
     }
 }

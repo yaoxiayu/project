@@ -8,22 +8,18 @@
                     margin: 0;
                     padding: 0;
                 }
-
                 li {
                     list-style: none;
                 }
-
                 .solid {
                     width: 717px;
                     height: 372px;
                     margin: 0px auto 0;
                     box-shadow: 1px 7px 25px #fd8fd9;
                 }
-
                 .solid ul {
                     height: 100%;
                 }
-
                 .solid ul li {
                     position: relative;
                     float: left;
@@ -31,37 +27,31 @@
                     transform-style: preserve-3d;
                     transform: translateZ(-180px);
                 }
-
                 .solid ul li div {
                     position: absolute;
                     width: 100%;
                     height: 80%;
                 }
-
                 .solid ul li div:nth-child(1) {
                     top: -360px;
                     background: url('./lunbo/img/02.jpg');
                     transform-origin: bottom;
                     transform: translateZ(180px) rotateX(90deg);
                 }
-
                 .solid ul li div:nth-child(2) {
                     top: 360px;
                     background: url('./lunbo/img/01.jpg');
                     transform-origin: top;
                     transform: translateZ(180px) rotateX(-90deg);
                 }
-
                 .solid ul li div:nth-child(3) {
                     background: url('./lunbo/img/03.jpg');
                     transform: translateZ(180px);
                 }
-
                 .solid ul li div:nth-child(4) {
                     background: url('./lunbo/img/04.jpg');
                     transform: translateZ(-180px) rotateX(180deg);
                 }
-
                 .solid ol {
                     position: absolute;
                     left: 50%;
@@ -71,7 +61,6 @@
                     display: flex;
                     justify-content: space-around;
                 }
-
                 .solid ol li {
                     width: 20px;
                     height: 20px;
@@ -84,7 +73,6 @@
                     font: italic 12px/20px 'Microsoft Yahei';
                     cursor: pointer;
                 }
-
                 .solid ol li.on {
                     background: red;
                 }
@@ -851,7 +839,7 @@
                             <div class="searchbtn-wrap ">
                                 <input class="searchbtn " id="j-topSearchBtn " mon="element=search_button " type="submit " value=" "/>
                                 <span class="search-text ">
-                                    搜 索
+                                    搜 索
                                 </span>
                                 <div class="btn-shadow ">
                                 </div>
@@ -947,10 +935,10 @@
                 </h3>
                 <ul>
                     <li>
-                        周一至周日 9:00-22:00
+                        周一至周日 9:00-22:00
                     </li>
                     <li>
-                        客服电话 免长途费
+                        客服电话 免长途费
                     </li>
                 </ul>
                 <a class="mobile-btn " href="//d.nuomi.com/inter/group?from=WebRootWord ">
@@ -1049,23 +1037,18 @@
 }();
 !function(){F.context('staticController').run(function (data, tools) {
     var isStatic = this.isStatic;
-
     $.ajaxSetup({
         cache : false
     });
-
     //2014_10_11 zhangyijun02: 因增加广告轮播曝光日志逻辑，调整showtrack初始化方式
     require.async(['common:widget/ui/usertrack/usertrack.js', 'common:widget/ui/sidlog/pclog.js', 'common:widget/ui/lazyload/lazyload.js', 'common:widget/ui/cookie/cookie.js', 'common:widget/ui/showtrack/showtrack.js', 'common:widget/ui/items_post/items_post.js'], function(usertrack, pclog, LazyLoad, Cookie, ShowTrack, itemsPost){
         // 初始化点击监听
         usertrack.init();
-
         new LazyLoad({
             lazy : $('img[data-original]'),
             expect: 250
         });
-
         itemsPost.init();
-
         var sendPv = (function (smartyData) {
             return function () {
                 var logInfoExt = isStatic
@@ -1076,7 +1059,6 @@
                     : {};
                 logInfoExt.page = smartyData.staticData.page;
                 pclog.sendPv(logInfoExt);
-
                 usertrack.send({
                     da_src: encodeURIComponent($.stringify({
                         page: smartyData.staticData.page
@@ -1088,13 +1070,11 @@
             //
             {"staticData ":{"page ":"index_new "},"dynamicData ":{"logInfoExt ":[]}}
         );
-
         function handleBaiduid(){
             //
             var getBaiduidUrl = '//nuomipassport.baidu.com/getbdid';
             var retryCount = 1;
             getBaiduid();
-
             function getBaiduid(){
                 $.ajax(getBaiduidUrl, {
                     dataType : 'jsonp',
@@ -1118,14 +1098,11 @@
                 });
             }
         }
-
         handleBaiduid();
-
         //2014_10_11 zhangyijun02: 因增加广告轮播曝光日志逻辑，调整ShowTrack初始化方式
         //曝光日志统计
         ShowTrack.startShowTrack();
     });
-
 });}();
 !function(){        require.async("common:widget/ui/httpslink/httpslink.js ", function (httpslink) {
             httpslink.init();

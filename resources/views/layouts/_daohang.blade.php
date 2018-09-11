@@ -9,7 +9,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="//www.nuomi.com/static/common/img/favicon.ico">
+   
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit">
     <meta name="baidu_ssp_verify" content="8541ea43669332b498d0d46a88e31c5c">
@@ -27,7 +27,7 @@
     <script>
     F.context('staticController').init && F.context('staticController').init(!!'', !!'', !!'', null, '');
     </script>
-    <title>【百度糯米】高品质生活服务网站！</title>
+    <title>【温代】高品质生活服务网站！</title>
     <meta name="description" content="百度糯米，中国领先的互联网本地生活服务平台，精选美食、电影、旅游、酒店、KTV、丽人、结婚、休闲娱乐，及鲜花、汽车、机票火车票等优享服务。一起百度糯米，惠享品质生活！！" />
     <meta name="keywords" content="百度糯米,本地生活服务,美食,电影,旅游,酒店,KTV">
     <script>
@@ -135,7 +135,7 @@
     F.context("coupon_url", "//www.nuomi.com/uc/giftcard/find?status=1"); //
     </script>
     <div class="search-bar clearfix flexible static-hook-real static-hook-id-2" mon="area=searchTop">
-        <div class="logo-area"><a href="//www.nuomi.com" class="logo" mon="element=logo" title="百度糯米"><img class="fix-new-logo" src="/home/static/picture/re-logo_7c90a10.png"></a>
+        <div class="logo-area"><a href="//www.nuomi.com" class="logo" mon="element=logo" title="百度糯米"><img class="fix-new-logo" src="/home/static/picture/logo.png"></a>
             <div class="city-wrap"><span class="city-pos"></span><span>北京</span><span class="arrow-down-line"></span>
                 <div class="city-drop-down">
                     <div class="drop-block"></div>
@@ -165,7 +165,7 @@
         <div class="search-area clearfix" >
             <div data-ui-id="main-searcher" class="form-wrap clearfix">
                 <form method="get" action="//bj.nuomi.com/search" id="j-searchForm" >
-                    <input type="text" id="j-searchInput" class="searchinput" name="k" value="" data-placeholder="" placeholder="搜索商家/地点" autocomplete="off" mon="element=search_input" style="" />
+                    <input type="text" id="j-searchInput" class="searchinput" name="keywords" value="" data-placeholder="" placeholder="搜索商家/地点" autocomplete="off" mon="element=search_input" style="" />
                     <div class="searchbtn-wrap">
                         <input type="submit" class="searchbtn" id="j-searchBtn" value="" mon="element=search_button" /><span class="search-text">搜&nbsp;索</span>
                         <div class="btn-shadow"></div>
