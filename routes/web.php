@@ -77,7 +77,7 @@ Route::resource('order','OrderController');
 //友情链接
 Route::resource('link','LinkController');
 
-//友情链接
+//广告管理
 Route::resource('ad','AdController');
 
 

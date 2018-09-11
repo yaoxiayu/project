@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Link;
+use Illuminate\Http\Request;
+use phpDocumentor\Reflection\DocBlock\Tags\Link;
 
 class LinkController extends Controller
 {
@@ -16,15 +17,10 @@ class LinkController extends Controller
     {
 
         $links = Link::orderBy('id','desc')
-       ->where('name','like','%'.request()->keywords.'%')
+        ->where('name','like','%'.request()->keywords.'%')
         ->get();
         
        return view('admin.link.index',['links'=>$links]);
-
-           
-
-
-        
     }
 
     /**

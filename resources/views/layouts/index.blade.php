@@ -238,7 +238,7 @@
                     <span class="menu-text"></span>
                 </a> @include('layouts._menu')
 
-                 @include('layouts._session')
+                 
             <div class="main-content">
 
 

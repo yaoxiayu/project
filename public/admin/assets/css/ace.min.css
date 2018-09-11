@@ -1,4 +1,4 @@
-
+﻿
 body.navbar-fixed{padding-top: 75px;}
 body.breadcrumbs-fixed{padding-top: 116px;}
 .main-container{position: relative; padding: 0;width:100%}
@@ -1454,7 +1454,6 @@ blockquote,blockquote.pull-right
   padding-right: 0;
   min-height: 60px;
   position: relative;
-  background: #438eb9;
 }
 
 .navbar>.container
