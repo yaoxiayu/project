@@ -16,25 +16,17 @@
             <div style="margin:50px 300px">
                 <form class="am-form tpl-form-line-form" method="post" action="/zhanghu/{{$user['id']}}"  enctype="multipart/form-data">
                   
-	
+	               
                     <div class="am-form-group">
-                            <p style="font-size: 18px">输入您的新手机号</p><input type="text" name="phone"  placeholder="" value="{{$user->phone}}" style="width: 190px;height:30px" class="form-control" id="exampleInputEmail1" >
+                            <p style="font-size: 18px">输入您的用户名</p>
+                                
+                            <input type="text" name="username"  placeholder="" value="{{$user->username}}" style="width: 490px;height:30px" class="form-control" id="exampleInputEmail1" >
+                    </div>
+                    
+                    <div class="am-form-group">
+                            <p style="font-size: 18px">输入您的新手机号</p><input type="text" name="phone"  placeholder="" value="{{$user->phone}}" style="width: 490px;height:30px" class="form-control" id="exampleInputEmail1" >
                     </div>
 					
-					<div class="am-form-group">
-                        <p style="font-size: 18px;margin-top: 15px">地址</p>
-                        <div class="am-u-sm-9" >
-                            <div class="info">
-                                <div data-toggle="distpicker">
-                                    <select class="form-control" id="province2" data-province="{{$asd[0]}}" name="s_province" style="margin-top: 5px;width: 190px"></select>
-                                    <select class="form-control" id="city2" data-city="{{$asd[1]}}" name="s_city" style="margin-top: 5px;width: 190px"></select>
-                                    <select class="form-control" id="district2" data-district="{{$asd[2]}}" name="s_county" style="margin-top: 5px;width: 190px"></select>
-				                         <input type="text" name="address" placeholder="" value="{{$user->phone}}" style="width: 190px;height:25px;margin-top: 5px"  class="form-control" id="exampleInputEmail1" >
-                                </div>
-                            <div id="show"></div>
-                            </div>
-                        </div>
-                    </div>
 					
                     {{method_field('PUT')}}
 					{{csrf_field()}}

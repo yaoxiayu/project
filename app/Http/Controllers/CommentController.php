@@ -130,4 +130,15 @@ class CommentController extends Controller
             return back()->with('error','删除失败!');
         }
     }
+    
+    public function shanchu($id)
+    {
+         $comment = Comment::findOrFail($id);
+
+        if($comment->delete()){
+            return back()->with('success','删除成功');
+        }else{
+            return back()->with('error','删除失败!');
+        }
+    }
 }

@@ -95,8 +95,10 @@ Route::resource('hcomment','HcommentController');
 //账户设置
 Route::resource('zhanghu','ZhanghuController');
 //购物车
-Route::get('/shopcar','HomeController@show');
-
-
+Route::get('/shopcart','HomeController@show');
+//订单删除
+Route::get('/order/delete/{id}','OrderController@shanchu');
+//评价删除
+Route::get('/hcomment/delete/{id}','CommentController@shanchu');
 
 Route::resource('administrator','AdministratorController');
