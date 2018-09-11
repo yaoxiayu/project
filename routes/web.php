@@ -116,3 +116,5 @@ Route::resource('administrator','AdministratorController');
 
 //商家首页
 Route::get('/shangjia','BusinessController@index');
+//订单修改
+Route::get('/order/gai/{id}','OrderController@gai');
