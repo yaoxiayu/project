@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Order;
 use App\Shopping;
+use App\Shopuser;
+use App\Comment;
+use Illuminate\Http\Request;
 class FoodController extends Controller
 {
     /**
@@ -14,10 +17,15 @@ class FoodController extends Controller
     public function index()
     {
         //
-        $shopping = Shopping::orderBy('id','desc')
+       $shopuser = Shopuser::all();
+        $order = Order::all();
+        $shopping = Shopping::all();
+        $comment = Comment::all();
+        $shopuser = Shopuser::orderBy('id','desc')
         ->where('name', 'like' , '%'.request()->keywords.'%')
-        ->paginate(15);
-        return view('home.food.index',compact('shopping'));
+        ->paginate(1);
+
+        return view('home.food.index',compact('shopping','shopuser','order','comment'));
     }
 
     /**
@@ -27,8 +35,7 @@ class FoodController extends Controller
      */
     public function create()
     {
-        return view('home.food.create');
-
+       
     }
 
     /**
@@ -85,5 +92,21 @@ class FoodController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+     public function shopuser($id)
+    {   
+        
+        $shopuser = Shopuser::find($id);
+        $shopping = Shopping::all();
+        $comment = Comment::all();
+        return view('home.food.shopuser',compact('shopuser','shopping','comment'));
+    }
+
+    public function shopping($id)
+    {   
+
+        $shopping = Shopping::find($id);
+        return view('home.food.shopping',compact('shopping'));
     }
 }

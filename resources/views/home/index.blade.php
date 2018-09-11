@@ -1,4 +1,4 @@
-@include('layouts._daohang')
+﻿@include('layouts._daohang')
 <div class="nav-bar-header nav-area-index static-hook-real static-hook-id-3">
     <div class="nav-inner flexible clearfix">
         <ul class="nav-list clearfix" mon="area=nav&element_type=nav" id="j-catg">
@@ -241,7 +241,7 @@
                 </li>
                 <div class="container clearfix flexible">
                     <div class="re-top-content">
-                        <div class="mid-area-re">
+                        <div class="mid-area-re" style="float:left;margin-top:12px;">
                             <!--  <a href="http://zhaopin.baidu.com/" target="_blank">
                 <img src="/home/static/picture/banner_21ada6c.jpg"/>
             </a> -->
