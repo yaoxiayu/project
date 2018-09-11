@@ -13,4 +13,8 @@ class shopUser extends Model
     {
     	return $this->belongsTo('App\Industry');
     }
+		public function tag()
+		{
+			return $this->belongsToMany('App\Tag');
+		}
 }

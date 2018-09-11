@@ -40,19 +40,20 @@
 
 
 
-					<div class="am-form-group">
+					          <div class="am-form-group">
                         <label for="user-name" class="am-u-sm-3 am-form-label">商家ID <span class="tpl-form-line-small-title"></span></label>
                         <div class="am-u-sm-9">
                             <select name="shopUser_id">
                                 @foreach($shopUser as $v)
-								<option value="{{$v['id']}}">{{$v['name']}}</option>
+								                        <option value="{{$v['id']}}">{{$v['name']}}</option>
                                 @endforeach
                             </select>
 
                         </div>
                     </div>
 
-					<div class="am-form-group">
+
+					         <div class="am-form-group">
                         <label for="user-weibo" class="am-u-sm-3 am-form-label">主图</label>
                         <div class="am-u-sm-9">
                             <div class="am-form-group am-form-file">

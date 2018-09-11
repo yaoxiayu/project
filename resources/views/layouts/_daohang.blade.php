@@ -104,7 +104,8 @@
                 <li class="welcome-text"><span class="welcome-tag" id="j-welcomeTag">Hi，欢迎来到百度糯米</span></li>
                 <li class="login"><a href="/login" id="j-barLoginBtn" class="pad-left">请登录</a></li>
                 <li class="reg"><a href="/home/zhuce" class="pad-left">免费注册</a></li>
-                @endif @if(Session::has('username'))
+                @endif 
+                @if(Session::has('username'))
                 <li class="welcome-text"><span class="welcome-tag" id="j-welcomeTag">Hi，{{Session::get('username')}}</span></li>
                 <li class="reg"><a href="/logoutt" class="pad-left">退出</a></li> @endif
             </ul>
@@ -120,7 +121,7 @@
                     <div class="header-dropmenu">
                         <div class="drop-block"></div><a class="img" href="//d.nuomi.com/?1009764s" target="_blank">二维码</a></div>
                 </li>
-                <li class="j-bar-dropdown"><a href="#" class="pad-right"><span>我是商家</span><span class="arrow-down-logo"></span></a><span class="sep-lines"></span>
+                <li class="j-bar-dropdown"><a href="/shangjia" class="pad-right"><span>我是商家</span><span class="arrow-down-logo"></span></a><span class="sep-lines"></span>
                     <div class="merchant-list header-dropmenu">
                         <div class="drop-block"></div><a href="http://y.nuomi.com" class="link" target="_blank">商户中心</a><a href="https://mct.y.nuomi.com/sc/pc/guide/guideFlow?page=true" class="link" target="_blank">我想合作</a></div>
                 </li>
@@ -161,10 +162,10 @@
                     </ul><a href="//www.nuomi.com/changecity" class="link morelink">更多城市 &gt;</a></div>
             </div>
         </div>
-        <div class="search-area clearfix">
+        <div class="search-area clearfix" >
             <div data-ui-id="main-searcher" class="form-wrap clearfix">
-                <form method="get" action="//bj.nuomi.com/search" id="j-searchForm">
-                    <input type="text" id="j-searchInput" class="searchinput" name="k" value="" data-placeholder="" placeholder="搜索商家/地点" autocomplete="off" mon="element=search_input" />
+                <form method="get" action="//bj.nuomi.com/search" id="j-searchForm" >
+                    <input type="text" id="j-searchInput" class="searchinput" name="k" value="" data-placeholder="" placeholder="搜索商家/地点" autocomplete="off" mon="element=search_input" style="" />
                     <div class="searchbtn-wrap">
                         <input type="submit" class="searchbtn" id="j-searchBtn" value="" mon="element=search_button" /><span class="search-text">搜&nbsp;索</span>
                         <div class="btn-shadow"></div>

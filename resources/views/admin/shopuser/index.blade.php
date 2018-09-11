@@ -1,7 +1,7 @@
 ﻿@extends('layouts.index')
 @section('content')
 <hr>
-@include('layouts._head')    
+@include('layouts._head')
 <div class="tpl-portlet-components">
     <div class="portlet-title">
         <div class="caption font-green bold">
@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="am-u-sm-12 am-u-md-3">
             	<form action="shopuser" method="get">
                 <div class="am-input-group am-input-group-sm">
@@ -33,7 +33,7 @@
         </div>
         <div class="am-g">
             <div class="am-u-sm-12">
-                
+
                     <table class="am-table am-table-striped am-table-hover table-main">
                         <thead>
                             <tr>
@@ -41,8 +41,8 @@
                                     <input type="checkbox" class="tpl-table-fz-check">
                                 </th>
                                 <th class="table-id">ID</th>
-                                <th class="table-title">商家</th>
-                                <th class="table-title">商家名称</th>
+                                <th class="table-title">店铺名称</th>
+                                <th class="table-title">商家用户名</th>
                                 <th class="table-title">商家行业</th>
                                 <th class="table-title">商家头像</th>
                                 <th class="table-title">商家手机</th>
@@ -69,10 +69,10 @@
                                 <td>
                                     <div class="am-btn-toolbar">
                                         <div class="am-btn-group am-btn-group-xs">
-                                            
+
                                             <a href="/shopuser/{{$v['id']}}/edit" class="am-btn am-btn-default am-btn-xs am-text-secondary" style="float:left"><span class="am-icon-pencil-square-o"></span> 编辑</a>
 
-                                            <form action="/shopuser/{{$v['id']}}" method="post" style="float:left">  
+                                            <form action="/shopuser/{{$v['id']}}" method="post" style="float:left">
                                                 <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
                                                 {{csrf_field()}}
                                                 {{method_field('DELETE')}}

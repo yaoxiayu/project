@@ -88,10 +88,21 @@ class OrderController extends Controller
      */
     public function destroy($id)
     {
-        $order = Order::findOrFail($id);
+        /*$order = Order::findOrFail($id);
 
         if($order->delete()){
             return back()->with('success','删除成功');
+        }else{
+            return back()->with('success','删除失败');
+        }*/
+    }
+
+    public function shanchu($id)
+    {
+        $order = Order::findOrFail($id);
+
+        if($order->delete()){
+            return redirect('/shopcart')->with('success','删除成功');
         }else{
             return back()->with('success','删除失败');
         }

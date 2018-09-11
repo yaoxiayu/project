@@ -13,7 +13,7 @@ class ZhanghuController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //获取个人信息
         $user = User::all();
@@ -62,9 +62,8 @@ class ZhanghuController extends Controller
     public function edit($id)
     {
         $user = User::findOrFail($id); 
-        $asd = explode('-', $user->address);
         $order = Order::all();
-        return view('home.person.zhanghuedit',compact('user','asd','order'));
+        return view('home.person.zhanghuedit',compact('user','order'));
     }
 
     /**
@@ -79,9 +78,11 @@ class ZhanghuController extends Controller
         //更新数据
         $user = User::findOrFail($id);
 
+        $user -> username = $request -> username;
+
         $user -> phone = $request -> phone;
-   
-        $user -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request-> address;
+        //写入session
+            session(['username'=>$user->username,'id'=>$user->id,'phone'=>$user->phone]);
         //插入
         if($user -> save()){
             try{
@@ -92,6 +93,7 @@ class ZhanghuController extends Controller
         }else{
             return back()->with('error','修改失败');
         }
+        
     }
 
     /**

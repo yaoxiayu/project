@@ -1,6 +1,7 @@
 @extends('home.person.index')
 
 @section('content')
+<script type="text/javascript" src="/js/jquery.min.js"></script>
          <div class="uc-main fr">
                             <div class="w-list" id="J-orders-wrap">
                                 <table class="order-list" mon="area=orderList">
@@ -12,8 +13,9 @@
                                         <th>操作</th>
                                     </tr>
                                     <tr>
-
-                                        @foreach($order as $v)
+                                    @foreach($order as $v)
+                                   @if(Session::get('id') == $v['user_id'])
+                                        
                                         <td class="goods-info left">
                                             <div class="goods-img fl">
                                                 <img src="{{$v->shopping->img}}" title="{{$v->shopping->name}}" />
@@ -32,16 +34,20 @@
                                             @if($v['state']==1) 未使用 @elseif($v['state']==2) 已使用 @endif
                                         </td>
                                         <td class="blank-10">
-                                            <a class="btn-s btn-org" href="javascript:;" data-id="2282279537" data-target="pay" mon="element=2282279537&element_type=nav">订单退款</a>
-                                            <form action="/person/{{$v['id']}}" method="post"> 
-                                                <button style="background:RGB(217,83,79);width: 74px;color: white;border: none;margin: 2px;height: 22px">订单删除</button>
-                                                {{csrf_field()}}
-                                                {{method_field('DELETE')}}
-                                            </form>
+                                            <p class="del"><button id="del{{$v['id']}}" class="btn btn-danger">删除订单</button></p>
+                                            <script>
+                                                $('#del{{$v['id']}}').click(function()
+                                                {
+                                                    if(confirm("确定要删除吗")){
+                                                        location.href="/order/delete/{{$v['id']}}";
+                                                     }
+                                                })
+                                            </script>
                                         </td>
                                     </tr>
+                                             @endif
                                     @endforeach
-                                    
+                                   
                                 </table>
                                 <div id="J-pager" class="uc-pager" data-p="1" data-pn="20" data-total="1" data-status="all" mon="area=pageNum"></div>
                             </div>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Setting;
 use App\User;
-
+use App\Order;
 use App\Industry;
 
 use Illuminate\Contracts\Session\Session;
@@ -27,19 +27,17 @@ class HomeController extends Controller
 
 
     //注册
+
     public function zhuce(Request $request)
 
     {
 	     
         return view('home.zhuce');
-
     }
 
    public function zhucewan(Request $request)
     {
                    
-               
-
        // dd('aaa');
         $user = new User;
         $user -> username = $request->username;
@@ -76,7 +74,7 @@ class HomeController extends Controller
         //校验密码
         if(Hash::check($request->password,$user->password)){
             //写入session
-            session(['username'=>$user->username,'id'=>$user->id]);
+            session(['username'=>$user->username,'id'=>$user->id,'phone'=>$user->phone]);
             return redirect('/')->with('success','登录成功');
         }else{
              return back()->with('error','登录失败');
@@ -95,5 +93,13 @@ class HomeController extends Controller
 
 
     	 
+
+    //购物车
+    public function show()
+    {
+        $order = Order::all();
+        return view('home.gwc',compact('order'));
+    }
+
 
 }

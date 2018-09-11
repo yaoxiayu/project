@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Shopping;
 use App\ShopUser;
 use App\Industry;
+use App\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
