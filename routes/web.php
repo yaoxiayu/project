@@ -46,6 +46,7 @@ Route::get('/admin/logout','AdminController@logout');
 
 
 
+
 /**
  * 商品管理
  */
@@ -77,6 +78,10 @@ Route::resource('order','OrderController');
 //友情链接
 Route::resource('link','LinkController');
 
+//广告管理
+Route::resource('ad','AdController');
+
+
 //网站管理
 Route::get('/admin/setting','AdminController@index');
 Route::post('/admin/setting','AdminController@update');
@@ -87,7 +92,13 @@ Route::resource('administrator','AdministratorController');
 //前台首页
 Route::get('/', 'HomeController@index');
 //美食
+Route::get('/food/shopuser','FoodController@shopuser');
+// Route::get('/food/shopuser/shopping','FoodController@shopping');
 Route::resource('food', 'FoodController');
+// Route::get('/shopuser/{id}.html','FoodController@shopuser');
+Route::get('{id}.html','FoodController@shopuser');
+Route::get('/home/{id}.html','FoodController@shopping');
+
 //酒店
 Route::resource('hotel', 'HotelController');
 //娱乐

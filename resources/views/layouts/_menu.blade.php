@@ -117,7 +117,15 @@
                             </ul>
                         </li>
 						<!-- 友情链接管理 end -->
-
+                        
+                        <!-- 广告管理 start -->
+                        <li><a href="#" class="dropdown-toggle"><i class="icon-bookmark"></i><span class="menu-text"> 广告管理 </span><b class="arrow icon-angle-down"></b></a>
+                            <ul class="submenu">
+                                <li class="home"><a href="/ad" name="article_list.html" title="友情链接列表" class="iframeurl"><i class="icon-double-angle-right"></i>广告列表</a></li>
+                                <li class="home"><a href="/ad/create" name="article_list.html" title="友情链接添加" class="iframeurl"><i class="icon-double-angle-right"></i>广告添加</a></li>
+                            </ul>
+                        </li>
+                        <!-- 广告管理 end -->
 
 						<!-- 网站管理 start -->
                        <li><a href="/admin/setting" class="dropdown-toggle"><i class="icon-cogs"></i><span class="menu-text"> 网站管理 </span><b class="arrow icon-angle-down"></b></a>

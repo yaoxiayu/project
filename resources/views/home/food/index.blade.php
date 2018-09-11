@@ -406,23 +406,8 @@
                                     新品榜
                                 </a>
                             </span>
-                            <span class="filter-area" id="j-filter-area" mon="area=sort">
-                                <a class=" filter-checkbox j-filter-sort-item" href="//bj.nuomi.com/326?appointment=1#j-sort-bar" id="j-reservation" mon="element=noreservation" rel="nofollow">
-                                    <span class="filter-checkbox-ico">
-                                    </span>
-                                    免预约
-                                </a>
-                                <a class=" filter-checkbox j-filter-sort-item" href="//bj.nuomi.com/326?voucher=1#j-sort-bar" id="j-voucher" mon="element=voucher" rel="nofollow">
-                                    <span class="filter-checkbox-ico">
-                                    </span>
-                                    优惠券
-                                </a>
-                                <a class=" filter-checkbox j-filter-sort-item" href="//bj.nuomi.com/326?jingxuanpinpai=1#j-sort-bar" id="j-jingxuan" mon="element=jingxuan" rel="nofollow">
-                                    <span class="filter-checkbox-ico">
-                                    </span>
-                                    精选品牌
-                                </a>
-                            </span>
+                            
+                            
                             <div class="sortbar-right">
                                 <div class="w-search" mon="area=search&element_type=nav">
                                     <div class="search-wrap">
@@ -435,38 +420,12 @@
                                         </form>
                                     </div>
                                     <div alog-alias="bainuo-header-hot-area" alog-group="bainuo-header-hot-area" class="hot-area">
-                                        <a class="link" href="//bj.nuomi.com/search?k=%E7%BE%8A%E8%9D%8E%E5%AD%90%E7%81%AB%E9%94%85&rid=de52c9cbc93fc84b7c8f69d71b836989" mon="element=hot">
-                                            羊蝎子火锅
-                                        </a>
-                                        <a class="link" href="//bj.nuomi.com/search?k=%E5%A4%A9%E8%99%B9%E5%95%86%E5%9C%BA&rid=de52c9cbc93fc84b7c8f69d71b836989" mon="element=hot">
-                                            天虹商场
-                                        </a>
-                                        <a class="link" href="//bj.nuomi.com/search?k=%E9%92%A2%E7%90%B4&rid=de52c9cbc93fc84b7c8f69d71b836989" mon="element=hot">
-                                            钢琴
-                                        </a>
-                                        <a class="link" href="//bj.nuomi.com/search?k=%E6%8E%A8%E6%8B%BF&rid=de52c9cbc93fc84b7c8f69d71b836989" mon="element=hot">
-                                            推拿
-                                        </a>
-                                        <a class="link" href="//bj.nuomi.com/search?k=%E8%88%9E%E8%B9%88&rid=de52c9cbc93fc84b7c8f69d71b836989" mon="element=hot">
-                                            舞蹈
-                                        </a>
+                                    
                                     </div>
                                 </div>
                                 <span class="page-area" mon="area=pageNum">
-                                    <a class="prev-btn prev-disable" href="javascript:;">
-                                        <span>
-                                        </span>
-                                    </a>
-                                    <span class="page-number">
-                                        <span class="current">
-                                            1
-                                        </span>
-                                        /50
-                                    </span>
-                                    <a class="next-btn" href="//bj.nuomi.com/326-page2?#j-sort-bar" mon="element=next">
-                                        <span>
-                                        </span>
-                                    </a>
+                                    
+                                    
                                 </span>
                             </div>
                         </div>
@@ -478,28 +437,34 @@
             </script>
             <div class="content-wrap" id="j-goods-area">
                 <div alog-alias="bainuo-good-area" alog-group="bainuo-good-area" class="shop-infoo-list" data-index="1" mon="area=itemList">
-                    <ul class="shop-infoo-list-ul">
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/85493528" target="_blank">
-                                <img alt="宏状元粥店(黄寺大街店)" class="shop-infoo-list-item-img" src="/home/static/picture/8326cffc1e178a8227461227fa03738da977e83b.jpg"/>
+                <ul class="shop-infoo-list-ul">
+                        <li class="shop-infoo-list-item clearfix"> 
+                        @foreach($shopuser as $v)
+                            <a href="/{{$v['id']}}.html" target="_blank">
+                                <img alt="{{$v['name']}}" class="shop-infoo-list-item-img" src="{{$v['pic']}}"/>
                             </a>
                             <a href="//www.nuomi.com/shop/85493528" target="_blank">
                                 <h3 class="shop-infoo-list-item-title">
-                                    宏状元粥店(黄寺大街店)
+                                    {{$v['name']}}
                                 </h3>
                             </a>
+                            
                             <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/85493528" target="_blank">
+                            @foreach($comment as $vv)                       
                                     <span>
-                                        暂无评分
+                                        @if($vv['values']==1)
+                                            🌹好评
+                                        @elseif($vv['values']==2)
+                                            😫中评
+                                        @elseif($vv['values']==3)
+                                            💣差评
+                                        @endif
                                     </span>
-                                </a>
+                            @endforeach
                                 <a href="//www.nuomi.com/shop/85493528" target="_blank">
+                               
                                     <span class="shop-infoo-list-item-line-label">
-                                        暂无报价
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        安贞
+                                        {{$v->s_province}}
                                     </span>
                                 </a>
                             </p>
@@ -511,1056 +476,70 @@
                                 </span>
                             </a>
                         </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/53438408" target="_blank">
-                                <img alt="幸福西饼蛋糕(东城店)" class="shop-infoo-list-item-img" src="/home/static/picture/43a7d933c895d143176cf82a7bf082025aaf07a4.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/53438408" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    幸福西饼蛋糕(东城店)
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/53438408" target="_blank">
-                                    <span class="shop-star">
-                                        <img class="shop-star-bottom" src="/home/static/picture/shop-star-b_767a724.png">
-                                            <span class="shop-star-mask" style="width: 65.3544px;">
-                                                <img class="shop-star-mask-star" src="/home/static/picture/shop-star-o_e5d6259.png">
-                                                </img>
-                                            </span>
-                                        </img>
-                                    </span>
-                                    <span class="shop-infoo-list-color-gold" style="margin-left: 10px; font-weight: bold;">
-                                        4.5分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/53438408" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        人均 ￥75.5
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        朝阳门
-                                    </span>
-                                </a>
-                            </p>
-                            <a href="//www.nuomi.com/shop/53438408" target="_blank">
-                                <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle shop-infoo-list-color-gold">
-                                    女生喜欢,尝出幸福的味道
-                                </p>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/m00s4bmm9.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    芒果千层/榴莲千层2选1新鲜现做，需提前3-5小时预约，免费配送上门，需预约，免费配送！
-                                </span>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/i00s3fru8.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    四重奏生日蛋糕1个（2磅）！需提前3-5小时预约，蛋糕免费配送上门，需预约，免费配送！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/40821843" target="_blank">
-                                <img alt="一味一诚|活鱼现烤才好吃(霄云路店)" class="shop-infoo-list-item-img" src="/home/static/picture/024f78f0f736afc3361f9582b919ebc4b64512c1.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/40821843" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    一味一诚|活鱼现烤才好吃(霄云路店)
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/40821843" target="_blank">
-                                    <span class="shop-star">
-                                        <img class="shop-star-bottom" src="/home/static/picture/shop-star-b_767a724.png">
-                                            <span class="shop-star-mask" style="width: 63.65088px;">
-                                                <img class="shop-star-mask-star" src="/home/static/picture/shop-star-o_e5d6259.png">
-                                                </img>
-                                            </span>
-                                        </img>
-                                    </span>
-                                    <span class="shop-infoo-list-color-gold" style="margin-left: 10px; font-weight: bold;">
-                                        4.4分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/40821843" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        人均 ￥77
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        霄云路
-                                    </span>
-                                </a>
-                            </p>
-                            <a href="//www.nuomi.com/shop/40821843" target="_blank">
-                                <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle shop-infoo-list-color-gold">
-                                    适合聚会的好去处
-                                </p>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/f00v8luim.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    双人餐！免费WiFi！
-                                </span>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/600v8jkpf.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    4人餐！免费WiFi！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/87413583" target="_blank">
-                                <img alt="榴莲哥蛋糕(华严北里店)" class="shop-infoo-list-item-img" src="/home/static/picture/4b90f603738da97709407f59bb51f8198618e351.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/87413583" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    榴莲哥蛋糕(华严北里店)
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/87413583" target="_blank">
-                                    <span>
-                                        暂无评分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/87413583" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        暂无报价
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        北太平庄
-                                    </span>
-                                </a>
-                            </p>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/s00visbs8.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    下午茶乳酪蛋糕切角1个！配送自提均可！
-                                </span>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/g00vhfscn.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    榴莲千层蛋糕4英寸1个！配送自提均可！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/10825678" target="_blank">
-                                <img alt="玛喜达韩国年糕料理(广安门外店)" class="shop-infoo-list-item-img" src="/home/static/picture/b7fd5266d01609243b1bd299dd0735fae6cd3471.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/10825678" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    玛喜达韩国年糕料理(广安门外店)
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/10825678" target="_blank">
-                                    <span class="shop-star">
-                                        <img class="shop-star-bottom" src="/home/static/picture/shop-star-b_767a724.png">
-                                            <span class="shop-star-mask" style="width: 64.57824px;">
-                                                <img class="shop-star-mask-star" src="/home/static/picture/shop-star-o_e5d6259.png">
-                                                </img>
-                                            </span>
-                                        </img>
-                                    </span>
-                                    <span class="shop-infoo-list-color-gold" style="margin-left: 10px; font-weight: bold;">
-                                        4.5分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/10825678" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        人均 ￥58
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        广外大街
-                                    </span>
-                                </a>
-                            </p>
-                            <a href="//www.nuomi.com/shop/10825678" target="_blank">
-                                <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle shop-infoo-list-color-gold">
-                                    女生喜欢,尝出幸福的味道
-                                </p>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/aoicy1og.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    回龙观店双人套餐！节假日通用！无需预约！美味可口！
-                                </span>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/4tescave.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    回龙观店3人套餐！地道韩式风味，口味正宗，无需预约，节假日通用！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/63223575" target="_blank">
-                                <img alt="小牛牛韩国水煎肉(凯德Mall店)" class="shop-infoo-list-item-img" src="/home/static/picture/c83d70cf3bc79f3de814793ab3a1cd11738b29c6.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/63223575" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    小牛牛韩国水煎肉(凯德Mall店)
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/63223575" target="_blank">
-                                    <span>
-                                        暂无评分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/63223575" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        人均 ￥79
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        西直门
-                                    </span>
-                                </a>
-                            </p>
-                            <a href="//www.nuomi.com/shop/63223575" target="_blank">
-                                <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle shop-infoo-list-color-gold">
-                                    北京市烤肉销量第1名
-                                </p>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/a00ttw0ul.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    双人餐！免费WiFi！
-                                </span>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/g00ttxzcz.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    双人餐！免费WiFi！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/85070644" target="_blank">
-                                <img alt="黄记煌三汁焖锅(恒泰广场店)" class="shop-infoo-list-item-img" src="/home/static/picture/9f2f070828381f30c9aa49f2a0014c086e06f03e.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/85070644" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    黄记煌三汁焖锅(恒泰广场店)
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/85070644" target="_blank">
-                                    <span>
-                                        暂无评分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/85070644" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        人均 ￥82.5
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        丽泽桥
-                                    </span>
-                                </a>
-                            </p>
-                            <a href="//www.nuomi.com/shop/85070644" target="_blank">
-                                <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle shop-infoo-list-color-gold">
-                                    环境优美 味道不错
-                                </p>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/y00uj3gi6.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    4人餐！免费WiFi！
-                                </span>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/500ujduty.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    6人餐！免费WiFi！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/97880598" target="_blank">
-                                <img alt="辣老三老火锅" class="shop-infoo-list-item-img" src="/home/static/picture/a2cc7cd98d1001e936d140c7b30e7bec55e7970c.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/97880598" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    辣老三老火锅
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/97880598" target="_blank">
-                                    <span>
-                                        暂无评分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/97880598" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        暂无报价
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        簋街
-                                    </span>
-                                </a>
-                            </p>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/a00v6claf.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    100元代金券！可使用包间，免费WiFi！
-                                </span>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/200v9lvhv.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    4人餐！可使用包间，免费WiFi！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/9710653" target="_blank">
-                                <img alt="英伦小镇pizza(格兰山水店)" class="shop-infoo-list-item-img" src="/home/static/picture/574e9258d109b3de61664ce4c0bf6c81810a4c65.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/9710653" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    英伦小镇pizza(格兰山水店)
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/9710653" target="_blank">
-                                    <span class="shop-star">
-                                        <img class="shop-star-bottom" src="/home/static/picture/shop-star-b_767a724.png">
-                                            <span class="shop-star-mask" style="width: 66.26592px;">
-                                                <img class="shop-star-mask-star" src="/home/static/picture/shop-star-o_e5d6259.png">
-                                                </img>
-                                            </span>
-                                        </img>
-                                    </span>
-                                    <span class="shop-infoo-list-color-gold" style="margin-left: 10px; font-weight: bold;">
-                                        4.6分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/9710653" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        暂无报价
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        延庆县
-                                    </span>
-                                </a>
-                            </p>
-                            <a href="//www.nuomi.com/shop/9710653" target="_blank">
-                                <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle shop-infoo-list-color-gold">
-                                    女生喜欢,尝出幸福的味道
-                                </p>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/7yqjtg6c.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    100元代金券！可叠加使用，节假日通用，店内提供免费WiFi、停车位，免费停车，免费WiFi！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/10625109" target="_blank">
-                                <img alt="船老大" class="shop-infoo-list-item-img" src="/home/static/picture/a5c27d1ed21b0ef4ea367165dac451da81cb3e2b.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/10625109" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    船老大
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/10625109" target="_blank">
-                                    <span class="shop-star">
-                                        <img class="shop-star-bottom" src="/home/static/picture/shop-star-b_767a724.png">
-                                            <span class="shop-star-mask" style="width: 61.65936px;">
-                                                <img class="shop-star-mask-star" src="/home/static/picture/shop-star-o_e5d6259.png">
-                                                </img>
-                                            </span>
-                                        </img>
-                                    </span>
-                                    <span class="shop-infoo-list-color-gold" style="margin-left: 10px; font-weight: bold;">
-                                        4.3分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/10625109" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        人均 ￥55
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        圆明园
-                                    </span>
-                                </a>
-                            </p>
-                            <a href="//www.nuomi.com/shop/10625109" target="_blank">
-                                <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle shop-infoo-list-color-gold">
-                                    味道不错
-                                </p>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/jlppqxoy.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    烤鱼套餐！节假日通用，提供免费WiFi，免费WiFi！
-                                </span>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/uaiuv0xe.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    香辣虾锅双人餐！节假日通用，提供免费WiFi，免费WiFi！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/81137800" target="_blank">
-                                <img alt="林之雨精致料理铁板烧(上地店)" class="shop-infoo-list-item-img" src="/home/static/picture/f2deb48f8c5494ee169d9fc024f5e0fe98257ea8.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/81137800" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    林之雨精致料理铁板烧(上地店)
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/81137800" target="_blank">
-                                    <span class="shop-star">
-                                        <img class="shop-star-bottom" src="/home/static/picture/shop-star-b_767a724.png">
-                                            <span class="shop-star-mask" style="width: 72px;">
-                                                <img class="shop-star-mask-star" src="/home/static/picture/shop-star-o_e5d6259.png">
-                                                </img>
-                                            </span>
-                                        </img>
-                                    </span>
-                                    <span class="shop-infoo-list-color-gold" style="margin-left: 10px; font-weight: bold;">
-                                        5分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/81137800" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        暂无报价
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        上地
-                                    </span>
-                                </a>
-                            </p>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/t00tf5u3h.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    100元代金券！仅适用于日料自助，可叠加适用。可使用包间，免费WiFi！
-                                </span>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/y00tib6lk.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    精品双人餐！免费WiFi！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/53625815" target="_blank">
-                                <img alt="京彤轩(回龙观店)" class="shop-infoo-list-item-img" src="/home/static/picture/3c6d55fbb2fb431602c0f06a29a4462308f7d3c7.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/53625815" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    京彤轩(回龙观店)
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/53625815" target="_blank">
-                                    <span>
-                                        暂无评分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/53625815" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        人均 ￥50.5
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        回龙观
-                                    </span>
-                                </a>
-                            </p>
-                            <a href="//www.nuomi.com/shop/53625815" target="_blank">
-                                <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle shop-infoo-list-color-gold">
-                                    品种丰富 环境优美
-                                </p>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/xewhwgar.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    单人自助！午晚餐通享！包括烤肉、火锅自助，尝遍天下美食，尽饮美酒佳酿，免费停车！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/63933229" target="_blank">
-                                <img alt="串串金" class="shop-infoo-list-item-img" src="/home/static/picture/e61190ef76c6a7efcf511f0ff4faaf51f3de66a7.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/63933229" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    串串金
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/63933229" target="_blank">
-                                    <span class="shop-star">
-                                        <img class="shop-star-bottom" src="/home/static/picture/shop-star-b_767a724.png">
-                                            <span class="shop-star-mask" style="width: 58.48704px;">
-                                                <img class="shop-star-mask-star" src="/home/static/picture/shop-star-o_e5d6259.png">
-                                                </img>
-                                            </span>
-                                        </img>
-                                    </span>
-                                    <span class="shop-infoo-list-color-gold" style="margin-left: 10px; font-weight: bold;">
-                                        4.1分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/63933229" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        人均 ￥72
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        地安门
-                                    </span>
-                                </a>
-                            </p>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/600sbwo3f.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    单人自助平日！免费WiFi！
-                                </span>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/200u2uphv.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    单人餐！免费WiFi！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/77920028" target="_blank">
-                                <img alt="晚枫亭(静安庄店)" class="shop-infoo-list-item-img" src="/home/static/picture/0ff41bd5ad6eddc498d7854133dbb6fd52663353.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/77920028" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    晚枫亭(静安庄店)
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/77920028" target="_blank">
-                                    <span class="shop-star">
-                                        <img class="shop-star-bottom" src="/home/static/picture/shop-star-b_767a724.png">
-                                            <span class="shop-star-mask" style="width: 68.9544px;">
-                                                <img class="shop-star-mask-star" src="/home/static/picture/shop-star-o_e5d6259.png">
-                                                </img>
-                                            </span>
-                                        </img>
-                                    </span>
-                                    <span class="shop-infoo-list-color-gold" style="margin-left: 10px; font-weight: bold;">
-                                        4.8分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/77920028" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        人均 ￥216.5
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        三元桥
-                                    </span>
-                                </a>
-                            </p>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/g00u5undw.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    100元代金券！可使用包间，免费WiFi！
-                                </span>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/s00v0ymqy.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    海鲜自助午餐1位！免费WiFi！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/87887530" target="_blank">
-                                <img alt="汉釜宫自助烤肉(搜秀城店)" class="shop-infoo-list-item-img" src="/home/static/picture/08f790529822720e55ac0c1270cb0a46f31fabfc.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/87887530" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    汉釜宫自助烤肉(搜秀城店)
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/87887530" target="_blank">
-                                    <span>
-                                        暂无评分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/87887530" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        暂无报价
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        崇文门
-                                    </span>
-                                </a>
-                            </p>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/i00v6khuv.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    汉釜宫自助午餐券1份！免费WiFi！
-                                </span>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/i00v5gpz8.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    汉釜宫双人自助晚餐券1份！免费WiFi！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/78681199" target="_blank">
-                                <img alt="余家小厨(建国路店)" class="shop-infoo-list-item-img" src="/home/static/picture/0dd7912397dda144f71c53d8bab7d0a20cf48646.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/78681199" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    余家小厨(建国路店)
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/78681199" target="_blank">
-                                    <span class="shop-star">
-                                        <img class="shop-star-bottom" src="/home/static/picture/shop-star-b_767a724.png">
-                                            <span class="shop-star-mask" style="width: 67.0536px;">
-                                                <img class="shop-star-mask-star" src="/home/static/picture/shop-star-o_e5d6259.png">
-                                                </img>
-                                            </span>
-                                        </img>
-                                    </span>
-                                    <span class="shop-infoo-list-color-gold" style="margin-left: 10px; font-weight: bold;">
-                                        4.7分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/78681199" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        人均 ￥66
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        国贸
-                                    </span>
-                                </a>
-                            </p>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/r00tsdore.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    100元代金券！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/87837922" target="_blank">
-                                <img alt="比格披萨" class="shop-infoo-list-item-img" src="/home/static/picture/c8177f3e6709c93d7811915e933df8dcd00054b3.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/87837922" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    比格披萨
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/87837922" target="_blank">
-                                    <span>
-                                        暂无评分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/87837922" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        暂无报价
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        三元桥
-                                    </span>
-                                </a>
-                            </p>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/g00v01xkt.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    单人自助餐1份！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/87444058" target="_blank">
-                                <img alt="名鼎阁自助烤肉火锅(望京店)" class="shop-infoo-list-item-img" src="/home/static/picture/4034970a304e251f7a9e6f70ad86c9177e3e53c9.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/87444058" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    名鼎阁自助烤肉火锅(望京店)
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/87444058" target="_blank">
-                                    <span>
-                                        暂无评分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/87444058" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        暂无报价
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        望京
-                                    </span>
-                                </a>
-                            </p>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/n00u5o1mh.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    名鼎阁开业酬宾午餐券1份！免费停车，免费WiFi！
-                                </span>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/x00ulg83l.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    名鼎阁单人自助周六日/节假日全天券1份！免费停车，免费WiFi，需预约！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/60709167" target="_blank">
-                                <img alt="金源海鲜自助(丽泽店)" class="shop-infoo-list-item-img" src="/home/static/picture/37d12f2eb9389b5032572aed8d35e5dde6116ee1.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/60709167" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    金源海鲜自助(丽泽店)
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/60709167" target="_blank">
-                                    <span class="shop-star">
-                                        <img class="shop-star-bottom" src="/home/static/picture/shop-star-b_767a724.png">
-                                            <span class="shop-star-mask" style="width: 67.92336px;">
-                                                <img class="shop-star-mask-star" src="/home/static/picture/shop-star-o_e5d6259.png">
-                                                </img>
-                                            </span>
-                                        </img>
-                                    </span>
-                                    <span class="shop-infoo-list-color-gold" style="margin-left: 10px; font-weight: bold;">
-                                        4.7分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/60709167" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        人均 ￥193
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        丽泽桥
-                                    </span>
-                                </a>
-                            </p>
-                            <a href="//www.nuomi.com/shop/60709167" target="_blank">
-                                <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle shop-infoo-list-color-gold">
-                                    丰台区自助餐销量第9名
-                                </p>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/j00rzqt94.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    单人午式自助1份！免费WiFi！
-                                </span>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/v00sq119v.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    节假日单人自助1份！免费WiFi！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/85071475" target="_blank">
-                                <img alt="京川婆婆骨汤麻辣烫(崇文门店)" class="shop-infoo-list-item-img" src="/home/static/picture/838ba61ea8d3fd1f895571e6354e251f94ca5f8a.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/85071475" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    京川婆婆骨汤麻辣烫(崇文门店)
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/85071475" target="_blank">
-                                    <span>
-                                        暂无评分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/85071475" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        人均 ￥23
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        崇文门
-                                    </span>
-                                </a>
-                            </p>
-                            <a href="//www.nuomi.com/shop/85071475" target="_blank">
-                                <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle shop-infoo-list-color-gold">
-                                    味道不错
-                                </p>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/900ss351w.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    20元代金券！
-                                </span>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/q00ss5b5s.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    30元代金券！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/87266708" target="_blank">
-                                <img alt="菲罗牛排主题自助西餐厅" class="shop-infoo-list-item-img" src="/home/static/picture/d50735fae6cd7b895d2a188e052442a7d9330e7c.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/87266708" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    菲罗牛排主题自助西餐厅
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/87266708" target="_blank">
-                                    <span>
-                                        暂无评分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/87266708" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        暂无报价
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        亦庄
-                                    </span>
-                                </a>
-                            </p>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/c00tsivw3.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    单人晚餐自助1位！免费WiFi！
-                                </span>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/d00tt2fvh.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    单人晚餐自助1位！免费WiFi！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/63444487" target="_blank">
-                                <img alt="阿斯牛牛(-北京店)" class="shop-infoo-list-item-img" src="/home/static/picture/2934349b033b5bb5c93d59f33cd3d539b700bcd0.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/63444487" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    阿斯牛牛(-北京店)
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/63444487" target="_blank">
-                                    <span>
-                                        暂无评分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/63444487" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        人均 ￥75
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        三里屯
-                                    </span>
-                                </a>
-                            </p>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/600tsfs6h.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    100元代金券！免费WiFi！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/40826166" target="_blank">
-                                <img alt="正新鸡排(房山分店)" class="shop-infoo-list-item-img" src="/home/static/picture/6a600c338744ebf8b82cccb3d5f9d72a6159a7d9.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/40826166" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    正新鸡排(房山分店)
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/40826166" target="_blank">
-                                    <span class="shop-star">
-                                        <img class="shop-star-bottom" src="/home/static/picture/shop-star-b_767a724.png">
-                                            <span class="shop-star-mask" style="width: 67.1832px;">
-                                                <img class="shop-star-mask-star" src="/home/static/picture/shop-star-o_e5d6259.png">
-                                                </img>
-                                            </span>
-                                        </img>
-                                    </span>
-                                    <span class="shop-infoo-list-color-gold" style="margin-left: 10px; font-weight: bold;">
-                                        4.7分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/40826166" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        人均 ￥13.5
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        房山
-                                    </span>
-                                </a>
-                            </p>
-                            <a href="//www.nuomi.com/shop/40826166" target="_blank">
-                                <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle shop-infoo-list-color-gold">
-                                    女生喜欢,尝出幸福的味道
-                                </p>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/s00lcmkrs.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    正新超值鸡排1份！免费WiFi！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/87875373" target="_blank">
-                                <img alt="盛宴海鲜自助百汇(大兴店)" class="shop-infoo-list-item-img" src="/home/static/picture/eac4b74543a98226e663d5b08182b9014b90eb83.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/87875373" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    盛宴海鲜自助百汇(大兴店)
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/87875373" target="_blank">
-                                    <span>
-                                        暂无评分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/87875373" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        暂无报价
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        西红门
-                                    </span>
-                                </a>
-                            </p>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/c00v5l9sc.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    海鲜自助午餐1份！免费WiFi！
-                                </span>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/y00v6ht3y.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    海鲜自助晚餐1份！免费WiFi！
-                                </span>
-                            </a>
-                        </li>
-                        <li class="shop-infoo-list-item clearfix">
-                            <a href="//www.nuomi.com/shop/87655567" target="_blank">
-                                <img alt="锦绣乡月" class="shop-infoo-list-item-img" src="/home/static/picture/48540923dd54564e86cf5555b8de9c82d1584f37.jpg"/>
-                            </a>
-                            <a href="//www.nuomi.com/shop/87655567" target="_blank">
-                                <h3 class="shop-infoo-list-item-title">
-                                    锦绣乡月
-                                </h3>
-                            </a>
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                <a href="//www.nuomi.com/shop/comment/87655567" target="_blank">
-                                    <span>
-                                        暂无评分
-                                    </span>
-                                </a>
-                                <a href="//www.nuomi.com/shop/87655567" target="_blank">
-                                    <span class="shop-infoo-list-item-line-label">
-                                        暂无报价
-                                    </span>
-                                    <span class="shop-infoo-list-item-line-label">
-                                        北大地
-                                    </span>
-                                </a>
-                            </p>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/b00uvvyht.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    单人餐！
-                                </span>
-                            </a>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/e00uu32i1.html" target="_blank">
-                                <span>
-                                    <i class="icon-tuan icon-tuan-adjust">
-                                    </i>
-                                    4人餐！
-                                </span>
-                            </a>
-                        </li>
                     </ul>
+                    @endforeach
+
                 </div>
                 <div class="w-channel-pager">
                     <div class="pager-info">
                         共
                         <span class="good-total ml5 mr5">
                             1250
+
                         </span>
                         条
                     </div>
+                    <style>
+                    .pagination{
+                        padding-left: 0;
+                        margin: 1.5rem 0;
+                        list-style: none;
+                        color: #999;
+                        text-align: left;
+                        padding: 0;
+                    }
+
+                    .pagination li{
+                        display: inline-block;
+                    }
+
+                    .pagination li a, .pagination li span{
+                        color: #23abf0;
+                        border-radius: 3px;
+                        padding: 6px 12px;
+                        position: relative;
+                        display: block;
+                        text-decoration: none;
+                        line-height: 1.2;
+                        background-color: #fff;
+                        border: 1px solid #ddd;
+                        border-radius: 0;
+                        margin-bottom: 5px;
+                        margin-right: 5px;
+                    }
+
+                    .pagination .active span{
+                        color: #23abf0;
+                        border-radius: 3px;
+                        padding: 6px 12px;
+                        position: relative;
+                        display: block;
+                        text-decoration: none;
+                        line-height: 1.2;
+                        background-color: #fff;
+                        border: 1px solid #ddd;
+                        border-radius: 0;
+                        margin-bottom: 5px;
+                        margin-right: 5px;
+                        background: #23abf0;
+                        color: #fff;
+                        border: 1px solid #23abf0;
+                        padding: 6px 12px;
+                    }
+                </style> 
                     <div class="am-cf">
                         <div class="am-fr">
-                            {{ $shopping->appends(request()->all())->links() }}
+                            {{ $shopuser->appends(request()->all())->links() }}
                         </div>
                     </div>
                 </div>

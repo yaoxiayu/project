@@ -11,15 +11,16 @@
 </head>
 
 <body>
+
     <div class="login_box">
         <div class="login_l_img"><img src="/images/login-img.png" /></div>
         <div class="login">
-       
+        
             <div class="login_logo"><a href="#"><img src="/images/login_logo.png" /></a></div>
             <div class="login_name">
                 <p>后台管理系统</p>
             </div>
-             @include('layouts._session')
+            @include('layouts._session')
             <form method="post" action="/admin/login">
                 <input name="username" type="text" value="用户名" onfocus="this.value=''" onblur="if(this.value==''){this.value='用户名'}">
                 <span id="password_text" onclick="this.style.display='none';document.getElementById('password').style.display='block';document.getElementById('password').focus().select();">密码</span>
