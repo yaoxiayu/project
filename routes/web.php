@@ -64,6 +64,10 @@ Route::resource('order','OrderController');
 //友情链接
 Route::resource('link','LinkController');
 
+//友情链接
+Route::resource('ad','AdController');
+
+
 //网站管理
 Route::get('/admin/setting','AdminController@index');
 Route::post('/admin/setting','AdminController@update');
