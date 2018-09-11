@@ -218,11 +218,7 @@
             <input type="hidden" value="" id="isSchoolReg" />
             <input type="hidden" value="" id="hasAuthsite" />
         </div>
-        <div id="foot">
-            <div class="mod-footer">
-                <div class="copy-box">2018&nbsp;&copy;Baidu</div>
-            </div>
-        </div>
+       
     </div>
     <script type="text/javascript" src="/zhuce/static/js/uni_wrapper.js"></script>
     <script type="text/javascript" src="/zhuce/static/js/core.js"></script>

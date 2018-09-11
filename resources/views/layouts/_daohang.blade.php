@@ -100,10 +100,13 @@
     <div class="header-bar static-hook-real static-hook-id-1" mon="area=navigation" id="header-bar">
         <div class="header-inner clearfix flexible ">
             <ul class="left-city first-level" id="j-ucLoginList">
+                @if(!Session::has('username'))
                 <li class="welcome-text"><span class="welcome-tag" id="j-welcomeTag">Hi，欢迎来到百度糯米</span></li>
-                <li class="login"><a href="//www.nuomi.com/pclogin/main/loginpage" id="j-barLoginBtn" class="pad-left" mon="element=login">请登录</a></li>
-                <li class="reg"><a href="//passport.baidu.com/v2/?reg&tpl=nuomi&color=pink" id="j-barRegBtn" class="pad-left" mon="element=register">免费注册</a></li>
-                <li class="logout"><a id="j-logout" href="https://passport.baidu.com/?logout" class="pad-left" mon="element=logout">退出</a></li>
+                <li class="login"><a href="/login" id="j-barLoginBtn" class="pad-left">请登录</a></li>
+                <li class="reg"><a href="/home/zhuce" class="pad-left">免费注册</a></li>
+                @endif @if(Session::has('username'))
+                <li class="welcome-text"><span class="welcome-tag" id="j-welcomeTag">Hi，{{Session::get('username')}}</span></li>
+                <li class="reg"><a href="/logoutt" class="pad-left">退出</a></li> @endif
             </ul>
             <ul class="right-util first-level">
                 <li><a href="/person" class="pad-right" mon="element=my_order">个人中心</a></li>
@@ -129,61 +132,6 @@
     <script type="text/javascript">
     F.context("page_name", "index_new"); //
     F.context("coupon_url", "//www.nuomi.com/uc/giftcard/find?status=1"); //
-
-    <
-    div class = "header-bar static-hook-real static-hook-id-1"
-    mon = "area=navigation"
-    id = "header-bar" >
-        <
-        div class = "header-inner clearfix flexible " >
-        <
-        ul class = "left-city first-level"
-    id = "j-ucLoginList" >
-        @if(!Session::has('username')) <
-        li class = "welcome-text" > < span class = "welcome-tag"
-    id = "j-welcomeTag" > Hi， 欢迎来到百度糯米 < /span></li >
-        <
-        li class = "login" > < a href = "/login"
-    id = "j-barLoginBtn"
-    class = "pad-left" > 请登录 < /a></li >
-        <
-        li class = "reg" > < a href = "/home/zhuce"
-    class = "pad-left" > 免费注册 < /a></li >
-        @endif @if(Session::has('username')) <
-        li class = "welcome-text" > < span class = "welcome-tag"
-    id = "j-welcomeTag" > Hi， { { Session::get('username') } } < /span></li >
-        <
-        li class = "reg" > < a href = "/logoutt"
-    class = "pad-left" > 退出 < /a></li > @endif <
-        /ul> <
-    ul class = "right-util first-level" >
-        <
-        li > < a href = "/person"    class = "pad-right"    mon = "element=my_order" > 个人中心 < /a></li > < li id = "j-visitedArea"    class = "recent-view" > < a href = "#"    class = "pad-right"    mon = "element=recent_view" > < span class = "j-visitedArea-title" > 最近浏览 < /span><span class="arrow-down-logo"></span > < /a><span class="sep-lines"></span > < div class = "header-dropmenu items"    id = "j-visitedContainer" > < div class = "drop-block" > < /div><div class="loading">数据载入中...</div > < /div>                </li > < li class = "qr-code j-bar-dropdown" > < a href = "//d.nuomi.com/?1009764s"
-    class = "pad-left pad-right"
-    target = "_blank" > 糯米APP < span class = "arrow-down-logo" > < /span></a >
-        <
-        div class = "header-dropmenu" >
-        <
-        div class = "drop-block" > < /div><a class="img" href="/ / d.nuomi.com " target="
-    _blank ">二维码</a></div>                </li>                <li class="
-    j - bar - dropdown "><a href="#
-    " class="
-    pad - right "><span>我是商家</span><span class="
-    arrow - down - logo "></span></a><span class="
-    sep - lines "></span>                    <div class="
-    merchant - list header - dropmenu ">                        <div class="
-    drop - block "></div><a href="
-    http: //y.nuomi.com" class="link" target="_blank">商户中心</a><a href="https://mct.y.nuomi.com/sc/pc/guide/guideFlow?page=true" class="link" target="_blank">我想合作</a></div>
-        <
-        /li> <
-    li > < a href = "//www.nuomi.com/help"    class = "pad-left"    mon = "element=help_center" > 帮助中心 < /a></li > < li > < a href = "//www.nuomi.com/pcindex/about/foodsafe "
-    class = "pad-left"
-    mon = "element=help_foodsafe" > 食品安全 < /a></li >
-        <
-        /ul> < /
-        div > <
-        /div> <
-    script type = "text/javascript" > F.context("page_name", "index_new"); //    F.context("coupon_url", "//www.nuomi.com/uc/giftcard/find?status=1"); //
     </script>
     <div class="search-bar clearfix flexible static-hook-real static-hook-id-2" mon="area=searchTop">
         <div class="logo-area"><a href="//www.nuomi.com" class="logo" mon="element=logo" title="百度糯米"><img class="fix-new-logo" src="/home/static/picture/re-logo_7c90a10.png"></a>

@@ -19,7 +19,6 @@ class ShopuserController extends Controller
      */
     public function index()
     {
-        //
 
         $shopuser = Shopuser::orderBy('id','desc')
         ->where('username', 'like' , '%'.request()->keywords.'%')
