@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Shopuser;
 use App\Industry;
 use App\Address;
+use App\Tag;
+use App\Shop_user_tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -36,8 +38,9 @@ class ShopuserController extends Controller
     public function create()
     {
         //
+        $tag = Tag::all();
         $industry = Industry::all();
-        return view('admin.shopuser.create',compact('industry'));
+        return view('admin.shopuser.create',compact('industry','tag'));
     }
 
     /**
@@ -65,6 +68,7 @@ class ShopuserController extends Controller
         $address -> province = $request->s_province;
         $address -> city = $request->s_city;
         $address -> county = $request->s_county;
+        // dd($request->tag_id);
         //文件上传
         if($request->hasFile('pic')){
             $shopuser -> pic = '/'.$request->pic->store('uploads/'.date('Ymd'));
@@ -74,6 +78,7 @@ class ShopuserController extends Controller
         // DB::beginTransaction();
 
         if($shopuser->save() && $address->save()){
+            $res = $shopuser->tag()->sync($request->tag_id);
             return redirect('/shopuser')->with('success','添加成功');
         }else{
             return back()->with('error','添加失败');
@@ -105,7 +110,8 @@ class ShopuserController extends Controller
         $shopuser = Shopuser::findOrFail($id);
         $asd = explode('-', $shopuser->address);
         $industry = Industry::all();
-        return view('admin.shopuser.edit',compact('shopuser','industry','asd'));
+        $tag = Tag::all();
+        return view('admin.shopuser.edit',compact('shopuser','industry','asd','tag'));
         // return '555';
     }
 
@@ -141,6 +147,7 @@ class ShopuserController extends Controller
         //
 
          if($shopuser->save() && $address->save()){
+            $res = $shopuser->tag()->sync($request->tag_id);
             return redirect('/shopuser')->with('success','修改成功');
         }else{
             return back()->with('error','修改失败');
@@ -158,7 +165,14 @@ class ShopuserController extends Controller
         //
         $shopuser = Shopuser::findOrfail($id);
         $address = Address::findOrfail($id);
-
+        $shop_user_tag = Shop_user_tag::all();
+        foreach ($shop_user_tag as $key => $value) {
+            if($id == $value['shop_user_id']){
+                // $shop_user_tag[$key];
+              Shop_user_tag::findOrfail($shop_user_tag[$key]->id)->delete();
+            }
+        }
+        
         if($shopuser->delete() && $address -> delete()){
             return redirect('/shopuser')->with('success','删除成功');
         }else{

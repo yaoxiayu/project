@@ -36,6 +36,14 @@
                             </ul>
                         </li>
                         <!-- 商品管理 end -->
+                        <!-- 标签管理 start -->
+                                    <li><a href="#" class="dropdown-toggle"><i class="icon-bookmark"></i><span class="menu-text"> 标签管理 </span><b class="arrow icon-angle-down"></b></a>
+                                        <ul class="submenu">
+                                            <li class="home"><a href="/tag" title="标签列表" class="iframeurl"><i class="icon-double-angle-right"></i>标签列表</a></li>
+                                            <li class="home"><a href="/tag/create" title="标签列表" class="iframeurl"><i class="icon-double-angle-right"></i>标签添加</a></li>
+                                        </ul>
+                                    </li>
+            						<!-- 标签管理 end -->
                         <!-- 订单管理 start -->
                         <li>
                             <a href="#" class="dropdown-toggle"><i class="icon-list"></i><span class="menu-text"> 订单管理 </span><b class="arrow icon-angle-down"></b></a>

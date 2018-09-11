@@ -18,12 +18,10 @@ class HomeController extends Controller
 
 
     //注册
-    public function reg()
+    public function zhuce()
 
     {
-    	//echo  'aa';
-
-    	// return view('home.zhuce');
+    	return view('home.zhuce');
     }
 
 

@@ -60,8 +60,8 @@
             <input type="hidden" value="" id="jsU" />
             <input type="hidden" value="pink" id="jsColor" />
             <input type="hidden" value="" id="jsSubpro" />
-            <input type="hidden" value="https://bj.nuomi.com/" id="jsNorealU" />
-            <input type="hidden" value="https://bj.nuomi.com/" id="jsRetu" />
+            <input type="hidden" value="" id="jsNorealU" />
+            <input type="hidden" value="" id="jsRetu" />
             <input type="hidden" value="1" id="jsnoUsername" />
             <input type="hidden" value="" id="jsdefaultAccount" />
             <input type="hidden" value="" id="isSchoolReg" />
@@ -92,7 +92,7 @@
             l = document.getElementById("jsRetu").value,
             c = document.getElementById("jsnoUsername").value,
             d = "/v2/?reg&u=" + l + "&tpl=" + o;
-        t.options = { product: o, u: s, userName: !0, isPhone: !0, color: u, subpro: n, noreal_u: a, retu: l, staticPage: document.location.protocol + "//" + document.location.host + "/static/passpc-account/html/v3Jump.html", noUsername: c, registerLink: d, qrcode: 2, sms: sms, regMerge: !1, regMergeUserName: !1, hasPlaceholder: !0, hasPasswordcheck: !0, isexchangeable: 1, overseas: overseas }, t.defaultAccount = document.getElementById("jsdefaultAccount").value, t.isSchoolReg = document.getElementById("isSchoolReg").value, t.hasAuthsite = document.getElementById("hasAuthsite").value }(baidu, window.Pass);
+        t.options = { product: o, u: s, userName: !0, isPhone: !0, color: u, subpro: n, noreal_u: a, retu: l, /zhuce/staticPage: document.location.protocol + "//" + document.location.host + "//zhuce/static/passpc-account/html/v3Jump.html", noUsername: c, registerLink: d, qrcode: 2, sms: sms, regMerge: !1, regMergeUserName: !1, hasPlaceholder: !0, hasPasswordcheck: !0, isexchangeable: 1, overseas: overseas }, t.defaultAccount = document.getElementById("jsdefaultAccount").value, t.isSchoolReg = document.getElementById("isSchoolReg").value, t.hasAuthsite = document.getElementById("hasAuthsite").value }(baidu, window.Pass);
     </script>
     <script type="text/javascript" src="/zhuce/static/js/tpl2logourl.js"></script>
     <script type="text/javascript" src="/zhuce/static/js/nocaptcha.js"></script>

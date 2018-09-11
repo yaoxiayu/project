@@ -15,7 +15,7 @@
 //前台首页
 Route::get('/','HomeController@index');
 //注册
-Route::get('/zhuce','HomeController@reg');
+Route::get('/zhuce','HomeController@zhuce');
 
 //登录
 Route::get('/login','HomeController@login');
@@ -45,6 +45,9 @@ Route::resource('industry','IndustryController');
 //商家管理
 Route::resource('shopuser','ShopuserController');
 
+//标签管理
+Route::resource('tag','TagController');
+
 //地址管理
 Route::get('/address','ShopuserController@aindex');
 
@@ -63,13 +66,6 @@ Route::post('/admin/setting','AdminController@update');
 
 //超级管理员
 Route::resource('administrator','AdministratorController');
-
-
-
-
-
-
-
 
 //前台首页
 Route::get('/', 'HomeController@index');
@@ -106,3 +102,8 @@ Route::get('/person/order/3','PersonController@pindex');
 
 
 Route::resource('administrator','AdministratorController');
+
+
+
+//商家首页
+Route::get('/shangjia','BusinessController@index');
