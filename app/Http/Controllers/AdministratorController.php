@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Admin;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 class AdministratorController extends Controller
 {
     /**
@@ -48,7 +49,7 @@ class AdministratorController extends Controller
 
         $admin = new Admin;
         $admin -> username = $request ->username;
-        $admin -> password = $request ->password;
+        $admin -> password =Hash::make($request->password);
         //$admin -> pic = $request ->pic;
         $admin -> phone = $request ->phone;
         //dd($admin);

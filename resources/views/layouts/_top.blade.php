@@ -16,21 +16,20 @@
         </div>
         <div class="navbar-header pull-right" role="navigation">
             <ul class="nav ace-nav">
-                <li class="light-blue">
+                <li class="light-blue open">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                  <span  class="time"><em id="time"></em></span><span class="user-info"><small>欢迎光临,</small>超级管理员</span>
-                 <i class="icon-caret-down"></i>
+                 <i class="icon-caret-down"></i> 
                 </a>
                     <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li><a href="/admin/setting" title="系统设置" class="iframeurl"><i class="icon-cog"></i>网站设置</a></li>
-                        <li><a href="javascript:void(0)" name="admin_info.html" title="个人信息" class="iframeurl"><i class="icon-user"></i>个人资料</a></li>
+                        <li><a href="/admin/geren" name="admin_info.html" title="个人信息" class="iframeurl"><i class="icon-user"></i>个人资料</a></li>
                         <li class="divider"></li>
-                        <li><a href="javascript:ovid(0)" id="Exit_system"><i class="icon-off"></i>退出</a></li>
+                        <li><a href="#" id="Exit_system">退出</a></li>
                     </ul>
                 </li>
-                
                 <!-- 消息提示 start -->
-                <!-- <li class="purple">
+            <!--   <li class="purple">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-bell-alt"></i><span class="badge badge-important">8</span></a>
                         <ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
                             <li class="dropdown-header"><i class="icon-warning-sign"></i>8条通知</li>
@@ -80,7 +79,7 @@
                                     </a>
                             </li>
                         </ul>
-                    </li> -->
+                    </li>  -->
                 <!-- 消息提示 end -->
             </ul>
             <!-- <div class="right_info">
