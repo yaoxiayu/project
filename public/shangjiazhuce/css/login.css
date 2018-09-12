@@ -47,7 +47,7 @@ a[href^="http://tongji.baidu.com"]{display: none;}
 .zhuce_body .logo{ width:114px; height:54px; margin:53px 0 0 65px;}
 .zhuce_body .zhuce_kong{ position:absolute; top:50%; left:50%; width:600px; height:478px; margin-left:-300px; margin-top:-239px;}
 .zhuce_body .zhuce_kong .zc{width:600px; height:408px;}
-.zhuce_body .zhuce_kong .zc .bj_bai{ float:left; width:450px; height:408px; padding-left:50px; background:#FFF;}
+.zhuce_body .zhuce_kong .zc .bj_bai{ float:left; width:470px; height:408px; padding-left:50px; background:#FFF;}
 .zhuce_body .zhuce_kong .zc .bj_bai h3{ font:16px/70px "微软雅黑", "黑体"; color:#333333; width:270px; text-align:center;}
 .zhuce_body .zhuce_kong .zc .bj_right{ float:left;width:185px; height:408px; padding-left:51px; background:#f8f8f8;}
 .zhuce_kong > p{font:16px/70px "微软雅黑", "黑体"; text-align:center; color:#fff;}

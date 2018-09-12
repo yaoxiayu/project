@@ -7,8 +7,8 @@
     <meta name="keywords" content="黑米">
     <meta name="content" content="黑米">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <link type="text/css" rel="stylesheet" href="/zhuce/css/login.css">
-    <script type="text/javascript" src="/zhuce/js/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="/shangjiazhuce/css/login.css">
+    <script type="text/javascript" src="/shangjiazhuce/js/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery-validate/1.9.0/localization/messages_cn.min.js"></script>
@@ -30,10 +30,6 @@
                         <br> {{csrf_field()}}
                         <div class="am-form-group">
                             <label for="user-name" class="am-u-sm-3 am-form-label">店铺名称 <span class="tpl-form-line-small-title"></span></label>
-                            <div class="am-u-sm-9">
-                                <input type="text" name="name" class="tpl-form-input" id="user-name" placeholder="">
-                                <small>输入您的店铺名</small>
-                            </div>
                             <div class="am-u-sm-9">
                                 <input type="text" name="name" class="tpl-form-input" id="user-name" placeholder="">
                             </div>
@@ -60,8 +56,7 @@
                                     <div class="am-form-group am-form-file">
                                         <div class="tpl-form-file-img">
                                         </div>
-                                        <button type="button" class="am-btn am-btn-danger am-btn-sm">
-                                            <i class="am-icon-cloud-upload"></i> 添加封面图片</button>
+                                       
                                         <input id="doc-form-file" type="file" name="pic">
                                     </div>
                                 </div>
@@ -110,7 +105,7 @@
                         //边框颜色
                         $(this).addClass('active');
                         //提示语显示
-                        $(this).next().show().html('输入8~18位字母数字下划线');
+                        $(this).next().show().html('8~18位字母数字下划线');
                     }).blur(function() {
                         //移出激活状态的class active
                         $(this).removeClass('active');
@@ -267,10 +262,10 @@
                 <input type="hidden" value="" id="hasAuthsite" />
             </div>
         </div>
-        <script type="text/javascript" src="/zhuce/static/js/uni_wrapper.js"></script>
-        <script type="text/javascript" src="/zhuce/static/js/core.js"></script>
-        <script type="text/javascript" src="/zhuce/static/js/ui.js"></script>
-        <script type="text/javascript" src="/zhuce/static/js/wrapper.js"></script>
+        <script type="text/javascript" src="/shangjiazhuce/static/js/uni_wrapper.js"></script>
+        <script type="text/javascript" src="/shangjiazhuce/static/js/core.js"></script>
+        <script type="text/javascript" src="/shangjiazhuce/static/js/ui.js"></script>
+        <script type="text/javascript" src="/shangjiazhuce/static/js/wrapper.js"></script>
         <script type="text/javascript">
         var sms = !1;
         </script>
@@ -290,9 +285,9 @@
             t.options = { product: o, u: s, userName: !0, isPhone: !0, color: u, subpro: n, noreal_u: a, retu: l, /zhuce/staticPage: document.location.protocol + "//" + document.location.host + "//zhuce/static/passpc-account/html/v3Jump.html", noUsername: c, registerLink: d, qrcode: 2, sms: sms, regMerge: !1, regMergeUserName: !1, hasPlaceholder: !0, hasPasswordcheck: !0, isexchangeable: 1, overseas: overseas }, t.defaultAccount = document.getElementById("jsdefaultAccount").value, t.isSchoolReg = document.getElementById("isSchoolReg").value, t.hasAuthsite = document.getElementById("hasAuthsite").value
         }(baidu, window.Pass);
         </script>
-        <script type="text/javascript" src="/zhuce/static/js/tpl2logourl.js"></script>
-        <script type="text/javascript" src="/zhuce/static/js/nocaptcha.js"></script>
-        <script type="text/javascript" src="/zhuce/static/js/boot_reg_c6d49e2.js"></script>
+        <script type="text/javascript" src="/shangjiazhuce/static/js/tpl2logourl.js"></script>
+        <script type="text/javascript" src="/shangjiazhuce/static/js/nocaptcha.js"></script>
+        <script type="text/javascript" src="/shangjiazhuce/static/js/boot_reg_c6d49e2.js"></script>
         <script type="text/javascript">
         (function($, ns) {
             var require = ns.require;

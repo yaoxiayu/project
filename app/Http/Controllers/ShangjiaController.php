@@ -80,4 +80,11 @@ class ShangjiaController extends Controller
         }
     }
 
+     //退出登录
+    public function logout(Request $request)
+    {
+        $request->session()->flush();
+        return redirect('/shangjia/login/')->with('success','退出成功');
+
+    }
 }
