@@ -7,7 +7,7 @@
 
 	$pdo = new PDO('mysql:host=localhost;dbname=xiangmu;charset=utf8','root','');
 
-	$stmt = $pdo -> prepare('select * from users where username =  ?');
+	$stmt = $pdo -> prepare('select * from shop_users where username =  ?');
 
 	$arr = [$username];
 
@@ -16,7 +16,7 @@
 	$user = $stmt -> fetch();
 
 	if($user === false){
-		echo '1';
-	}else{
 		echo '0';
+	}else{
+		echo '1';
 	}

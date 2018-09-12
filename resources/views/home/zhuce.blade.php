@@ -7,8 +7,8 @@
     <meta name="keywords" content="黑米">
     <meta name="content" content="黑米">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <link type="text/css" rel="stylesheet" href="/zhuce/css/login.css">
-    <script type="text/javascript" src="/zhuce/js/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="/qiantaizhuce/css/login.css">
+    <script type="text/javascript" src="/qiantaizhuce/js/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery-validate/1.9.0/localization/messages_cn.min.js"></script>
@@ -53,7 +53,7 @@
                         //边框颜色
                         $(this).addClass('active');
                         //提示语显示
-                        $(this).next().show().html('输入8~18位字母数字下划线');
+                        $(this).next().show().html('8~18位字母数字下划线');
                     }).blur(function() {
                         //移出激活状态的class active
                         $(this).removeClass('active');
@@ -220,10 +220,10 @@
         </div>
        
     </div>
-    <script type="text/javascript" src="/zhuce/static/js/uni_wrapper.js"></script>
-    <script type="text/javascript" src="/zhuce/static/js/core.js"></script>
-    <script type="text/javascript" src="/zhuce/static/js/ui.js"></script>
-    <script type="text/javascript" src="/zhuce/static/js/wrapper.js"></script>
+    <script type="text/javascript" src="/qiantaizhuce/static/js/uni_wrapper.js"></script>
+    <script type="text/javascript" src="/qiantaizhuce/static/js/core.js"></script>
+    <script type="text/javascript" src="/qiantaizhuce/static/js/ui.js"></script>
+    <script type="text/javascript" src="/qiantaizhuce/static/js/wrapper.js"></script>
     <script type="text/javascript">
     var sms = !1;
     </script>
@@ -241,9 +241,9 @@
             d = "/v2/?reg&u=" + l + "&tpl=" + o;
         t.options = { product: o, u: s, userName: !0, isPhone: !0, color: u, subpro: n, noreal_u: a, retu: l, /zhuce/staticPage: document.location.protocol + "//" + document.location.host + "//zhuce/static/passpc-account/html/v3Jump.html", noUsername: c, registerLink: d, qrcode: 2, sms: sms, regMerge: !1, regMergeUserName: !1, hasPlaceholder: !0, hasPasswordcheck: !0, isexchangeable: 1, overseas: overseas }, t.defaultAccount = document.getElementById("jsdefaultAccount").value, t.isSchoolReg = document.getElementById("isSchoolReg").value, t.hasAuthsite = document.getElementById("hasAuthsite").value }(baidu, window.Pass);
     </script>
-    <script type="text/javascript" src="/zhuce/static/js/tpl2logourl.js"></script>
-    <script type="text/javascript" src="/zhuce/static/js/nocaptcha.js"></script>
-    <script type="text/javascript" src="/zhuce/static/js/boot_reg_c6d49e2.js"></script>
+    <script type="text/javascript" src="/qiantaizhuce/static/js/tpl2logourl.js"></script>
+    <script type="text/javascript" src="/qiantaizhuce/static/js/nocaptcha.js"></script>
+    <script type="text/javascript" src="/qiantaizhuce/static/js/boot_reg_c6d49e2.js"></script>
     <script type="text/javascript">
     (function($, ns) {
         var require = ns.require;

@@ -136,6 +136,9 @@ Route::post('/shangjia','ShangjiaController@dologin');
 Route::get('/shangjia/zhuce','ShangjiaController@zhuce');
 Route::post('/shangjia/zhuce','ShangjiaController@zhucewan');
 
+//退出
+Route::get('/logout','ShangjiaController@logout');
+
 //订单修改
 Route::get('/order/gai/{id}','OrderController@gai');
 
