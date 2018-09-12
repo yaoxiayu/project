@@ -122,8 +122,8 @@ Route::get('/order/delete/{id}','OrderController@shanchu');
 Route::get('/hcomment/delete/{id}','CommentController@shanchu');
 
 Route::resource('administrator','AdministratorController');
-
-
+//友情链接
+Route::get('/links','HomeController@link');
 
 //商家首页
 Route::get('/shangjia','BusinessController@index');

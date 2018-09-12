@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Link;
 use Illuminate\Http\Request;
-use phpDocumentor\Reflection\DocBlock\Tags\Link;
 
 class LinkController extends Controller
 {
