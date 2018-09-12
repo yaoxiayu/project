@@ -4,7 +4,7 @@
     </script>
     <div class="navbar-container" id="navbar-container">
         <div class="navbar-header pull-left">
-            <a href="#" class="navbar-brand">
+            <a href="/houtai" class="navbar-brand">
                         <small>
                         <img src="/admin/images/wen.png" width="200px" height="70px">
                         </small>
@@ -43,18 +43,7 @@
                           }
                     </script>
                 </li>
-
             </ul>
-
-            <!-- <div class="right_info">
-
-                   <div class="get_time" ><span id="time" class="time"></span>欢迎光临,管理员</span></div>
-                    <ul class="nav ace-nav">
-                        <li><a href="javascript:ovid(0)" class="change_Password">修改密码</a></li>
-                        <li><a href="javascript:ovid(0)" id="Exit_system">退出系统</a></li>
-
-                    </ul>
-                </div>-->
         </div>
     </div>
 </div>

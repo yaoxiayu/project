@@ -37,7 +37,7 @@
     </div>
 </div>
 <li class="nav-item nav-item-first">
-    <a class="item first new-item" href="//www.nuomi.com" mon="element=首页" target="_top">
+    <a class="item first new-item" href="/" mon="element=首页" target="_top">
         首页
     </a>
 </li>
@@ -155,13 +155,7 @@
                                         </a>
                                     </div>
                                     <div class="district-tab">
-                                        <span class="tab-item j-district-tab-li j-district-tab-li0 " index="0">
-                                            <span class="tab-item-wrap">
-                                                地铁附近
-                                                <span class="markup">
-                                                </span>
-                                            </span>
-                                        </span>
+                                        
                                         <span class="tab-item j-district-tab-li j-district-tab-li1 selected" index="1">
                                             <span class="tab-item-wrap">
                                                 行政区
@@ -170,97 +164,7 @@
                                             </span>
                                         </span>
                                     </div>
-                                    <div class="district-cont-wrap j-district-cont j-district-cont0 filterBySubway " index="0" mon="area=filterBySubway" style="clear: both;">
-                                        <div class="district-list-ab">
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/1-88" mon="element=88&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    10号线
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/1-79" mon="element=79&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    6号线
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/1-70" mon="element=70&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    1号线
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/1-81" mon="element=81&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    5号线
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/1-84" mon="element=84&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    13号线
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/1-73" mon="element=73&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    2号线
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/1-82" mon="element=82&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    4号线
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/1-86" mon="element=86&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    15号线
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/1-87" mon="element=87&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    7号线
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/1-76" mon="element=76&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    八通线
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/1-74" mon="element=74&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    14号线
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/1-83" mon="element=83&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    8号线
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/1-77" mon="element=77&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    大兴线
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/1-80" mon="element=80&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    9号线
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/1-75" mon="element=75&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    亦庄线
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/1-85" mon="element=85&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    昌平线
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/1-78" mon="element=78&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    房山线
-                                                </span>
-                                            </a>
-                                            <span class="district-ab-button district-ab-button-more" style="display:none;">
-                                            </span>
-                                        </div>
-                                    </div>
+                                    
                                     <div class="district-cont-wrap j-district-cont j-district-cont1 filterDistrict selected" index="1" mon="area=filterDistrict" style="clear: both;">
                                         <div class="district-list-ab">
                                             <a class="w-filter-item-ab " href="//bj.nuomi.com/326/307" mon="element=307&element_type=filter&position=1">
@@ -268,81 +172,7 @@
                                                     朝阳区
                                                 </span>
                                             </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/406" mon="element=406&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    昌平区
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/392" mon="element=392&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    海淀区
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/395" mon="element=395&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    丰台区
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/396" mon="element=396&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    西城区
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/394" mon="element=394&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    东城区
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/409" mon="element=409&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    大兴区
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/408" mon="element=408&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    通州区
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/6545" mon="element=6545&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    顺义区
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/6544" mon="element=6544&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    房山区
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/410" mon="element=410&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    石景山区
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/6549" mon="element=6549&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    延庆县
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/6546" mon="element=6546&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    怀柔区
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/6548" mon="element=6548&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    密云县
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/6547" mon="element=6547&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    平谷区
-                                                </span>
-                                            </a>
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/326/5985" mon="element=5985&element_type=filter&position=1">
-                                                <span class="item-content ">
-                                                    门头沟区
-                                                </span>
-                                            </a>
+                                            
                                             <span class="district-ab-button district-ab-button-more" style="display:none;">
                                             </span>
                                         </div>
@@ -443,26 +273,20 @@
                             <a href="/{{$v['id']}}.html" target="_blank">
                                 <img alt="{{$v['name']}}" class="shop-infoo-list-item-img" src="{{$v['pic']}}"/>
                             </a>
-                            <a href="//www.nuomi.com/shop/85493528" target="_blank">
+                            <a href="/{{$v['id']}}.html" target="_blank">
                                 <h3 class="shop-infoo-list-item-title">
                                     {{$v['name']}}
                                 </h3>
                             </a>
                             
-                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                                
-                                    <span>
-                                        好评数:            
-                                    </span>
-                            
-                                <a href="//www.nuomi.com/shop/85493528" target="_blank">
-                               
+                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">                               
+                                <a href="/{{$v['id']}}.html">           
                                     <span class="shop-infoo-list-item-line-label">
                                         {{$v['address']}}
                                     </span>
                                 </a>
                             </p>
-                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="//www.nuomi.com/deal/y00vah1a3.html" target="_blank">
+                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="/{{$v['id']}}.html">
                                 <span>
                                     <i class="icon-tuan icon-tuan-adjust">
                                     </i>
@@ -475,14 +299,7 @@
 
                 </div>
                 <div class="w-channel-pager">
-                    <div class="pager-info">
-                        共
-                        <span class="good-total ml5 mr5">
-                            1250
-
-                        </span>
-                        条
-                    </div>
+                   
                     <style>
                     .pagination{
                         padding-left: 0;

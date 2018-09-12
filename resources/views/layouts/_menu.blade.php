@@ -5,17 +5,17 @@
                 <div class="sidebar-shortcuts" id="sidebar-shortcuts">
                     <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
                         <a class="btn btn-success">
-								<i class="icon-signal"></i>
-							</a>
+          								<i class="icon-signal"></i>
+          							</a>
                         <a class="btn btn-info">
-								<i class="icon-pencil"></i>
-							</a>
+          								<i class="icon-pencil"></i>
+          							</a>
                         <a class="btn btn-warning">
-								<i class="icon-group"></i>
-							</a>
+          								<i class="icon-group"></i>
+          							</a>
                         <a class="btn btn-danger">
-								<i class="icon-cogs"></i>
-							</a>
+          								<i class="icon-cogs"></i>
+          							</a>
                     </div>
                     <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
                         <span class="btn btn-success"></span>
@@ -117,7 +117,7 @@
                             </ul>
                         </li>
 						<!-- 友情链接管理 end -->
-                        
+
                         <!-- 广告管理 start -->
                         <li><a href="#" class="dropdown-toggle"><i class="icon-bookmark"></i><span class="menu-text"> 广告管理 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">

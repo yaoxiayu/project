@@ -83,7 +83,7 @@
                         <div class="first-level j-catg-row " data-index="0" mon="area=catg_642">
                             <dl>
                                 <dt class="title">
-                                    <a href="/food/?industry_id=1" mon="element=酒店" target="_top">
+                                    <a href="/hotel/?industry_id=1" mon="element=酒店" target="_top">
                                         酒店
                                     </a>
                                 </dt>
@@ -116,7 +116,7 @@
                         <div class="first-level j-catg-row " data-index="3" mon="area=catg_320">
                             <dl>
                                 <dt class="title">
-                                    <a href="//bj.nuomi.com/320" mon="element=休闲娱乐" target="_top">
+                                    <a href="/play/?industry_id=1" mon="element=休闲娱乐" target="_top">
                                         休闲娱乐
                                     </a>
                                 </dt>
@@ -127,7 +127,7 @@
                         <div class="first-level j-catg-row " data-index="4" mon="area=catg_565">
                             <dl>
                                 <dt class="title">
-                                    <a href="//bj.nuomi.com/pcindex/dipin#/list/565" mon="element=结婚" target="_top">
+                                    <a href="/marry/?industry_id=1" mon="element=结婚" target="_top">
                                         结婚
                                     </a>
                                 </dt>
