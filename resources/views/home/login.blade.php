@@ -27,7 +27,7 @@
     <script>
     F.context('staticController').init && F.context('staticController').init(!!'', !!'', !!'', null, '');
     </script>
-    <title>百度糯米</title>
+    <title>【温代】</title>
     <script>
     var _hmt = _hmt || [];
     F.context('tongji_hm', {
@@ -72,7 +72,7 @@
     </script>
     <!--[if IE 6]>
 <div id="kie-bar" class="kie-bar">
-目前您正在使用ie6浏览器，该浏览器已经过时了，为了更加安全和方便地进行团购，百度糯米推荐您使用以下浏览器：<a href="http://www.microsoft.com/china/windows/IE/upgrade/index.aspx" class="kie-setup-IE8"  target="_blank" title="免费升级至IE8浏览器">免费升级</a>或下载使用<a href="http://browser.baidu.com/" class="kie-setup-baidu" target="_blank" title="百度浏览器">百度浏览器</a>，体验极速浏览体验！</div>
+目前您正在使用ie6浏览器，该浏览器已经过时了，为了更加安全和方便地进行团购，温代推荐您使用以下浏览器：<a href="http://www.microsoft.com/china/windows/IE/upgrade/index.aspx" class="kie-setup-IE8"  target="_blank" title="免费升级至IE8浏览器">免费升级</a>或下载使用<a href="http://browser.baidu.com/" class="kie-setup-baidu" target="_blank" title="百度浏览器">百度浏览器</a>，体验极速浏览体验！</div>
 <style>
         .kie-bar {
             height: 24px;
@@ -98,14 +98,14 @@
             <div class="wrap clearfix">
                 <div class="logo"><a href="/"></a></div>
                 <div class="login-text">登录</div>
-                <div class="reg-area">还没有百度糯米帐号<a href="/home/zhuce" class="reg-btn">注册</a></div>
+                <div class="reg-area">还没有温代帐号<a href="/home/zhuce" class="reg-btn">注册</a></div>
             </div>
         </div>
         <div class="body">
             <div class="wrap clearfix">
                 <div class="login-logo"></div>
                 <div class="login-area" id="j-loginArea">
-                    <div class="title">登录百度糯米</div>
+                    <div class="title">登录温代</div>
                     <br>
                     <br>
                     <div class="login tang-pass-login" id="j-login">
@@ -115,7 +115,7 @@
                             <p id="TANGRAM__PSP_4__userNameWrapper" class="pass-form-item pass-form-item-userName" style="display:">
                            
                                 <input type="text" style="display:none;">
-                                <input id="TANGRAM__PSP_4__userName" type="text" name="username" class="pass-text-input pass-text-input-userName" autocomplete="off" value="" placeholder="手机/邮箱/用户名/糯米帐号">
+                                <input id="TANGRAM__PSP_4__userName" type="text" name="username" class="pass-text-input pass-text-input-userName" autocomplete="off" value="" placeholder="手机/邮箱/用户名/温代帐号">
                             </p>
                             <br>
                             <br>
@@ -148,7 +148,7 @@
     <div class="w-footer-mini" alog-alias="bainuo-order-footermini" alog-group="bainuo-order-footermini">
         <div class="wrap">
             <div class="links">
-                <a href="//www.nuomi.com/about" class="link">关于百度糯米</a><span>|</span>
+                <a href="//www.nuomi.com/about" class="link">关于温代</a><span>|</span>
                 <a href="//www.nuomi.com/help" class="link">常见问题</a><span>|</span>
                 <a href="javascript:;" class="link" id="j-tttel">违规投诉</a><span>|</span>
                 <a href="//www.nuomi.com/help/api" class="link">开放平台</a><span>|</span>

@@ -93,9 +93,7 @@ Route::resource('administrator','AdministratorController');
 Route::get('/', 'HomeController@index');
 //美食
 Route::get('/food/shopuser','FoodController@shopuser');
-// Route::get('/food/shopuser/shopping','FoodController@shopping');
 Route::resource('food', 'FoodController');
-// Route::get('/shopuser/{id}.html','FoodController@shopuser');
 Route::get('{id}.html','FoodController@shopuser');
 Route::get('/home/{id}.html','FoodController@shopping');
 
@@ -122,10 +120,22 @@ Route::get('/order/delete/{id}','OrderController@shanchu');
 Route::get('/hcomment/delete/{id}','CommentController@shanchu');
 
 Route::resource('administrator','AdministratorController');
-
-
+//友情链接
+Route::get('/links','HomeController@link');
 
 //商家首页
 Route::get('/shangjia','BusinessController@index');
+
+
+
+//商家登录
+Route::get('/shangjia/login','ShangjiaController@login');
+Route::post('/shangjia','ShangjiaController@dologin');
+
+//商家注册
+Route::get('/shangjia/zhuce','ShangjiaController@zhuce');
+Route::post('/shangjia/zhuce','ShangjiaController@zhucewan');
+
 //订单修改
 Route::get('/order/gai/{id}','OrderController@gai');
+
