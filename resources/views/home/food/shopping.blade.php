@@ -210,7 +210,7 @@
     <div class="nav-bar-header  static-hook-real static-hook-id-3">
         <div class="nav-inner flexible clearfix">
             <ul class="nav-list clearfix" mon="area=nav&element_type=nav" id="j-catg">
-                <li class="nav-item cate-row all-cate deep"><span class="item ">全部分类</span>
+                <li class="nav-item cate-row all-cate deep"><span class="item "><a href="/{{$shopuser['id']}}.html">美食分类</a></span>
                     <li class="nav-item nav-item-first"><a href="//www.nuomi.com" target="_top" class="item first new-item" mon="element=首页">首页</a></li>
                     <li class="nav-item"><a href="//t.nuomi.com" target="_top" class="item new-item " mon="element=酒店">酒店</a></li>
                     <li class="nav-item item-dropdown">

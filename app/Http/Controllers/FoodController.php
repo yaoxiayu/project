@@ -110,7 +110,10 @@ class FoodController extends Controller
     {   
 
         $shopping = Shopping::find($id);
-        return view('home.food.shopping',compact('shopping'));
+        $shopuser = Shopuser::find($id);
+
+        return view('home.food.shopping',compact('shopping','shopuser'));
     }
 
 }
+
