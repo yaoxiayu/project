@@ -14,7 +14,7 @@
         <ul class="nav-list clearfix" id="j-catg" mon="area=nav&element_type=nav">
             <li class="nav-item cate-row all-cate deep">
                 <span class="item ">
-                    美食分类
+                    <a href="/food">美食分类</a>
                 </span>
                 <div class="" id="j-catg-list">
                     <div catg-id="326" class="level-item">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <li class="nav-item nav-item-first">
-                    <a class="item first new-item" href="//www.nuomi.com" mon="element=首页" target="_top">
+                    <a class="item first new-item" href="/" mon="element=首页" target="_top">
                         首页
                     </a>
                 </li>
@@ -188,7 +188,7 @@
                                         </a>
                                         <div class="n-item-content">
                                             <h4 class="header">
-                                                <a data-item-st="22c6db79f151ca833ed03c36960cf669" href="">
+                                                <a data-item-st="22c6db79f151ca833ed03c36960cf669" href="/home/{{$v->id}}.html">
                                                     {{$v['name']}}
                                                 </a>
                                             </h4>
@@ -225,7 +225,7 @@
                                         </div>
                                     </div>
                                     <div class="col col-4">
-                                        <a class="n-btn n-btn-primary btn-buy" href="//www.nuomi.com/deal/t00qpcidc.html?s=22c6db79f151ca833ed03c36960cf669" mon="element=33330185&position=0&s=22c6db79f151ca833ed03c36960cf669" target="_blank">
+                                        <a class="n-btn n-btn-primary btn-buy" href="" mon="element=33330185&position=0&s=22c6db79f151ca833ed03c36960cf669" target="_blank">
                                             立即购买
                                         </a>
                                     </div>
@@ -237,15 +237,15 @@
                         <div class="user-comment user-comment-shop">
                             <div class="w-user-comment static-hook-real static-hook-id-5" id="j-user-comment">
                                 <div class="detail clearfix ">
-                                    @foreach($comment as $vv) @if($vv['shopping_id']==$vv->shopping->id)
+                                    
                                     <div class="no-comment">
-                                    {{$vv['content']}}
+                                    
                                     </div>
-                                    @else
+                                   
                                     <div class="no-comment">
                                         暂无评论
                                     </div>
-                                    @endif @endforeach
+                                    
                                 </div>
                             </div>
                         </div>

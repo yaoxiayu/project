@@ -135,7 +135,7 @@
     F.context("coupon_url", "//www.nuomi.com/uc/giftcard/find?status=1"); //
     </script>
     <div class="search-bar clearfix flexible static-hook-real static-hook-id-2" mon="area=searchTop">
-        <div class="logo-area"><a href="//www.nuomi.com" class="logo" mon="element=logo" title="温代"><img class="fix-new-logo" src="/home/static/picture/logo.png"></a>
+        <div class="logo-area"><a href="/" class="logo" mon="element=logo" title="温代"><img class="fix-new-logo" src="/home/static/picture/logo.png"></a>
             <div class="city-wrap"><span class="city-pos"></span><span>北京</span><span class="arrow-down-line"></span>
                 <div class="city-drop-down">
                     <div class="drop-block"></div>

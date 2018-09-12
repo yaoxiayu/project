@@ -136,6 +136,7 @@ Route::post('/shangjia','ShangjiaController@dologin');
 Route::get('/shangjia/zhuce','ShangjiaController@zhuce');
 Route::post('/shangjia/zhuce','ShangjiaController@zhucewan');
 
+
 //商家商品列表
 Route::get('/business/shopping/index','BusinessController@sindex');
 //商家订单列表
@@ -143,5 +144,8 @@ Route::get('/business/shopping/index','BusinessController@sindex');
 Route::get('/business/order/2','BusinessController@oindex2');
 //已成交
 Route::get('/business/order/1','BusinessController@oindex1');
+
+//退出
+Route::get('/logout','ShangjiaController@logout');
 //订单修改
 Route::get('/order/gai/{id}','OrderController@gai');

@@ -52,10 +52,10 @@
 					<h2>账号登录</h2>
 					<form class="form-horizontal" action="/shangjia" method="post">
 						<fieldset>
+							
+							<input class="input-large span12" name="username" id="username" type="text" placeholder="用户名" /><span class="remind"></span>
 
-							<input class="input-large span12" name="username" id="username" type="text" placeholder="用户名" />
-
-							<input class="input-large span12" name="password" id="password" type="password" placeholder="密码" />
+							<input class="input-large span12" name="password" id="password" type="password" placeholder="密码" /><span class="remind"></span>
 
 							<div class="clearfix"></div>
 
@@ -67,6 +67,79 @@
 						</fieldset>
 
 					</form>
+					<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+                    <script>
+
+
+                    var CUSER = false;
+
+					    //用户名
+                    $('input[name=username]').focus(function() {
+                        //边框颜色
+                        $(this).addClass('active');
+                        //提示语显示
+                        $(this).next().show().html('8~18位字母数字下划线');
+                    }).blur(function() {
+                        //移出激活状态的class active
+                        $(this).removeClass('active');
+                        //正则判断
+                        var v = $(this).val();
+                        //声明正则
+                        var reg = /^\w{8,18}$/;
+                        //判断
+                        if (!reg.test(v)) {
+                            //边框
+                            $(this).addClass('error');
+                            //文字提醒
+                            $(this).next().html('<span style="color:red">格式不正确</span>').show();
+                            CUSER = false;
+                        } else {
+                            var input = $(this);
+                            //发送 AJAX 请求检测用户名是否已经存在
+                           // $.post('/shopuser.php', {username: v}, function(data){
+                             //})
+
+                            $.ajax({
+                                url: '/shopuser.php',
+                                type: 'post',
+                                data: { username: v },
+                                success: function(data) {
+                                    if (data != '1') {
+                                        //边框
+                                        input.addClass('error');
+                                        //文字提醒
+                                        input.next().html('<span style="color:red">该用户名不正确!!</span>').show();
+                                        CUSER = false;
+                                    } else {
+                                        input.removeClass('error');
+                                        input.next().html('<span style="color:green;font-size:16px;font-weight:bold">&nbsp;&nbsp;√</span>').show();
+                                        CUSER = true;
+                                    }
+                                },
+                                async: false
+                            })
+
+
+
+                        }
+                    })
+
+                    	 //表单的提交事件
+                    $('form').submit(function() {
+
+                        //触发错误提醒
+                        $('input').trigger('blur');
+                        //console.log(CUSER);
+                        //判断输入值是否都正确
+                        if (CUSER) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+
+
+                    </script>
 					<hr />
 					
 				</div>

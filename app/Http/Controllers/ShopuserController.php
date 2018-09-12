@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Shopuser;
-use App\Industry;
 use App\Address;
-use App\Tag;
+use App\Industry;
 use App\Shop_user_tag;
+use App\Shopuser;
+use App\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -176,7 +176,7 @@ class ShopuserController extends Controller
             }
         }
 
-        if($shopuser->delete() && $address -> delete()){
+        if($shopuser-> delete() && $address -> delete()){
             return redirect('/shopuser')->with('success','删除成功');
         }else{
             return back()->with('error','删除失败');
