@@ -237,15 +237,15 @@
                         <div class="user-comment user-comment-shop">
                             <div class="w-user-comment static-hook-real static-hook-id-5" id="j-user-comment">
                                 <div class="detail clearfix ">
-                                    @foreach($comment as $vv) @if($vv['shopping_id']==$vv->shopping->id)
+                                    
                                     <div class="no-comment">
-                                    {{$vv['content']}}
+                                    
                                     </div>
-                                    @else
+                                   
                                     <div class="no-comment">
                                         暂无评论
                                     </div>
-                                    @endif @endforeach
+                                    
                                 </div>
                             </div>
                         </div>
