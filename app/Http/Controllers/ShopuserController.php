@@ -112,7 +112,6 @@ class ShopuserController extends Controller
         $industry = Industry::all();
         $tag = Tag::all();
         return view('admin.shopuser.edit',compact('shopuser','industry','asd','tag'));
-        // return '555';
     }
 
     /**

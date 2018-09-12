@@ -28,8 +28,8 @@
     F.context('staticController').init && F.context('staticController').init(!!'', !!'', !!'', null, '');
     </script>
     <title>【温代】高品质生活服务网站！</title>
-    <meta name="description" content="百度糯米，中国领先的互联网本地生活服务平台，精选美食、电影、旅游、酒店、KTV、丽人、结婚、休闲娱乐，及鲜花、汽车、机票火车票等优享服务。一起百度糯米，惠享品质生活！！" />
-    <meta name="keywords" content="百度糯米,本地生活服务,美食,电影,旅游,酒店,KTV">
+    <meta name="description" content="温代，中国领先的互联网本地生活服务平台，精选美食、电影、旅游、酒店、KTV、丽人、结婚、休闲娱乐，及鲜花、汽车、机票火车票等优享服务。一起温代，惠享品质生活！！" />
+    <meta name="keywords" content="温代,本地生活服务,美食,电影,旅游,酒店,KTV">
     <script>
     var _hmt = _hmt || [];
     F.context('tongji_hm', {
@@ -76,7 +76,7 @@
     </script>
     <!--[if IE 6]>
 <div id="kie-bar" class="kie-bar">
-目前您正在使用ie6浏览器，该浏览器已经过时了，为了更加安全和方便地进行团购，百度糯米推荐您使用以下浏览器：<a href="http://www.microsoft.com/china/windows/IE/upgrade/index.aspx" class="kie-setup-IE8"  target="_blank" title="免费升级至IE8浏览器">免费升级</a>或下载使用<a href="http://browser.baidu.com/" class="kie-setup-baidu" target="_blank" title="百度浏览器">百度浏览器</a>，体验极速浏览体验！</div>
+目前您正在使用ie6浏览器，该浏览器已经过时了，为了更加安全和方便地进行团购，温代推荐您使用以下浏览器：<a href="http://www.microsoft.com/china/windows/IE/upgrade/index.aspx" class="kie-setup-IE8"  target="_blank" title="免费升级至IE8浏览器">免费升级</a>或下载使用<a href="http://browser.baidu.com/" class="kie-setup-baidu" target="_blank" title="百度浏览器">百度浏览器</a>，体验极速浏览体验！</div>
 <style>
         .kie-bar {
             height: 24px;
@@ -101,7 +101,7 @@
         <div class="header-inner clearfix flexible ">
             <ul class="left-city first-level" id="j-ucLoginList">
                 @if(!Session::has('username'))
-                <li class="welcome-text"><span class="welcome-tag" id="j-welcomeTag">Hi，欢迎来到百度糯米</span></li>
+                <li class="welcome-text"><span class="welcome-tag" id="j-welcomeTag">Hi，欢迎来到温代</span></li>
                 <li class="login"><a href="/login" id="j-barLoginBtn" class="pad-left">请登录</a></li>
                 <li class="reg"><a href="/home/zhuce" class="pad-left">免费注册</a></li>
                 @endif 
@@ -117,7 +117,7 @@
                         <div class="loading">数据载入中...</div>
                     </div>
                 </li>
-                <li class="qr-code j-bar-dropdown"><a href="//d.nuomi.com/?1009764s" class="pad-left pad-right" target="_blank">糯米APP<span class="arrow-down-logo"></span></a>
+                <li class="qr-code j-bar-dropdown"><a href="//d.nuomi.com/?1009764s" class="pad-left pad-right" target="_blank">温代APP<span class="arrow-down-logo"></span></a>
                     <div class="header-dropmenu">
                         <div class="drop-block"></div><a class="img" href="//d.nuomi.com/?1009764s" target="_blank">二维码</a></div>
                 </li>
@@ -135,7 +135,7 @@
     F.context("coupon_url", "//www.nuomi.com/uc/giftcard/find?status=1"); //
     </script>
     <div class="search-bar clearfix flexible static-hook-real static-hook-id-2" mon="area=searchTop">
-        <div class="logo-area"><a href="//www.nuomi.com" class="logo" mon="element=logo" title="百度糯米"><img class="fix-new-logo" src="/home/static/picture/logo.png"></a>
+        <div class="logo-area"><a href="//www.nuomi.com" class="logo" mon="element=logo" title="温代"><img class="fix-new-logo" src="/home/static/picture/logo.png"></a>
             <div class="city-wrap"><span class="city-pos"></span><span>北京</span><span class="arrow-down-line"></span>
                 <div class="city-drop-down">
                     <div class="drop-block"></div>

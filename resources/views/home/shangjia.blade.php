@@ -25,7 +25,7 @@
     <script>
     F.context('staticController').init && F.context('staticController').init(!!'', !!'', !!'', null, '');
     </script>
-    <title>宏电宾馆(报国寺店)电话,地址,营业时间,人均,评价,优惠,代金券,相册--百度糯米</title>
+    <title>宏电宾馆(报国寺店)电话,地址,营业时间,人均,评价,优惠,代金券,相册--温代</title>
     <meta name="description" content="位于北京西城区广内大街的宏电宾馆(报国寺店)怎么样？人均￥78；地址：北京市西城区广安门内大街报国寺西夹道32号地铁7号线--广安门内站；电话：01083167543；点击进入北…" />
     <meta name="keywords" content="宏电宾馆(报国寺店),电话,地址,营业时间,北京广内大街酒店" />
     <script>
@@ -71,7 +71,7 @@
     </script>
     <!--[if IE 6]>
 <div id="kie-bar" class="kie-bar">
-目前您正在使用ie6浏览器，该浏览器已经过时了，为了更加安全和方便地进行团购，百度糯米推荐您使用以下浏览器：<a href="http://www.microsoft.com/china/windows/IE/upgrade/index.aspx" class="kie-setup-IE8"  target="_blank" title="免费升级至IE8浏览器">免费升级</a>或下载使用<a href="http://browser.baidu.com/" class="kie-setup-baidu" target="_blank" title="百度浏览器">百度浏览器</a>，体验极速浏览体验！</div>
+目前您正在使用ie6浏览器，该浏览器已经过时了，为了更加安全和方便地进行团购，温代推荐您使用以下浏览器：<a href="http://www.microsoft.com/china/windows/IE/upgrade/index.aspx" class="kie-setup-IE8"  target="_blank" title="免费升级至IE8浏览器">免费升级</a>或下载使用<a href="http://browser.baidu.com/" class="kie-setup-baidu" target="_blank" title="百度浏览器">百度浏览器</a>，体验极速浏览体验！</div>
 <style>
         .kie-bar {
             height: 24px;
@@ -95,7 +95,7 @@
     <div class="header-bar static-hook-real static-hook-id-1" mon="area=navigation" id="header-bar">
         <div class="header-inner clearfix flexible ">
             <ul class="left-city first-level" id="j-ucLoginList">
-                <li class="welcome-text"><span class="welcome-tag" id="j-welcomeTag">Hi，欢迎来到百度糯米</span></li>
+                <li class="welcome-text"><span class="welcome-tag" id="j-welcomeTag">Hi，欢迎来到温代</span></li>
                 <li class="login"><a href="//www.nuomi.com/pclogin/main/loginpage" id="j-barLoginBtn" class="pad-left" mon="element=login">请登录</a></li>
                 <li class="reg"><a href="//passport.baidu.com/v2/?reg&tpl=nuomi&color=pink" id="j-barRegBtn" class="pad-left" mon="element=register">免费注册</a></li>
                 <li class="logout"><a id="j-logout" href="https://passport.baidu.com/?logout" class="pad-left" mon="element=logout">退出</a></li>
@@ -108,7 +108,7 @@
                         <div class="loading">数据载入中...</div>
                     </div>
                 </li>
-                <li class="qr-code j-bar-dropdown"><a href="//d.nuomi.com/?1009764s" class="pad-left pad-right" target="_blank">糯米APP<span class="arrow-down-logo"></span></a>
+                <li class="qr-code j-bar-dropdown"><a href="//d.nuomi.com/?1009764s" class="pad-left pad-right" target="_blank">温代APP<span class="arrow-down-logo"></span></a>
                     <div class="header-dropmenu">
                         <div class="drop-block"></div><a class="img" href="//d.nuomi.com/?1009764s" target="_blank">二维码</a></div>
                 </li>
@@ -126,7 +126,7 @@
     F.context("coupon_url", "//www.nuomi.com/uc/giftcard/find?status=1"); //
     </script>
     <div class="search-bar clearfix flexible static-hook-real static-hook-id-2" mon="area=searchTop">
-        <div class="logo-area"><a href="//www.nuomi.com" class="logo" mon="element=logo" title="百度糯米"><img class="fix-new-logo" src="/home/static/picture/re-logo_7c90a10.png"></a>
+        <div class="logo-area"><a href="//www.nuomi.com" class="logo" mon="element=logo" title="温代"><img class="fix-new-logo" src="/home/static/picture/re-logo_7c90a10.png"></a>
             <div class="city-wrap"><span class="city-pos"></span><span>北京</span><span class="arrow-down-line"></span>
                 <div class="city-drop-down">
                     <div class="drop-block"></div>
@@ -679,7 +679,7 @@
                                     </select>
                                 </div>
                                 <a href="//d.nuomi.com/inter/group" target="_blank">
-                <span>用百度糯米手机版，随时随地查看商家地图</span>
+                <span>用温代手机版，随时随地查看商家地图</span>
                 <span class="download-free">免费下载</span>
             </a>
                             </div>
@@ -725,7 +725,7 @@
                             <div class="md-header clearfix">
                                 <h3>宏电宾馆(报国寺店)</h3>
                                 <a href="//d.nuomi.com/inter/group" target="_blank">
-                <span>用百度糯米手机版，随时随地查看商家地图</span>
+                <span>用温代手机版，随时随地查看商家地图</span>
                 <span class="download-free">免费下载</span>
             </a>
                             </div>
@@ -949,7 +949,7 @@
             <div class="md-header clearfix">
                 <h3>宏电宾馆(报国寺店)</h3>
                 <a href="//d.nuomi.com/inter/group" target="_blank">
-                    <span>用百度糯米手机版，随时随地查看商家地图</span>
+                    <span>用温代手机版，随时随地查看商家地图</span>
                     <span class="download-free">免费下载</span>
                 </a>
             </div>
@@ -982,7 +982,7 @@
                 <div class="footer-size-2">
                     <h3>手机百度助手</h3>
                     <ul>
-                        <li><a href="https://m.nuomi.com" target="_blank">百度糯米触屏版</a></li>
+                        <li><a href="https://m.nuomi.com" target="_blank">温代触屏版</a></li>
                         <li><a href="//d.nuomi.com/inter/group?from=WebRootWord" target="_blank">下载手机版</a></li>
                     </ul>
                 </div>
@@ -996,8 +996,8 @@
                 <div class="footer-size-2">
                     <h3>公司信息</h3>
                     <ul>
-                        <li><a href="//www.nuomi.com/about">关于百度糯米</a></li>
-                        <li><a href="http://weibo.com/nuomiwang" target="_blank">百度糯米新浪微博</a></li>
+                        <li><a href="//www.nuomi.com/about">关于温代</a></li>
+                        <li><a href="http://weibo.com/nuomiwang" target="_blank">温代新浪微博</a></li>
                         <li><a href="javascript:;" id="j-tttel">业务投诉</a></li>
                     </ul>
                 </div>

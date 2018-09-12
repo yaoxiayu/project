@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- start: Meta -->
     <meta charset="utf-8" />
@@ -18,6 +17,7 @@
     <link href="/business/css/style.min.css" rel="stylesheet" />
     <link href="/business/css/style-responsive.min.css" rel="stylesheet" />
     <link href="/business/css/retina.css" rel="stylesheet" />
+
     <!-- end: CSS -->
     <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -56,11 +56,12 @@
             <!-- end: Main Menu -->
             <!-- start: Content -->
             <div id="content" class="span10">
-            	@section('content')
+
                 <div class="row-fluid">
-                    
+                  @section('content')
+                  @show
                 </div>
-                @show
+
             </div>
             <!-- end: Content -->
         </div>

@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
 use App\Order;
 use App\Shopping;
 use App\Shopuser;
-use App\Comment;
+use App\Session;
 use Illuminate\Http\Request;
 class FoodController extends Controller
 {
@@ -18,14 +19,15 @@ class FoodController extends Controller
     {
         //
        $shopuser = Shopuser::all();
+       // $asd = explode('-', $shopuser->address);
         $order = Order::all();
         $shopping = Shopping::all();
-        $comment = Comment::all();
+        $comment = Comment::all()->count();
         $shopuser = Shopuser::orderBy('id','desc')
         ->where('name', 'like' , '%'.request()->keywords.'%')
         ->paginate(1);
 
-        return view('home.food.index',compact('shopping','shopuser','order','comment'));
+        return view('home.food.index',compact('shopping','shopuser','order','comment','asd'));
     }
 
     /**
@@ -98,6 +100,7 @@ class FoodController extends Controller
     {   
         
         $shopuser = Shopuser::find($id);
+        
         $shopping = Shopping::all();
         $comment = Comment::all();
         return view('home.food.shopuser',compact('shopuser','shopping','comment'));
@@ -109,4 +112,5 @@ class FoodController extends Controller
         $shopping = Shopping::find($id);
         return view('home.food.shopping',compact('shopping'));
     }
+
 }

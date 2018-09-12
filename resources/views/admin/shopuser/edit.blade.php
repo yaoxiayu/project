@@ -49,7 +49,7 @@
                             @foreach($tag as $v)
                             <label style="font-size: 14px;font-weight: normal;margin-right: 10px;">
                                 <input type="checkbox"
-                                    @if(in_array($v->id, $shopuser->tag()->pluck('id')->toArray()))
+                                    @if(in_array($v->id, $shopuser->tag()->pluck('tag_id')->toArray()))
                                     checked
                                     @endif
                                  name="tag_id[]" value="{{$v['id']}}">{{$v['name']}}</label>

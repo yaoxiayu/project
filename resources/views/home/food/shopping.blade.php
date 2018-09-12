@@ -304,7 +304,7 @@
                                         <div class="no-comment">
                                             评论
                                             <div class="no-comment-reason"><span class="ico-mark-up"></span>
-                                                <p>{{$shopping['content']}}</p>
+                                                <p>{!!$shopping['content']!!}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -416,9 +416,14 @@
                                 </li>
                                 <li class=" static-hook-real static-hook-id-16">
                                     <i></i>
-                                    <a id="j-nav-ugc" href="#j-info-ugc" data-rel-content="ugc" class="spec-nav-last" mon="element=会员评价">
+                                  
+                                    <a id="j-nav-ugc" href="" data-rel-content="ugc" class="spec-nav-last" mon="element=会员评价">
                                         <span>会员评价</span>
-                                        </a>
+                                    </a>
+                                   <!--  @if(!Session::has('username'))
+                                        <li class="login"><a href="/login" id="j-barLoginBtn" class="pad-left">请登录</a></li>
+                                        <li class="reg"><a href="/home/zhuce" class="pad-left">免费注册</a></li>
+                                    @endif -->
                                 </li>
                             </ul>
                             <div class="ceiling-buy clearfix static-hook-real static-hook-id-17">
@@ -726,7 +731,7 @@
                                         <div class="no-comment">暂无会员评价</div>
                                         <div class="status" mon="area=comment">
                                             <div class="ldesc">我在百度糯米买过此单</div>
-                                            <a mon="element=btn&element_type=nav" class="button" href="/home/{{$shopping['id']}}.html" id="j-add-comment">
+                                            <a mon="element=btn&element_type=nav" class="button" href="" id="j-add-comment">
                                                 我要评价
                                             </a>
                                         </div>

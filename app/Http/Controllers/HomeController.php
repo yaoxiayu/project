@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Industry;
+use App\Order;
 use App\Setting;
 use App\User;
-use App\Order;
-use App\Industry;
-
 use Illuminate\Contracts\Session\Session;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use App\Link;
 class HomeController extends Controller
 {
 
@@ -102,4 +101,11 @@ class HomeController extends Controller
     }
 
 
+    //友情链接
+    public function link()
+    {
+        $link = Link::all();
+
+        return view('home.link',compact('link'));
+    }
 }

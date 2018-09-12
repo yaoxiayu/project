@@ -880,7 +880,7 @@
                 <ul>
                     <li>
                         <a href="https://m.nuomi.com " target="_blank ">
-                            百度糯米触屏版
+                            温代触屏版
                         </a>
                     </li>
                     <li>
@@ -896,7 +896,7 @@
                 </h3>
                 <ul>
                     <li>
-                        <a href="//www.nuomi.com/links ">
+                        <a href="/links ">
                             友情链接
                         </a>
                     </li>
@@ -914,12 +914,12 @@
                 <ul>
                     <li>
                         <a href="//www.nuomi.com/about ">
-                            关于百度糯米
+                            关于温代
                         </a>
                     </li>
                     <li>
                         <a href="http://weibo.com/nuomiwang " target="_blank ">
-                            百度糯米新浪微博
+                            温代新浪微博
                         </a>
                     </li>
                     <li>

@@ -107,4 +107,15 @@ class OrderController extends Controller
             return back()->with('success','删除失败');
         }
     }
+
+    public function gai($id)
+    {
+      $order = Order::findOrFail($id);
+      $order -> state = 1;
+      if($order -> save()){
+          return redirect('/shangjia')->with('success', '修改成功');
+      }else{
+          return back()->with('error','修改失败');
+      }
+    }
 }

@@ -10,7 +10,7 @@ class order extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
-    
+
 	//订单跟用户的模型关系  属于
     public function user()
     {
