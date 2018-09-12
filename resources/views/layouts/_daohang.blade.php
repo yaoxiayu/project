@@ -123,7 +123,7 @@
                 </li>
                 <li class="j-bar-dropdown"><a href="/shangjia" class="pad-right"><span>我是商家</span><span class="arrow-down-logo"></span></a><span class="sep-lines"></span>
                     <div class="merchant-list header-dropmenu">
-                        <div class="drop-block"></div><a href="http://y.nuomi.com" class="link" target="_blank">商户中心</a><a href="https://mct.y.nuomi.com/sc/pc/guide/guideFlow?page=true" class="link" target="_blank">我想合作</a></div>
+                        <div class="drop-block"></div><a href="/shangjia/login" class="link" target="_blank">登录</a><a href="/shangjia/zhuce" class="link" target="_blank">注册</a></div>
                 </li>
                 <li><a href="//www.nuomi.com/help" class="pad-left" mon="element=help_center">帮助中心</a></li>
                 <li><a href="//www.nuomi.com/pcindex/about/foodsafe " class="pad-left" mon="element=help_foodsafe">食品安全</a></li>

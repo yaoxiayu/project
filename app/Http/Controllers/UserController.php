@@ -18,7 +18,7 @@ class UserController extends Controller
     {
         $users = User::orderBy('id','desc')
             ->where('username','like', '%'.request()->keywords.'%')
-            ->paginate(1);
+            ->paginate(8);
         //解析模板显示用户数据
         return view('admin.user.index', compact('users'));
     }
@@ -52,7 +52,7 @@ class UserController extends Controller
             $user->pic = '/'.$request->pic->store('uploads/'.date('Ymd'));
         }
         // $user -> save();
-    
+
         if($user -> save()){
             try{
                 return redirect('/user')->with('success', '添加成功');
@@ -83,7 +83,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::findOrFail($id); 
+        $user = User::findOrFail($id);
         $asd = explode('-', $user->address);
         return view('admin.user.edit',compact('user','asd'));
     }
@@ -103,10 +103,10 @@ class UserController extends Controller
         $user -> username = $request->username;
         $user -> phone = $request -> phone;
 
-          
+
         $user -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request-> address;
 
-        
+
         //文件上传
          if ($request->hasFile('pic')) {
             $user->pic = '/'.$request->pic->store('uploads/'.date('Ymd'));

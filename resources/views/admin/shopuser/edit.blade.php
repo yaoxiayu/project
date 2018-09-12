@@ -46,7 +46,7 @@
                     <div class="am-form-group">
                         <label for="user-name" class="am-u-sm-3 am-form-label">标签 <span class="tpl-form-line-small-title"></span></label>
                         <div class="am-u-sm-9">
-                            @foreach($tag as $v)
+                          @foreach($tag as $v)
                             <label style="font-size: 14px;font-weight: normal;margin-right: 10px;">
                                 <input type="checkbox"
                                     @if(in_array($v->id, $shopuser->tag()->pluck('tag_id')->toArray()))

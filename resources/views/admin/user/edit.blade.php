@@ -19,7 +19,7 @@
                             <small>用户名为6-20位字母数字下划线</small>
                         </div>
                     </div>
-	
+
                     <div class="am-form-group">
                         <label for="user-name" class="am-u-sm-3 am-form-label">密码 <span class="tpl-form-line-small-title"></span></label>
                         <div class="am-u-sm-9">
@@ -35,23 +35,17 @@
                             <small>请输入您的手机号</small>
                         </div>
                     </div>
-					
+
 					<div class="am-form-group">
                         <label for="user-name" class="am-u-sm-3 am-form-label">地址 <span class="tpl-form-line-small-title"></span></label>
                         <div class="am-u-sm-9">
                             <div class="info">
                                 <div data-toggle="distpicker">
+                                    <select class="form-control" id="province2" data-province="@if($asd !==null) $asd[0] @else @endif" name="s_province"></select>
+                                    <select class="form-control" id="city2" data-city="@if($asd!=null) $asd[1] @endif" name="s_city"></select>
+                                    <select class="form-control" id="district2" data-district="@if($asd!=null) $asd[2] @endif" name="s_county"></select>
 
-
-                                   
-
-                                    
-
-                                    <select class="form-control" id="province2" data-province="{{$asd[0]}}" name="s_province"></select>
-                                    <select class="form-control" id="city2" data-city="{{$asd[1]}}" name="s_city"></select>
-                                    <select class="form-control" id="district2" data-district="{{$asd[2]}}" name="s_county"></select>
-
-                                    <textarea name="address" id="" cols="5" rows="1">{{$asd[3]}}</textarea>
+                                    <textarea name="address" id="" cols="5" rows="1" value="@if($asd!=null) $asd[2] @endif"></textarea>
                                 </div>
                             <div id="show"></div>
                             </div>
@@ -63,7 +57,7 @@
                             <div class="am-form-group am-form-file">
                                 <div class="tpl-form-file-img">
                                 </div>
-                                <img src="{{$user->pic}}" width="80" height="80">
+                                <img src="{{$user->pic}}" width="80" height="80" alt="您还没有添加头像哦!" style="color:#ccc">
                                 <button type="button" class="am-btn am-btn-danger am-btn-sm">
                                     <i class="am-icon-cloud-upload"></i>选张美美的照片当头像吧</button>
                                 <input id="doc-form-file" type="file" name="pic">
