@@ -93,9 +93,7 @@ Route::resource('administrator','AdministratorController');
 Route::get('/', 'HomeController@index');
 //美食
 Route::get('/food/shopuser','FoodController@shopuser');
-// Route::get('/food/shopuser/shopping','FoodController@shopping');
 Route::resource('food', 'FoodController');
-// Route::get('/shopuser/{id}.html','FoodController@shopuser');
 Route::get('{id}.html','FoodController@shopuser');
 Route::get('/home/{id}.html','FoodController@shopping');
 

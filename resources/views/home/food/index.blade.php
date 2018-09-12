@@ -450,21 +450,15 @@
                             </a>
                             
                             <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                            @foreach($comment as $vv)                       
+                                                
                                     <span>
-                                        @if($vv['values']==1)
-                                            🌹好评
-                                        @elseif($vv['values']==2)
-                                            😫中评
-                                        @elseif($vv['values']==3)
-                                            💣差评
-                                        @endif
+                                        好评数:            
                                     </span>
-                            @endforeach
+                            
                                 <a href="//www.nuomi.com/shop/85493528" target="_blank">
                                
                                     <span class="shop-infoo-list-item-line-label">
-                                        {{$v->s_province}}
+                                        {{$v['address']}}
                                     </span>
                                 </a>
                             </p>
