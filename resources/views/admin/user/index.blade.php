@@ -18,7 +18,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="am-u-sm-12 am-u-md-3">
                 <form action="/user" method="get">
                 <div class="am-input-group am-input-group-sm">
@@ -54,7 +54,7 @@
                             </td>
                             <td>{{$v['id']}}</td>
                             <td>{{$v['username']}}</td>
-                            <td><img src="{{$v['pic']}}" width="80" alt=""></td>
+                            <td><img src="{{$v['pic']}}" width="80" alt="您还没有添加头像哦!" style="color:#ccc"></td>
                             <td>{{$v['phone']}}</td>
                             <td>{{$v['address']}}</td>
                             <td>

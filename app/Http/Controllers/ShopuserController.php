@@ -24,7 +24,9 @@ class ShopuserController extends Controller
         ->where('username', 'like' , '%'.request()->keywords.'%')
         ->paginate(5);
         //解析模板显示用户数据
-        return view('admin.shopuser.index',['shopuser'=>$shopuser]);
+        $tag = Shop_user_tag::all();
+        $tags = Tag::all();
+        return view('admin.shopuser.index',compact('shopuser','tag','tags'));
 
 
     }
@@ -63,7 +65,7 @@ class ShopuserController extends Controller
         $shopuser -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request-> address;
 
         $address = new Address;
-        
+
 
         $address -> province = $request->s_province;
         $address -> city = $request->s_city;
@@ -134,7 +136,7 @@ class ShopuserController extends Controller
         // $shopuser -> password = $request -> password;
         $shopuser -> phone = $request -> phone;
         $shopuser -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request-> address;
-        
+
         $address = Address::findOrFail($id);
         $address -> province = $request->s_province;
         $address -> city = $request->s_city;
@@ -173,7 +175,7 @@ class ShopuserController extends Controller
               Shop_user_tag::findOrfail($shop_user_tag[$key]->id)->delete();
             }
         }
-        
+
         if($shopuser->delete() && $address -> delete()){
             return redirect('/shopuser')->with('success','删除成功');
         }else{

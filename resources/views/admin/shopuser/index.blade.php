@@ -45,6 +45,7 @@
                                 <th class="table-title">商家用户名</th>
                                 <th class="table-title">商家行业</th>
                                 <th class="table-title">商家头像</th>
+                                <th class="table-title">商家标签</th>
                                 <th class="table-title">商家手机</th>
                                 <th class="table-title">商家地址</th>
                                 <th class="table-title">商家简介</th>
@@ -63,6 +64,11 @@
                                 <td class="am-hide-sm-only">{{$v['username']}}</td>
                                 <td class="am-hide-sm-only">{{$v->industry['name']}}</td>
                                 <td><img src="{{$v['pic']}}" width="80" alt=""></td>
+                                <td>@foreach($tags as $val)
+                                          @if(in_array($val->id, $tag->pluck('tag_id')->toArray()))
+                                                {{$val['name']}}
+                                          @endif
+                                  @endforeach</td>
                                 <td class="am-hide-sm-only">{{$v['phone']}}</td>
                                 <td class="am-hide-sm-only">{{$v['address']}}</td>
                                 <td class="am-hide-sm-only">{{$v['intro']}}</td>
