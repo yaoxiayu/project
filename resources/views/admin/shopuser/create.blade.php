@@ -22,10 +22,7 @@
                             <small>输入您的店铺名</small>
                         </div>
 
-                        <div class="am-u-sm-9">
-                            <input type="text" name="name" class="tpl-form-input" id="user-name" placeholder="">
-
-                    </div>
+                    </div>   
 
                     <div class="am-form-group">
                         <label for="user-name" class="am-u-sm-3 am-form-label">商家用户名 <span class="tpl-form-line-small-title"></span></label>
