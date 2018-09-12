@@ -127,3 +127,12 @@ Route::resource('administrator','AdministratorController');
 
 //商家首页
 Route::get('/shangjia','BusinessController@index');
+
+
+//商家登录
+Route::get('/shangjia/login','ShangjiaController@login');
+Route::post('/shangjia','ShangjiaController@dologin');
+
+//商家注册
+Route::get('/shangjia/zhuce','ShangjiaController@zhuce');
+Route::post('/shangjia/zhuce','ShangjiaController@zhucewan');

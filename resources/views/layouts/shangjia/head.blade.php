@@ -261,7 +261,7 @@
                                 <div class="avatar"><img src="/business/img/avatar.jpg" alt="Avatar" /></div>
                                 <div class="user">
                                     <span class="hello">Welcome!</span>
-                                    <span class="name">?ukasz Holeczek</span>
+                                    <span class="name">{{Session::get('username')}}</span>
                                 </div>
                             </a>
                             <ul class="dropdown-menu">
