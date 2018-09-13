@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Comment;
 use App\Order;
+use App\Session;
 use App\Shopping;
 use App\Shopuser;
-use App\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 class FoodController extends Controller
 {
     /**
@@ -17,17 +18,17 @@ class FoodController extends Controller
      */
     public function index()
     {
-        //
-       $shopuser = Shopuser::all();
-       // $asd = explode('-', $shopuser->address);
-        $order = Order::all();
-        $shopping = Shopping::all();
-        $comment = Comment::all()->count();
-        $shopuser = Shopuser::orderBy('id','desc')
-        ->where('name', 'like' , '%'.request()->keywords.'%')
-        ->paginate(10);
+       
+       // $shopuser = Shopuser::all();
+       // // $asd = explode('-', $shopuser->address);
+       //  $order = Order::all();
+       //  $shopping = Shopping::all();
+       //  $comment = Comment::all()->count();
+       //  $shopuser = Shopuser::orderBy('id','desc')
+       //  ->where('name', 'like' , '%'.request()->keywords.'%')
+       //  ->paginate(10);
 
-        return view('home.food.index',compact('shopping','shopuser','order','comment','asd'));
+       //  return view('home.food.index',compact('shopping','shopuser','order','comment','asd'));
     }
 
     /**
@@ -100,10 +101,10 @@ class FoodController extends Controller
     {   
         
         $shopuser = Shopuser::find($id);
-        
+        $tag = Tag::all();
         $shopping = Shopping::all();
         $comment = Comment::all();
-        return view('home.food.shopuser',compact('shopuser','shopping','comment'));
+        return view('home.food.shopuser',compact('shopuser','shopping','comment','tag'));
     }
 
     public function shopping($id)
@@ -115,6 +116,21 @@ class FoodController extends Controller
 
         return view('home.food.shopping',compact('shopping','shopuser','comment'));
 
+    }
+
+    public function meishi($id)
+    {   
+        
+        // $shopuser = DB::table('shop_users')->where('industry_id','=',$id)->get();
+        $shopuser = Shopuser::where('industry_id','=',$id)->paginate(10);
+        $order = Order::all();
+        $shopping = Shopping::all();
+        $comment = Comment::all()->count();
+        // $shopuser = Shopuser::orderBy('id','desc')
+        // ->where('name', 'like' , '%'.request()->keywords.'%')
+        // ->paginate(10);
+
+        return view('home.food.index',compact('shopping','shopuser','order','comment','asd'));
     }
 
 }
