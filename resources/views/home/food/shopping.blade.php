@@ -72,7 +72,7 @@
         <div class="w-item-info clearfix">
             <h2>{{$shopping['name']}}</h2>
             <div class="item-title">
-                <span class="text-main">仅元{{$shopping['price']}}！最高价值198元，四人普间/大床房2选1。</span>
+                
                 <span class="hot hide">优惠内容</span>
             </div>
             <div class="ii-images clearfix static-hook-real static-hook-id-6">
@@ -147,7 +147,11 @@
                                 </div>
                             </div>
                             <div class="item-buy-area clearfix">
-                                <div style="float:left" class="static-hook-real static-hook-id-12" id="buy-button-wrap"><a href="/shopcart" class="btn-buy btn-buy-qrnew j-btn-buy btn-hit" >立即抢购</a></div>
+                                <form action="/shopcart/{{$shopping['id']}}&{{$shopping['id']}}" enctype="mulipart/form-data" method="get">
+                                    <div style="float:left" class="static-hook-real static-hook-id-12" id="buy-button-wrap"><button class="btn-buy btn-buy-qrnew j-btn-buy btn-hit" >立即抢购</button></div>
+
+                                </form>
+                                
                             </div>
                         </div>
                     </div>
@@ -222,28 +226,12 @@
                                         <span>本单详情</span>
                                         </a>
                             </li>
-                            <li class="">
-                                <i></i>
-                                <a href="#j-info-consum-tip" data-rel-content="consum-tip" mon="element=消费提示">
-                                        <span>消费提示</span>
-                                        </a>
-                            </li>
-                            <li class="">
-                                <i></i>
-                                <a href="#j-info-intro" data-rel-content="intro" mon="element=商家介绍">
-                                        <span>商家介绍</span>
-                                        </a>
-                            </li>
-                            <li class=" static-hook-real static-hook-id-16">
-                                <i></i>
-                                <a id="j-nav-ugc" href="" data-rel-content="ugc" class="spec-nav-last" mon="element=会员评价">
-                                        <span>会员评价</span>
-                                    </a>
+                           
                                 <!--  @if(!Session::has('username'))
                                         <li class="login"><a href="/login" id="j-barLoginBtn" class="pad-left">请登录</a></li>
                                         <li class="reg"><a href="/home/zhuce" class="pad-left">免费注册</a></li>
                                     @endif -->
-                            </li>
+                           
                         </ul>
                         <div class="ceiling-buy clearfix static-hook-real static-hook-id-17">
                             <div class="pic-price-area"><span class="unit">&yen;</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 50px;line-height:35px;">{{$shopping['price']}}</span></div>

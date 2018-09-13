@@ -96,6 +96,7 @@ class HomeController extends Controller
     //购物车
     public function show()
     {
+        
         $order = Order::all();
         return view('home.gwc',compact('order'));
     }

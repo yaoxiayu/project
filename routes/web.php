@@ -38,6 +38,7 @@ Route::get('/admin/login','AdminController@login');
 
 //登陆操作
 Route::post('/admin/login','AdminController@dologin');
+
 //退出
 Route::get('/admin/logout','AdminController@logout');
 
@@ -119,7 +120,7 @@ Route::resource('hcomment','HcommentController');
 //账户设置
 Route::resource('zhanghu','ZhanghuController');
 //购物车
-Route::get('/shopcart','HomeController@show');
+Route::get('/shopcart/{id}&{counts}','HomeController@show');
 //订单删除
 Route::get('/order/delete/{id}','OrderController@shanchu');
 //评价删除
