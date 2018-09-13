@@ -62,6 +62,7 @@
         </div>
         <!--/for-->
     </script>
+
     <div class="nav-bar-header  static-hook-real static-hook-id-3">
         <div class="nav-inner flexible clearfix">
             <ul class="nav-list clearfix" mon="area=nav&element_type=nav" id="j-catg">
@@ -108,6 +109,30 @@
                         <div id="j-images-board" class="images-board">
                             <div class="item-status clearfix ">
                             </div>
+
+    
+        
+
+    <div class="static-hook-real static-hook-id-5">
+
+    </div>
+    <div class="p-item-info" mon="deal_id=33330185">
+        <div class="w-item-info clearfix">
+            <h2>{{$shopping['name']}}</h2>
+            <div class="item-title">
+                
+                <span class="hot hide">优惠内容</span>
+            </div>
+            <div class="ii-images clearfix static-hook-real static-hook-id-6">
+                <div class="w-item-images">
+                    <div id="j-images-board" class="images-board">
+                        <div class="item-status clearfix ">
+                        </div>
+                        <img src="{{$shopping['img']}}" alt="{{$shopping['name']}}" title="{{$shopping['name']}}" />
+                    </div>
+                    <ul id="j-images-list" class="images-list clearfix">
+                        <li class="images images-last">
+
                             <img src="{{$shopping['img']}}" alt="{{$shopping['name']}}" title="{{$shopping['name']}}" />
                         </div>
                         <ul id="j-images-list" class="images-list clearfix">
@@ -177,6 +202,15 @@
                                 <div class="item-buy-area clearfix">
                                     <div style="float:left" class="static-hook-real static-hook-id-12" id="buy-button-wrap"><a href="/shopcart" class="btn-buy btn-buy-qrnew j-btn-buy btn-hit">立即抢购</a></div>
                                 </div>
+
+                            </div>
+                            <div class="item-buy-area clearfix">
+                                <form action="/shopcart/{{$shopping['id']}}&{{$shopping['id']}}" enctype="mulipart/form-data" method="get">
+                                    <div style="float:left" class="static-hook-real static-hook-id-12" id="buy-button-wrap"><button class="btn-buy btn-buy-qrnew j-btn-buy btn-hit" >立即抢购</button></div>
+
+                                </form>
+                                
+
                             </div>
                         </div>
                         <script type="text/template" data-role="tips-tags">
@@ -249,6 +283,7 @@
                                     <a href="#j-info-all" data-rel-content="all" mon="element=本单详情">
                                         <span>本单详情</span>
                                         </a>
+
                                 </li>
                                 <li class="">
                                     <i></i>
@@ -276,6 +311,19 @@
                             <div class="ceiling-buy clearfix static-hook-real static-hook-id-17">
                                 <div class="pic-price-area"><span class="unit">&yen;</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 50px;line-height:35px;">{{$shopping['price']}}</span></div>
                                 <a mon="area=buyCell" href="//www.nuomi.com/buy/beijing/t00qpcidc?s=a816c32acc2bd60c8ade97fa9907cf13" class="btn-buy btn-buy-s j-btn-buy " mon="area=buy&element=buyCell&element_type=nav" id="pc-buy-spec-nav-id-for-hmt">
+
+                            </li>
+                           
+                                <!--  @if(!Session::has('username'))
+                                        <li class="login"><a href="/login" id="j-barLoginBtn" class="pad-left">请登录</a></li>
+                                        <li class="reg"><a href="/home/zhuce" class="pad-left">免费注册</a></li>
+                                    @endif -->
+                           
+                        </ul>
+                        <div class="ceiling-buy clearfix static-hook-real static-hook-id-17">
+                            <div class="pic-price-area"><span class="unit">&yen;</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 50px;line-height:35px;">{{$shopping['price']}}</span></div>
+                            <a mon="area=buyCell" href="//www.nuomi.com/buy/beijing/t00qpcidc?s=a816c32acc2bd60c8ade97fa9907cf13" class="btn-buy btn-buy-s j-btn-buy " mon="area=buy&element=buyCell&element_type=nav" id="pc-buy-spec-nav-id-for-hmt">
+
                                 立即抢购</a>
                             </div>
                         </div>
@@ -457,6 +505,7 @@
                                     <h3 class="w-section-header">
                                     会员评价
                                 </h3>
+
                                     <div class="detail clearfix " style="min-height: 200px">
                                         <ul>
                                             @if($comment) @foreach($comment as $v) @if($v['shopping_id']==$shopping['id'] && $v['user_id']==$v->user->id)
@@ -472,6 +521,31 @@
                                             @endif
                                         </ul>
                                     </div>
+
+                                <div class="detail clearfix " style="min-height: 200px">
+                                   
+                                    <ul>
+                            @if($comment)
+                                @foreach($comment as $v)
+                                    @if($v['shopping_id']==$shopping['id'] && $v['user_id']==$v->user->id)    
+                                        <div style="width: 720px;height: 80px">
+                                            <div style="float:left;"><img src="/home/static/images/icon_4e372f0.png" style="border-radius: 50%" width="60px" height="60px" style="float:left;"></div>
+                                            <div style="float:left;line-height:80px;width: 140px;height: 20px">{{$v->user->username}}</div>
+                                            <div style="float:left;width: 360px;height:20px;margin-left:20px;padding-top: 20px">{{$v->content}}</div>
+                                            <div style="padding-top: 20px;color:#ff658e">评价时间<br>{{$v['updated_at']}}</div>
+                                        </div>
+                                        
+                                    @endif
+                                @endforeach 
+                                    @else
+                                        <div>暂无评价</div>
+                            @endif   
+                                    </ul>
+                                            
+                                            
+                                        
+                                    
+
                                 </div>
                             </div>
                         </li>

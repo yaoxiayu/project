@@ -5,7 +5,9 @@
 
 	//数据库检测
 
-	$pdo = new PDO('mysql:host=localhost;dbname=xiangmu;charset=utf8','root','');
+
+	$pdo = new PDO('mysql:host=localhost;dbname=lamp0;charset=utf8','root','');
+
 
 	$stmt = $pdo -> prepare('select * from users where username =  ?');
 

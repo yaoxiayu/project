@@ -38,6 +38,7 @@ Route::get('/admin/login','AdminController@login');
 
 //登陆操作
 Route::post('/admin/login','AdminController@dologin');
+
 //退出
 Route::get('/admin/logout','AdminController@logout');
 
@@ -87,18 +88,29 @@ Route::resource('administrator','AdministratorController');
 //前台首页
 Route::get('/', 'HomeController@index');
 //美食
+Route::get('/food/{id}','FoodController@meishi');
 Route::get('/food/shopuser','FoodController@shopuser');
 Route::resource('food', 'FoodController');
 Route::get('{id}.html','FoodController@shopuser');
 Route::get('/home/{id}.html','FoodController@shopping');
-
 //酒店
+Route::get('/hotel/{id}','HotelController@meishi');
+Route::get('/hotel/shopuser','HotelController@shopuser');
 Route::resource('hotel', 'HotelController');
+Route::get('{id}.html','HotelController@shopuser');
+Route::get('/home/{id}.html','HotelController@shopping');
 //娱乐
+Route::get('/play/{id}','PlayController@meishi');
+Route::get('/play/shopuser','PlayController@shopuser');
 Route::resource('play', 'PlayController');
+Route::get('{id}.html','PlayController@shopuser');
+Route::get('/home/{id}.html','PlayController@shopping');
 //结婚
+Route::get('/marry/{id}','MarryController@meishi');
+Route::get('/marry/shopuser','MarryController@shopuser');
 Route::resource('marry', 'MarryController');
-
+Route::get('{id}.html','MarryController@shopuser');
+Route::get('/home/{id}.html','MarryController@shopping');
 
 //个人中心
 Route::resource('person','PersonController');
@@ -108,7 +120,7 @@ Route::resource('hcomment','HcommentController');
 //账户设置
 Route::resource('zhanghu','ZhanghuController');
 //购物车
-Route::get('/shopcart','HomeController@show');
+Route::get('/shopcart/{id}&{counts}','HomeController@show');
 //订单删除
 Route::get('/order/delete/{id}','OrderController@shanchu');
 //评价删除

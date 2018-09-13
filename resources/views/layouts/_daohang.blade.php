@@ -173,13 +173,7 @@
                     <input type="hidden" id="j-input-hidden" name="rid" value="5e11a75122df4436dce95dd5720e3270">
                 </form>
             </div>
-            <ul class="reco-list">
-                <li><a href="//bj.nuomi.com/search?k=%E7%BE%8A%E8%9D%8E%E5%AD%90%E7%81%AB%E9%94%85" mon="element=hot_query&position=0">羊蝎子火锅</a></li>
-                <li><a href="//bj.nuomi.com/search?k=%E5%A4%A9%E8%99%B9%E5%95%86%E5%9C%BA" mon="element=hot_query&position=1">天虹商场</a></li>
-                <li><a href="//bj.nuomi.com/search?k=%E9%92%A2%E7%90%B4" mon="element=hot_query&position=2">钢琴</a></li>
-                <li><a href="//bj.nuomi.com/search?k=%E6%8E%A8%E6%8B%BF" mon="element=hot_query&position=3">推拿</a></li>
-                <li><a href="//bj.nuomi.com/search?k=%E8%88%9E%E8%B9%88" mon="element=hot_query&position=4">舞蹈</a></li>
-            </ul>
+            
         </div>
         <input type="hidden" id="j-input-city-fix" value="bj">
         <div class="utils clearfix">

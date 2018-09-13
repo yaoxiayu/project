@@ -113,18 +113,35 @@
                                             <span class="item-content filter-active-all-ab ">
                                                 全部
                                             </span>
+
                                                     </a>
                                                     </span>
                                                     <div class="j-filter-items-wrap-ab filter-items-wrap-ab">
                                                         <div class="j-filter-items-ab filter-items-ab filter-content-ab">
                                                             <a class="w-filter-item-ab " href="//bj.nuomi.com/1000002" mon="element=1000002&element_type=filter&position=1">
+
+                                        </a>
+                                    </span>
+                                    <div class="j-filter-items-wrap-ab filter-items-wrap-ab">
+                                        <div class="j-filter-items-ab filter-items-ab filter-content-ab">
+                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/1000002" mon="element=1000002&element_type=filter&position=1">
+                                                @foreach($tag as $v)
+
                                                 <span class="item-content ">
-                                                    今日新单
+                                                        {{$v['name']}}
                                                 </span>
+
                                             </a>
                                                         </div>
                                                     </div>
                                                     <a class="show-more j-more-button" mon="element=showMore">
+
+                                                @endforeach
+                                            </a>                                          
+                                        </div>
+                                    </div>
+                                    <a class="show-more j-more-button" mon="element=showMore">
+
                                         <span class="j-more-or-less more-or-less">
                                             更多
                                         </span>
@@ -248,6 +265,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <script>
                             void
                             function(e, t) { for (var n = t.getElementsByTagName("img"), a = +new Date, i = [], o = function() { this.removeEventListener && this.removeEventListener("load", o, !1), i.push({ img: this, time: +new Date }) }, s = 0; s < n.length; s++) ! function() { var e = n[s];
@@ -260,6 +278,22 @@
                                         <li class="shop-infoo-list-item clearfix">
                                             @foreach($shopuser as $v)
                                             <a href="/{{$v['id']}}.html" target="_blank">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                void function(e,t){for(var n=t.getElementsByTagName("img"),a=+new Date,i=[],o=function(){this.removeEventListener&&this.removeEventListener("load",o,!1),i.push({img:this,time:+new Date})},s=0;s< n.length;s++)!function(){var e=n[s];e.addEventListener?!e.complete&&e.addEventListener("load",o,!1):e.attachEvent&&e.attachEvent("onreadystatechange",function(){"complete"==e.readyState&&o.call(e,o)})}();alog("speed.set",{fsItems:i,fs:a})}(window,document);
+            </script>
+            <div class="content-wrap" id="j-goods-area">
+                <div alog-alias="bainuo-good-area" alog-group="bainuo-good-area" class="shop-infoo-list" data-index="1" mon="area=itemList">
+
+                <ul class="shop-infoo-list-ul">
+                    @foreach($shopuser as $v)
+                        <li class="shop-infoo-list-item clearfix"> 
+                            <a href="/{{$v['id']}}.html" target="_blank">
+
                                 <img alt="{{$v['name']}}" class="shop-infoo-list-item-img" src="{{$v['pic']}}"/>
                             </a>
                                             <a href="/{{$v['id']}}.html" target="_blank">
@@ -281,6 +315,7 @@
                                     40元代金券！免费WiFi！
                                 </span>
                             </a>
+
                                         </li>
                                     </ul>
                                     @endforeach
@@ -295,6 +330,23 @@
                                         text-align: left;
                                         padding: 0;
                                     }
+
+                        </li>
+                      @endforeach  
+                    </ul>
+                </div>
+                <div class="w-channel-pager">
+                   
+                    <style>
+                    .pagination{
+                        padding-left: 0;
+                        margin: 1.5rem 0;
+                        list-style: none;
+                        color: #999;
+                        text-align: left;
+                        padding: 0;
+                    }
+
 
                                     .pagination li {
                                         display: inline-block;
