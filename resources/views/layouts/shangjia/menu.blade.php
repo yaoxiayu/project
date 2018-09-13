@@ -26,7 +26,7 @@
 
                             </ul>
                         </li>
-                        <li><a href="index.html"><i class="icon-bar-chart"></i><span class="hidden-tablet"> 评论列表</span></a></li>
+                        <li><a href="/business/comment"><i class="icon-bar-chart"></i><span class="hidden-tablet"> 评论列表</span></a></li>
 
                     </ul>
                 </div>

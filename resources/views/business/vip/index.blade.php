@@ -18,95 +18,39 @@
 						<th>手机号</th>
 						<th>订单数量</th>
 						<th>状态</th>
-						<th>操作</th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php $a = array_rand(array_flip(['waring','success','error','info'])); ?>
-          @foreach($order as $v)
+          @foreach($vip as $k=>$val)
 	  					<tr class="{{$a}}">
 	  						<td>
-	  							{{$v['user_id']}}
+	  							{{$k}}
 	  						</td>
 	  						<td>
-	  							{{$v->user->username}}
+	  							@foreach($user as $v)
+										@if($k == $v['id'])
+											{{$v['username']}}
+										@endif
+									@endforeach
 	  						</td>
 	  						<td>
-	  							{{$v->user->phone}}
+									@foreach($user as $v)
+										@if($k == $v['id'])
+											{{$v['phone']}}
+										@endif
+									@endforeach
 	  						</td>
 	  						<td>
-	                1
+	               {{$val}}
 	  						</td>
 	  						<td>
-	  									<button type="button" class="btn btn-danger">会员</button>
-	  						</td>
-	  						<td>
-	                <button type="button" class="btn btn-success" id="start">移除会员</button>
-									<script type="text/javascript" src="/js/jquery.min.js"></script>
-									<script type="text/javascript">
-											$('#start').click(function()
-											{
-												location.href="/order/gai/{{$v['id']}}";
-											})
-									</script>
+	  									<button type="button" class="btn btn-success">会员</button>
 	  						</td>
 	  					</tr>
 					@endforeach
 				</tbody>
 			</table>
-			<style>
-						.pagination{
-								padding-left: 0;
-								margin: 1.5rem 0;
-								list-style: none;
-								color: #999;
-								text-align: left;
-								padding: 0;
-						}
-
-						.pagination li{
-								display: inline-block;
-						}
-
-						.pagination li a, .pagination li span{
-								color: #23abf0;
-								border-radius: 3px;
-								padding: 6px 12px;
-								position: relative;
-								display: block;
-								text-decoration: none;
-								line-height: 1.2;
-								background-color: #fff;
-								border: 1px solid #ddd;
-								border-radius: 0;
-								margin-bottom: 5px;
-								margin-right: 5px;
-						}
-
-						.pagination .active span{
-								color: #23abf0;
-								border-radius: 3px;
-								padding: 6px 12px;
-								position: relative;
-								display: block;
-								text-decoration: none;
-								line-height: 1.2;
-								background-color: #fff;
-								border: 1px solid #ddd;
-								border-radius: 0;
-								margin-bottom: 5px;
-								margin-right: 5px;
-								background: #23abf0;
-								color: #fff;
-								border: 1px solid #23abf0;
-								padding: 6px 12px;
-						}
-				</style>
-				<div class="am-cf" style="float:right;">
-						<div class="am-fr">
-								{{$order->appends(request()->all())->links()}}
-						</div>
-				</div>
 		</div>
 	</div>
 </div>
