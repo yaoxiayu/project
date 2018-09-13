@@ -61,7 +61,7 @@ class ShopuserController extends Controller
         $shopuser -> name = $request -> name;
         $shopuser -> industry_id = $request -> industry_id;
         $shopuser -> intro = $request -> intro;
-        $shopuser -> password = Hash::make($request->password);
+        $shopuser -> password = Hash::make($request -> password);
         $shopuser -> phone = $request -> phone;
         $shopuser -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request-> address;
 
@@ -166,8 +166,8 @@ class ShopuserController extends Controller
     public function destroy($id)
     {
         //
-        $shopuser = Shopuser::findOrfail($id);
-        $address = Address::findOrfail($id);
+        $shopuser = Shopuser::find($id);
+        $address = Address::find($id);
         $shop_user_tag = Shop_user_tag::all();
         foreach ($shop_user_tag as $key => $value) {
             if($id == $value['shop_user_id']){

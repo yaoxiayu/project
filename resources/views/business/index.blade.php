@@ -25,7 +25,7 @@
 				<tbody>
 					<?php $a = array_rand(array_flip(['waring','success','error','info'])); ?>
           @foreach($order as $v)
-						@if($v['state'] == 2)
+						@if(in_array($v['shopping_id'],$shop)==1)
 	  					<tr class="{{$a}}">
 	  						<td>
 	  							{{$v['id']}}
@@ -60,11 +60,11 @@
 									</script>
 	  						</td>
 	  					</tr>
-						@endif
+							@endif
 					@endforeach
 				</tbody>
 			</table>
-
+			
 		</div>
 	</div>
 </div>
