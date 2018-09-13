@@ -25,7 +25,7 @@ class FoodController extends Controller
         $comment = Comment::all()->count();
         $shopuser = Shopuser::orderBy('id','desc')
         ->where('name', 'like' , '%'.request()->keywords.'%')
-        ->paginate(1);
+        ->paginate(8);
 
         return view('home.food.index',compact('shopping','shopuser','order','comment','asd'));
     }

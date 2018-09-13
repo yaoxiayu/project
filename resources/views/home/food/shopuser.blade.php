@@ -233,22 +233,7 @@
                             </div>
                         </div>
                         @endif @endforeach
-                        <h4 class="n-title" id="user-comment-title">用户评价</h4>
-                        <div class="user-comment user-comment-shop">
-                            <div class="w-user-comment static-hook-real static-hook-id-5" id="j-user-comment">
-                                <div class="detail clearfix ">
-                                    
-                                    <div class="no-comment">
-                                    
-                                    </div>
-                                   
-                                    <div class="no-comment">
-                                        暂无评论
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
+               
                     </div>
                     <div class="main-aside ">
                         <div class="shop-map">

@@ -268,8 +268,9 @@
             <div class="content-wrap" id="j-goods-area">
                 <div alog-alias="bainuo-good-area" alog-group="bainuo-good-area" class="shop-infoo-list" data-index="1" mon="area=itemList">
                 <ul class="shop-infoo-list-ul">
+                    @foreach($shopuser as $v)
                         <li class="shop-infoo-list-item clearfix"> 
-                        @foreach($shopuser as $v)
+                        
                             <a href="/{{$v['id']}}.html" target="_blank">
                                 <img alt="{{$v['name']}}" class="shop-infoo-list-item-img" src="{{$v['pic']}}"/>
                             </a>
@@ -294,8 +295,9 @@
                                 </span>
                             </a>
                         </li>
+                      @endforeach  
                     </ul>
-                    @endforeach
+                    
 
                 </div>
                 <div class="w-channel-pager">
