@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Comment;
 use App\Order;
+use App\Session;
 use App\Shopping;
 use App\Shopuser;
-use App\Session;
+use App\Tag;
 use Illuminate\Http\Request;
 class FoodController extends Controller
 {
@@ -26,8 +27,9 @@ class FoodController extends Controller
         $shopuser = Shopuser::orderBy('id','desc')
         ->where('name', 'like' , '%'.request()->keywords.'%')
         ->paginate(10);
+        $tag = Tag::all();
 
-        return view('home.food.index',compact('shopping','shopuser','order','comment','asd'));
+        return view('home.food.index',compact('shopping','shopuser','order','comment','asd','tag'));
     }
 
     /**

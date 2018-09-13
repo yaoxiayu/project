@@ -127,9 +127,11 @@
                                     <div class="j-filter-items-wrap-ab filter-items-wrap-ab">
                                         <div class="j-filter-items-ab filter-items-ab filter-content-ab">
                                             <a class="w-filter-item-ab " href="//bj.nuomi.com/1000002" mon="element=1000002&element_type=filter&position=1">
+                                                @foreach($tag as $v)
                                                 <span class="item-content ">
-                                                    今日新单
+                                                        {{$v['name']}}
                                                 </span>
+                                                @endforeach
                                             </a>                                          
                                         </div>
                                     </div>
