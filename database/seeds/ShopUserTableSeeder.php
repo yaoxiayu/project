@@ -20,7 +20,7 @@ class ShopUserTableSeeder extends Seeder
         	$shopuser -> password = Hash::make('admin');
 	        $shopuser -> pic = $faker -> imageUrl(640,480);
 	        $shopuser -> phone = str_random(11);
-	        $shopuser -> address = '山西省-太原市-小店区';
+	        $shopuser -> address = '山西省-太原市-小店区-111';
 	        $shopuser -> intro = '欢迎光临我的小店';
 	        $shopuser -> industry_id = rand(1,4);
 	        $shopuser -> name = $faker -> name;

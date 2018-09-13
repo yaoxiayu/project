@@ -137,10 +137,7 @@ class ShopuserController extends Controller
         $shopuser -> phone = $request -> phone;
         $shopuser -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request-> address;
 
-        $address = Address::findOrFail($id);
-        $address -> province = $request->s_province;
-        $address -> city = $request->s_city;
-        $address -> county = $request->s_county;
+        
         //文件上传
         if($request->hasFile('pic')){
             $shopuser ->pic = '/'.$request->pic->store('uploads/'.date('Ymd'));
@@ -149,7 +146,7 @@ class ShopuserController extends Controller
         }
         //
 
-         if($shopuser->save() && $address->save()){
+         if($shopuser->save()){
             $res = $shopuser->tag()->sync($request->tag_id);
             return redirect('/shopuser')->with('success','修改成功');
         }else{
@@ -167,7 +164,7 @@ class ShopuserController extends Controller
     {
         //
         $shopuser = Shopuser::find($id);
-        $address = Address::find($id);
+        
         $shop_user_tag = Shop_user_tag::all();
         foreach ($shop_user_tag as $key => $value) {
             if($id == $value['shop_user_id']){
@@ -176,7 +173,7 @@ class ShopuserController extends Controller
             }
         }
 
-        if($shopuser-> delete() && $address -> delete()){
+        if($shopuser->delete()){
             return redirect('/shopuser')->with('success','删除成功');
         }else{
             return back()->with('error','删除失败');
