@@ -438,7 +438,7 @@
                                     @if($v['shopping_id']==$shopping['id'] && $v['user_id']==$v->user->id)    
                                         <div style="width: 720px;height: 80px">
                                             <div style="float:left;"><img src="/home/static/images/icon_4e372f0.png" style="border-radius: 50%" width="60px" height="60px" style="float:left;"></div>
-                                            <div style="float:left;line-height:80px;">{{$v->user->username}}</div>
+                                            <div style="float:left;line-height:80px;width: 140px;height: 20px">{{$v->user->username}}</div>
                                             <div style="float:left;width: 360px;height:20px;margin-left:20px;padding-top: 20px">{{$v->content}}</div>
                                             <div style="padding-top: 20px;color:#ff658e">评价时间<br>{{$v['updated_at']}}</div>
                                         </div>

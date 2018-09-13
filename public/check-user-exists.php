@@ -5,8 +5,12 @@
 
 	//数据库检测
 
-	$pdo = new PDO('mysql:host=localhost;dbname=project;charset=utf8','root','');
+<<<<<<< HEAD
+	$pdo = new PDO('mysql:host=localhost;dbname=nuomi;charset=utf8','root','');
 
+=======
+	$pdo = new PDO('mysql:host=localhost;dbname=xiangmu;charset=utf8','root','');
+>>>>>>> 1e041ad7edde863b87f55cdd5effe3970eb5134d
 
 	$stmt = $pdo -> prepare('select * from users where username =  ?');
 

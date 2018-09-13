@@ -78,14 +78,14 @@
                         //边框颜色
                         $(this).addClass('active');
                         //提示语显示
-                        $(this).next().show().html('8~18位字母数字下划线');
+                        $(this).next().show().html('6~20位字母数字下划线');
                     }).blur(function() {
                         //移出激活状态的class active
                         $(this).removeClass('active');
                         //正则判断
                         var v = $(this).val();
                         //声明正则
-                        var reg = /^\w{8,18}$/;
+                        var reg = /^\w{6,20}$/;
                         //判断
                         if (!reg.test(v)) {
                             //边框
