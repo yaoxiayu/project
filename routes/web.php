@@ -144,7 +144,8 @@ Route::get('/business/shopping/index','BusinessController@sindex');
 Route::get('/business/order/2','BusinessController@oindex2');
 //已成交
 Route::get('/business/order/1','BusinessController@oindex1');
-
+//会员列表
+Route::get('/business/vip','BusinessController@vindex');
 //退出
 Route::get('/logout','ShangjiaController@logout');
 //订单修改

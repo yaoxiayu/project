@@ -22,7 +22,7 @@
                         <li>
                             <a class="dropmenu" href="#"><i class="icon-eye-open"></i><span class="hidden-tablet"> 会员管理</span> <span class="label"></span></a>
                             <ul>
-                                <li><a class="submenu" href="messages.html"><i class="icon-envelope"></i><span class="hidden-tablet">会员列表 </span></a></li>
+                                <li><a class="submenu" href="/business/vip"><i class="icon-envelope"></i><span class="hidden-tablet">会员列表 </span></a></li>
 
                             </ul>
                         </li>

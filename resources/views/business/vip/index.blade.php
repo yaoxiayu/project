@@ -4,7 +4,7 @@
 	<div class="row-fluid">
 		<div class="span12">
 			<h1 class="text-info">
-				未成交订单管理
+				会员管理
 			</h1>
 			<form class="form-search" action="/shangjia" method="get">
 				<input class="input-medium search-query" name="keywords" type="text" value="{{request()->keywords}}">
@@ -13,11 +13,10 @@
 			<table class="table table-hover">
 				<thead>
 					<tr>
-						<th>订单ID</th>
+						<th>会员ID</th>
 						<th>用户名</th>
-						<th>商品</th>
-						<th>价格</th>
-						<th>数量</th>
+						<th>手机号</th>
+						<th>订单数量</th>
 						<th>状态</th>
 						<th>操作</th>
 					</tr>
@@ -27,29 +26,22 @@
           @foreach($order as $v)
 	  					<tr class="{{$a}}">
 	  						<td>
-	  							{{$v['id']}}
+	  							{{$v['user_id']}}
 	  						</td>
 	  						<td>
 	  							{{$v->user->username}}
 	  						</td>
 	  						<td>
-	  							{{$v->shopping->name}}
+	  							{{$v->user->phone}}
 	  						</td>
 	  						<td>
-	                ¥{{$v['price']}}
+	                1
 	  						</td>
 	  						<td>
-	                {{$v['counts']}}
+	  									<button type="button" class="btn btn-danger">会员</button>
 	  						</td>
 	  						<td>
-	                @if($v['state'] == 2)
-	  									<button type="button" class="btn btn-danger">未成交</button>
-									@elseif($v['state'] == 1)
-											<button type="button" class="btn btn-success">已成交</button>
-									@endif
-	  						</td>
-	  						<td>
-	                <button type="button" class="btn btn-success" id="start">立即启用</button>
+	                <button type="button" class="btn btn-success" id="start">移除会员</button>
 									<script type="text/javascript" src="/js/jquery.min.js"></script>
 									<script type="text/javascript">
 											$('#start').click(function()
