@@ -4,7 +4,7 @@
 	<div class="row-fluid">
 		<div class="span12">
 			<h1 class="text-info">
-				未成交订单管理
+				已成交订单
 			</h1>
 			<form class="form-search" action="/shangjia" method="get">
 				<input class="input-medium search-query" name="keywords" type="text" value="{{request()->keywords}}">
@@ -19,7 +19,6 @@
 						<th>价格</th>
 						<th>数量</th>
 						<th>状态</th>
-						<th>操作</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -49,22 +48,12 @@
 											<button type="button" class="btn btn-success">已成交</button>
 									@endif
 	  						</td>
-	  						<td>
-	                <button type="button" class="btn btn-success" id="start">立即启用</button>
-									<script type="text/javascript" src="/js/jquery.min.js"></script>
-									<script type="text/javascript">
-											$('#start').click(function()
-											{
-												location.href="/order/gai/{{$v['id']}}";
-											})
-									</script>
-	  						</td>
 	  					</tr>
 							@endif
 					@endforeach
 				</tbody>
 			</table>
-			
+
 		</div>
 	</div>
 </div>
