@@ -176,9 +176,7 @@
                     <div class="main-section">
                         <h4 class="n-title">
                             当前商家团购
-                        </h4> 
-                        @foreach($shopping as $v) 
-                        @if($v['shopUser_id']==$shopuser['id'])
+                        </h4> @foreach($shopping as $v) @if($v['shopUser_id']==$shopuser['id'])
                         <div class="shop-current-wrap ">
                             <div class="shop-current" mon="area=shop_current">
                                 <div class="col-wrap">
@@ -237,15 +235,11 @@
                         <div class="user-comment user-comment-shop">
                             <div class="w-user-comment static-hook-real static-hook-id-5" id="j-user-comment">
                                 <div class="detail clearfix ">
-                                    
                                     <div class="no-comment">
-                                    
                                     </div>
-                                   
                                     <div class="no-comment">
                                         暂无评论
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>
