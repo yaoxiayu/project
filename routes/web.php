@@ -27,8 +27,6 @@ Route::post('/home/index','HomeController@dologin');
 //退出登录
 Route::get('/logoutt/','HomeController@logoutt');
 
-
-
 /**
  * 后台首页
  */
@@ -42,9 +40,6 @@ Route::get('/admin/login','AdminController@login');
 Route::post('/admin/login','AdminController@dologin');
 //退出
 Route::get('/admin/logout','AdminController@logout');
-
-
-
 
 
 /**
