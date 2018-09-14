@@ -18,7 +18,7 @@
 	$user = $stmt -> fetch();
 
 	if($user === false){
-		echo '1';
-	}else{
 		echo '0';
+	}else{
+		echo '1';
 	}

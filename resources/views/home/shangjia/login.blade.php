@@ -87,7 +87,7 @@
                             //})
 
                             $.ajax({
-                                url: '/shopuser.php',
+                                url: '/shangjia.php',
                                 type: 'post',
                                 data: { username: v },
                                 success: function(data) {

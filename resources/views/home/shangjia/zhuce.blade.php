@@ -126,8 +126,8 @@
                             // $.post('./check-user-exists.php', {username: v}, function(data){
                             // })
 
-                            $.ajax({
-                                url: '/check-user-exists.php',
+                           $.ajax({
+                                url: '/shopuser.php',
                                 type: 'post',
                                 data: { username: v },
                                 success: function(data) {
@@ -135,7 +135,7 @@
                                         //边框
                                         input.addClass('error');
                                         //文字提醒
-                                        input.next().html('<span style="color:red">该用户名太受欢迎, 请换一个!!</span>').show();
+                                        input.next().html('<span style="color:red">用户名已存在,请换一个</span>').show();
                                         CUSER = false;
                                     } else {
                                         input.removeClass('error');
@@ -242,8 +242,8 @@
                         $('input').trigger('blur');
                         //console.log(CUSER);
                         //判断输入值是否都正确
-                        if (CUSER && CPASS && CPHONE && CREPASS) {
-                            return true;
+                        if (CUSER && CPASS && CPHONE && CREPASS) { 
+                           return true;
                         } else {
                             return false;
                         }

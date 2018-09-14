@@ -156,3 +156,4 @@ Route::get('/business/order/1','BusinessController@oindex1');
 Route::get('/logout','ShangjiaController@logout');
 //订单修改
 Route::get('/order/gai/{id}','OrderController@gai');
+
