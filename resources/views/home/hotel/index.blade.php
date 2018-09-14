@@ -1,5 +1,5 @@
 @include('layouts._daohang')
-<div class="nav-bar-header nav-area-index static-hook-real static-hook-id-3" ><div class="nav-inner flexible clearfix"><ul class="nav-list clearfix" mon="area=nav&element_type=nav" id="j-catg"><li class="nav-item cate-row all-cate deep"><span class="item ">美食分类</span>
+<div class="nav-bar-header nav-area-index static-hook-real static-hook-id-3" ><div class="nav-inner flexible clearfix"><ul class="nav-list clearfix" mon="area=nav&element_type=nav" id="j-catg"><li class="nav-item cate-row all-cate deep"><span class="item "><a href="/">酒店分类</a></span>
 <div class="" id="j-catg-list">
     
     
@@ -105,7 +105,7 @@
                     <div class="w-filter-ab-test" style="position:relative">
                         <div class="filter-breadcrumb">
                             <a class="filter-breadcrumb-link" href="/meishi">
-                                美食
+                              
                             </a>
                         </div>
                         <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208"/ style="position:absolute;right:20px;">
