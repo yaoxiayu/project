@@ -120,7 +120,7 @@ Route::resource('hcomment','HcommentController');
 //账户设置
 Route::resource('zhanghu','ZhanghuController');
 //购物车
-Route::get('/shopcart','HomeController@show');
+Route::get('/shopcart/{id}','HomeController@show');
 //订单删除
 Route::get('/order/delete/{id}','OrderController@shanchu');
 //评价删除
