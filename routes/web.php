@@ -150,3 +150,4 @@ Route::get('/business/comment','BusinessController@cindex');
 Route::get('/logout','ShangjiaController@logout');
 //订单修改
 Route::get('/order/gai/{id}','OrderController@gai');
+

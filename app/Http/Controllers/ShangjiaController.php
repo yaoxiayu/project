@@ -73,7 +73,7 @@ class ShangjiaController extends Controller
         //校验密码
         if(Hash::check($request->password,$shopuser->password)){
             //写入session
-            session(['username'=>$shopuser->username,'id'=>$shopuser->id,'phone'=>$shopuser->phone]);
+            \session(['username'=>$shopuser->username,'id'=>$shopuser->id,'phone'=>$shopuser->phone]);
             return redirect('/shangjia')->with('success','登录成功');
         }else{
              return back()->with('error','登录失败');
