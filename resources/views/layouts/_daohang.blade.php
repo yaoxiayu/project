@@ -200,10 +200,5 @@
         </div>
     </div>
     <script type="text/template" id="autocomplete-template">
-        <!--for:${data} as ${suggestion}, ${index}-->
-        <div data-index="${index}" class="j-suggestion-item n-textbox-autocomplete-item" mon="area=sug&element=${suggestion.relword}">
-            <span class="word">${suggestion.relword}</span>
-            <span class="sug-count">约<em class="count">${suggestion.count}</em>个结果</span>
-        </div>
-        <!--/for-->
+      
     </script>

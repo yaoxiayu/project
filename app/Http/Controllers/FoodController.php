@@ -115,13 +115,14 @@ class FoodController extends Controller
         // $shopuser = DB::table('shop_users')->where('industry_id','=',$id)->get();
         $shopuser = Shopuser::where('industry_id','=',$id)->paginate(10);
         $order = Order::all();
+        $tag = Tag::all();
         $shopping = Shopping::all();
         $comment = Comment::all()->count();
         // $shopuser = Shopuser::orderBy('id','desc')
         // ->where('name', 'like' , '%'.request()->keywords.'%')
         // ->paginate(10);
 
-        return view('home.food.index',compact('shopping','shopuser','order','comment','asd'));
+        return view('home.food.index',compact('shopping','shopuser','order','comment','asd','tag'));
     }
 
 }

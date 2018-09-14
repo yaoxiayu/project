@@ -1,6 +1,6 @@
 @include('layouts._daohang')
 
-<div class="nav-bar-header nav-area-index static-hook-real static-hook-id-3" ><div class="nav-inner flexible clearfix"><ul class="nav-list clearfix" mon="area=nav&element_type=nav" id="j-catg"><li class="nav-item cate-row all-cate deep"><span class="item ">美食分类</span>
+<div class="nav-bar-header nav-area-index static-hook-real static-hook-id-3" ><div class="nav-inner flexible clearfix"><ul class="nav-list clearfix" mon="area=nav&element_type=nav" id="j-catg"><li class="nav-item cate-row all-cate deep"><span class="item "><a href="/">休闲娱乐</a></span>
 <div class="" id="j-catg-list">  
     <div catg-id="326" class="level-item">
         <div class="first-level j-catg-row " data-index="6" mon="area=catg_326">

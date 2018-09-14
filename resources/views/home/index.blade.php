@@ -169,12 +169,12 @@
                     </div>
                 </div>
                 <li class="nav-item nav-item-first">
-                    <a class="item first new-item" href="//www.nuomi.com" mon="element=首页" target="_top">
+                    <a class="item first new-item" href="/" mon="element=首页" target="_top">
                         首页
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="item new-item " href="//t.nuomi.com" mon="element=酒店" target="_top">
+                    <a class="item new-item " href="/hotel/1" mon="element=酒店" target="_top">
                         酒店
                     </a>
                 </li>
@@ -218,7 +218,7 @@
     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="item new-item" href="//bj.nuomi.com/pcindex/dipin#/list/565" mon="element=结婚" target="_top">
+                    <a class="item new-item" href="/marry/4" mon="element=结婚" target="_top">
         结婚
     </a>
                 </li>

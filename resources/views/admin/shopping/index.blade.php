@@ -62,7 +62,9 @@
                             <td>{{$v['price']}}</td>
                             <td>{{$v->shopuser->name}}</td>
                             <td><img src="{{$v['img']}}" width="80" alt=""></td>
-                            <td>{!!$v['content']!!}</td>
+                            <td>
+                              {{$v['content']}}
+                            </td>
                             <td>{{$v['counts']}}</td>
                             <td>{{$v['created_at']}}</td>
                             <td>{{$v['updated_at']}}</td>
@@ -136,7 +138,7 @@
                         {{ $shopping->appends(request()->all())->links() }}
                     </div>
                 </div>
-                
+
                 <hr>
             </div>
         </div>

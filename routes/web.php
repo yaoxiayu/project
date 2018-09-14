@@ -94,23 +94,23 @@ Route::resource('food', 'FoodController');
 Route::get('{id}.html','FoodController@shopuser');
 Route::get('/home/{id}.html','FoodController@shopping');
 //酒店
-Route::get('/hotel/{id}','HotelController@meishi');
+Route::get('/hotel/{id}','HotelController@hotel');
 Route::get('/hotel/shopuser','HotelController@shopuser');
 Route::resource('hotel', 'HotelController');
-Route::get('{id}.html','HotelController@shopuser');
-Route::get('/home/{id}.html','HotelController@shopping');
+// Route::get('{id}.html','HotelController@shopuser');
+// Route::get('/home/{id}.html','HotelController@shopping');
 //娱乐
-Route::get('/play/{id}','PlayController@meishi');
+Route::get('/play/{id}','PlayController@play');
 Route::get('/play/shopuser','PlayController@shopuser');
 Route::resource('play', 'PlayController');
-Route::get('{id}.html','PlayController@shopuser');
-Route::get('/home/{id}.html','PlayController@shopping');
+// Route::get('{id}.html','PlayController@shopuser');
+// Route::get('/home/{id}.html','PlayController@shopping');
 //结婚
-Route::get('/marry/{id}','MarryController@meishi');
+Route::get('/marry/{id}','MarryController@marry');
 Route::get('/marry/shopuser','MarryController@shopuser');
 Route::resource('marry', 'MarryController');
-Route::get('{id}.html','MarryController@shopuser');
-Route::get('/home/{id}.html','MarryController@shopping');
+// Route::get('{id}.html','MarryController@shopuser');
+// Route::get('/home/{id}.html','MarryController@shopping');
 
 //个人中心
 Route::resource('person','PersonController');
@@ -120,7 +120,7 @@ Route::resource('hcomment','HcommentController');
 //账户设置
 Route::resource('zhanghu','ZhanghuController');
 //购物车
-Route::get('/shopcart/{id}&{counts}','HomeController@show');
+Route::get('/shopcart','HomeController@show');
 //订单删除
 Route::get('/order/delete/{id}','OrderController@shanchu');
 //评价删除
@@ -151,7 +151,10 @@ Route::get('/business/shopping/index','BusinessController@sindex');
 Route::get('/business/order/2','BusinessController@oindex2');
 //已成交
 Route::get('/business/order/1','BusinessController@oindex1');
-
+//会员列表
+Route::get('/business/vip','BusinessController@vindex');
+//评论列表
+Route::get('/business/comment','BusinessController@cindex');
 //退出
 Route::get('/logout','ShangjiaController@logout');
 //订单修改

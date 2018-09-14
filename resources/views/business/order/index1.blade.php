@@ -24,7 +24,6 @@
 				<tbody>
 					<?php $a = array_rand(array_flip(['waring','success','error','info'])); ?>
           @foreach($order as $v)
-						@if(in_array($v['shopping_id'],$shop)==1)
 	  					<tr class="{{$a}}">
 	  						<td>
 	  							{{$v['id']}}
@@ -49,11 +48,62 @@
 									@endif
 	  						</td>
 	  					</tr>
-							@endif
 					@endforeach
 				</tbody>
 			</table>
+			<style>
+						.pagination{
+								padding-left: 0;
+								margin: 1.5rem 0;
+								list-style: none;
+								color: #999;
+								text-align: left;
+								padding: 0;
+						}
 
+						.pagination li{
+								display: inline-block;
+						}
+
+						.pagination li a, .pagination li span{
+								color: #23abf0;
+								border-radius: 3px;
+								padding: 6px 12px;
+								position: relative;
+								display: block;
+								text-decoration: none;
+								line-height: 1.2;
+								background-color: #fff;
+								border: 1px solid #ddd;
+								border-radius: 0;
+								margin-bottom: 5px;
+								margin-right: 5px;
+						}
+
+						.pagination .active span{
+								color: #23abf0;
+								border-radius: 3px;
+								padding: 6px 12px;
+								position: relative;
+								display: block;
+								text-decoration: none;
+								line-height: 1.2;
+								background-color: #fff;
+								border: 1px solid #ddd;
+								border-radius: 0;
+								margin-bottom: 5px;
+								margin-right: 5px;
+								background: #23abf0;
+								color: #fff;
+								border: 1px solid #23abf0;
+								padding: 6px 12px;
+						}
+				</style>
+				<div class="am-cf" style="float:right;">
+						<div class="am-fr">
+								{{$order->appends(request()->all())->links()}}
+						</div>
+				</div>
 		</div>
 	</div>
 </div>
