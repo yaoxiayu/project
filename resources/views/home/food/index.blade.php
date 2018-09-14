@@ -239,6 +239,7 @@
                         </div>
                         
                     </div>
+
                     <div alog-alias="bainuo-sort-bar" alog-group="bainuo-sort-bar" class="w-sort-bar" id="j-sort-bar">
                         <div class="bar-area" id="j-bar-area">
                             <span class="sort-area" mon="area=sort">
@@ -275,9 +276,13 @@
                                 </span>
                             </div>
                         </div>
+                      
                     </div>
                 </div>
-            </div>
+                </div>
+
+
+
             <script>
                 void function(e,t){for(var n=t.getElementsByTagName("img"),a=+new Date,i=[],o=function(){this.removeEventListener&&this.removeEventListener("load",o,!1),i.push({img:this,time:+new Date})},s=0;s< n.length;s++)!function(){var e=n[s];e.addEventListener?!e.complete&&e.addEventListener("load",o,!1):e.attachEvent&&e.attachEvent("onreadystatechange",function(){"complete"==e.readyState&&o.call(e,o)})}();alog("speed.set",{fsItems:i,fs:a})}(window,document);
             </script>
@@ -377,11 +382,18 @@
                 </div>
             </div>
         </div>
+          </div>
         <div class="page-body-right">
             
         </div>
-    </div>
-</div>
+  
+
+
+
+
+
+
+
 <div class="hover-overlay" id="hover-overlay">
 </div>
 <div class="re-footer-content">
