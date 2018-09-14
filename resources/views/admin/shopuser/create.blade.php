@@ -51,8 +51,18 @@
                         <label for="user-phone" class="am-u-sm-3 am-form-label">标签ID</label>
                         <div class="am-u-sm-9" style="font-size: 16px;color: #888;font-weight: inherit;">
                                 @foreach($tag as $v)
+                                <label>
                                     <input type="checkbox" name="tag_id[]" value="{{$v['id']}}">{{$v['name']}}
+                                </label>
                                 @endforeach
+                        </div>
+                    </div>
+                    
+                    <div class="am-form-group">
+                        <label for="user-name" class="am-u-sm-3 am-form-label">人均消费 <span class="tpl-form-line-small-title"></span></label>
+                        <div class="am-u-sm-9">
+                            <input type="text" name="renprice" class="tpl-form-input" placeholder="">
+                            <small>请输入本店人均消费额</small>
                         </div>
                     </div>
 

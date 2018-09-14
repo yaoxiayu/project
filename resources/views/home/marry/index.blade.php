@@ -64,13 +64,7 @@
                                     </span>
                                     <div class="j-filter-items-wrap-ab filter-items-wrap-ab">
                                         <div class="j-filter-items-ab filter-items-ab filter-content-ab">
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/1000002" mon="element=1000002&element_type=filter&position=1">
-                                                @foreach($tag as $vvv)
-                                                <span class="item-content ">
-                                                        {{$vvv['name']}}
-                                                </span>
-                                                @endforeach
-                                            </a>                                          
+                                                                              
                                         </div>
                                     </div>
                                     <a class="show-more j-more-button" mon="element=showMore">
@@ -232,6 +226,11 @@
                                     <i class="icon-tuan icon-tuan-adjust">
                                     </i>
                                     40元代金券！免费WiFi！
+                                </span>
+                            </a>
+                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="/{{$v['id']}}.html">
+                                <span>
+                                    人均价格:￥{{$v['renprice']}}
                                 </span>
                             </a>
                         </li>

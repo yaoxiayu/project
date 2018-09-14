@@ -61,6 +61,7 @@ class ShopuserController extends Controller
         $shopuser -> name = $request -> name;
         $shopuser -> industry_id = $request -> industry_id;
         $shopuser -> intro = $request -> intro;
+        $shopuser -> renprice = $request -> renprice;
         $shopuser -> password = Hash::make($request -> password);
         $shopuser -> phone = $request -> phone;
         $shopuser -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request-> address;
@@ -132,8 +133,8 @@ class ShopuserController extends Controller
         $shopuser -> username = $request -> username;
         $shopuser -> name = $request -> name;
         $shopuser -> industry_id = $request -> industry_id;
+        $shopuser -> renprice = $request -> renprice;
         $shopuser -> intro = $request -> intro;
-        // $shopuser -> password = $request -> password;
         $shopuser -> phone = $request -> phone;
         $shopuser -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request-> address;
 

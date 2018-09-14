@@ -56,6 +56,13 @@
                             @endforeach
                         </div>
                     </div>
+                    
+                    <div class="am-form-group">
+                        <label for="user-name" class="am-u-sm-3 am-form-label">人均消费 <span class="tpl-form-line-small-title"></span></label>
+                        <div class="am-u-sm-9">
+                            <input type="text" name="renprice" class="tpl-form-input" id="user-name" placeholder="" value="{{$shopuser['renprice']}}">
+                        </div>
+                    </div>
 
                     <div class="am-form-group">
                         <label for="user-name" class="am-u-sm-3 am-form-label">商家手机号 <span class="tpl-form-line-small-title"></span></label>

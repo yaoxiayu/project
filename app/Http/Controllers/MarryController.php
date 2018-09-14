@@ -118,11 +118,10 @@ class MarryController extends Controller
         $order = Order::all();
         $shopping = Shopping::all();
         $comment = Comment::all()->count();
-        $tag = Tag::all();
+        $tag = Tag::get()->where('industry_id','=',$id);
         // $shopuser = Shopuser::orderBy('id','desc')
         // ->where('name', 'like' , '%'.request()->keywords.'%')
         // ->paginate(10);
-
         return view('home.marry.index',compact('shopping','shopuser','order','comment','asd','tag'));
     }
 

@@ -115,7 +115,7 @@ class FoodController extends Controller
         // $shopuser = DB::table('shop_users')->where('industry_id','=',$id)->get();
         $shopuser = Shopuser::where('industry_id','=',$id)->paginate(10);
         $order = Order::all();
-        $tag = Tag::all();
+        $tag = Tag::get()->where('industry_id','=',$id);
         $shopping = Shopping::all();
         $comment = Comment::all()->count();
         // $shopuser = Shopuser::orderBy('id','desc')
