@@ -7,6 +7,7 @@ use App\Order;
 use App\Session;
 use App\Shopping;
 use App\Shopuser;
+use App\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -109,7 +110,7 @@ class MarryController extends Controller
 
     }
 
-    public function meishi($id)
+    public function marry($id)
     {   
         
         // $shopuser = DB::table('shop_users')->where('industry_id','=',$id)->get();
@@ -117,11 +118,12 @@ class MarryController extends Controller
         $order = Order::all();
         $shopping = Shopping::all();
         $comment = Comment::all()->count();
+        $tag = Tag::get()->where('industry_id','=',$id);
         // $shopuser = Shopuser::orderBy('id','desc')
         // ->where('name', 'like' , '%'.request()->keywords.'%')
         // ->paginate(10);
 
-        return view('home.marry.index',compact('shopping','shopuser','order','comment','asd'));
+        return view('home.marry.index',compact('shopping','shopuser','order','comment','asd','tag'));
     }
 
 }

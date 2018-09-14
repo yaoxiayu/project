@@ -1,5 +1,6 @@
 @include('layouts._daohang')
-<div class="nav-bar-header nav-area-index static-hook-real static-hook-id-3" ><div class="nav-inner flexible clearfix"><ul class="nav-list clearfix" mon="area=nav&element_type=nav" id="j-catg"><li class="nav-item cate-row all-cate deep"><span class="item ">美食分类</span>
+
+<div class="nav-bar-header nav-area-index static-hook-real static-hook-id-3" ><div class="nav-inner flexible clearfix"><ul class="nav-list clearfix" mon="area=nav&element_type=nav" id="j-catg"><li class="nav-item cate-row all-cate deep"><span class="item "><a href="/">分类</a></span>
 <div class="" id="j-catg-list">
     
     
@@ -42,7 +43,9 @@
     </a>
 </li>
 <li class="nav-item">
-    <a class="item new-item " href="//t.nuomi.com" mon="element=酒店" target="_top">
+
+    <a class="item new-item " href="/hotel/1" mon="element=酒店" target="_top">
+
         酒店
     </a>
 </li>
@@ -86,11 +89,19 @@
     </a>
 </li>
 <li class="nav-item">
-    <a class="item new-item" href="//bj.nuomi.com/pcindex/dipin#/list/565" mon="element=结婚" target="_top">
+
+    <a class="item new-item" href="/marry" mon="element=结婚" target="_top">
+
         结婚
     </a>
 </li>
 <li class="nav-item">
+    <a class="item new-item" href="/food" mon="element=结婚" target="_top">
+       
+    </a>
+</li>
+<li class="nav-item">
+
     <a class="item new-item" href="http://waimai.baidu.com/?utm_source=bainuo&utm_medium=nav&utm_content=toububiaoqian&utm_term=default&utm_campaign=beijing&cid=PC_%E5%93%81%E7%89%8C%E6%8E%A8%E5%B9%BF_940766" mon="element=外卖" target="_blank">
         外卖
     </a>
@@ -104,9 +115,9 @@
 
                     <div class="w-filter-ab-test" style="position:relative">
                         <div class="filter-breadcrumb">
-                            <a class="filter-breadcrumb-link" href="/meishi">
-                                美食
-                            </a>
+
+                            
+
                         </div>
                         <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208"/ style="position:absolute;right:20px;">
                         <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208"/ style="position:absolute;right:20px;top: 174px;">
@@ -126,13 +137,17 @@
                                     </span>
                                     <div class="j-filter-items-wrap-ab filter-items-wrap-ab">
                                         <div class="j-filter-items-ab filter-items-ab filter-content-ab">
-                                            <a class="w-filter-item-ab " href="//bj.nuomi.com/1000002" mon="element=1000002&element_type=filter&position=1">
-                                                @foreach($tag as $vvv)
-                                                <span class="item-content ">
-                                                        {{$vvv['name']}}
-                                                </span>
-                                                @endforeach
-                                            </a>                                          
+                                        @foreach($tag as $v)
+                                            <a class="w-filter-item-ab " href="" mon="element=1000002&element_type=filter&position=1">
+
+                                                
+
+                                                
+                                                        {{$v['name']}}
+                                                
+                                                
+                                            </a>
+                                            @endforeach                                          
                                         </div>
                                     </div>
                                     <a class="show-more j-more-button" mon="element=showMore">

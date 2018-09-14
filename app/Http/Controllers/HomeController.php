@@ -17,8 +17,7 @@ class HomeController extends Controller
 
     public function index()
     {
-        $industry = Industry::all()
-        ->where('name', 'like' , '%'.request()->keywords.'%');
+        $industry = Industry::get();
     	return view('home.index',compact('industry'));
        
         
@@ -96,7 +95,6 @@ class HomeController extends Controller
     //购物车
     public function show()
     {
-        
         $order = Order::all();
         return view('home.gwc',compact('order'));
     }
