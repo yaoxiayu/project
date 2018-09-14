@@ -50,6 +50,8 @@
     <link rel="stylesheet" type="text/css" href="/home/static/css/header_8e018e5.css" />
     <link rel="stylesheet" type="text/css" href="/home/static/css/index_a4c176c.css" />
     <link rel="stylesheet" type="text/css" href="/home/static/css/list_a00e520.css" />
+    
+                
 </head>
 
 <body mon="page=index_new" class="gl-big-screen">
@@ -111,11 +113,8 @@
             </ul>
             <ul class="right-util first-level">
                 <li><a href="/person" class="pad-right" mon="element=my_order">个人中心</a></li>
-                <li id="j-visitedArea" class="recent-view"><a href="#" class="pad-right" mon="element=recent_view"><span class="j-visitedArea-title">最近浏览</span><span class="arrow-down-logo"></span></a><span class="sep-lines"></span>
-                    <div class="header-dropmenu items" id="j-visitedContainer">
-                        <div class="drop-block"></div>
-                        <div class="loading">数据载入中...</div>
-                    </div>
+                <li id="j-visitedArea" class="recent-view"><a href="" class="pad-right" mon="element=recent_view"><span class="j-visitedArea-title">温代推荐</span><span class="arrow-down-logo"></span></a><span class="sep-lines"></span>
+                    
                 </li>
                 <li class="qr-code j-bar-dropdown"><a href="//d.nuomi.com/?1009764s" class="pad-left pad-right" target="_blank">温代APP<span class="arrow-down-logo"></span></a>
                     <div class="header-dropmenu">
