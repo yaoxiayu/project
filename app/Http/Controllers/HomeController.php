@@ -17,8 +17,7 @@ class HomeController extends Controller
 
     public function index()
     {
-        $industry = Industry::all()
-        ->where('name', 'like' , '%'.request()->keywords.'%');
+        $industry = Industry::get();
     	return view('home.index',compact('industry'));
        
         

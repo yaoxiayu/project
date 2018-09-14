@@ -118,7 +118,7 @@ class MarryController extends Controller
         $order = Order::all();
         $shopping = Shopping::all();
         $comment = Comment::all()->count();
-        $tag = Tag::all();
+        $tag = Tag::get()->where('industry_id','=',$id);
         // $shopuser = Shopuser::orderBy('id','desc')
         // ->where('name', 'like' , '%'.request()->keywords.'%')
         // ->paginate(10);
