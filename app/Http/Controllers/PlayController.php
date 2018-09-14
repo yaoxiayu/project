@@ -109,7 +109,7 @@ class PlayController extends Controller
 
     }
 
-    public function meishi($id)
+    public function play($id)
     {   
         
         // $shopuser = DB::table('shop_users')->where('industry_id','=',$id)->get();

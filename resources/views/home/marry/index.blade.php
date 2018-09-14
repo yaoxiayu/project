@@ -1,6 +1,6 @@
 @include('layouts._daohang')
 
-<div class="nav-bar-header nav-area-index static-hook-real static-hook-id-3" ><div class="nav-inner flexible clearfix"><ul class="nav-list clearfix" mon="area=nav&element_type=nav" id="j-catg"><li class="nav-item cate-row all-cate deep"><span class="item ">美食分类</span>
+<div class="nav-bar-header nav-area-index static-hook-real static-hook-id-3" ><div class="nav-inner flexible clearfix"><ul class="nav-list clearfix" mon="area=nav&element_type=nav" id="j-catg"><li class="nav-item cate-row all-cate deep"><span class="item "><a href="/">结婚</a></span>
 <div class="" id="j-catg-list">  
     <div catg-id="326" class="level-item">
         <div class="first-level j-catg-row " data-index="6" mon="area=catg_326">
@@ -65,9 +65,11 @@
                                     <div class="j-filter-items-wrap-ab filter-items-wrap-ab">
                                         <div class="j-filter-items-ab filter-items-ab filter-content-ab">
                                             <a class="w-filter-item-ab " href="//bj.nuomi.com/1000002" mon="element=1000002&element_type=filter&position=1">
+                                                @foreach($tag as $vvv)
                                                 <span class="item-content ">
-                                                    今日新单
+                                                        {{$vvv['name']}}
                                                 </span>
+                                                @endforeach
                                             </a>                                          
                                         </div>
                                     </div>
