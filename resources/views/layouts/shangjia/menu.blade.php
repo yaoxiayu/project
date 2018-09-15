@@ -7,7 +7,7 @@
                     	<li>
                             <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> 商品管理</span> <span class="label"></span></a>
                             <ul>
-                                <li><a class="submenu" href="/business/shopping/create"><i class="icon-hdd"></i><span class="hidden-tablet"> 添加商品</span></a></li>
+                                <li><a class="submenu" href="/business/shopping/create"><i class="icon-envelope"></i><span class="hidden-tablet"> 商品添加</span></a></li>
                                 <li><a class="submenu" href="/business/shopping/index"><i class="icon-envelope"></i><span class="hidden-tablet"> 商品列表</span></a></li>
 
                             </ul>
@@ -27,7 +27,10 @@
                             </ul>
                         </li>
                         <li><a href="/business/comment"><i class="icon-bar-chart"></i><span class="hidden-tablet"> 评论列表</span></a></li>
+                        <li>
+                            <a class="" href="/business/set"><i class="icon-eye-open"></i><span class="hidden-tablet"> 店铺管理</span> <span class="label"></span></a>
 
+                        </li>
                     </ul>
                 </div>
             </div>

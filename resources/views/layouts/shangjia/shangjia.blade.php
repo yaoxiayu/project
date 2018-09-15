@@ -37,7 +37,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 
-<body>
+<body style="height:1200px">
     <!-- start: Header -->
     <div class="navbar">
     	<div class="navbar-inner">
@@ -66,25 +66,8 @@
             <!-- end: Content -->
         </div>
         <!--/fluid-row-->
-        <div class="modal hide fade" id="myModal">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">×</button>
-                <h3>Settings</h3>
-            </div>
-            <div class="modal-body">
-                <p>Here settings can be configured...</p>
-            </div>
-            <div class="modal-footer">
-                <a href="#" class="btn" data-dismiss="modal">Close</a>
-                <a href="#" class="btn btn-primary">Save changes</a>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-        <footer>
-            <p>
-                <span style="text-align:left;float:left">Copyright &copy; 2014.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></span>
-            </p>
-        </footer>
+
+
     </div>
     <!--/.fluid-container-->
     <!-- start: JavaScript-->

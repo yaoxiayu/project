@@ -16,9 +16,9 @@ class HcommentController extends Controller
     {
         //前台获取评价
         $order = order::all();
-
         $comment = Comment::orderBy('id','desc')
-         ->paginate(2);
+                    ->where('user_id',\Session::get('id'))
+                    ->paginate(2);
         return view('home.person.comment',compact('order','comment'));
     }
 
