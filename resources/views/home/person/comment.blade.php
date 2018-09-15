@@ -16,7 +16,6 @@
 
                                     <tr>
                                         @foreach($comment as $v)
-                                        @if(Session::get('id') == $v['user_id'])
                                         <td class="font14 total-amount">{{$v->shopping->name}}</td>
                                         <td>
                                             <span class="font14">{{$v->shopping->shopuser->username}}</span>
@@ -32,7 +31,7 @@
 
                                         <td class="goods-info left">
                                             <div class="goods-img fl">
-                                               <span class="font14">{!!$v['content']!!}</span>
+                                               <span class="font14" >{!!$v['content']!!}</span>
                                             </div>
                                         </td>
                                         <td>
@@ -56,7 +55,6 @@
                                         </td>
                                        
                                     </tr>
-                                    @endif
                                     @endforeach
                                     
                                 </table>
