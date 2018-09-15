@@ -8,10 +8,14 @@
                         <a href="/"  style="color:white;">全部分类</a>
                         <ul class="submenu">
                         @foreach($industry as $v)
+                            <a href="/food/{{$v->id}}" style="color:white;">
+                            <label >
                             <li style="border-top:1px solid white;">
-                                <a href="/food/{{$v->id}}" style="color:white;">{{$v->name}}
-                                </a>
+                                {{$v->name}}
+                                
                             </li>
+                            </label>
+                            </a>
                         @endforeach          
                         </ul>
                     </li>

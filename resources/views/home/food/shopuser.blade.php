@@ -14,7 +14,8 @@
         <ul class="nav-list clearfix" id="j-catg" mon="area=nav&element_type=nav">
             <li class="nav-item cate-row all-cate deep">
                 <span class="item ">
-                    <a href="/food/2">美食分类</a>
+
+                    <a href="/food/2">@foreach($industry as $v) @if($shopuser['industry_id'] == $v['id']) {{$v['name']}} @endif @endforeach分类</a>
                 </span>
                 <div class="" id="j-catg-list">
                     <div catg-id="326" class="level-item">

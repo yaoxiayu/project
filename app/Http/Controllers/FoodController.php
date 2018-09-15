@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Comment;
+use App\Industry;
 use App\Order;
 use App\Session;
 use App\Shopping;
 use App\Shopuser;
 use App\Tag;
+use App\shop_user_tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class FoodController extends Controller
@@ -87,6 +89,31 @@ class FoodController extends Controller
     {
         //
     }
+    //第一页面 店铺遍历
+    public function meishi($id)
+    {   
+        $id = $id;
+        $order = Order::all();
+        $shopping = Shopping::all();
+        $comment = Comment::all()->count();
+        $tag = Tag::get()->where('industry_id','=',$id);
+        $industry = Industry::all();
+
+        $shop_user_tag = shop_user_tag::get()
+                         ->where('tag_id',request()->name)
+                         ->pluck('shop_user_id');
+        $shopUser_id = json_decode($shop_user_tag);
+        // var_dump($shopUser_id);echo '<br>';
+        if(request()->name){
+            $shopuser = Shopuser::whereIn('id',$shopUser_id)
+                            ->paginate(1);
+        }else{
+             $shopuser = Shopuser::where('industry_id',$id)
+                            ->paginate(1);
+        }
+        $industry_id = request()->name;
+        return view('home.food.index',compact('shopping','shopuser','order','comment','asd','tag','id','industry','industry_id'));
+    }
 
      public function shopuser($id)
     {
@@ -95,39 +122,18 @@ class FoodController extends Controller
         $tag = Tag::all();
         $shopping = Shopping::all();
         $comment = Comment::all();
-        return view('home.food.shopuser',compact('shopuser','shopping','comment','tag'));
+        $industry = Industry::all();
+        return view('home.food.shopuser',compact('shopuser','shopping','comment','tag','industry'));
     }
 
     public function shopping($id)
     {
         $comment = Comment::all();
         $shopping = Shopping::find($id);
-
         $shopuser = Shopuser::find($id);
+        $industry = Industry::all();
 
-        return view('home.food.shopping',compact('shopping','shopuser','comment'));
-
-    }
-
-    public function meishi($id)
-    {
-
-        // $shopuser = DB::table('shop_users')->where('industry_id','=',$id)->get();
-        $shopuser = Shopuser::where('industry_id','=',$id)->paginate(10);
-        $order = Order::all();
-        $tag = Tag::get()->where('industry_id','=',$id);
-        $shopping = Shopping::all();
-        $comment = Comment::all()->count();
-
-        $tag = Tag::all();
-
-        $tag = Tag::get()->where('industry_id','=',$id);
-
-        // $shopuser = Shopuser::orderBy('id','desc')
-        // ->where('name', 'like' , '%'.request()->keywords.'%')
-        // ->paginate(10);
-
-        return view('home.food.index',compact('shopping','shopuser','order','comment','asd','tag'));
+        return view('home.food.shopping',compact('shopping','shopuser','comment','industry'));
     }
 
 }
