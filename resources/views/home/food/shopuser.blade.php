@@ -246,7 +246,7 @@
                             </div>
                         </div>
 
-               
+
 
                     </div>
                     <div class="main-aside ">
@@ -557,7 +557,7 @@ require.resourceMap({ "res": { "detail:widget/map_panorama/panorama.js": { "url"
 ! function() { require.async(['common:widget/static/init.js'], function(init) {}); }();
 ! function() {
     F.context('staticController').run(function(data, tools) {
-        //   
+        //
     });
 }();
 ! function() {
@@ -574,8 +574,8 @@ require.resourceMap({ "res": { "detail:widget/map_panorama/panorama.js": { "url"
 ! function() { F.context('staticController').run(function() { require.async(['common:widget/new_header/nav/nav.js'], function(Nav) { var nav = new Nav({ selectedClass: 'selected', container: '#j-catg', navContainerClass: 'all-cate', navClass: 'j-catg-row' }); }); }); }();
 ! function() {
     F.context({
-        isHotCity: '1', // 
-        isIndex: '', // 
+        isHotCity: '1', //
+        isIndex: '', //
         erweimaCurrentTime: new Date(1536236662 * 1000)
     });
     F.context('staticController').run(function() {
@@ -602,14 +602,14 @@ require.resourceMap({ "res": { "detail:widget/map_panorama/panorama.js": { "url"
 }();
 ! function() {
     F.context('staticController').run(function(data, tools) {
-        // 
+        //
         var output = tools.smarty.base.output;
         F.context('status', this.isStatic ? output('data.ugc.user_comment.status', {}) :
             '');
-        F.context('dealId', ''); // 
+        F.context('dealId', ''); //
         F.context('orderId', this.isStatic ? output('data.ugc.user_comment.billId', {}) :
             '');
-        F.context('catg_ids', ''); // 
+        F.context('catg_ids', ''); //
         F.context('buyUrl', '//www.nuomi.com/buy//?s=' +
             (this.isStatic ? output('data.s', {}) : ''));
         require.async(["detail:widget/ugc/user_comment/user_comment.js"], function(comment) {
@@ -735,12 +735,12 @@ require.resourceMap({ "res": { "detail:widget/map_panorama/panorama.js": { "url"
                     });
                 }
             })(
-                // 
+                //
                 { "staticData": { "page": "shop_page" }, "dynamicData": { "logInfoExt": { "search_key": "[{\"s\":\"7bdb2eef75065fc873b44c8cc6b3aa7b\",\"s_name\":\"visited\"}]" } } }
             );
 
             function handleBaiduid() {
-                // 
+                //
                 var getBaiduidUrl = '//nuomipassport.baidu.com/getbdid';
                 var retryCount = 1;
                 getBaiduid();
@@ -788,5 +788,8 @@ require.resourceMap({ "res": { "detail:widget/map_panorama/panorama.js": { "url"
 <script>
 var _trace_page_logid = 1462268926;
 </script>
+<<<<<<< HEAD
+=======
 
   
+>>>>>>> 68689cf4592cadb4cf95afa4ad9de55bae8822bb

@@ -49,8 +49,17 @@
 	                {{$v['created_at']}}
 	  						</td>
                 <td>
-                  <button type="button" class="btn btn-danger">删除</button>
-                  <button type="button" class="btn btn-success">编辑</button>
+                  <button type="button" class="btn btn-danger" id="del">删除</button>
+                  <button type="button" class="btn btn-success" id="edit">编辑</button>
+									<script src="/js/jquery.min.js"></script>
+									<script>
+												$('#del').click(function(){
+													location.href="/business/shopping/del/{{$v['id']}}";
+												})
+												$('#edit').click(function(){
+													location.href="/business/shopping/edit/{{$v['id']}}";
+												})
+									</script>
                 </td>
 	  					</tr>
 					@endforeach

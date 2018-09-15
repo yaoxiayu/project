@@ -21,7 +21,7 @@ class FoodController extends Controller
      */
     public function index()
     {
-       
+
     }
 
     /**
@@ -31,7 +31,7 @@ class FoodController extends Controller
      */
     public function create()
     {
-       
+
     }
 
     /**
@@ -116,8 +116,8 @@ class FoodController extends Controller
     }
 
      public function shopuser($id)
-    {   
-        
+    {
+
         $shopuser = Shopuser::find($id);
         $tag = Tag::all();
         $shopping = Shopping::all();
@@ -127,7 +127,7 @@ class FoodController extends Controller
     }
 
     public function shopping($id)
-    {   
+    {
         $comment = Comment::all();
         $shopping = Shopping::find($id);
         $shopuser = Shopuser::find($id);
@@ -136,7 +136,4 @@ class FoodController extends Controller
         return view('home.food.shopping',compact('shopping','shopuser','comment','industry'));
     }
 
-    
-
 }
-
