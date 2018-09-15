@@ -19,7 +19,7 @@ class FoodController extends Controller
      */
     public function index()
     {
-       
+
     }
 
     /**
@@ -29,7 +29,7 @@ class FoodController extends Controller
      */
     public function create()
     {
-       
+
     }
 
     /**
@@ -89,8 +89,8 @@ class FoodController extends Controller
     }
 
      public function shopuser($id)
-    {   
-        
+    {
+
         $shopuser = Shopuser::find($id);
         $tag = Tag::all();
         $shopping = Shopping::all();
@@ -99,7 +99,7 @@ class FoodController extends Controller
     }
 
     public function shopping($id)
-    {   
+    {
         $comment = Comment::all();
         $shopping = Shopping::find($id);
 
@@ -110,19 +110,19 @@ class FoodController extends Controller
     }
 
     public function meishi($id)
-    {   
-        
+    {
+
         // $shopuser = DB::table('shop_users')->where('industry_id','=',$id)->get();
         $shopuser = Shopuser::where('industry_id','=',$id)->paginate(10);
         $order = Order::all();
         $shopping = Shopping::all();
         $comment = Comment::all()->count();
+        $tag = Tag::all();
         // $shopuser = Shopuser::orderBy('id','desc')
         // ->where('name', 'like' , '%'.request()->keywords.'%')
         // ->paginate(10);
 
-        return view('home.food.index',compact('shopping','shopuser','order','comment','asd'));
+        return view('home.food.index',compact('shopping','shopuser','order','comment','asd','tag'));
     }
 
 }
-

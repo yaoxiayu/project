@@ -146,6 +146,18 @@ Route::post('/shangjia/zhuce','ShangjiaController@zhucewan');
 
 //商家商品列表
 Route::get('/business/shopping/index','BusinessController@sindex');
+//商家商品编辑
+Route::get('/business/shopping/edit/{id}','BusinessController@edit');
+Route::post('/business/shopping/update/{id}','BusinessController@update');
+//商家商品添加
+Route::get('/business/shopping/create','BusinessController@create');
+Route::post('/business/shopping/store','BusinessController@store');
+//商家店铺编辑
+Route::get('/business/set','BusinessController@set');
+Route::post('/business/xiugai/{id}','BusinessController@xiugai');
+
+//商品删除
+Route::get('/business/shopping/del/{id}','BusinessController@del');
 //商家订单列表
 //未成交
 Route::get('/business/order/2','BusinessController@oindex2');
