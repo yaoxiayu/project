@@ -220,7 +220,7 @@ class BusinessController extends Controller
           $shopuser = Shopuser::findOrFail($id);
 
           $shopuser -> name = $request -> name;
-          // $shopuser -> renprice = $request -> renprice;
+          $shopuser -> renprice = $request -> renprice;
           $shopuser -> username = $request -> username;
           $shopuser -> id = \Session::get('id');
           $shopuser -> phone = $request -> phone;
