@@ -147,7 +147,7 @@
                                 </div>
                             </div>
                             <div class="item-buy-area clearfix">
-                                <div style="float:left" class="static-hook-real static-hook-id-12" id="buy-button-wrap"><a href="/shopcart" class="btn-buy btn-buy-qrnew j-btn-buy btn-hit" >立即抢购</a></div>
+                                <div style="float:left" class="static-hook-real static-hook-id-12" id="buy-button-wrap"><a href="/shopcart  " class="btn-buy btn-buy-qrnew j-btn-buy btn-hit" >立即抢购</a></div>
                             </div>
                         </div>
                     </div>

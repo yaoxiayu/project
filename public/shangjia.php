@@ -6,14 +6,10 @@
 	//数据库检测
 
 
-<<<<<<< HEAD
-	$pdo = new PDO('mysql:host=localhost;dbname=project;charset=utf8','root','');
-=======
 	$pdo = new PDO('mysql:host=localhost;dbname=xiangmu;charset=utf8','root','');
->>>>>>> 68689cf4592cadb4cf95afa4ad9de55bae8822bb
 
 
-	$stmt = $pdo -> prepare('select * from users where username =  ?');
+	$stmt = $pdo -> prepare('select * from shop_users where username =  ?');
 
 	$arr = [$username];
 
@@ -22,7 +18,7 @@
 	$user = $stmt -> fetch();
 
 	if($user === false){
-		echo '1';
-	}else{
 		echo '0';
+	}else{
+		echo '1';
 	}

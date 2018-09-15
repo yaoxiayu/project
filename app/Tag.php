@@ -12,6 +12,7 @@ class Tag extends Model
    }
    public function shopUser()
    {
-     return $this->belongsToMany('App\shopUser');
+     return $this->belongsTo('App\shopUser');
    }
+   
 }

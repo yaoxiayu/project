@@ -17,8 +17,7 @@ class HomeController extends Controller
 
     public function index()
     {
-        $industry = Industry::all()
-        ->where('name', 'like' , '%'.request()->keywords.'%');
+        $industry = Industry::get();
     	return view('home.index',compact('industry'));
        
         
@@ -73,7 +72,7 @@ class HomeController extends Controller
         //校验密码
         if(Hash::check($request->password,$user->password)){
             //写入session
-            session(['username'=>$user->username,'id'=>$user->id,'phone'=>$user->phone]);
+            \session(['username'=>$user->username,'id'=>$user->id,'phone'=>$user->phone]);
             return redirect('/')->with('success','登录成功');
         }else{
              return back()->with('error','登录失败');
@@ -96,7 +95,9 @@ class HomeController extends Controller
     //购物车
     public function show()
     {
-        
+        //dd('aa');
+
+
         $order = Order::all();
         return view('home.gwc',compact('order'));
     }

@@ -15,56 +15,13 @@
 <link rel="stylesheet" type="text/css" href="/home/static/css/searchinfowindow_1da1739.css" />
 <link rel="stylesheet" type="text/css" href="/home/static/css/detail_cf6a9f9.css" />
 <link rel="stylesheet" type="text/css" href="/home/static/css/detail_0bf534b.css" />
-<div class="nav-bar-header  static-hook-real static-hook-id-3">
-    <div class="nav-inner flexible clearfix">
-        <ul class="nav-list clearfix" mon="area=nav&element_type=nav" id="j-catg">
-            <li class="nav-item cate-row all-cate deep"><span class="item ">全部分类</span>
-                <li class="nav-item nav-item-first"><a href="//www.nuomi.com" target="_top" class="item first new-item" mon="element=首页">首页</a></li>
-                <li class="nav-item"><a href="//t.nuomi.com" target="_top" class="item new-item " mon="element=酒店">酒店</a></li>
-                <li class="nav-item item-dropdown">
-                    <div class="item new-item">出行</div><i class="item-icon-arrowdown"></i>
-                    <ul class="item-arrowdown-container">
-                        <div class="drop-block"></div>
-                        <li class="arrowdown-item">
-                            <a class="arrowdown-item-link" href="http://flight.baidu.com/flight/h5redirect?v=1.0&type=1&client=pcweb&app_from=bainuo&src_from=bainuo_pc_main" mon="element=机票" target="_blank">
-                                <div>机票</div>
-                            </a>
-                        </li>
-                        <li class="arrowdown-item">
-                            <a class="arrowdown-item-link" href="http://api.kuai.baidu.com/cserver/train/redirectctrip?&u=http%253a%252f%252ftrains.ctrip.com%252f%253f%2526mkt_header%253dbdkx%2526allianceID%253d106175%2526sid%253d549977%0a&us=nuomi_pc" mon="element=火车" target="_blank">
-                                <div>火车票</div>
-                            </a>
-                        </li>
-                        <li class="arrowdown-item">
-                            <a class="arrowdown-item-link" href="//kuai.baidu.com/pc/index/index?us=nuomi_pc" mon="element=汽车" target="_blank">
-                                <div>汽车票</div>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item hot-item-s"><a href="//dianying.nuomi.com?cityId=131" target="_blank" class="item new-item " mon="element=电影">电影<i class="new-item-hot"></i></a></li>
-                <li class="nav-item"><a href="//bj.nuomi.com/pcindex/dipin#/list/565" target="_top" class="item new-item" mon="element=结婚">结婚</a></li>
-                <li class="nav-item"><a href="http://waimai.baidu.com/?utm_source=bainuo&utm_medium=nav&utm_content=toububiaoqian&utm_term=default&utm_campaign=beijing&cid=PC_%E5%93%81%E7%89%8C%E6%8E%A8%E5%B9%BF_940766" target="_blank" class="item new-item" mon="element=外卖">外卖</a></li>
-        </ul>
-    </div>
-</div>
+
 <div class="p-detail">
     <div data-huodong="共有多少人团购"></div>
     <div class="p-bread-crumb" mon="deal_id=33330185" alog-alias="bainuo-detail-bread-crumb" alog-group="bainuo-detail-bread-crumb" class="static-hook-real static-hook-id-4">
         <div class="w-bread-crumb" mon="area=breadCrumbs">
-        </div>
-    </div>
-    <script type="text/template" id="autocomplete-template">
-        <!--for:${data} as ${suggestion}, ${index}-->
-        <div data-index="${index}" class="j-suggestion-item n-textbox-autocomplete-item" mon="area=sug&element=${suggestion.relword}">
-            <span class="word">${suggestion.relword}</span>
-            <span class="sug-count">约<em class="count">${suggestion.count}</em>个结果</span>
-        </div>
-        <!--/for-->
-    </script>
-
-    <div class="nav-bar-header  static-hook-real static-hook-id-3">
-        <div class="nav-inner flexible clearfix">
+            <div class="nav-bar-header  static-hook-real static-hook-id-3">
+            <div class="nav-inner flexible clearfix">
             <ul class="nav-list clearfix" mon="area=nav&element_type=nav" id="j-catg">
                 <li class="nav-item cate-row all-cate deep"><span class="item "><a href="/{{$shopuser['id']}}.html">美食分类</a></span>
                     <li class="nav-item nav-item-first"><a href="//www.nuomi.com" target="_top" class="item first new-item" mon="element=首页">首页</a></li>
@@ -95,6 +52,14 @@
                     <li class="nav-item"><a href="http://waimai.baidu.com/?utm_source=bainuo&utm_medium=nav&utm_content=toububiaoqian&utm_term=default&utm_campaign=beijing&cid=PC_%E5%93%81%E7%89%8C%E6%8E%A8%E5%B9%BF_940766" target="_blank" class="item new-item" mon="element=外卖">外卖</a></li>
             </ul>
         </div>
+        </div>
+    </div>
+    <script type="text/template" id="autocomplete-template">
+       
+    </script>
+
+    
+        
         <div class="static-hook-real static-hook-id-5">
         </div>
         <div class="p-item-info" mon="deal_id=33330185">
@@ -109,37 +74,13 @@
                         <div id="j-images-board" class="images-board">
                             <div class="item-status clearfix ">
                             </div>
-
-    
-        
-
-    <div class="static-hook-real static-hook-id-5">
-
-    </div>
-    <div class="p-item-info" mon="deal_id=33330185">
-        <div class="w-item-info clearfix">
-            <h2>{{$shopping['name']}}</h2>
-            <div class="item-title">
-                
-                <span class="hot hide">优惠内容</span>
-            </div>
-            <div class="ii-images clearfix static-hook-real static-hook-id-6">
-                <div class="w-item-images">
-                    <div id="j-images-board" class="images-board">
-                        <div class="item-status clearfix ">
-                        </div>
-                        <img src="{{$shopping['img']}}" alt="{{$shopping['name']}}" title="{{$shopping['name']}}" />
-                    </div>
-                    <ul id="j-images-list" class="images-list clearfix">
-                        <li class="images images-last">
-
                             <img src="{{$shopping['img']}}" alt="{{$shopping['name']}}" title="{{$shopping['name']}}" />
                         </div>
-                        <ul id="j-images-list" class="images-list clearfix">
-                            <li class="images images-last">
-                                <img src="{{$shopping['img']}}" alt="{{$shopping['name']}}" title="{{$shopping['name']}}" />
-                            </li>
-                        </ul>
+                            <ul id="j-images-list" class="images-list clearfix">
+                                <li class="images images-last">
+                                    <img src="{{$shopping['img']}}" alt="{{$shopping['name']}}" title="{{$shopping['name']}}" />
+                                </li> 
+                            </ul>  
                         <div class="erweima-share-collect">
                             <ul class="item-option clearfix" mon="area=dealCollect&element_type=nav" alog-alias="bainuo-detail-item-option" alog-group="bainuo-detail-item-option">
                                 <li class=" "><a href="###" id="j-item-collect" class="item-collect " mon="element=collect">收藏</a>
@@ -199,14 +140,13 @@
                                             <input type="text" value="1" maxlength="10" autocomplete="off"><a href="javascript:;" class="ctrl j-ctrl plus "><span class="horizontal"></span><span class="vertical"></span></a></div>
                                     </div>
                                 </div>
-                                <div class="item-buy-area clearfix">
-                                    <div style="float:left" class="static-hook-real static-hook-id-12" id="buy-button-wrap"><a href="/shopcart" class="btn-buy btn-buy-qrnew j-btn-buy btn-hit">立即抢购</a></div>
-                                </div>
+                                
 
                             </div>
                             <div class="item-buy-area clearfix">
                                 <form action="/shopcart/{{$shopping['id']}}&{{$shopping['id']}}" enctype="mulipart/form-data" method="get">
-                                    <div style="float:left" class="static-hook-real static-hook-id-12" id="buy-button-wrap"><button class="btn-buy btn-buy-qrnew j-btn-buy btn-hit" >立即抢购</button></div>
+                                    <div style="float:left" class="static-hook-real static-hook-id-12" id="buy-button-wrap"><button class="btn-buy btn-buy-qrnew j-btn-buy btn-hit" >立即抢购</button>
+                                    </div>
 
                                 </form>
                                 
@@ -258,16 +198,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="j-buy2buy-page buy2buy-page " index="1">
-                                        <div class="buy2buy-item first">
-                                            <div class="w-goods-item-b2b"><a mon="element=38124685&position=5&element_type=item" href="//www.nuomi.com/deal/z00tjfgpf.html" data-item-st='{"s":"364dd9f17f6db28a36cbab19078ce16a"}' target="_blank"><img class="goods-img" src="static/picture/b151f8198618367a7a142e0e27738bd4b21ce540.jpg" alt="天伦松鹤特惠午餐自助" title="天伦松鹤特惠午餐自助"></a><a mon="element=38124685&position=5&element_type=item" class="title" href="//www.nuomi.com/deal/z00tjfgpf.html" data-item-st='{"s":"364dd9f17f6db28a36cbab19078ce16a"}'>天伦松鹤特惠午餐自助</a>
-                                                <div class="price-sold clearfix">
-                                                    <div class="price"><span class="current">&yen;110</span></div>
-                                                    <div class="sold"><span class="name">已售</span><span class="current">261</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -279,47 +209,28 @@
                         <div id="j-sn-ceiling" class="w-spec-nav clearfix">
                             <ul id="j-sn-list" class="sn-list" mon="area=detailTab&element_type=nav" alog-alias="bainuo-detail-sn-list" alog-group="bainuo-detail-sn-list">
                                 <li class="spec-nav-current ">
-                                    <i></i>
+                                    
+
                                     <a href="#j-info-all" data-rel-content="all" mon="element=本单详情">
                                         <span>本单详情</span>
-                                        </a>
-
-                                </li>
-                                <li class="">
-                                    <i></i>
-                                    <a href="#j-info-consum-tip" data-rel-content="consum-tip" mon="element=消费提示">
-                                        <span>消费提示</span>
-                                        </a>
-                                </li>
-                                <li class="">
-                                    <i></i>
-                                    <a href="#j-info-intro" data-rel-content="intro" mon="element=商家介绍">
-                                        <span>商家介绍</span>
-                                        </a>
-                                </li>
-                                <li class=" static-hook-real static-hook-id-16">
-                                    <i></i>
-                                    <a id="j-nav-ugc" href="" data-rel-content="ugc" class="spec-nav-last" mon="element=会员评价">
-                                        <span>会员评价</span>
                                     </a>
-                                    <!--  @if(!Session::has('username'))
-                                        <li class="login"><a href="/login" id="j-barLoginBtn" class="pad-left">请登录</a></li>
-                                        <li class="reg"><a href="/home/zhuce" class="pad-left">免费注册</a></li>
-                                    @endif -->
-                                </li>
+                                </li>                                
                             </ul>
-                            <div class="ceiling-buy clearfix static-hook-real static-hook-id-17">
-                                <div class="pic-price-area"><span class="unit">&yen;</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 50px;line-height:35px;">{{$shopping['price']}}</span></div>
-                                <a mon="area=buyCell" href="//www.nuomi.com/buy/beijing/t00qpcidc?s=a816c32acc2bd60c8ade97fa9907cf13" class="btn-buy btn-buy-s j-btn-buy " mon="area=buy&element=buyCell&element_type=nav" id="pc-buy-spec-nav-id-for-hmt">
+                           
 
-                            </li>
+                                
+
+
+                           
+
                            
                                 <!--  @if(!Session::has('username'))
                                         <li class="login"><a href="/login" id="j-barLoginBtn" class="pad-left">请登录</a></li>
                                         <li class="reg"><a href="/home/zhuce" class="pad-left">免费注册</a></li>
                                     @endif -->
                            
-                        </ul>
+                        
+
                         <div class="ceiling-buy clearfix static-hook-real static-hook-id-17">
                             <div class="pic-price-area"><span class="unit">&yen;</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 50px;line-height:35px;">{{$shopping['price']}}</span></div>
                             <a mon="area=buyCell" href="//www.nuomi.com/buy/beijing/t00qpcidc?s=a816c32acc2bd60c8ade97fa9907cf13" class="btn-buy btn-buy-s j-btn-buy " mon="area=buy&element=buyCell&element_type=nav" id="pc-buy-spec-nav-id-for-hmt">
@@ -501,70 +412,36 @@
                         <li id="j-info-ugc" class="item-info-detail j-item-content">
                             <div id="shop-ugc" class="info-bar"></div>
                             <div class="user-comment">
-                                <div class="w-user-comment static-hook-real static-hook-id-19" id="j-user-comment">
+                                <div class="w-user-comment static-hook-real static-hook-id-19" id="j-user-comment" >
                                     <h3 class="w-section-header">
                                     会员评价
                                 </h3>
 
                                     <div class="detail clearfix " style="min-height: 200px">
                                         <ul>
-                                            @if($comment) @foreach($comment as $v) @if($v['shopping_id']==$shopping['id'] && $v['user_id']==$v->user->id)
+                                           
+                                            @foreach($comment as $v) @if($v['shopping_id']==$shopping['id'] && $v['user_id']==$v->user->id)
                                             <div style="width: 720px;height: 80px">
-                                                <div style="float:left;"><img src="/home/static/images/icon_4e372f0.png" style="border-radius: 50%" width="60px" height="60px" style="float:left;"></div>
-                                                <div style="float:left;line-height:80px;">{{$v->user->username}}</div>
-                                                <div style="float:left;width: 360px;height:20px;margin-left:20px;padding-top: 20px">{{$v->content}}</div>
+                                                <div style="float:left;"><img src="/home/static/images/icon_4e372f0.png" style="border-radius: 50%" width="60px" height="60px" style="float:left;">
+                                                </div>
+                                                <div style="float:left;line-height:80px;">{{$v->user->username}}
+                                                </div>
+                                                <div style="float:left;width: 360px;height:20px;margin-left:20px;padding-top: 20px">{{$v->content}}
+                                                </div>
                                                 <div style="padding-top: 20px;color:#ff658e">评价时间
-                                                    <br>{{$v['updated_at']}}</div>
+                                                {{$v['updated_at']}}
+                                                </div>
                                             </div>
-                                            @endif @endforeach @else
-                                            <div>暂无评价</div>
                                             @endif
+                                            @endforeach
+                                           
+                                           
                                         </ul>
                                     </div>
-
-                                <div class="detail clearfix " style="min-height: 200px">
-                                   
-                                    <ul>
-                            @if($comment)
-                                @foreach($comment as $v)
-                                    @if($v['shopping_id']==$shopping['id'] && $v['user_id']==$v->user->id)    
-                                        <div style="width: 720px;height: 80px">
-                                            <div style="float:left;"><img src="/home/static/images/icon_4e372f0.png" style="border-radius: 50%" width="60px" height="60px" style="float:left;"></div>
-                                            <div style="float:left;line-height:80px;width: 140px;height: 20px">{{$v->user->username}}</div>
-                                            <div style="float:left;width: 360px;height:20px;margin-left:20px;padding-top: 20px">{{$v->content}}</div>
-                                            <div style="padding-top: 20px;color:#ff658e">评价时间<br>{{$v['updated_at']}}</div>
-                                        </div>
-                                        
-                                    @endif
-                                @endforeach 
-                                    @else
-                                        <div>暂无评价</div>
-                            @endif   
-                                    </ul>
-                                            
-                                            
-                                        
-                                    
-
-                                </div>
                             </div>
                         </li>
                     </ul>
-                    <div class="buy-bottom static-hook-real static-hook-id-20">
-                        <div class="w-buy-bottom clearfix">
-                            <ul class="bb-info-list">
-                                <li class="info-price">
-                                    <div class="pic-price-area"><span class="unit">&yen;</span> <span style="font-size: 50px;">{{$shopping['price']}}</span></div>
-                                </li>
-                                <li class="info-ori">
-                                    <p class="info-title">门市价</p>
-                                    <p class="info-value">￥198</p>
-                                </li>
-                            </ul>
-                            <a mon="area=buy&element=buyBottom&element_type=nav" href="//www.nuomi.com/buy/beijing/t00qpcidc?s=a816c32acc2bd60c8ade97fa9907cf13" class="btn-buy btn-buy-m j-btn-buy " id="pc-buy-bottom-id-for-hmt">
-立即抢购</a>
-                        </div>
-                    </div>
+                  
                     <div class="bottom-recommend" id="j-bottomRecommend">
                         <div class="user-bought clearfix" id="ajax-recent-recommend">
                             <script id="j-recent-recommend-list" type="text/template">
@@ -1159,3 +1036,5 @@
     <script>
     var _trace_page_logid = 1463053361;
     </script>
+
+    

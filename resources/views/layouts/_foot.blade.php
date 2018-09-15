@@ -19,14 +19,14 @@
                             <div class="footer-size-2">
                                 <h3>商务合作</h3>
                                 <ul>
-                                    <li><a href="//www.nuomi.com/links">友情链接</a></li>
+                                    <li><a href="/links">友情链接</a></li>
                                     <li><a href="https://mct.y.nuomi.com/sc/pc/guide/guideFlow?page=true">市场合作</a></li>
                                 </ul>
                             </div>
                             <div class="footer-size-2">
                                 <h3>公司信息</h3>
                                 <ul>
-                                    <li><a href="//www.nuomi.com/about">关于百度糯米</a></li>
+                                    <li><a href="//www.nuomi.com/about">关于百度糯l米</a></li>
                                     <li><a href="http://weibo.com/nuomiwang" target="_blank">百度糯米新浪微博</a></li>
                                     <li><a href="javascript:;" id="j-tttel">业务投诉</a></li>
                                 </ul>

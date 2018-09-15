@@ -11,14 +11,6 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/carts.css">
-    <!--[if IE]>
-    <style type="text/css">
-        li.remove_frame a {
-            padding-top: 5px;
-            background-position: 0px -3px;
-        }
-    </style>
-    <![endif]-->
     <script type="text/javascript" src="/home/gstatic/js/jquery.min.js"></script>
     <script type="text/javascript" src="/home/gstatic/js/jquery.qrcode.min.js"></script>
     <script type="text/javascript">
@@ -170,16 +162,6 @@
         <script src="/js/jquery.min.js"></script>
         <script src="/js/carts.js"></script>
     </div>
-    <!--百度流量统计代码-->
-    <!-- <script>
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?382f81c966395258f239157654081890";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-    </script> -->
 </body>
 
 </html>

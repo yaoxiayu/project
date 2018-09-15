@@ -14,7 +14,7 @@
         <ul class="nav-list clearfix" id="j-catg" mon="area=nav&element_type=nav">
             <li class="nav-item cate-row all-cate deep">
                 <span class="item ">
-                    <a href="/food">美食分类</a>
+                    <a href="/food/2">美食分类</a>
                 </span>
                 <div class="" id="j-catg-list">
                     <div catg-id="326" class="level-item">
@@ -223,7 +223,7 @@
                                         </div>
                                     </div>
                                     <div class="col col-4">
-                                        <a class="n-btn n-btn-primary btn-buy" href="" mon="element=33330185&position=0&s=22c6db79f151ca833ed03c36960cf669" target="_blank">
+                                        <a class="n-btn n-btn-primary btn-buy" href="/home/{{$v->id}}.html" mon="element=33330185&position=0&s=22c6db79f151ca833ed03c36960cf669" target="_blank">
                                             立即购买
                                         </a>
                                     </div>
@@ -787,3 +787,8 @@ require.resourceMap({ "res": { "detail:widget/map_panorama/panorama.js": { "url"
 <script>
 var _trace_page_logid = 1462268926;
 </script>
+<<<<<<< HEAD
+=======
+
+  
+>>>>>>> 68689cf4592cadb4cf95afa4ad9de55bae8822bb

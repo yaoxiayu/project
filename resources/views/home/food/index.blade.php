@@ -8,10 +8,21 @@
     <div catg-id="326" class="level-item">
         <div class="first-level j-catg-row " data-index="6" mon="area=catg_326">
 
+
+<div class="nav-bar-header nav-area-index static-hook-real static-hook-id-3" ><div class="nav-inner flexible clearfix"><ul class="nav-list clearfix" mon="area=nav&element_type=nav" id="j-catg"><li class="nav-item cate-row all-cate deep"><span class="item "><a href="/">分类</a></span>
+<div class="" id="j-catg-list">
+
+
+
+
+    <div catg-id="326" class="level-item">
+        <div class="first-level j-catg-row " data-index="6" mon="area=catg_326">
+
         </div>
         <div class="second-level with-min" mon="area=catg_hover_326">
             <div class="section clearfix">
                 <div class="section-item clearfix no-top-border ">
+
 
                 </div>
                 <div class="section-item clearfix ">
@@ -32,6 +43,7 @@
                 <div class="section-item clearfix">
 
                 </div>
+
             </div>
         </div>
     </div>
@@ -42,7 +54,12 @@
     </a>
 </li>
 <li class="nav-item">
+
     <a class="item new-item " href="/hotel" mon="element=酒店" target="_top">
+
+
+    <a class="item new-item " href="/hotel/1" mon="element=酒店" target="_top">
+
         酒店
     </a>
 </li>
@@ -86,16 +103,29 @@
     </a>
 </li>
 <li class="nav-item">
+
     <a class="item new-item" href="/marry" mon="element=结婚" target="_top">
+
+
+    <a class="item new-item" href="/marry" mon="element=结婚" target="_top">
+
+
         结婚
     </a>
 </li>
 <li class="nav-item">
     <a class="item new-item" href="/food" mon="element=结婚" target="_top">
+
         美食
     </a>
 </li>
 <li class="nav-item">
+
+
+    </a>
+</li>
+<li class="nav-item">
+
     <a class="item new-item" href="http://waimai.baidu.com/?utm_source=bainuo&utm_medium=nav&utm_content=toububiaoqian&utm_term=default&utm_campaign=beijing&cid=PC_%E5%93%81%E7%89%8C%E6%8E%A8%E5%B9%BF_940766" mon="element=外卖" target="_blank">
         外卖
     </a>
@@ -109,6 +139,12 @@
 
                     <div class="w-filter-ab-test" style="position:relative">
                         <div class="filter-breadcrumb">
+
+                        </div>
+                        <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208"/ style="position:absolute;right:20px;">
+                        <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208"/ style="position:absolute;right:20px;top: 174px;">
+
+
 
                         </div>
                         <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208"/ style="position:absolute;right:20px;">
@@ -129,6 +165,7 @@
                                     </span>
                                     <div class="j-filter-items-wrap-ab filter-items-wrap-ab">
                                         <div class="j-filter-items-ab filter-items-ab filter-content-ab">
+                                         @foreach($tag as $v)
                                             <a class="w-filter-item-ab " href="//bj.nuomi.com/1000002" mon="element=1000002&element_type=filter&position=1">
                                                 @foreach($tag as $v)
                                                 <span class="item-content ">
@@ -136,6 +173,15 @@
                                                 </span>
                                                 @endforeach
                                             </a>
+=======
+                                                {{$v['name']}}
+                                            </a>
+                                        @endforeach
+                                        @foreach($tag as $v)
+                                            <a class="w-filter-item-ab " href="" mon="element=1000002&element_type=filter&position=1">
+                                                {{$v['name']}}
+                                            </a>
+                                            @endforeach
                                         </div>
                                     </div>
                                     <a class="show-more j-more-button" mon="element=showMore">
@@ -169,6 +215,7 @@
                                             </span>
                                         </span>
                                     </div>
+
 
                                     <div class="district-cont-wrap j-district-cont j-district-cont1 filterDistrict selected" index="1" mon="area=filterDistrict" style="clear: both;">
                                         <div class="district-list-ab">
@@ -227,7 +274,12 @@
                             </div>
                         </div>
 
+
                     </div>
+
+
+                    </div>
+
                     <div alog-alias="bainuo-sort-bar" alog-group="bainuo-sort-bar" class="w-sort-bar" id="j-sort-bar">
                         <div class="bar-area" id="j-bar-area">
                             <span class="sort-area" mon="area=sort">
@@ -241,7 +293,6 @@
                                     新品榜
                                 </a>
                             </span>
-
 
                             <div class="sortbar-right">
                                 <div class="w-search" mon="area=search&element_type=nav">
@@ -261,12 +312,22 @@
                                 <span class="page-area" mon="area=pageNum">
 
 
+                                    </div>
+                                </div>
+                                <span class="page-area" mon="area=pageNum">
+
+
+
                                 </span>
                             </div>
                         </div>
+
                     </div>
                 </div>
-            </div>
+                </div>
+
+
+
             <script>
                 void function(e,t){for(var n=t.getElementsByTagName("img"),a=+new Date,i=[],o=function(){this.removeEventListener&&this.removeEventListener("load",o,!1),i.push({img:this,time:+new Date})},s=0;s< n.length;s++)!function(){var e=n[s];e.addEventListener?!e.complete&&e.addEventListener("load",o,!1):e.attachEvent&&e.attachEvent("onreadystatechange",function(){"complete"==e.readyState&&o.call(e,o)})}();alog("speed.set",{fsItems:i,fs:a})}(window,document);
             </script>
@@ -285,8 +346,14 @@
                                 </h3>
                             </a>
 
+
                             <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
                                 <a href="/{{$v['id']}}.html">
+
+
+                            <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
+                                <a href="/{{$v['id']}}.html">
+
                                     <span class="shop-infoo-list-item-line-label">
                                         {{$v['address']}}
                                     </span>
@@ -299,6 +366,14 @@
                                     40元代金券！免费WiFi！
                                 </span>
                             </a>
+
+
+                            <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="/{{$v['id']}}.html">
+                                <span>
+                                    人均价格:￥{{$v['renprice']}}
+                                </span>
+                            </a>
+
                         </li>
                       @endforeach
                     </ul>
@@ -352,7 +427,11 @@
                         border: 1px solid #23abf0;
                         padding: 6px 12px;
                     }
+
                 </style>
+
+                </style>
+
                     <div class="am-cf">
                         <div class="am-fr">
                             {{ $shopuser->appends(request()->all())->links() }}
@@ -361,11 +440,20 @@
                 </div>
             </div>
         </div>
+
         <div class="page-body-right">
 
         </div>
     </div>
 </div>
+
+          </div>
+        <div class="page-body-right">
+
+        </div>
+
+
+
 <div class="hover-overlay" id="hover-overlay">
 </div>
 <div class="re-footer-content">
@@ -500,7 +588,7 @@
 <script type="text/javascript">
     !function(){require.async(['common:widget/static/init.js'], function(init){});}();
 !function(){    F.context('staticController').run(function (data, tools) {
-        //
+
             });
 }();
 !function(){        F.context('staticController').run(function () {
@@ -515,8 +603,13 @@
     }();
 !function(){F.context('staticController').run(function () {require.async(['common:widget/new_header/nav/nav.js'], function (Nav) {var nav = new Nav({selectedClass: 'selected',container:'#j-catg',navContainerClass:'all-cate',navClass:'j-catg-row'});});});}();
 !function(){        F.context({
+
             isHotCity: '1', //
             isIndex: '', //
+
+            isHotCity: '1', //
+            isIndex: '', //
+
             erweimaCurrentTime: new Date(1536236668 * 1000)
                 });
         F.context('staticController').run(function () {
@@ -631,12 +724,12 @@
                 });
             }
         })(
-            //
+
             {"staticData":{"page":"channel"},"dynamicData":{"logInfoExt":{"search_key":"[{\"s\":\"eb3bb82691612092dac9dc3e2abccd32\",\"s_name\":\"defaultsearch\"}]"}}}
         );
 
         function handleBaiduid(){
-            //
+
             var getBaiduidUrl = '//nuomipassport.baidu.com/getbdid';
             var retryCount = 1;
             getBaiduid();
@@ -687,4 +780,7 @@
 <!--14672969350928892682090620-->
 <script>
     var _trace_page_logid = 1467296935;
+
+</script>
+=======
 </script>

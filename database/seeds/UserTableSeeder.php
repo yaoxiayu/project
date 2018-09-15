@@ -21,7 +21,7 @@ class UserTableSeeder extends Seeder
         	$user -> password = Hash::make('admin');
 	        $user -> pic = $faker -> imageUrl(640,480);
 	        $user -> phone = str_random(11);
-	        $user -> address = '山西省-吕梁市-孝义市';
+	        $user -> address = '山西省-吕梁市-孝义市-高阳镇';
 	        $user -> save();
         }
     }
