@@ -139,13 +139,7 @@
                                         <div class="j-filter-items-ab filter-items-ab filter-content-ab">
                                         @foreach($tag as $v)
                                             <a class="w-filter-item-ab " href="" mon="element=1000002&element_type=filter&position=1">
-
-                                                
-
-                                                
                                                         {{$v['name']}}
-                                                
-                                                
                                             </a>
                                             @endforeach                                          
                                         </div>
