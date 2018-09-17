@@ -140,7 +140,7 @@
                     border-bottom:1px solid white;
 
                 }
-                li:hover{background-color:#ccc;}
+                li:hover{background-color:#ccc;cursor: pointer;}
                 
                 </style>
                 
