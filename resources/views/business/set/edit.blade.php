@@ -50,18 +50,19 @@
                       </div>
                   </div>
 
-
-
-
-
+                  <div class="am-form-group">
+                      <label for="user-name" class="am-u-sm-3 am-form-label">人均价格<span class="tpl-form-line-small-title"></span></label>
+                      <div class="am-u-sm-9">
+                          <input type="text" name="renprice" class="tpl-form-input" placeholder="" style="border-bottom-color: rgb(194, 202, 216);" value="{{$shopuser['renprice']}}">
+                      </div>
+                  </div>
 
                   {{csrf_field()}}
                   <div class="am-form-group">
                       <div class="am-u-sm-9 am-u-sm-push-3">
-                          <button class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+                        <button class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
                       </div>
                   </div>
-
 
               </form>
           </div>
