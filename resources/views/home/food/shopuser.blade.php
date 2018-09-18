@@ -788,8 +788,3 @@ require.resourceMap({ "res": { "detail:widget/map_panorama/panorama.js": { "url"
 <script>
 var _trace_page_logid = 1462268926;
 </script>
-<<<<<<< HEAD
-=======
-
-  
->>>>>>> 68689cf4592cadb4cf95afa4ad9de55bae8822bb

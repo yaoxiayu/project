@@ -102,6 +102,7 @@ class FoodController extends Controller
         $shop_user_tag = shop_user_tag::get()
                          ->where('tag_id',request()->name)
                          ->pluck('shop_user_id');
+
         $shopUser_id = json_decode($shop_user_tag);
         // var_dump($shopUser_id);echo '<br>';
         if(request()->name){
@@ -136,4 +137,15 @@ class FoodController extends Controller
         return view('home.food.shopping',compact('shopping','shopuser','comment','industry'));
     }
 
+
+    public function wushi()
+    {
+        $price = $_POST['wushi'];
+        $tag_id = $_POST['tag_id'];
+        $shop = shop_user_tag::where('tag_id',$tag_id)->get();
+        foreach($shop as $v){
+            dd($v);
+        }
+
+    }
 }

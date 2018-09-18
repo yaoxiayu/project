@@ -125,7 +125,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-active">
-                                    <a class="nav-txt nav-link" href="/uc/collection/online">
+                                    <a class="nav-txt nav-link" href="/cunshoucang">
                                         我的收藏
                                     </a>
                                 </li>
@@ -150,8 +150,8 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="//baifubao.baidu.com/jump?uri=%2Fuser%2F0%2Fmy_bfb%2F0&domain=https%3A%2F%2Fwww.baifubao.com" class="" target="_blank">
-                                                <span class="sub-nav-ico">&#149;</span>百度钱包余额
+                                            <a href="/cunzuji" class="">
+                                                <span class="sub-nav-ico">&#149;</span>我的足迹
                                             </a>
                                         </li>
                                     </ul>

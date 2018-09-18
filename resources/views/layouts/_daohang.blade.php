@@ -112,10 +112,12 @@
                 <li class="reg"><a href="/logoutt" class="pad-left">退出</a></li> @endif
             </ul>
             <ul class="right-util first-level">
-                <li><a href="/person" class="pad-right" mon="element=my_order">个人中心</a></li>
-                <li id="j-visitedArea" class="recent-view"><a href="" class="pad-right" mon="element=recent_view"><span class="j-visitedArea-title">温代推荐</span><span class="arrow-down-logo"></span></a><span class="sep-lines"></span>
-                    
-                </li>
+            @if(!Session::has('username'))
+                <li style="display: none;"><a href="/person" class="pad-right" mon="element=my_order">个人中心</a></li>
+            @endif 
+            @if(Session::has('username'))
+            <li><a href="/person" class="pad-right" mon="element=my_order">个人中心</a></li> 
+            @endif   
                 <li class="qr-code j-bar-dropdown"><a href="//d.nuomi.com/?1009764s" class="pad-left pad-right" target="_blank">温代APP<span class="arrow-down-logo"></span></a>
                     <div class="header-dropmenu">
                         <div class="drop-block"></div><a class="img" href="//d.nuomi.com/?1009764s" target="_blank">二维码</a></div>

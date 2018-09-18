@@ -15,7 +15,6 @@
 <link rel="stylesheet" type="text/css" href="/home/static/css/searchinfowindow_1da1739.css" />
 <link rel="stylesheet" type="text/css" href="/home/static/css/detail_cf6a9f9.css" />
 <link rel="stylesheet" type="text/css" href="/home/static/css/detail_0bf534b.css" />
-
 <div class="p-detail">
     <div data-huodong="共有多少人团购"></div>
     <div class="p-bread-crumb" mon="deal_id=33330185" alog-alias="bainuo-detail-bread-crumb" alog-group="bainuo-detail-bread-crumb" class="static-hook-real static-hook-id-4">
@@ -74,6 +73,7 @@
                         <div id="j-images-board" class="images-board">
                             <div class="item-status clearfix ">
                             </div>
+
                             <img src="{{$shopping['img']}}" alt="{{$shopping['name']}}" title="{{$shopping['name']}}" />
                         </div>
                             <ul id="j-images-list" class="images-list clearfix">
@@ -83,7 +83,7 @@
                             </ul>  
                         <div class="erweima-share-collect">
                             <ul class="item-option clearfix" mon="area=dealCollect&element_type=nav" alog-alias="bainuo-detail-item-option" alog-group="bainuo-detail-item-option">
-                                <li class=" "><a href="###" id="j-item-collect" class="item-collect " mon="element=collect">收藏</a>
+                                <li class=""><span class="item-collect " mon="element=collect" id="shou">收藏</span>
                                     <div id="j-collect-success" class="collect-success">
                                         <p>收藏成功！</p><a href="//www.nuomi.com/uc/collection/online">去看看我的收藏</a></div>
                                 </li>
@@ -1035,6 +1035,62 @@
     <!--14630533610928892682090620-->
     <script>
     var _trace_page_logid = 1463053361;
+    </script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script>
+        var shop_id = {{$shopping['id']}};
+        $(window).load(function(){
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url:'/cunzuji',
+                type:'post',
+                data:{shop_id:shop_id},
+                success:function(data){
+                },
+                async:false
+            })
+            $.ajax({
+                url:'/cunshoucang',
+                type:'post',
+                data:{shop_id:shop_id},
+                success:function(data){
+                    if(data == 0){
+                    $('#shou').html('已收藏');
+                }
+                },
+                
+                async:false
+            })
+
+        })
+        $('#shou').click(function(){
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url:'/cunshoucang',
+                type:'post',
+                data:{shop_id:shop_id},
+                success:function(data){
+                    if(data == 0){
+                        alert('不可重复收藏');
+                    }else if(data == 1){
+                        alert('收藏成功');
+                    }else{
+                        alert('请先登录再收藏');
+                    }
+                },
+                async:false
+             })
+        })
+
+
     </script>
 
     

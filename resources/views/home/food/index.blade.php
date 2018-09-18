@@ -100,6 +100,7 @@
                     </a>
                 </li>
                 <pre></pre>
+                @section('content')
                 <div class="page-body page-body-channel">
                     <div class="page-body-container clearfix">
                         <div class="page-body-left">
@@ -138,6 +139,7 @@
                                                         background-color: yellow;
                                                     }
                                                     </style>
+                                                    
                                                     <div class="j-filter-items-wrap-ab filter-items-wrap-ab">
                                                         <div class="j-filter-items-ab filter-items-ab filter-content-ab">
                                                             @foreach($tag as $v)
@@ -148,11 +150,11 @@
                                                                         <div class="am-input-group am-input-group-sm yellow" style="display: none;z-index: 1;">
                                                                             <input type="text" name="name" class="am-form-field" value="{{$v['id']}}" style="display:none;">
                                                                             <span class="am-input-group-btn">
-                                                                    <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" style="display:none" id="suo{{$v['id']}}"></button>
-                                                                  </span>
+                                                                            <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" style="display:none" id="suo{{$v['id']}}"></button>
+                                                                          </span>
                                                                         </div>
+                                                                    </form>
                                                                 </div>
-                                                                </form>
                                                             </a>
                                                             <script src="/js/jquery.min.js"></script>
                                                             <script>
@@ -182,11 +184,10 @@
                                                         <a class="w-filter-item-ab item-all-auto-ab" href="javascript:;" mon="element=0&element_type=filter&position=1">
                                                             <span class="item-content filter-active-all-ab ">
                                                                 全部
-                                                            </span>
+                                                         </span>
                                                         </a>
 
                                                     </div>
-                                                    
                                                     <div class="district-tab">
 
                                                         <span class="tab-item j-district-tab-li j-district-tab-li1 selected" index="1">
@@ -211,7 +212,6 @@
                                                             </span>
                                                         </div>
                                                     </div>
-                                              
                                             <div class="normal-filter ">
                                                 <div alog-alias="bainuo-filter-section" alog-group="bainuo-filter-section" class="w-filter-p-ab filter-list-ab clearfix" mon="area=filterPrice">
                                                     <h5 class="filter-label-ab">
@@ -225,32 +225,62 @@
                                                         </a>
                                                     </span>
                                                     <span class="filter-items-ab filter-content-ab">
-                                                        <a class="w-filter-item-ab " href="//bj.nuomi.com/326?price=1" mon="element=1&element_type=filter&position=1">
-                                                            <span class="item-content ">
+                                                        <a class="w-filter-item-ab "  mon="element=1&element_type=filter&position=1">
+                                                            <span class="item-content" id="wushi">
                                                                 50元以下
                                                             </span>
+                                                            <meta name="csrf-token" content="{{ csrf_token() }}">
+                                                            <script>
+                                                                $("#wushi").click(function(){
+                                                                    var wushi = '50';
+                                                                    var tag_id = {{$tag[0]['id']}};
+                                                                    $.ajaxSetup({
+                                                                        headers: {
+                                                                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                                                        }
+                                                                    });
+                                                                    $.ajax({
+                                                                        url:'/wushi',
+                                                                        type:'post',
+                                                                        data:{wushi:wushi,tag_id:tag_id},
+                                                                        success:function(data){
+
+                                                                        },
+                                                                        async:false
+
+                                                                    })
+                                                                })
+                                                            </script>
                                                                     </a>
-                                                                    <a class="w-filter-item-ab " href="//bj.nuomi.com/326?price=2" mon="element=2&element_type=filter&position=1">
+                                                                    <a class="w-filter-item-ab " href="" mon="element=2&element_type=filter&position=1">
                                                             <span class="item-content ">
                                                                 50-100元
                                                             </span>
                                                         </a>
-                                                                    <a class="w-filter-item-ab " href="//bj.nuomi.com/326?price=3" mon="element=3&element_type=filter&position=1">
+                                                                    <a class="w-filter-item-ab " href="" mon="element=3&element_type=filter&position=1">
                                                             <span class="item-content ">
                                                                 100-200元
                                                             </span>
                                                         </a>
-                                                                    <a class="w-filter-item-ab " href="//bj.nuomi.com/326?price=4" mon="element=4&element_type=filter&position=1">
+                                                                    <a class="w-filter-item-ab " href="" mon="element=4&element_type=filter&position=1">
                                                             <span class="item-content ">
                                                                 200-300元
                                                             </span>
                                                         </a>
-                                                                    <a class="w-filter-item-ab " href="//bj.nuomi.com/326?price=5" mon="element=5&element_type=filter&position=1">
+                                                                    <a class="w-filter-item-ab " href="" mon="element=5&element_type=filter&position=1">
                                                             <span class="item-content ">
                                                                 300元以上
                                                             </span>
                                                         </a>
                                                     </span>
+                                                          <form action="/food/{{$id}}/name=&" method="get">
+                                                                        <div class="am-input-group am-input-group-sm yellow" style="display: none;z-index: 1;">
+                                                                            <input type="text" name="price" class="am-form-field" value="{{$v['id']}}" style="display:none;">
+                                                                            <span class="am-input-group-btn">
+                                                                            <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" style="display:none" id="suo{{$v['id']}}"></button>
+                                                                          </span>
+                                                                        </div>
+                                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -258,42 +288,11 @@
                                 </div>
                             </div>
                         </div>
+                    
                     <div alog-alias="bainuo-sort-bar" alog-group="bainuo-sort-bar" class="w-sort-bar" id="j-sort-bar">
-                        <div class="bar-area" id="j-bar-area">
-                            <span class="sort-area" mon="area=sort">
-                                <a class="sort-default sort-default-active" href="javascript:;" mon="element=default" rel="nofollow">
-                                    综合榜
-                                </a>
-                                <a class="sort-item sort-down" href="//bj.nuomi.com/326/hot#j-sort-bar" mon="element=sales" rel="nofollow" title="点击按销量降序排序">
-                                    热销榜
-                                </a>
-                                <a class="sort-item sort-up" href="//bj.nuomi.com/326/release#j-sort-bar" mon="element=lastest" rel="nofollow" title="发布时间由近到远">
-                                    新品榜
-                                </a>
-                            </span>
-
-                                            <div class="sortbar-right">
-                                                <div class="w-search" mon="area=search&element_type=nav">
-                                                    <div class="search-wrap">
-                                                        <form action="//www.nuomi.com/search" class="j-searchForm" method="get" target="_blank">
-                                                            <input autocomplete="off" class="search-input placeholder j-searchInput" name="k" placeholder="艾灸" type="text" value="" />
-                                                            <input class="btn search-btn j-search-btn" mon="element=button" type="submit" value="">
-                                                            <input class="input-hidden j-input-hidden" name="rid" type="text" value="2113180bd5a56524f3b24fd64b5446d0">
-                                                            </input>
-                                                            </input>
-                                                        </form>
-                                                    </div>
-                                                    <div alog-alias="bainuo-header-hot-area" alog-group="bainuo-header-hot-area" class="hot-area">
-                                                    </div>
-                                                </div>
-                                               <span class="page-area" mon="area=pageNum">
-                                    
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        
+                    </div>
+                            
                             <script>
                             void function(e, t) {
                                 for (var n = t.getElementsByTagName("img"), a = +new Date, i = [], o = function() { this.removeEventListener && this.removeEventListener("load", o, !1), i.push({ img: this, time: +new Date }) }, s = 0; s < n.length; s++) ! function() {
@@ -398,6 +397,7 @@
                             </div>
                         </div>
                     </div>
+                    @show
                     <div class="page-body-right">
                     </div>
                     <div class="hover-overlay" id="hover-overlay">
