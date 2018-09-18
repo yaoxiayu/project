@@ -34,15 +34,12 @@ Route::resource('hcomment','HcommentController');
 //账户设置
 Route::resource('zhanghu','ZhanghuController');
 //购物车
-Route::get('/shopcart/{id}','HomeController@show');
-//订单删除
-Route::get('/order/delete/{id}','OrderController@shanchu');
+Route::get('/shopcart/{id}&{counts}','HomeController@show');
 //评价删除
 Route::get('/hcomment/delete/{id}','CommentController@shanchu');
 //友情链接
 Route::get('/links','HomeController@link');
-//最近浏览
-Route::get('/liulan','LanController@liulan');
+
 //美食 娱乐 结婚 酒店
 Route::get('/food/{id}','FoodController@meishi');
 Route::get('/food/shopuser','FoodController@shopuser');
@@ -50,7 +47,21 @@ Route::resource('/food', 'FoodController');
 Route::get('{id}.html','FoodController@shopuser');
 Route::get('/home/{id}.html','FoodController@shopping');
 
+//后台足迹
+Route::resource('/zuji','ZujiController');
 
+//前台cun足迹
+Route::post('/cunzuji','ZujiController@cunzuji');
+Route::get('/cunzuji','ZujiController@xianshi');
+Route::get('/cunzuji/delete/{id}','ZujiController@shanchu');
+
+//后台收藏
+Route::resource('/shoucang','ShoucangController');
+
+//前台收藏
+Route::post('/cunshoucang','ShoucangController@cunshoucang');
+Route::get('/cunshoucang','ShoucangController@xianshi');
+Route::get('/cunshoucang/delete/{id}','ShoucangController@shanchu');
 
 
 /**
@@ -159,4 +170,6 @@ Route::get('/business/comment','BusinessController@cindex');
 Route::get('/logout','ShangjiaController@logout');
 //订单修改
 Route::get('/order/gai/{id}','OrderController@gai');
+//优惠券管理
 
+Route::resource('coupon','CouponController');

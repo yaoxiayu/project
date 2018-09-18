@@ -1,5 +1,6 @@
 @extends('home.person.index') @section('content')
 <script type="text/javascript" src="/js/jquery.min.js"></script>
+
 <div class="uc-main fr" >
    @foreach($comment as $v)
     <div style="width: 580px;float: right;margin-top:25px;">
@@ -32,6 +33,34 @@
 .am-cf {
     float: right;
 }
+
+       <div class="uc-main fr">
+                            <div class="w-list" id="J-orders-wrap">
+                                <table class="order-list" mon="area=orderList">
+                                    <tr>
+                                        <th width="70">商品名称</th>
+                                        <th width="70">商家名称</th>
+                                        <th width="70">评论分值</th>                                 
+                                        <th width="120">评论内容</th>
+                                        <th width="70">评论人</th>
+                                        <th style="padding-left:80px">操作</th>
+                                    </tr>
+                                    <tr>
+                                        @foreach($comment as $v)
+
+                                        <td class="font14 total-amount">{{$v->shopping->name}}</td>
+                                        <td>
+                                            <span class="font14">{{$v->shopping->shopuser->username}}</span>
+                                        </td>
+                                        <td>
+                                            <div class="goods-img fl">
+                                                @if($v['values']==1) 🌹好评
+                                                @elseif($v['values']==2) 😫中评
+                                                @elseif($v['values']==3) 💣差评
+                                                @endif
+                                            </div>
+                                        </td>
+
 
 .pagination {
     padding-left: 0;

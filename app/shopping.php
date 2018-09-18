@@ -15,4 +15,14 @@ class shopping extends Model
     {
     	return $this->belongsTo('App\shopUser','shopUser_id','id');
     }
+
+    public function zuji()
+    {
+    	return $this->hasMany('App\Zuji');
+    }
+
+    public function shoucang()
+    {
+        return $this->hasMany('App\Shoucang');
+    }
 }

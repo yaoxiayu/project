@@ -26,4 +26,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function zuji()
+    {
+        return $this->hasMany('App\Zuji');
+    }
+
+    public function shoucang()
+    {
+        return $this->hasMany('App\Shoucang');
+    }
 }

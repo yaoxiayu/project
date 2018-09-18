@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Order;
+use App\Coupon;
 use Illuminate\Http\Request;
 
-class PersonController extends Controller
+class CouponController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,12 +13,8 @@ class PersonController extends Controller
      */
     public function index()
     {
-        $order = Order::orderBy('id','desc')
-         ->where('user_id',\Session::get('id'))
-         ->paginate(3);
-        
-
-        return view('home.person.order',compact('order'));
+        $coupon = Coupon::all();
+        return view('/admin/coupon/index',compact('coupon'));
     }
 
     /**
@@ -29,7 +24,7 @@ class PersonController extends Controller
      */
     public function create()
     {
-        //
+        return view('/admin/coupon/create');
     }
 
     /**
@@ -40,7 +35,19 @@ class PersonController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //插入数据
+       $coupon = new Coupon;
+
+       $coupon -> min = $request -> min;
+       $coupon -> max = $request -> max;
+       $coupon -> counts = $request -> counts;
+
+       //插入
+       if($coupon->save()){
+               return redirect('/coupon')->with('success','添加成功');
+       }else{
+           return back()->with('error','添加失败!');
+       }
     }
 
     /**
@@ -62,7 +69,8 @@ class PersonController extends Controller
      */
     public function edit($id)
     {
-        //
+      $coupon = Coupon::find($id);
+      return view('/admin/coupon/edit',compact('coupon'));
     }
 
     /**
@@ -74,7 +82,18 @@ class PersonController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $coupon = Coupon::find($id);
+
+       $coupon -> min = $request -> min;
+       $coupon -> max = $request -> max;
+       $coupon -> counts = $request -> counts;
+
+       //插入
+       if($coupon->save()){
+               return redirect('/coupon')->with('success','添加成功');
+       }else{
+           return back()->with('error','添加失败!');
+       }
     }
 
     /**
@@ -85,12 +104,12 @@ class PersonController extends Controller
      */
     public function destroy($id)
     {
-        
-        $order = Order::find($id);
-        if($order->delete()){
-            return redirect('/person')->with('success','删除成功');
-        }else{
-            return back()->with('error','删除失败');
-        }
+      $coupon = Coupon::findOrFail($id);
+
+      if($coupon->delete()){
+          return back()->with('success','删除成功');
+      }else{
+          return back()->with('error','删除失败!');
+      }
     }
 }

@@ -91,7 +91,7 @@ class FoodController extends Controller
     }
     //第一页面 店铺遍历
     public function meishi($id)
-    {   
+    {
         $id = $id;
         $order = Order::all();
         $shopping = Shopping::all();
@@ -102,14 +102,17 @@ class FoodController extends Controller
         $shop_user_tag = shop_user_tag::get()
                          ->where('tag_id',request()->name)
                          ->pluck('shop_user_id');
+
         $shopUser_id = json_decode($shop_user_tag);
         // var_dump($shopUser_id);echo '<br>';
         if(request()->name){
             $shopuser = Shopuser::whereIn('id',$shopUser_id)
-                            ->paginate(3);
+
+                            ->paginate(2);
         }else{
              $shopuser = Shopuser::where('industry_id',$id)
-                            ->paginate(3);
+                            ->paginate(2);
+
         }
         $industry_id = request()->name;
         return view('home.food.index',compact('shopping','shopuser','order','comment','asd','tag','id','industry','industry_id'));
@@ -136,4 +139,15 @@ class FoodController extends Controller
         return view('home.food.shopping',compact('shopping','shopuser','comment','industry'));
     }
 
+
+    public function wushi()
+    {
+        $price = $_POST['wushi'];
+        $tag_id = $_POST['tag_id'];
+        $shop = shop_user_tag::where('tag_id',$tag_id)->get();
+        foreach($shop as $v){
+            dd($v);
+        }
+
+    }
 }
