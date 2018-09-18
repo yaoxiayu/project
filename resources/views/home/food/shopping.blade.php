@@ -66,7 +66,7 @@
             <div class="w-item-info clearfix">
                 <h2>{{$shopping['name']}}</h2>
                 <div class="item-title">
-                    <span class="text-main">仅元{{$shopping['price']}}！最高价值198元，四人普间/大床房2选1。</span>
+                    <span class="text-main">仅{{$shopping['price']}}元！ 最高价值198元，四人普间/大床房2选1。</span>
                     <span class="hot hide">优惠内容</span>
                 </div>
                 <div class="ii-images clearfix static-hook-real static-hook-id-6">
@@ -426,7 +426,7 @@
                                                 </div>
                                                 <div style="float:left;line-height:80px;">{{$v->user->username}}
                                                 </div>
-                                                <div style="float:left;width: 360px;height:20px;margin-left:20px;padding-top: 20px">{{$v->content}}
+                                                <div style="float:left;width: 360px;height:20px;margin-left:20px;padding-top: 20px">{!!$v->content!!}
                                                 </div>
                                                 <div style="padding-top: 20px;color:#ff658e">评价时间
                                                 {{$v['updated_at']}}
@@ -757,6 +757,7 @@
                 var has = base.has;
                 var output = base.output;
                 var itemIntro = data.dtail_attr;
+                if (has('data.t10.total') && data.t10.total > 0) {
                 if (has('data.t10.total') && data.t10.total > 0) {
                     require.async('detail:widget/item_info/item_intro/item_intro.js', function(Jx) {
                         var marketingData = {

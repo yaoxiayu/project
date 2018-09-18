@@ -19,14 +19,47 @@
         <div class="logo"><a href="#"></a></div>
         <div class="zhuce_kong">
             <div class="zc">
-                <div class="bj_bai" style="height:450px;">
+                <div class="bj_bai" style="height:1000px;">
                     <h3>欢迎注册</h3>
-                    <form action="/home/zhuce" method="post">
+                    <form action="/home/zhuce" method="post" enctype="multipart/form-data">
                         <input name="username" type="text" class="kuang_txt phone" placeholder="用户名" style="width:270px;"><span class="remind"></span>
                         <input name="password" type="password" class="kuang_txt email" placeholder="密码" style="width:270px;"><span class="remind"></span>
                         <input name="repassword" type="password" class="kuang_txt email" placeholder="确认密码" style="width:270px;"><span class="remind"></span>
-                        <input name="phone" type="text" class="kuang_txt possword" placeholder="手机号" style="width:270px;"><span class="remind"></span><br><br>
+                        <input name="phone" type="text" class="kuang_txt possword" placeholder="手机号" style="width:270px;"><span class="remind"></span>
+                         <div class="am-form-group">
+                                <label for="user-weibo" class="am-u-sm-3 am-form-label">主图 </label>
+                                <div class="am-u-sm-9">
+                                    <div class="am-form-group am-form-file">
+                                        <div class="tpl-form-file-img">
+                                        </div>
+                                       
+                                        <input id="doc-form-file" type="file" name="pic">
+                                    </div>
+                                </div>
+                            </div>
 
+                         <div class="am-form-group">
+                                <label for="user-name" class="am-u-sm-3 am-form-label">商家地址 <span class="tpl-form-line-small-title"></span></label>
+                                <div class="am-u-sm-9">
+                                    <div class="info">
+                                        <div>
+                                            <div style="width: 150px;">
+                                                <select id="s_province" name="s_province"></select>
+                                                <select id="s_city" name="s_city"></select>
+                                                <select id="s_county" name="s_county"></select>
+                                                <textarea cols="5" rows="1" name="address"></textarea>
+                                            </div>
+                                            <script class="resources library" src="http://sandbox.runjs.cn/uploads/rs/267/g3ugugjp/area.js" type="text/javascript"></script>
+                                            <script type="text/javascript">
+                                            _init_area();
+                                            </script>
+                                        </div>
+                                        <div id="show"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        <br><br>
+                                    
                          {{csrf_field()}}
                         <input type="submit" class="btn_zhuce" value="注册">
                         <!-- <button class="btn_zhuce" value="注册">注册</button> -->
@@ -198,7 +231,7 @@
                     });
                     </script>
                
-                <div class="bj_right" style="height:450px;">
+                <div class="bj_right" style="height:1000px;">
                     <p>使用以下账号直接登录</p>
                     <a href="/home/zhuce" class="zhuce_qq">QQ注册</a>
                     <a href="/home/zhuce" class="zhuce_wb">微博注册</a>

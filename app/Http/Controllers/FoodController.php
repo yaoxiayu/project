@@ -106,10 +106,10 @@ class FoodController extends Controller
         // var_dump($shopUser_id);echo '<br>';
         if(request()->name){
             $shopuser = Shopuser::whereIn('id',$shopUser_id)
-                            ->paginate(1);
+                            ->paginate(3);
         }else{
              $shopuser = Shopuser::where('industry_id',$id)
-                            ->paginate(1);
+                            ->paginate(3);
         }
         $industry_id = request()->name;
         return view('home.food.index',compact('shopping','shopuser','order','comment','asd','tag','id','industry','industry_id'));

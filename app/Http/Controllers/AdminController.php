@@ -28,10 +28,7 @@ class AdminController extends Controller
      //后台设置页面
     public function setting()
     {
-        //读取表中的数据
-        // $setting = Setting::first();
-
-        // return view('admin.setting',compact('setting'));
+       
 
     }
 
@@ -79,10 +76,10 @@ class AdminController extends Controller
 
         //dd($admin);
 
-        // if(!$admin){
-        //     return back()->with('error','登录失败');
+         if(!$admin){
+            return back()->with('error','登录失败');
 
-        // }
+         }
 
         //校验密码
         if(Hash::check($request->password,$admin->password)){

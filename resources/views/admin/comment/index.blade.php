@@ -65,7 +65,7 @@
                             </td>
                             <td>{{$v->shopping->name}}</td>
                             <td>{{$v->user->username}}</td>
-                            <td>{{$v['content']}}</td>
+                            <td>{!!$v['content']!!}</td>
                             <td>{{$v['created_at']}}</td>
                             <td>{{$v['updated_at']}}</td>
                             <td>
