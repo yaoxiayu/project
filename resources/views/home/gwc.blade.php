@@ -104,48 +104,36 @@
                 
                 <div class="order_content">
 
-                    @foreach($order as $v)
-                    @if(Session::get('id') == $v['user_id'])
+                  
                     <ul class="order_lists">
                         <li class="list_chk">
-                            <input type="checkbox" id="{{$v['id']}}" class="son_check">
-                            <label for="{{$v['id']}}"></label>
+                            <input type="checkbox" id="{{$shopping['id']}}" class="son_check">
+                            <label for="{{$shopping['id']}}"></label>
                         </li>
                         <li class="list_con">
-                            <div class="list_img" style="margin-left: 40px"><a href="javascript:;"><img src="{{$v->shopping->img}}" alt="" width="50px" height="70px"></a></div>
-                            <div class="list_text"><a href="javascript:;">{{$v->shopping->name}}</a></div>
+                            <div class="list_img" style="margin-left: 40px"><a href="javascript:;"><img src="{{$shopping['img']}}" alt="" width="50px" height="70px"></a></div>
+                            <div class="list_text"><a href="javascript:;">{{$shopping['name']}}</a></div>
                         </li>
                         <li class="list_info">
-                            <p>{!!$v->shopping->content!!}</p>
+                            <p>{!!$shopping['content']!!}</p>
                         </li>
                         <li class="list_price">
-                            <p class="price">￥{{$v->shopping->price}}</p>
+                            <p class="price">￥{{$shopping['price']}}</p>
                         </li>
                         <li class="list_amount">
                             <div class="amount_box">
                                 <a href="javascript:;" class="reduce reSty">-</a>
-                                <input type="text" value="{{$v['counts']}}" class="sum" style="height: 22px">
+                                <input type="text" value="{{$counts}}" class="sum" style="height: 22px">
                                 <a href="javascript:;" class="plus">+</a>
                             </div>
                         </li>
                         <li class="list_sum">
-                            <p class="sum_price">￥{{($v->shopping->price)*($v['counts'])}}</p>
+                            <p class="sum_price">￥{{($shopping['price'])*($counts)}}</p>
                         </li>
                         <li class="list_op">
-                            <p class="del"><button id="del{{$v['id']}}" class="btn btn-danger">移除商品</button></p>
-                        
-                            <script>
-                                $('#del{{$v['id']}}').click(function()
-                                {
-                                    if(confirm("确定要删除数据吗")){
-                                        location.href="/order/delete/{{$v['id']}}";
-                                     }
-                                })
-                            </script>
+                            <p class="del"><button id="del{{$shopping['id']}}" class="btn btn-danger">移除商品</button></p>
                         </li>
                     </ul>
-                    @endif
-                    @endforeach
                 </div>
             </div>
             <!--底部-->

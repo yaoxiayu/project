@@ -6,49 +6,25 @@
                             <div class="w-list" id="J-orders-wrap">
                                 <table class="order-list" mon="area=orderList">
                                     <tr>
-                                        <th width="70">商品名称</th>
-                                        <th width="70">商家名称</th>
-                                        <th width="70">评论分值</th>                                 
-                                        <th width="120">评论内容</th>
-                                        <th width="70">评论人</th>
-                                        <th style="padding-left:80px">操作</th>
+                                        <th style="text-align: center">商品名称</th>
+                                        <th style="text-align: center">商品图片</th>
+                                        <th style="text-align: center">浏览时间</th>
+                                        <th style="text-align: center">操作</th>
                                     </tr>
+
                                     <tr>
-                                        @foreach($comment as $v)
-
+                                        @foreach($zuji as $v)
                                         <td class="font14 total-amount">{{$v->shopping->name}}</td>
-                                        <td>
-                                            <span class="font14">{{$v->shopping->shopuser->username}}</span>
-                                        </td>
-                                        <td>
-                                            <div class="goods-img fl">
-                                                @if($v['values']==1) 🌹好评
-                                                @elseif($v['values']==2) 😫中评
-                                                @elseif($v['values']==3) 💣差评
-                                                @endif
-                                            </div>
-                                        </td>
+                                         <td><img src="{{$v->shopping->img}}" width="80" alt=""></td>
+                                        <td class="font14 total-amount">{{$v->updated_at}}</td>
 
-                                        <td class="goods-info left">
-                                            <div class="goods-img fl">
-                                               <span class="font14" >{!!$v['content']!!}</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="goods-name fl">
-                                                <span class="font14">{{$v->user->username}}</span>
-                                            </div>
-                                        </td>
-                                        
-                                        
-                    
                                         <td class="blank-10">
-                                             <p class="del"><button id="del{{$v['id']}}" class="btn btn-danger">删除评价</button></p>
+                                             <p class="del"><button id="del{{$v['id']}}" class="btn btn-danger">删除足迹</button></p>
                                             <script>
                                                 $('#del{{$v['id']}}').click(function()
                                                 {
                                                     if(confirm("确定要删除吗")){
-                                                        location.href="/hcomment/delete/{{$v['id']}}";
+                                                        location.href="/cunzuji/delete/{{$v['id']}}";
                                                      }
                                                 })
                                             </script>
@@ -115,7 +91,7 @@
                 </style>
                <div class="am-cf">
                     <div class="am-fr">
-                        {{$comment->appends(request()->all())->links()}}
+                        {{$zuji->appends(request()->all())->links()}}
                     </div>
                 </div>
 @endsection

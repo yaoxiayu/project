@@ -51,10 +51,12 @@
                     <ul class="item-arrowdown-container">
                         <div class="drop-block">
                         </div>
+
                         <li class="arrowdown-item">
                             <a class="arrowdown-item-link" href="http://flight.baidu.com/flight/h5redirect?v=1.0&type=1&client=pcweb&app_from=bainuo&src_from=bainuo_pc_main" mon="element=机票" target="_blank">
                                 <div>
                                     机票
+
                                 </div>
                             </a>
                         </li>
@@ -98,6 +100,7 @@
                     </a>
                 </li>
                 <pre></pre>
+                @section('content')
                 <div class="page-body page-body-channel">
                     <div class="page-body-container clearfix">
                         <div class="page-body-left">
@@ -106,16 +109,16 @@
                                     <div class="w-filter-ab-test" style="position:relative">
                                         <div class="filter-breadcrumb">
                                         </div>
-                                        <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208" / style="position:absolute;right:20px;">
-                                        <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208" / style="position:absolute;right:20px;top: 174px;">
-                                        <div class="filter-wrapper">
+                                        <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208" / style="position:absolute;right:20px;height: 120px">
+                                        <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208" / style="position:absolute;right:20px;top:150px;height: 120px">
+                                        <div class="filter-wrapper" style="margin-bottom: 50px">
                                             <div class="normal-filter ">
                                                 <div alog-alias="bainuo-filter-section" alog-group="bainuo-filter-section" class="w-filter-normal-ab filter-list-ab clearfix" mon="area=filterCatg">
                                                     <h5 class="filter-label-ab">
                                                         分类
                                                     </h5>
                                                     <span class="filter-all-ab">
-                                                    <a class="w-filter-item-ab item-all-auto-ab" href="/food/{{$id}}" mon="element=0&element_type=filter&position=1">
+                                                    <a class="w-filter-item-ab item-all-auto-ab" href="/food/{{$id}}?name=0" mon="element=0&element_type=filter&position=1">
                                                         <span class="item-content filter-active-all-ab ">
                                                             全部
                                                         </span>
@@ -136,6 +139,7 @@
                                                         background-color: yellow;
                                                     }
                                                     </style>
+
                                                     <div class="j-filter-items-wrap-ab filter-items-wrap-ab">
                                                         <div class="j-filter-items-ab filter-items-ab filter-content-ab">
                                                             @foreach($tag as $v)
@@ -146,11 +150,11 @@
                                                                         <div class="am-input-group am-input-group-sm yellow" style="display: none;z-index: 1;">
                                                                             <input type="text" name="name" class="am-form-field" value="{{$v['id']}}" style="display:none;">
                                                                             <span class="am-input-group-btn">
-                                                                    <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" style="display:none" id="suo{{$v['id']}}"></button>
-                                                                  </span>
+                                                                            <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" style="display:none" id="suo{{$v['id']}}"></button>
+                                                                          </span>
                                                                         </div>
+                                                                    </form>
                                                                 </div>
-                                                                </form>
                                                             </a>
                                                             <script src="/js/jquery.min.js"></script>
                                                             <script>
@@ -180,7 +184,7 @@
                                                         <a class="w-filter-item-ab item-all-auto-ab" href="javascript:;" mon="element=0&element_type=filter&position=1">
                                                             <span class="item-content filter-active-all-ab ">
                                                                 全部
-                                                            </span>
+                                                         </span>
                                                         </a>
 
                                                     </div>
@@ -223,32 +227,42 @@
                                                         </a>
                                                     </span>
                                                     <span class="filter-items-ab filter-content-ab">
-                                                        <a class="w-filter-item-ab " href="//bj.nuomi.com/326?price=1" mon="element=1&element_type=filter&position=1">
-                                                            <span class="item-content ">
-                                                                50元以下
-                                                            </span>
-                                                                    </a>
-                                                                    <a class="w-filter-item-ab " href="//bj.nuomi.com/326?price=2" mon="element=2&element_type=filter&position=1">
-                                                            <span class="item-content ">
-                                                                50-100元
-                                                            </span>
-                                                        </a>
-                                                                    <a class="w-filter-item-ab " href="//bj.nuomi.com/326?price=3" mon="element=3&element_type=filter&position=1">
-                                                            <span class="item-content ">
-                                                                100-200元
-                                                            </span>
-                                                        </a>
-                                                                    <a class="w-filter-item-ab " href="//bj.nuomi.com/326?price=4" mon="element=4&element_type=filter&position=1">
-                                                            <span class="item-content ">
-                                                                200-300元
-                                                            </span>
-                                                        </a>
-                                                                    <a class="w-filter-item-ab " href="//bj.nuomi.com/326?price=5" mon="element=5&element_type=filter&position=1">
-                                                            <span class="item-content ">
-                                                                300元以上
-                                                            </span>
-                                                        </a>
+
+                                                            <a class="w-filter-item-ab" mon="element=1&element_type=filter&position=1">
+                                                                <span class="item-content" min="0" max="49" id="price1">
+                                                                    50元以下
+                                                                </span>
+                                                            </a>
+                                                            <a class="w-filter-item-ab" mon="element=2&element_type=filter&position=1">
+                                                                <span class="item-content" min="50" max="100" id="price2">
+                                                                    50-100元
+                                                                </span>
+                                                            </a>
+                                                            <a class="w-filter-item-ab " mon="element=3&element_type=filter&position=1">
+                                                                <span class="item-content" min="100" max="200" id="price3">
+                                                                    100-200元
+                                                                </span>
+                                                            </a>
+                                                            <a class="w-filter-item-ab" mon="element=4&element_type=filter&position=1">
+                                                                <span class="item-content" min="200" max="300" id="price4">
+                                                                    200-300元
+                                                                </span>
+                                                            </a>
+                                                            <a class="w-filter-item-ab" mon="element=5&element_type=filter&position=1" >
+                                                                <span class="item-content" min="300" max="∞" id="price5">
+                                                                    300元以上
+                                                                </span>
+                                                            </a>
+
                                                     </span>
+                                                          <form action="/food/{{$id}}/name=&" method="get">
+                                                                        <div class="am-input-group am-input-group-sm yellow" style="display: none;z-index: 1;">
+                                                                            <input type="text" name="price" class="am-form-field" value="{{$v['id']}}" style="display:none;">
+                                                                            <span class="am-input-group-btn">
+                                                                            <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" style="display:none" id="suo{{$v['id']}}"></button>
+                                                                          </span>
+                                                                        </div>
+                                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
@@ -256,42 +270,7 @@
                                 </div>
                             </div>
                         </div>
-                    <div alog-alias="bainuo-sort-bar" alog-group="bainuo-sort-bar" class="w-sort-bar" id="j-sort-bar">
-                        <div class="bar-area" id="j-bar-area">
-                            <span class="sort-area" mon="area=sort">
-                                <a class="sort-default sort-default-active" href="javascript:;" mon="element=default" rel="nofollow">
-                                    综合榜
-                                </a>
-                                <a class="sort-item sort-down" href="//bj.nuomi.com/326/hot#j-sort-bar" mon="element=sales" rel="nofollow" title="点击按销量降序排序">
-                                    热销榜
-                                </a>
-                                <a class="sort-item sort-up" href="//bj.nuomi.com/326/release#j-sort-bar" mon="element=lastest" rel="nofollow" title="发布时间由近到远">
-                                    新品榜
-                                </a>
-                            </span>
 
-                                            <div class="sortbar-right">
-                                                <div class="w-search" mon="area=search&element_type=nav">
-                                                    <div class="search-wrap">
-                                                        <form action="//www.nuomi.com/search" class="j-searchForm" method="get" target="_blank">
-                                                            <input autocomplete="off" class="search-input placeholder j-searchInput" name="k" placeholder="艾灸" type="text" value="" />
-                                                            <input class="btn search-btn j-search-btn" mon="element=button" type="submit" value="">
-                                                            <input class="input-hidden j-input-hidden" name="rid" type="text" value="2113180bd5a56524f3b24fd64b5446d0">
-                                                            </input>
-                                                            </input>
-                                                        </form>
-                                                    </div>
-                                                    <div alog-alias="bainuo-header-hot-area" alog-group="bainuo-header-hot-area" class="hot-area">
-                                                    </div>
-                                                </div>
-                                               <span class="page-area" mon="area=pageNum">
-
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <script>
                             void function(e, t) {
                                 for (var n = t.getElementsByTagName("img"), a = +new Date, i = [], o = function() { this.removeEventListener && this.removeEventListener("load", o, !1), i.push({ img: this, time: +new Date }) }, s = 0; s < n.length; s++) ! function() {
@@ -396,6 +375,7 @@
                             </div>
                         </div>
                     </div>
+                    @show
                     <div class="page-body-right">
                     </div>
                     <div class="hover-overlay" id="hover-overlay">
@@ -598,192 +578,7 @@
                                 bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
                             } else {
                                 bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        </div>
-    </div>
-</div>
-<script>
-    var monkeyPageId = "bainuo-list-page-channel";
-</script>
-<script type="text/javascript">
-    <!--
-            (function (d) {
-            (window.bd_cpro_rtid = window.bd_cpro_rtid || []).push({id:"nH0znjDv"});
-            var s = d.createElement("script");s.type = "text/javascript";s.async = true;s.src = location.protocol + "//cpro.baidu.com/cpro/ui/rt.js";
-            var s0 = d.getElementsByTagName("script")[0];s0.parentNode.insertBefore(s, s0);
-            })(document);
-            //-->
-</script>
-<script>
-    (function () {try {if (!(!('performance' in window) || !('getEntriesByType' in window.performance) || !(window.performance.getEntriesByType('resource') instanceof Array))) {var LOG_REQUEST_URL = window.location.host.indexOf('m.nuomi.com') !== -1 ? '//m.nuomi.com/s.gif?' : '//www.nuomi.com/s.gif?';window.addEventListener('load', function () {setTimeout(function () {try {var events = ['navigationStart','redirectStart','redirectEnd','fetchStart','domainLookupStart','domainLookupEnd','connectStart','connectEnd','secureConnectionStart','requestStart','responseStart','responseEnd','domLoading','domInteractive','domContentLoadedEventStart','domContentLoadedEventEnd','domComplete','loadEventStart','loadEventEnd'];var timing = window.performance.timing;var zero = timing.navigationStart;var mon = document.body.getAttribute('mon') || 'page=unknown';var query = ['performance=1', 'zero=' + zero, mon];for (var i = 0; i < events.length; i++) {var event = events[i];var eventTime = timing[event];if (typeof eventTime !== 'undefined') {var delta = eventTime - zero;query.push(event + '=' + (delta < 0 ? 0 : delta));}}var img = document.createElement('img');img.style.display = 'none';document.body.appendChild(img).src = LOG_REQUEST_URL + query.join('&');}catch (err) {}}, 100);});}}catch (err) {}})();
-</script>
-<script src="/home/static/js/jquery-1.10.2_d88366fd.js">
-</script>
-<script src="/home/static/js/mod_e56bbba.js" type="text/javascript">
-</script>
-<script type="text/javascript">
-    require.resourceMap({"res":{"list:widget/around_tuan/around_tuan_map.js":{"url":"//gss0.bdstatic.com/8r1VfDn9KggZnd_b8IqT0jB-xx1xbK/static/list/widget/around_tuan/around_tuan_map_7509f0f.js","pkg":"list:p0","deps":["common:widget/ui/template/template.js","common:widget/dep/moye/Pager.js","common:widget/ui/cookie/cookie.js"]},"list:widget/around_tuan/around_tuan.js":{"url":"//gss0.bdstatic.com/8r1VfDn7KggZnd_b8IqT0jB-xx1xbK/static/list/widget/around_tuan/around_tuan_538aa53.js","pkg":"list:p0","deps":["list:widget/around_tuan/around_tuan_map.js","common:widget/ui/cookie/cookie.js","common:widget/ui/template/template.js","common:widget/dep/moye/Pager.js"]},"list:widget/cinema_list/cinema_list.js":{"url":"//gss0.bdstatic.com/8r1VfDn9KggZnd_b8IqT0jB-xx1xbK/static/list/widget/cinema_list/cinema_list_28986c0.js","pkg":"list:p0","deps":["common:widget/ui/dialog/dialog.js","common:widget/ui/template/template.js","common:widget/map/map.js"]},"list:widget/city_search/city_search.js":{"url":"//gss0.bdstatic.com/8r1VfDn7KggZnd_b8IqT0jB-xx1xbK/static/list/widget/city_search/city_search_2815227.js","pkg":"list:p0","deps":["common:widget/ui/suggestion/suggestion.js"]},"list:widget/filter/category/category.js":{"url":"//gss0.bdstatic.com/8r1VfDn-KggZnd_b8IqT0jB-xx1xbK/static/list/widget/filter/category/category_89d1708.js","pkg":"list:p0"},"list:widget/filter_ab/filter_ab.js":{"url":"//gss0.bdstatic.com/8r1VfDn-KggZnd_b8IqT0jB-xx1xbK/static/list/widget/filter_ab/filter_ab_d0fbe42.js","pkg":"list:p0","deps":["common:widget/ui/cookie/cookie.js"]},"list:widget/filter_ab/filter_district_ab/filter_district_ab.js":{"url":"//gss0.bdstatic.com/8r1VfDn7KggZnd_b8IqT0jB-xx1xbK/static/list/widget/filter_ab/filter_district_ab/filter_district_ab_26dc83f.js","pkg":"list:p0","deps":["common:widget/ui/cookie/cookie.js"]},"list:widget/filter_ab/filter_normal_ab/filter_normal_ab.js":{"url":"//gss0.bdstatic.com/8r1VfDn9KggZnd_b8IqT0jB-xx1xbK/static/list/widget/filter_ab/filter_normal_ab/filter_normal_ab_5adbad9.js","pkg":"list:p0","deps":["common:widget/ui/cookie/cookie.js"]},"list:widget/filter_ab/filter_top_nav/filter_top_nav.js":{"url":"//gss0.bdstatic.com/8r1VfDn-KggZnd_b8IqT0jB-xx1xbK/static/list/widget/filter_ab/filter_top_nav/filter_top_nav_cdb1876.js","pkg":"list:p0"},"list:widget/hotel_search_bar/hotel_search_bar.js":{"url":"//gss0.bdstatic.com/8r1VfDn7KggZnd_b8IqT0jB-xx1xbK/static/list/widget/hotel_search_bar/hotel_search_bar_1976cac.js","pkg":"list:p0"},"list:widget/mis/ad1/index.js":{"url":"//gss0.bdstatic.com/8r1VfDn7KggZnd_b8IqT0jB-xx1xbK/static/list/widget/mis/ad1/index_7f2dacd.js","pkg":"list:p0"},"list:widget/new_header/bar/bar.js":{"url":"//gss0.bdstatic.com/8r1VfDn7KggZnd_b8IqT0jB-xx1xbK/static/list/widget/new_header/bar/bar_3dccb2f.js","pkg":"list:p0","deps":["common:widget/ui/passport/passport.js","common:widget/ui/account_forbidden/account_forbidden.js","common:widget/ui/cookie/cookie.js","common:widget/ui/dialog/dialog.js"]},"list:widget/new_header/header.js":{"url":"//gss0.bdstatic.com/8r1VfDn9KggZnd_b8IqT0jB-xx1xbK/static/list/widget/new_header/header_724f43d.js","pkg":"list:p0","deps":["common:widget/ui/cookie/cookie.js","common:widget/header/sug/sug.js","common:widget/ui/placeholder/placeholder.js","common:widget/ui/dialog/dialog.js"]},"list:widget/new_list/item.js":{"url":"//gss0.bdstatic.com/8r1VfDn9KggZnd_b8IqT0jB-xx1xbK/static/list/widget/new_list/item_e8fe713.js","pkg":"list:p0"},"list:widget/new_sidebar/sidebar.js":{"url":"//gss0.bdstatic.com/8r1VfDn9KggZnd_b8IqT0jB-xx1xbK/static/list/widget/new_sidebar/sidebar_ab7d4b2.js","pkg":"list:p0","deps":["common:widget/ui/template/template.js","common:widget/dep/moye/sticky.js"]},"list:widget/qingrenjie/huaban/huaban.js":{"url":"//gss0.bdstatic.com/8r1VfDn-KggZnd_b8IqT0jB-xx1xbK/static/list/widget/qingrenjie/huaban/huaban_08adb5a.js","pkg":"list:p0"},"list:widget/related_query/related_query.js":{"url":"//gss0.bdstatic.com/8r1VfDn-KggZnd_b8IqT0jB-xx1xbK/static/list/widget/related_query/related_query_f6deeb0.js","pkg":"list:p0","deps":["common:widget/ui/usertrack/usertrack.js"]},"list:widget/ui/ad/ad.js":{"url":"//gss0.bdstatic.com/8r1VfDn7KggZnd_b8IqT0jB-xx1xbK/static/list/widget/ui/ad/ad_13ff9fb.js","pkg":"list:p0","deps":["common:widget/ui/sliderbar/sliderbar.js"]},"list:widget/ui/ajax_get_goods/ajax_get_goods.js":{"url":"//gss0.bdstatic.com/8r1VfDn9KggZnd_b8IqT0jB-xx1xbK/static/list/widget/ui/ajax_get_goods/ajax_get_goods_8feebd6.js","pkg":"list:p0"},"list:widget/ui/scrollspy/scrollspy.js":{"url":"//gss0.bdstatic.com/8r1VfDn9KggZnd_b8IqT0jB-xx1xbK/static/list/widget/ui/scrollspy/scrollspy_ee18e42.js","pkg":"list:p0"}},"pkg":{"list:p0":{"url":"//gss0.bdstatic.com/8r1VfDn-KggZnd_b8IqT0jB-xx1xbK/static/list/pkg/list_7900cad.js"}}});
-</script>
-<script src="/home/static/js/common_5e9cc9b.js" type="text/javascript">
-</script>
-<script src="/home/static/js/list_7900cad.js" type="text/javascript">
-</script>
-<script type="text/javascript">
-    !function(){require.async(['common:widget/static/init.js'], function(init){});}();
-!function(){    F.context('staticController').run(function (data, tools) {
 
-            });
-}();
-!function(){        F.context('staticController').run(function () {
-            require.async(['common:widget/new_header/bar/revision_bar.js']);
-            require.async(['common:widget/new_header/bar/dropdown.js'], function (Dropdown) {
-                var nav = new Dropdown({
-                    container:'#header-bar',
-                    containerClass:'j-bar-dropdown'
-                });
-            });
-        });
-    }();
-!function(){F.context('staticController').run(function () {require.async(['common:widget/new_header/nav/nav.js'], function (Nav) {var nav = new Nav({selectedClass: 'selected',container:'#j-catg',navContainerClass:'all-cate',navClass:'j-catg-row'});});});}();
-!function(){        F.context({
-
-            isHotCity: '1', //
-            isIndex: '', //
-
-            isHotCity: '1', //
-            isIndex: '', //
-
-            erweimaCurrentTime: new Date(1536236668 * 1000)
-                });
-        F.context('staticController').run(function () {
-            require.async(['common:widget/iot_header/revision_header.js']);
-        });
-    }();
-!function(){    (function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https'){
-    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    }
-    else{
-    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-    })();
-    }();
-!function(){require.async('list:widget/filter_ab/filter_normal_ab/filter_normal_ab.js', function(filterNormal){filterNormal.init();});}();
-!function(){require.async('list:widget/filter_ab/filter_district_ab/filter_district_ab.js', function(district){district.init(1);});}();
-!function(){require("list:widget/filter_ab/filter_ab.js");}();
-!function(){    $(function(){
-        var Search = require('common:widget/search/search.js'),
-            initSearchObj = $(".j-searchInput").not("[elem-init]");
-        initSearchObj.each(function(){
-            var box = $(this).parents('.w-search');
-            new Search({
-                _inputId : $(this),
-                _searchBtnId : box.find('.j-search-btn'),
-                $searchForm: box.find('.j-searchForm'),
-                $inputHidden : box.find('.j-input-hidden')
-            });
-            $(this).attr('elem-init','t');
-        });
-
-    });
-
-}();
-!function(){F.context({sortBarPage:"channel"});require.async('common:widget/sort_bar/sort_bar.js', function(sortBar){sortBar.init();});}();
-!function(){        require.async('list:widget/filter_ab/filter_normal_ab/filter_normal_ab.js',
-            function (filterNormal) {
-                try {
-                    var config = {
-                        page_type: 'channel'
-                        // p_brand: '', // 品牌
-                    };
-                    $.each(
-                        filterNormal.getPClassList(),
-                        function (index, text) {
-                            if (index < 4) {
-                                config['p_class' + (index + 1)] = text;
-                            }
-                        }
-                    );
-                    F.context('tongji_hm').init({
-                        data: {
-                            ecom_view: config
-                        }
-                    });
-                }
-                catch (err) {}
-            }
-        );
-    }();
-!function(){    require.async(['common:widget/ui/dialog/dialog.js'], function(Dialog){
-    $('#j-tttel').on('click', function(){
-    Dialog.confirm({
-    width : 560,
-    customClassName : "ui-confirm-lz",
-    content : '<p>业务投诉平台受理对团购业务运营过程的投诉和建议:<br />投诉地址：<a target="_blank" href="http://help.baidu.com/newadd?prod_id=25" class="link">http://help.baidu.com/newadd?prod_id=25</a></p><p>感谢您的反馈！</p>',
-    footer : ['<a href="javascript:;" class="dialog-btn-cancel j-dialog-btn" data-event="cancel">关闭</a>'].join('')
-    });
-    });
-    });
-}();
-!function(){F.context('staticController').run(function (data, tools) {
-    var isStatic = this.isStatic;
-
-    $.ajaxSetup({
-        cache : false
-    });
-
-    //2014_10_11 zhangyijun02: 因增加广告轮播曝光日志逻辑，调整showtrack初始化方式
-    require.async(['common:widget/ui/usertrack/usertrack.js', 'common:widget/ui/sidlog/pclog.js', 'common:widget/ui/lazyload/lazyload.js', 'common:widget/ui/cookie/cookie.js', 'common:widget/ui/showtrack/showtrack.js', 'common:widget/ui/items_post/items_post.js'], function(usertrack, pclog, LazyLoad, Cookie, ShowTrack, itemsPost){
-        // 初始化点击监听
-        usertrack.init();
-
-        new LazyLoad({
-            lazy : $('img[data-original]'),
-            expect: 250
-        });
-
-        itemsPost.init();
-
-        var sendPv = (function (smartyData) {
-            return function () {
-                var logInfoExt = isStatic
-                    ? data && data.logInfoExt
-                    : smartyData.dynamicData.logInfoExt;
-                logInfoExt = logInfoExt && Object.prototype.toString.call(logInfoExt) !== '[object Array]'
-                    ? logInfoExt
-                    : {};
-                logInfoExt.page = smartyData.staticData.page;
-                pclog.sendPv(logInfoExt);
-
-                usertrack.send({
-                    da_src: encodeURIComponent($.stringify({
-                        page: smartyData.staticData.page
-                    })),
-                    element_type: 'pv'
-                });
-            }
-        })(
-
-            {"staticData":{"page":"channel"},"dynamicData":{"logInfoExt":{"search_key":"[{\"s\":\"eb3bb82691612092dac9dc3e2abccd32\",\"s_name\":\"defaultsearch\"}]"}}}
-        );
-
-        function handleBaiduid(){
-
-            var getBaiduidUrl = '//nuomipassport.baidu.com/getbdid';
-            var retryCount = 1;
-            getBaiduid();
-
-            function getBaiduid(){
-                $.ajax(getBaiduidUrl, {
-                    dataType : 'jsonp',
-                    success : function(json){
-                        if(json.errno == 0){
-                            var baiduid = json.data.baiduid;
-                            if(baiduid){
-                                Cookie.setRaw('BAIDUID', baiduid, 365);
                             }
                             var s = document.getElementsByTagName("script")[0];
                             s.parentNode.insertBefore(bp, s);
@@ -837,6 +632,10 @@
                                     });
                                 } catch (err) {}
                             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 967aa09d1eec0543af0d7adb6eaa1b8a2472a8e9
                         );
                     }();
                     ! function() {
@@ -949,33 +748,3 @@
                     <script>
                     var _trace_page_logid = 1467296935;
                     </script>
-                        }
-                    }
-                });
-            }
-        }
-
-        handleBaiduid();
-
-        //2014_10_11 zhangyijun02: 因增加广告轮播曝光日志逻辑，调整ShowTrack初始化方式
-        //曝光日志统计
-        ShowTrack.startShowTrack();
-    });
-
-});}();
-!function(){        require.async("common:widget/ui/httpslink/httpslink.js", function (httpslink) {
-            httpslink.init();
-        });
-    }();
-!function(){        require.async('common:widget/util/request_check.js',
-            function (reqCheck) {
-                reqCheck.init(F.context('da_page'));
-            }
-        );
-    }();
-</script>
-<!--14672969350928892682090620-->
-<script>
-    var _trace_page_logid = 1467296935;
-
-</script>
