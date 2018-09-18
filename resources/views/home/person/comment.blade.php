@@ -13,9 +13,9 @@
                                         <th width="70">评论人</th>
                                         <th style="padding-left:80px">操作</th>
                                     </tr>
-
                                     <tr>
                                         @foreach($comment as $v)
+
                                         <td class="font14 total-amount">{{$v->shopping->name}}</td>
                                         <td>
                                             <span class="font14">{{$v->shopping->shopuser->username}}</span>

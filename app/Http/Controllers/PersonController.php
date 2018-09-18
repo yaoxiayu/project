@@ -15,6 +15,7 @@ class PersonController extends Controller
     public function index()
     {
         $order = Order::orderBy('id','desc')
+         ->where('user_id',\Session::get('id'))
          ->paginate(3);
         
 

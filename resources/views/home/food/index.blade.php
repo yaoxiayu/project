@@ -109,16 +109,16 @@
                                     <div class="w-filter-ab-test" style="position:relative">
                                         <div class="filter-breadcrumb">
                                         </div>
-                                        <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208" / style="position:absolute;right:20px;">
-                                        <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208" / style="position:absolute;right:20px;top: 174px;">
-                                        <div class="filter-wrapper">
+                                        <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208" / style="position:absolute;right:20px;height: 120px">
+                                        <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208" / style="position:absolute;right:20px;top:150px;height: 120px">
+                                        <div class="filter-wrapper" style="margin-bottom: 50px">
                                             <div class="normal-filter ">
                                                 <div alog-alias="bainuo-filter-section" alog-group="bainuo-filter-section" class="w-filter-normal-ab filter-list-ab clearfix" mon="area=filterCatg">
                                                     <h5 class="filter-label-ab">
                                                         分类
                                                     </h5>
                                                     <span class="filter-all-ab">
-                                                    <a class="w-filter-item-ab item-all-auto-ab" href="/food/{{$id}}" mon="element=0&element_type=filter&position=1">
+                                                    <a class="w-filter-item-ab item-all-auto-ab" href="/food/{{$id}}?name=0" mon="element=0&element_type=filter&position=1">
                                                         <span class="item-content filter-active-all-ab ">
                                                             全部
                                                         </span>
@@ -225,53 +225,33 @@
                                                         </a>
                                                     </span>
                                                     <span class="filter-items-ab filter-content-ab">
-                                                        <a class="w-filter-item-ab "  mon="element=1&element_type=filter&position=1">
-                                                            <span class="item-content" id="wushi">
-                                                                50元以下
-                                                            </span>
-                                                            <meta name="csrf-token" content="{{ csrf_token() }}">
-                                                            <script>
-                                                                $("#wushi").click(function(){
-                                                                    var wushi = '50';
-                                                                    var tag_id = {{$tag[0]['id']}};
-                                                                    $.ajaxSetup({
-                                                                        headers: {
-                                                                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                                                                        }
-                                                                    });
-                                                                    $.ajax({
-                                                                        url:'/wushi',
-                                                                        type:'post',
-                                                                        data:{wushi:wushi,tag_id:tag_id},
-                                                                        success:function(data){
 
-                                                                        },
-                                                                        async:false
+                                                            <a class="w-filter-item-ab" mon="element=1&element_type=filter&position=1">
+                                                                <span class="item-content" min="0" max="49" id="price1">
+                                                                    50元以下
+                                                                </span>
+                                                            </a>
+                                                            <a class="w-filter-item-ab" mon="element=2&element_type=filter&position=1">
+                                                                <span class="item-content" min="50" max="100" id="price2">
+                                                                    50-100元
+                                                                </span>
+                                                            </a>
+                                                            <a class="w-filter-item-ab " mon="element=3&element_type=filter&position=1">
+                                                                <span class="item-content" min="100" max="200" id="price3">
+                                                                    100-200元
+                                                                </span>
+                                                            </a>
+                                                            <a class="w-filter-item-ab" mon="element=4&element_type=filter&position=1">
+                                                                <span class="item-content" min="200" max="300" id="price4">
+                                                                    200-300元
+                                                                </span>
+                                                            </a>
+                                                            <a class="w-filter-item-ab" mon="element=5&element_type=filter&position=1" >
+                                                                <span class="item-content" min="300" max="∞" id="price5">
+                                                                    300元以上
+                                                                </span>
+                                                            </a>
 
-                                                                    })
-                                                                })
-                                                            </script>
-                                                                    </a>
-                                                                    <a class="w-filter-item-ab " href="" mon="element=2&element_type=filter&position=1">
-                                                            <span class="item-content ">
-                                                                50-100元
-                                                            </span>
-                                                        </a>
-                                                                    <a class="w-filter-item-ab " href="" mon="element=3&element_type=filter&position=1">
-                                                            <span class="item-content ">
-                                                                100-200元
-                                                            </span>
-                                                        </a>
-                                                                    <a class="w-filter-item-ab " href="" mon="element=4&element_type=filter&position=1">
-                                                            <span class="item-content ">
-                                                                200-300元
-                                                            </span>
-                                                        </a>
-                                                                    <a class="w-filter-item-ab " href="" mon="element=5&element_type=filter&position=1">
-                                                            <span class="item-content ">
-                                                                300元以上
-                                                            </span>
-                                                        </a>
                                                     </span>
                                                           <form action="/food/{{$id}}/name=&" method="get">
                                                                         <div class="am-input-group am-input-group-sm yellow" style="display: none;z-index: 1;">
@@ -288,11 +268,7 @@
                                 </div>
                             </div>
                         </div>
-                    
-                    <div alog-alias="bainuo-sort-bar" alog-group="bainuo-sort-bar" class="w-sort-bar" id="j-sort-bar">
-                        
-                    </div>
-                            
+
                             <script>
                             void function(e, t) {
                                 for (var n = t.getElementsByTagName("img"), a = +new Date, i = [], o = function() { this.removeEventListener && this.removeEventListener("load", o, !1), i.push({ img: this, time: +new Date }) }, s = 0; s < n.length; s++) ! function() {
