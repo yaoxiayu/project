@@ -104,7 +104,7 @@
                 ! function() { require.async(['common:widget/static/init.js'], function(init) {}); }();
                 ! function() {
                     F.context('staticController').run(function(data, tools) {
-                        //   
+                        //
                     });
                 }();
                 ! function() {
@@ -121,8 +121,8 @@
                 ! function() { F.context('staticController').run(function() { require.async(['common:widget/new_header/nav/nav.js'], function(Nav) { var nav = new Nav({ selectedClass: 'selected', container: '#j-catg', navContainerClass: 'all-cate', navClass: 'j-catg-row' }); }); }); }();
                 ! function() {
                     F.context({
-                        isHotCity: '1', // 
-                        isIndex: '', // 
+                        isHotCity: '1', //
+                        isIndex: '', //
                         erweimaCurrentTime: new Date(1536240851 * 1000)
                     });
                     F.context('staticController').run(function() {
@@ -252,12 +252,12 @@
                                     });
                                 }
                             })(
-                                // 
+                                //
                                 { "staticData": { "page": "order_list" }, "dynamicData": { "logInfoExt": { "order_id": "2282279537" } } }
                             );
 
                             function handleBaiduid() {
-                                // 
+                                //
                                 var getBaiduidUrl = '//nuomipassport.baidu.com/getbdid';
                                 var retryCount = 1;
                                 getBaiduid();

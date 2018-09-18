@@ -89,7 +89,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="item new-item" href="/food" mon="element=结婚" target="_top">
-       
+
                     </a>
                 </li>
                 <li class="nav-item">
@@ -184,14 +184,14 @@
                                                         </a>
 
                                                     </div>
-                                                    
+
                                                     <div class="district-tab">
 
                                                         <span class="tab-item j-district-tab-li j-district-tab-li1 selected" index="1">
                                                             <span class="tab-item-wrap">
                                                                 行政区
                                                                 <span class="markup">
-                                                                   
+
                                                                 </span>
                                                             </span>
                                                         </span>
@@ -209,7 +209,7 @@
                                                             </span>
                                                         </div>
                                                     </div>
-                                              
+
                                             <div class="normal-filter ">
                                                 <div alog-alias="bainuo-filter-section" alog-group="bainuo-filter-section" class="w-filter-p-ab filter-list-ab clearfix" mon="area=filterPrice">
                                                     <h5 class="filter-label-ab">
@@ -285,7 +285,7 @@
                                                     </div>
                                                 </div>
                                                <span class="page-area" mon="area=pageNum">
-                                    
+
                                                 </span>
                                             </div>
                                         </div>
@@ -315,7 +315,7 @@
                                                 </h3>
                                             </a>
                                             <p class="shop-infoo-list-item-line shop-infoo-list-item-line-middle">
-                                                <a href="/{{$v['id']}}.html">           
+                                                <a href="/{{$v['id']}}.html">
                                                     <span class="shop-infoo-list-item-line-label">
                                                         {{$v['address']}}
                                                     </span>
@@ -565,7 +565,7 @@
                     ! function() { require.async(['common:widget/static/init.js'], function(init) {}); }();
                     ! function() {
                         F.context('staticController').run(function(data, tools) {
-                            //   
+                            //
                         });
                     }();
                     ! function() {
@@ -582,8 +582,8 @@
                     ! function() { F.context('staticController').run(function() { require.async(['common:widget/new_header/nav/nav.js'], function(Nav) { var nav = new Nav({ selectedClass: 'selected', container: '#j-catg', navContainerClass: 'all-cate', navClass: 'j-catg-row' }); }); }); }();
                     ! function() {
                         F.context({
-                            isHotCity: '1', // 
-                            isIndex: '', // 
+                            isHotCity: '1', //
+                            isIndex: '', //
                             erweimaCurrentTime: new Date(1536236668 * 1000)
                         });
                         F.context('staticController').run(function() {
@@ -598,7 +598,6 @@
                                 bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
                             } else {
                                 bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-=======
         </div>
     </div>
 </div>
@@ -785,7 +784,6 @@
                             var baiduid = json.data.baiduid;
                             if(baiduid){
                                 Cookie.setRaw('BAIDUID', baiduid, 365);
->>>>>>> 27a0f5d7e2cdb7bd8fc0c23c647433ac56aca654
                             }
                             var s = document.getElementsByTagName("script")[0];
                             s.parentNode.insertBefore(bp, s);
@@ -839,7 +837,6 @@
                                     });
                                 } catch (err) {}
                             }
-<<<<<<< HEAD
                         );
                     }();
                     ! function() {
@@ -892,12 +889,12 @@
                                         });
                                     }
                                 })(
-                                    // 
+                                    //
                                     { "staticData": { "page": "channel" }, "dynamicData": { "logInfoExt": { "search_key": "[{\"s\":\"eb3bb82691612092dac9dc3e2abccd32\",\"s_name\":\"defaultsearch\"}]" } } }
                                 );
 
                                 function handleBaiduid() {
-                                    // 
+                                    //
                                     var getBaiduidUrl = '//nuomipassport.baidu.com/getbdid';
                                     var retryCount = 1;
                                     getBaiduid();
@@ -952,7 +949,6 @@
                     <script>
                     var _trace_page_logid = 1467296935;
                     </script>
-=======
                         }
                     }
                 });
@@ -983,6 +979,3 @@
     var _trace_page_logid = 1467296935;
 
 </script>
-=======
-</script>
->>>>>>> 27a0f5d7e2cdb7bd8fc0c23c647433ac56aca654

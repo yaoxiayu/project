@@ -18,9 +18,10 @@ class HomeController extends Controller
     public function index()
     {
         $industry = Industry::get();
-    	return view('home.index',compact('industry'));
-       
-        
+
+    	return view('home.index',compact('industry','realip'));
+
+
     }
 
 
@@ -29,13 +30,13 @@ class HomeController extends Controller
     public function zhuce(Request $request)
 
     {
-	     
+
         return view('home.zhuce');
     }
 
    public function zhucewan(Request $request)
     {
-                   
+
        // dd('aaa');
         $user = new User;
         $user -> username = $request->username;
@@ -90,7 +91,7 @@ class HomeController extends Controller
     }
 
 
-    	 
+
 
     //购物车
     public function show()

@@ -91,7 +91,7 @@ class FoodController extends Controller
     }
     //第一页面 店铺遍历
     public function meishi($id)
-    {   
+    {
         $id = $id;
         $order = Order::all();
         $shopping = Shopping::all();
@@ -106,10 +106,10 @@ class FoodController extends Controller
         // var_dump($shopUser_id);echo '<br>';
         if(request()->name){
             $shopuser = Shopuser::whereIn('id',$shopUser_id)
-                            ->paginate(1);
+                            ->paginate(2);
         }else{
              $shopuser = Shopuser::where('industry_id',$id)
-                            ->paginate(1);
+                            ->paginate(2);
         }
         $industry_id = request()->name;
         return view('home.food.index',compact('shopping','shopuser','order','comment','asd','tag','id','industry','industry_id'));

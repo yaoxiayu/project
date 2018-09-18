@@ -12,11 +12,11 @@
                             <label >
                             <li style="border-top:1px solid white;">
                                 {{$v->name}}
-                                
+
                             </li>
                             </label>
                             </a>
-                        @endforeach          
+                        @endforeach
                         </ul>
                     </li>
                 </ul>
@@ -119,7 +119,7 @@
                     margin-right: 20px;
                     border: solid 1px #ddd;
                     font-size: 16px;
-                    
+
                     text-align: center;
                     line-height: 40px;
                     z-index:10;
@@ -141,9 +141,9 @@
 
                 }
                 li:hover{background-color:#ccc;}
-                
+
                 </style>
-                
+
                 <div class="left-menu clearfix" id="j-catg-list">
                         <div class="right-sidebar-re">
                             <div class="right-ad">
@@ -845,4 +845,3 @@
 </div>
 <div class="re-footer-content ">
 @include('layouts._foot')
-   

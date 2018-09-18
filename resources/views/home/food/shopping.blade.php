@@ -55,11 +55,11 @@
         </div>
     </div>
     <script type="text/template" id="autocomplete-template">
-       
+
     </script>
 
-    
-        
+
+
         <div class="static-hook-real static-hook-id-5">
         </div>
         <div class="p-item-info" mon="deal_id=33330185">
@@ -79,8 +79,8 @@
                             <ul id="j-images-list" class="images-list clearfix">
                                 <li class="images images-last">
                                     <img src="{{$shopping['img']}}" alt="{{$shopping['name']}}" title="{{$shopping['name']}}" />
-                                </li> 
-                            </ul>  
+                                </li>
+                            </ul>
                         <div class="erweima-share-collect">
                             <ul class="item-option clearfix" mon="area=dealCollect&element_type=nav" alog-alias="bainuo-detail-item-option" alog-group="bainuo-detail-item-option">
                                 <li class=" "><a href="###" id="j-item-collect" class="item-collect " mon="element=collect">收藏</a>
@@ -137,10 +137,10 @@
                                     <div class="item-buycount-row j-item-buycount-row clearfix" data-stock="10000000" data-personmax="2147483636" data-min="1" data-max="10000000">
                                         <div class="name">数&nbsp;&nbsp;&nbsp;量</div>
                                         <div class="buycount-ctrl"><a href="javascript:;" class="j-ctrl ctrl minus disabled"><span class="horizontal"></span></a>
-                                            <input type="text" value="1" maxlength="10" autocomplete="off"><a href="javascript:;" class="ctrl j-ctrl plus "><span class="horizontal"></span><span class="vertical"></span></a></div>
+                                            <input type="text" value="1" maxlength="10"><a href="javascript:;" class="ctrl j-ctrl plus "><span class="horizontal"></span><span class="vertical"></span></a></div>
                                     </div>
                                 </div>
-                                
+
 
                             </div>
                             <div class="item-buy-area clearfix">
@@ -149,7 +149,7 @@
                                     </div>
 
                                 </form>
-                                
+
 
                             </div>
                         </div>
@@ -209,27 +209,27 @@
                         <div id="j-sn-ceiling" class="w-spec-nav clearfix">
                             <ul id="j-sn-list" class="sn-list" mon="area=detailTab&element_type=nav" alog-alias="bainuo-detail-sn-list" alog-group="bainuo-detail-sn-list">
                                 <li class="spec-nav-current ">
-                                    
+
 
                                     <a href="#j-info-all" data-rel-content="all" mon="element=本单详情">
                                         <span>本单详情</span>
                                     </a>
-                                </li>                                
+                                </li>
                             </ul>
-                           
-
-                                
 
 
-                           
 
-                           
+
+
+
+
+
                                 <!--  @if(!Session::has('username'))
                                         <li class="login"><a href="/login" id="j-barLoginBtn" class="pad-left">请登录</a></li>
                                         <li class="reg"><a href="/home/zhuce" class="pad-left">免费注册</a></li>
                                     @endif -->
-                           
-                        
+
+
 
                         <div class="ceiling-buy clearfix static-hook-real static-hook-id-17">
                             <div class="pic-price-area"><span class="unit">&yen;</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 50px;line-height:35px;">{{$shopping['price']}}</span></div>
@@ -419,7 +419,7 @@
 
                                     <div class="detail clearfix " style="min-height: 200px">
                                         <ul>
-                                           
+
                                             @foreach($comment as $v) @if($v['shopping_id']==$shopping['id'] && $v['user_id']==$v->user->id)
                                             <div style="width: 720px;height: 80px">
                                                 <div style="float:left;"><img src="/home/static/images/icon_4e372f0.png" style="border-radius: 50%" width="60px" height="60px" style="float:left;">
@@ -434,14 +434,14 @@
                                             </div>
                                             @endif
                                             @endforeach
-                                           
-                                           
+
+
                                         </ul>
                                     </div>
                             </div>
                         </li>
                     </ul>
-                  
+
                     <div class="bottom-recommend" id="j-bottomRecommend">
                         <div class="user-bought clearfix" id="ajax-recent-recommend">
                             <script id="j-recent-recommend-list" type="text/template">
@@ -643,7 +643,7 @@
             require.async(['detail:widget/tongji_hm/tongji_hm.js'],
                 function(dsp) {
                     dsp.init(
-                        // 
+                        //
                         { "staticData": { "p_id": "33330185", "p_name": "\u5b8f\u7535\u5bbe\u9986(\u62a5\u56fd\u5bfa\u5e97)", "p_img_url": "\/\/gss0.baidu.com\/7Po3dSag_xI4khGko9WTAnF6hhy\/nuomi\/eWH%3D720%2C436\/sign=137342cdc4bf6c81e55d51e58b0c8119\/562c11dfa9ec8a13ecd6f145ff03918fa1ecc043.jpg" }, "dynamicData": [] }
                     );
                 }
@@ -652,7 +652,7 @@
     }();
     ! function() {
         F.context('staticController').run(function(data, tools) {
-            //   
+            //
         });
     }();
     ! function() {
@@ -669,8 +669,8 @@
     ! function() { F.context('staticController').run(function() { require.async(['common:widget/new_header/nav/nav.js'], function(Nav) { var nav = new Nav({ selectedClass: 'selected', container: '#j-catg', navContainerClass: 'all-cate', navClass: 'j-catg-row' }); }); }); }();
     ! function() {
         F.context({
-            isHotCity: '1', // 
-            isIndex: '', // 
+            isHotCity: '1', //
+            isIndex: '', //
             erweimaCurrentTime: new Date(1536236663 * 1000)
         });
         F.context('staticController').run(function() {
@@ -703,7 +703,7 @@
 
                 $("#j-item-collect").on("click", function(e) {
                     loginApi.check(function() {
-                        // 如果已经登录 // 
+                        // 如果已经登录 //
                         var url = '/pcindex/main/dealmark?dealId=33330185&dealmarkToken=3b40c07d294638472b57534f0f3ebc70';
 
                         $.getJSON(url, function(jsonData) {
@@ -750,7 +750,7 @@
                 }
             );
 
-            // 
+            //
             if (this.isStatic) {
 
                 var base = tools.smarty.base;
@@ -784,7 +784,7 @@
             require.async("detail:widget/spec_nav/spec_nav.js");
         });
     }();
-    ! function() { // 
+    ! function() { //
         $("#j-branch-list-content").on("mouseover", function(e) {
 
             var $target = $(e.target);
@@ -803,21 +803,21 @@
         });
     }();
     ! function() {
-        F.context('ajax_url_shopchain', '/pcindex/main/shopchain'); // 
-        F.context('deal_id', '33330185'); // 
-        F.context('previewCode', ''); // 
+        F.context('ajax_url_shopchain', '/pcindex/main/shopchain'); //
+        F.context('deal_id', '33330185'); //
+        F.context('previewCode', ''); //
         F.context('specifyMerchantID', '');
     }();
     ! function() {
         F.context('staticController').run(function(data, tools) {
-            // 
+            //
             var output = tools.smarty.base.output;
             F.context('status', this.isStatic ? output('data.ugc.user_comment.status', {}) :
                 '1');
-            F.context('dealId', '33330185'); // 
+            F.context('dealId', '33330185'); //
             F.context('orderId', this.isStatic ? output('data.ugc.user_comment.billId', {}) :
                 '');
-            F.context('catg_ids', '377,642,934'); // 
+            F.context('catg_ids', '377,642,934'); //
             F.context('buyUrl', '//www.nuomi.com/buy/beijing/t00qpcidc?s=' +
                 (this.isStatic ? output('data.s', {}) : 'a816c32acc2bd60c8ade97fa9907cf13'));
             require.async(["detail:widget/ugc/user_comment/user_comment.js"], function(comment) {
@@ -836,7 +836,7 @@
         F.context('staticController').run(function(data, tools) {
 
 
-            // 
+            //
             if (this.isStatic) {
                 var smarty = tools.smarty;
                 var base = smarty.base;
@@ -845,20 +845,20 @@
             }
 
 
-            F.context('girlsHdDlgDetail', ''); // 
+            F.context('girlsHdDlgDetail', ''); //
 
-            // 初始化see2see，buy2buy  // 
+            // 初始化see2see，buy2buy  //
             F.context(
                 'hasLoggedInDetail',
                 this.isStatic ? (smarty.fn.empty('data.userInfo', {}) ? '' : 1) :
                 ''
             );
 
-            F.context('dealid', '33330185'); // 
+            F.context('dealid', '33330185'); //
 
             $(function() {
                 var dealid = F.context("dealid");
-                //  // 
+                //  //
                 var url_recent_view = '/pcindex/deal/visitdeal' +
                     '?s=' + (this.isStatic ? output('data.s', {}) : 'a816c32acc2bd60c8ade97fa9907cf13');
                 var url_clear_visited = '/pcindex/clearvst';
@@ -867,8 +867,8 @@
                     var bdTpl = Baidu.template;
 
                     var queryData = {
-                        deal_id: '33330185', // 
-                        refer: document.referrer //  // 
+                        deal_id: '33330185', //
+                        refer: document.referrer //  //
                     }
                     $.getJSON(url_recent_view, queryData, function(json) {
                         if (0 !== json.errno) {
@@ -974,12 +974,12 @@
                         });
                     }
                 })(
-                    // 
+                    //
                     { "staticData": { "page": "item_detail" }, "dynamicData": { "logInfoExt": { "s": "a816c32acc2bd60c8ade97fa9907cf13", "search_key": "[{\"s\":\"d52b8397e73f98ae5625528074cea219\",\"s_name\":\"merchantotherhot\"},{\"s\":\"8aa0923203e522f93b01edc37c2cfabc\",\"s_name\":\"seetosee\"},{\"s\":\"364dd9f17f6db28a36cbab19078ce16a\",\"s_name\":\"dbuytobuy\"}]" } } }
                 );
 
                 function handleBaiduid() {
-                    // 
+                    //
                     var getBaiduidUrl = '//nuomipassport.baidu.com/getbdid';
                     var retryCount = 1;
                     getBaiduid();
@@ -1036,5 +1036,3 @@
     <script>
     var _trace_page_logid = 1463053361;
     </script>
-
-    

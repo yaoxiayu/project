@@ -63,6 +63,15 @@
                             </ul>
                         </li>
                         <!-- 支付管理 end -->
+                        <!-- 优惠券管理 start -->
+                        <li>
+                            <a href="#" class="dropdown-toggle"><i class="icon-credit-card"></i><span class="menu-text"> 优惠券管理 </span><b class="arrow icon-angle-down"></b></a>
+                            <ul class="submenu">
+                                <li class="home"><a href="/coupon/create" title="优惠券添加" class="iframeurl"><i class="icon-double-angle-right"></i>优惠券添加</a></li>
+                                <li class="home"><a href="/coupon" title="优惠券列表" class="iframeurl"><i class="icon-double-angle-right"></i>优惠券列表</a></li>
+                            </ul>
+                        </li>
+                        <!-- 支付管理 end -->
                         <!-- 用户管理  start-->
                         <li>
                             <a href="#" class="dropdown-toggle"><i class="icon-user"></i><span class="menu-text"> 用户管理 </span><b class="arrow icon-angle-down"></b></a>
