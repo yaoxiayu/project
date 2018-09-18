@@ -163,10 +163,10 @@
         </div>
         <div class="search-area clearfix" >
             <div data-ui-id="main-searcher" class="form-wrap clearfix">
-                <form method="get" action="//bj.nuomi.com/search" id="j-searchForm" >
-                    <input type="text" id="j-searchInput" class="searchinput" name="keywords" value="" data-placeholder="" placeholder="搜索商家/地点" autocomplete="off" mon="element=search_input" style="" />
+                <form method="get" action="/shopuser" id="j-searchForm" >
+                    <input type="text" id="j-searchInput" class="searchinput" name="keyword" value="" data-placeholder="" placeholder="搜索商家/地点" autocomplete="off" mon="element=search_input" style="height:37.5px;padding:0px;">
                     <div class="searchbtn-wrap">
-                        <input type="submit" class="searchbtn" id="j-searchBtn" value="" mon="element=search_button" /><span class="search-text">搜&nbsp;索</span>
+                        <input type="submit" class="searchbtn" id="j-searchBtn" value="" mon="element=search_button"><span class="search-text">搜&nbsp;索</span>
                         <div class="btn-shadow"></div>
                     </div>
                     <input type="hidden" id="j-input-hidden" name="rid" value="5e11a75122df4436dce95dd5720e3270">

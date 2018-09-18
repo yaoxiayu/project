@@ -33,9 +33,7 @@ Route::resource('hcomment','HcommentController');
 //账户设置
 Route::resource('zhanghu','ZhanghuController');
 //购物车
-Route::get('/shopcart/{id}','HomeController@show');
-//订单删除
-Route::get('/order/delete/{id}','OrderController@shanchu');
+Route::get('/shopcart/{id}&{counts}','HomeController@show');
 //评价删除
 Route::get('/hcomment/delete/{id}','CommentController@shanchu');
 //友情链接

@@ -5,51 +5,54 @@
             <li class="nav-item cate-row all-cate deep">
                 <ul id="menu">
                     <li style="background-color:#D4AB60;">
-                        <a href="/"  style="color:white;">全部分类</a>
+                        <a href="/" style="color:white;">全部分类</a>
                         <ul class="submenu">
-                        @foreach($industry as $v)
+                            @foreach($industry as $v)
                             <a href="/food/{{$v->id}}" style="color:white;">
-                            <label >
-                            <li style="border-top:1px solid white;">
-                                {{$v->name}}
-                                
-                            </li>
-                            </label>
+                                <label>
+                                    <li style="border-top:1px solid white;">
+                                        {{$v->name}}
+                                    </li>
+                                </label>
                             </a>
-                        @endforeach          
+                            @endforeach
                         </ul>
                     </li>
                 </ul>
                 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
                 <script>
-                    $('#menu > li').hover(function(){
-                        //停止动画
-                        $('#menu .submenu').stop().hide();
-                        //获取当前li中的ul标签
-                        $(this).find("ul").show();
-                    }, function(){
-                        //停止动画
-                        $(this).find("ul").stop().hide();
-                        $(this).find("ul").hide();
-                    })
+                $('#menu > li').hover(function() {
+                    //停止动画
+                    $('#menu .submenu').stop().hide();
+                    //获取当前li中的ul标签
+                    $(this).find("ul").show();
+                }, function() {
+                    //停止动画
+                    $(this).find("ul").stop().hide();
+                    $(this).find("ul").hide();
+                })
                 </script>
                 <style>
                 * {
                     margin: 0;
                     padding: 0;
                 }
+
                 li {
                     list-style: none;
                 }
+
                 .solid {
                     width: 717px;
                     height: 372px;
                     margin: 0px auto 0;
                     box-shadow: 1px 7px 25px #fd8fd9;
                 }
+
                 .solid ul {
                     height: 100%;
                 }
+
                 .solid ul li {
                     position: relative;
                     float: left;
@@ -57,31 +60,37 @@
                     transform-style: preserve-3d;
                     transform: translateZ(-180px);
                 }
+
                 .solid ul li div {
                     position: absolute;
                     width: 100%;
                     height: 80%;
                 }
+
                 .solid ul li div:nth-child(1) {
                     top: -360px;
                     background: url('./lunbo/img/02.jpg');
                     transform-origin: bottom;
                     transform: translateZ(180px) rotateX(90deg);
                 }
+
                 .solid ul li div:nth-child(2) {
                     top: 360px;
                     background: url('./lunbo/img/01.jpg');
                     transform-origin: top;
                     transform: translateZ(180px) rotateX(-90deg);
                 }
+
                 .solid ul li div:nth-child(3) {
                     background: url('./lunbo/img/03.jpg');
                     transform: translateZ(180px);
                 }
+
                 .solid ul li div:nth-child(4) {
                     background: url('./lunbo/img/04.jpg');
                     transform: translateZ(-180px) rotateX(180deg);
                 }
+
                 .solid ol {
                     position: absolute;
                     left: 50%;
@@ -91,6 +100,7 @@
                     display: flex;
                     justify-content: space-around;
                 }
+
                 .solid ol li {
                     width: 20px;
                     height: 20px;
@@ -103,6 +113,7 @@
                     font: italic 12px/20px 'Microsoft Yahei';
                     cursor: pointer;
                 }
+
                 .solid ol li.on {
                     background: red;
                 }
@@ -119,44 +130,45 @@
                     margin-right: 20px;
                     border: solid 1px #ddd;
                     font-size: 16px;
-                    
+
                     text-align: center;
                     line-height: 40px;
-                    z-index:10;
+                    z-index: 10;
                     position: relative;
                 }
 
                 .submenu {
                     position: absolute;
-                    background:black;
+                    background: black;
 
                     top: 40px;
-                    left:0px;
-                    display:none;
+                    left: 0px;
+                    display: none;
                 }
 
                 .submenu li {
                     width: 230px;
-                    border-bottom:1px solid white;
-
+                    border-bottom: 1px solid white;
                 }
-                li:hover{background-color:#ccc;cursor: pointer;}
-                
+
+                li:hover {
+                    background-color: #ccc;
+                    cursor: pointer;
+                }
                 </style>
-                
                 <div class="left-menu clearfix" id="j-catg-list">
-                        <div class="right-sidebar-re">
-                            <div class="right-ad">
-                                <a href="https://bj.nuomi.com/pcindex/dipin#/list/565" target="_blank">
+                    <div class="right-sidebar-re">
+                        <div class="right-ad">
+                            <a href="https://bj.nuomi.com/pcindex/dipin#/list/565" target="_blank">
                                     <img src="/home/static/picture/right-banner_562f509.jpg">
                                 </a>
-                            </div>
-                            <div class="right-erweima" mon="area=app_download">
-                                <a href="//d.nuomi.com/?1009764s" mon="element=https://d.nuomi.com/?1009764s" target="_blank" class="qrcode-discount" style="visibility: visible;">
+                        </div>
+                        <div class="right-erweima" mon="area=app_download">
+                            <a href="//d.nuomi.com/?1009764s" mon="element=https://d.nuomi.com/?1009764s" target="_blank" class="qrcode-discount" style="visibility: visible;">
                                     下载手机版
                                 </a>
-                            </div>
                         </div>
+                    </div>
                 </div>
                 <li class="nav-item nav-item-first">
                     <a class="item first new-item" href="/" mon="element=首页" target="_top">
@@ -256,7 +268,7 @@
             </h3>
                             <ul class="reco-words">
                                 <li class="link-all">
-                                    <a href="https://bj.nuomi.com/320" mon="element=top_link" target="_blank">
+                                    <a href="/home/{{$v['id']}}.html" mon="element=top_link" target="_blank">
                         查看全部
                         <span class="all-arrow">
                         </span>
@@ -265,17 +277,16 @@
                             </ul>
                         </div>
                         <ul class="item-list">
+                    @foreach($play as $v)
                             <li class="item yule-item clearfix">
-                                <a class="yule-content" href="https://www.nuomi.com/shop/87933569" target="_blank">
-                    <img class="yule-image" src="/home/static/picture/a6efce1b9d16fdfa4a5f6c36bf8f8c5494ee7b33.jpg"/>
+                                <a class="yule-content" href="/home/{{$v['id']}}.html" target="_blank">
+                    <img class="yule-image" src="{{$v['pic']}}"/>
                     <div class="yule-title">
-                        达人联盟
+                        {{$v['name']}}
                     </div>
                     <object>
                         <a class="yule-ugc" href="https://www.nuomi.com/shop/comment/87933569" target="_blank">
-                            <span class="comment">
-                                暂无评论
-                            </span>
+                            
                         </a>
                                 </object>
                                 <div class="shop-info">
@@ -285,321 +296,96 @@
                             </span>
                                     </span>
                                     <span class="has-sale">
-                            已售760
+                            {{$v['intro']}}
                         </span>
                                 </div>
                                 <div class="sale-info">
-                                    暂无
+                                    人均{{$v['renprice']}}
                                 </div>
                                 </a>
                             </li>
-                            <li class="item yule-item clearfix">
-                                <a class="yule-content" href="https://www.nuomi.com/shop/80661709" target="_blank">
-                    <img class="yule-image" src="/home/static/picture/e7cd7b899e510fb38c4515cbd533c895d1430c09.jpg"/>
-                    <div class="yule-title">
-                        安贞台球俱乐部
-                    </div>
-                    <object>
-                        <a class="yule-ugc" href="https://www.nuomi.com/shop/comment/80661709" target="_blank">
-                            <span class="comment">
-                                暂无评论
-                            </span>
-                        </a>
-                                </object>
-                                <div class="shop-info">
-                                    <span>
-                            <span class="info-break">
-                                |
-                            </span>
-                                    </span>
-                                    <span class="has-sale">
-                            已售152
-                        </span>
-                                </div>
-                                <div class="sale-info">
-                                    暂无
-                                </div>
-                                </a>
-                            </li>
-                            <li class="item yule-item clearfix">
-                                <a class="yule-content" href="https://www.nuomi.com/shop/100936970" target="_blank">
-                    <img class="yule-image" src="/home/static/picture/0b7b02087bf40ad1b87dcc105b2c11dfa8ecceac.jpg"/>
-                    <div class="yule-title">
-                        慢生活会馆
-                    </div>
-                    <object>
-                        <a class="yule-ugc" href="https://www.nuomi.com/shop/comment/100936970" target="_blank">
-                            <span class="comment">
-                                暂无评论
-                            </span>
-                        </a>
-                                </object>
-                                <div class="shop-info">
-                                    <span>
-                            <span class="info-break">
-                                |
-                            </span>
-                                    </span>
-                                    <span class="has-sale">
-                            已售226
-                        </span>
-                                </div>
-                                <div class="sale-info">
-                                    暂无
-                                </div>
-                                </a>
-                            </li>
-                            <li class="item yule-item clearfix">
-                                <a class="yule-content" href="https://www.nuomi.com/shop/99736913" target="_blank">
-                    <img class="yule-image" src="/home/static/picture/ae51f3deb48f8c54e175e29736292df5e1fe7fe7.jpg"/>
-                    <div class="yule-title">
-                        宝乐迪KTV
-                    </div>
-                    <object>
-                        <a class="yule-ugc" href="https://www.nuomi.com/shop/comment/99736913" target="_blank">
-                            <span class="comment">
-                                暂无评论
-                            </span>
-                        </a>
-                                </object>
-                                <div class="shop-info">
-                                    <span>
-                            <span class="info-break">
-                                |
-                            </span>
-                                    </span>
-                                    <span class="has-sale">
-                            已售144
-                        </span>
-                                </div>
-                                <div class="sale-info">
-                                    暂无
-                                </div>
-                                </a>
-                            </li>
-                            <li class="item yule-item clearfix">
-                                <a class="yule-content" href="https://www.nuomi.com/shop/87929124" target="_blank">
-                    <img class="yule-image" src="/home/static/picture/eac4b74543a982265de97cc88182b9014a90eb31.jpg"/>
-                    <div class="yule-title">
-                        爱丽丝奇幻乐园
-                    </div>
-                    <object>
-                        <a class="yule-ugc" href="https://www.nuomi.com/shop/comment/87929124" target="_blank">
-                            <span class="comment">
-                                暂无评论
-                            </span>
-                        </a>
-                                </object>
-                                <div class="shop-info">
-                                    <span>
-                            <span class="info-break">
-                                |
-                            </span>
-                                    </span>
-                                    <span class="has-sale">
-                            已售189
-                        </span>
-                                </div>
-                                <div class="sale-info">
-                                    暂无
-                                </div>
-                                </a>
-                            </li>
+                        @endforeach
                         </ul>
                     </div>
+
+                    <!-- 酒店 -->
                     <div class="re-mid-content">
                         <div class="content-header clearfix">
                             <h3>
-                美食
-            </h3>
-                            <ul class="reco-words">
-                                <li class="link-all">
-                                    <a href="https://lvyou.baidu.com/" mon="element=top_link" target="_blank">
-                        查看全部
-                        <span class="all-arrow">
-                        </span>
-                    </a>
-                                </li>
-                            </ul>
+                                            酒店
+                                        </h3>
                         </div>
                         <ul class="item-list">
+                            @foreach($hotel as $v)
                             <li class="ly-item">
-                                <a href="https://lvyou.baidu.com/scene/" target="_blank">
-                    <img src="/home/static/picture/ly-mudidi_51c0cde.jpg"/>
-                    <div class="lv-title">
-                        <div class="word-main">
-                            目的地攻略
-                        </div>
-                        <div class="word-title">
-                            Travelling guide
-                        </div>
-                    </div>
-                </a>
+                                <a href="/home/{{$v['id']}}.html" target="_blank">
+                                                <img src="{{$v['pic']}}" width="300" height="300">
+                                                <div class="lv-title">
+                                                    <div class="word-main">
+                                                        {{$v['name']}}
+                                                    </div>
+                                                    <div class="word-title">
+                                                        {{$v['intro']}}
+                                                    </div>
+                                            </div>
+                                        </a>
                             </li>
-                            <li class="ly-item">
-                                <a href="https://lvyou.baidu.com/plan/counselor/" target="_blank">
-                    <img src="/home/static/picture/ly-xingcheng_77e0c83.jpg"/>
-                    <div class="lv-title">
-                        <div class="word-main">
-                            行程计划
-                        </div>
-                        <div class="word-title">
-                            Travelling plan
-                        </div>
-                    </div>
-                </a>
-                            </li>
-                            <li class="ly-item">
-                                <a href="https://lvyou.baidu.com/notes/" target="_blank">
-                    <img src="/home/static/picture/ly-youji_7f7dac8.jpg"/>
-                    <div class="lv-title">
-                        <div class="word-main">
-                            游记
-                        </div>
-                        <div class="word-title">
-                            Travelling notes
-                        </div>
-                    </div>
-                </a>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
+                    
+                    <!-- 美食 -->
                     <div class="re-mid-content">
                         <div class="content-header clearfix">
                             <h3>
-                结婚
-            </h3>
-                            <ul class="reco-words">
-                                <li class="link-all">
-                                    <a href="https://bj.nuomi.com/pcindex/dipin#/list/565" mon="element=top_link" target="_blank">
-                        查看全部
-                        <span class="all-arrow">
-                        </span>
-                    </a>
-                                </li>
-                            </ul>
+                                美食
+                            </h3>
                         </div>
                         <ul class="item-list">
-                            <li class="jh-item">
-                                <a class="big-pic" href="https://bj.nuomi.com/pcindex/dipin#/list/565/0" target="_blank">
-                    <img src="/home/static/picture/jh-sheying_39f083d.jpg"/>
-                    <div class="lv-title">
-                        <div class="word-main">
-                            婚纱摄影
-                        </div>
-                        <div class="word-title">
-                            Wedding Photo
-                        </div>
-                    </div>
-                </a>
+                            @foreach($meishi as $v)
+                            <li class="ly-item">
+                                <a href="/home/{{$v['id']}}.html" target="_blank">
+                                    <img src="{{$v['pic']}}" width="300" height="300">
+                                    <div class="lv-title">
+                                        <div class="word-main">
+                                            {{$v['name']}}
+                                        </div>
+                                        <div class="word-title">
+                                            {{$v['intro']}}
+                                        </div>
+                                </div>
+                            </a>
                             </li>
-                            <li class="jh-item">
-                                <a class="big-pic" href="https://bj.nuomi.com/pcindex/dipin#/list/2014/0" target="_blank">
-                    <img src="/home/static/picture/jh-hunsha_ea096c9.jpg"/>
-                    <div class="lv-title">
-                        <div class="word-main">
-                            婚纱礼服
-                        </div>
-                        <div class="word-title">
-                            Wedding Dress
-                        </div>
-                    </div>
-                </a>
-                            </li>
-                            <li class="jh-item">
-                                <a class="mid-pic" href="https://bj.nuomi.com/pcindex/dipin#/list/709/0" target="_blank">
-                    <img src="/home/static/picture/jh-hunqing_59ba50f.jpg"/>
-                    <div class="lv-title">
-                        <div class="word-main">
-                            婚庆服务
-                        </div>
-                        <div class="word-title">
-                            Wedding Service
-                        </div>
-                    </div>
-                </a>
-                                <a class="mid-pic" href="https://bj.nuomi.com/pcindex/dipin#/list/614/0" target="_blank">
-                    <img src="/home/static/picture/jh-xiezhen_91c4453.jpg"/>
-                    <div class="lv-title">
-                        <div class="word-main">
-                            个性写真
-                        </div>
-                        <div class="word-title">
-                            Personal Photo
-                        </div>
-                    </div>
-                </a>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
+                    
+                    <!-- 结婚-->
                     <div class="re-mid-content">
                         <div class="content-header clearfix">
                             <h3>
-                酒店
-            </h3>
-                            <ul class="reco-words">
-                                <li class="link-all">
-                                    <a href="https://bj.nuomi.com/pcindex/dipin#/list/565" mon="element=top_link" target="_blank">
-                        查看全部
-                        <span class="all-arrow">
-                        </span>
-                    </a>
-                                </li>
-                            </ul>
+                                结婚
+                            </h3>
                         </div>
                         <ul class="item-list">
-                            <li class="jh-item">
-                                <a class="big-pic" href="https://bj.nuomi.com/pcindex/dipin#/list/565/0" target="_blank">
-                    <img src="/home/static/picture/jh-sheying_39f083d.jpg"/>
-                    <div class="lv-title">
-                        <div class="word-main">
-                            婚纱摄影
-                        </div>
-                        <div class="word-title">
-                            Wedding Photo
-                        </div>
-                    </div>
-                </a>
+                            @foreach($marry as $v)
+                            <li class="ly-item">
+                                <a href="/home/{{$v['id']}}.html" target="_blank">
+                                    <img src="{{$v['pic']}}" width="300" height="300">
+                                    <div class="lv-title">
+                                        <div class="word-main">
+                                            {{$v['name']}}
+                                        </div>
+                                        <div class="word-title">
+                                            {{$v['intro']}}
+                                        </div>
+                                </div>
+                            </a>
                             </li>
-                            <li class="jh-item">
-                                <a class="big-pic" href="https://bj.nuomi.com/pcindex/dipin#/list/2014/0" target="_blank">
-                    <img src="/home/static/picture/jh-hunsha_ea096c9.jpg"/>
-                    <div class="lv-title">
-                        <div class="word-main">
-                            婚纱礼服
-                        </div>
-                        <div class="word-title">
-                            Wedding Dress
-                        </div>
-                    </div>
-                </a>
-                            </li>
-                            <li class="jh-item">
-                                <a class="mid-pic" href="https://bj.nuomi.com/pcindex/dipin#/list/709/0" target="_blank">
-                    <img src="/home/static/picture/jh-hunqing_59ba50f.jpg"/>
-                    <div class="lv-title">
-                        <div class="word-main">
-                            婚庆服务
-                        </div>
-                        <div class="word-title">
-                            Wedding Service
-                        </div>
-                    </div>
-                </a>
-                                <a class="mid-pic" href="https://bj.nuomi.com/pcindex/dipin#/list/614/0" target="_blank">
-                    <img src="/home/static/picture/jh-xiezhen_91c4453.jpg"/>
-                    <div class="lv-title">
-                        <div class="word-main">
-                            个性写真
-                        </div>
-                        <div class="word-title">
-                            Personal Photo
-                        </div>
-                    </div>
-                </a>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
+
                     <div class="bottom-category" id="c-bottom">
                         <div class="bottom-cate">
                             <ul class="tab-nav clearfix">
@@ -621,72 +407,72 @@
                                             <a href="//www.nuomi.com/deal/f00vqsdlt.html " target="_blank ">
                                 Today holi
                             </a>
-                        </li>
-                        <li>
-                            <a  href="//www.nuomi.com/deal/200vpq3rt.html" target="_blank"> 夏月科技
+                                        </li>
+                                        <li>
+                                            <a href="//www.nuomi.com/deal/200vpq3rt.html" target="_blank"> 夏月科技
                                             </a>
                                         </li>
                                         <li>
                                             <a href="//www.nuomi.com/deal/g00vqjjxp.html " target="_blank ">
                                 美妤世家管家家政
                             </a>
-                        </li>
-                        <li>
-                            <a href="//www.nuomi.com/deal/q00vqoe8g.html" target="_blank"> knight cof
+                                        </li>
+                                        <li>
+                                            <a href="//www.nuomi.com/deal/q00vqoe8g.html" target="_blank"> knight cof
                                             </a>
                                         </li>
                                         <li>
                                             <a href="//www.nuomi.com/deal/l00vp0ejb.html " target="_blank ">
                                 齿泰华口腔(旧宫店)
                             </a>
-                        </li>
-                        <li>
-                            <a href="//www.nuomi.com/deal/w00vpokrv.html" target="_blank"> 绿萝琴行
+                                        </li>
+                                        <li>
+                                            <a href="//www.nuomi.com/deal/w00vpokrv.html" target="_blank"> 绿萝琴行
                                             </a>
                                         </li>
                                         <li>
                                             <a href="//www.nuomi.com/deal/c00vqvqoj.html " target="_blank ">
                                 北京市景运律师事务所
                             </a>
-                        </li>
-                        <li>
-                            <a href="//www.nuomi.com/deal/c00vqqqie.html" target="_blank"> 纪雯钧烘培
+                                        </li>
+                                        <li>
+                                            <a href="//www.nuomi.com/deal/c00vqqqie.html" target="_blank"> 纪雯钧烘培
                                             </a>
                                         </li>
                                         <li>
                                             <a href="//www.nuomi.com/deal/000vqa13e.html " target="_blank ">
                                 睛明堂
                             </a>
-                        </li>
-                        <li>
-                            <a href="//www.nuomi.com/deal/m00vqxdct.html" target="_blank"> 阳雀茶坊
+                                        </li>
+                                        <li>
+                                            <a href="//www.nuomi.com/deal/m00vqxdct.html" target="_blank"> 阳雀茶坊
                                             </a>
                                         </li>
                                         <li>
                                             <a href="//www.nuomi.com/deal/i00vqocnf.html " target="_blank ">
                                 咔嚓鱼儿童摄影
                             </a>
-                        </li>
-                        <li>
-                            <a href="//www.nuomi.com/deal/n00vqtgrx.html" target="_blank"> 迦南之约教堂婚礼
+                                        </li>
+                                        <li>
+                                            <a href="//www.nuomi.com/deal/n00vqtgrx.html" target="_blank"> 迦南之约教堂婚礼
                                             </a>
                                         </li>
                                         <li>
                                             <a href="//www.nuomi.com/deal/800vqvx47.html " target="_blank ">
                                 金鸿源
                             </a>
-                        </li>
-                        <li>
-                            <a href="//www.nuomi.com/deal/u00voxr4e.html" target="_blank"> 北京心悦东方舞艺术培
+                                        </li>
+                                        <li>
+                                            <a href="//www.nuomi.com/deal/u00voxr4e.html" target="_blank"> 北京心悦东方舞艺术培
                                             </a>
                                         </li>
                                         <li>
                                             <a href="//www.nuomi.com/deal/c00vqdfou.html " target="_blank ">
                                 CGWANG王氏教育
                             </a>
-                        </li>
-                        <li>
-                            <a href="//www.nuomi.com/deal/j00vqjvh3.html" target="_blank"> 奥美科贸
+                                        </li>
+                                        <li>
+                                            <a href="//www.nuomi.com/deal/j00vqjvh3.html" target="_blank"> 奥美科贸
                                             </a>
                                         </li>
                                     </ul>
@@ -697,152 +483,150 @@
                                             <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=1 " target="_blank ">
                                 朝阳大悦城
                             </a>
-                        </li>
-                        <li>
-                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=2" target="_blank"> 蓝色港湾
+                                        </li>
+                                        <li>
+                                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=2" target="_blank"> 蓝色港湾
                                             </a>
                                         </li>
                                         <li>
                                             <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=3 " target="_blank ">
                                 世贸天阶
                             </a>
-                        </li>
-                        <li>
-                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=4" target="_blank"> 万柳购物中心
+                                        </li>
+                                        <li>
+                                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=4" target="_blank"> 万柳购物中心
                                             </a>
                                         </li>
                                         <li>
                                             <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=5 " target="_blank ">
                                 清河五彩城
                             </a>
-                        </li>
-                        <li>
-                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=6" target="_blank"> 五道口购物中心
+                                        </li>
+                                        <li>
+                                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=6" target="_blank"> 五道口购物中心
                                             </a>
                                         </li>
                                         <li>
                                             <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=7 " target="_blank ">
                                 新中关购物中心
                             </a>
-                        </li>
-                        <li>
-                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=8" target="_blank"> 首地大峡谷购物中心
+                                        </li>
+                                        <li>
+                                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=8" target="_blank"> 首地大峡谷购物中心
                                             </a>
                                         </li>
                                         <li>
                                             <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=9 " target="_blank ">
                                 西单大悦城
                             </a>
-                        </li>
-                        <li>
-                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=10" target="_blank"> 龙德广场
+                                        </li>
+                                        <li>
+                                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=10" target="_blank"> 龙德广场
                                             </a>
                                         </li>
                                         <li>
                                             <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=15 " target="_blank ">
                                 爱琴海购物中心
                             </a>
-                        </li>
-                        <li>
-                            <a "="" href="//bj.nuomi.com/pcindex/marketdetail/?marketId=21" target="_blank"> 东方新天地
+                                        </li>
+                                        <li>
+                                            <a "=" " href="//bj.nuomi.com/pcindex/marketdetail/?marketId=21 " target="_blank "> 东方新天地
                                             </a>
                                         </li>
                                         <li>
-                                            <a "=" " href="//bj.nuomi.com/pcindex/marketdetail/?marketId=23 " target="_blank ">
-                                凤凰汇购物中心
-                            </a>
-                        </li>
-                        <li>
-                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=24" target="_blank"> 国瑞购物中心
+                                            <a "=" " href="//bj.nuomi.com/pcindex/marketdetail/?marketId=23 " target="_blank "> 凤凰汇购物中心
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=24" target="_blank"> 国瑞购物中心
                                             </a>
                                         </li>
                                         <li>
                                             <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=29 " target="_blank ">
                                 欧美汇购物中心
                             </a>
-                        </li>
-                        <li>
-                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=36" target="_blank"> 东方银座购物中心
+                                        </li>
+                                        <li>
+                                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=36" target="_blank"> 东方银座购物中心
                                             </a>
                                         </li>
                                         <li>
                                             <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=53 " target="_blank ">
                                 华宇时尚购物中心
                             </a>
-                        </li>
-                        <li>
-                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=81" target="_blank"> 望京华彩商业中心
+                                        </li>
+                                        <li>
+                                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=81" target="_blank"> 望京华彩商业中心
                                             </a>
                                         </li>
                                         <li>
                                             <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=88 " target="_blank ">
                                 丰联广场
                             </a>
-                        </li>
-                        <li>
-                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=206" target="_blank"> 建外SOHO
+                                        </li>
+                                        <li>
+                                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=206" target="_blank"> 建外SOHO
                                             </a>
                                         </li>
                                         <li>
                                             <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=207 " target="_blank ">
                                 中关村广场购物中心
                             </a>
-                        </li>
-                        <li>
-                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=208" target="_blank"> 百荣世贸商城
+                                        </li>
+                                        <li>
+                                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=208" target="_blank"> 百荣世贸商城
                                             </a>
                                         </li>
                                         <li>
                                             <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=218 " target="_blank ">
                                 金源新燕莎MALL
                             </a>
-                        </li>
-                        <li>
-                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=219" target="_blank"> 悠唐生活广场
+                                        </li>
+                                        <li>
+                                            <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=219" target="_blank"> 悠唐生活广场
                                             </a>
                                         </li>
                                         <li>
                                             <a href="//bj.nuomi.com/pcindex/marketdetail/?marketId=220 " target="_blank ">
                                 BHG Mall(华联常营购物中心)
                             </a>
-                        </li>
-                    </ul>
-                </div>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="w-top-search-box-revision ">
-    <div class="top-search-bg " id="j-top-search-bg ">
-    </div>
-    <div class="top-search-content " id="j-top-search-content ">
-        <div class="search-container ">
-            <div class="top-search-logo ">
-                <i class="new-logo ">
-                </i>
-            </div>
-            <div class="top-search " id="j-top-search ">
-                <div class="search-area clearfix ">
-                    <div class="form-wrap clearfix " data-ui-id="top-searcher ">
-                        <form action="//www.nuomi.com/search " id="j-top-searchForm " method="get ">
-                            <input autocomplete="off " class="searchinput " data-placeholder=" " id="j-topSearchInput " mon="element=search_input " name="k " placeholder="搜索商家/地点 " type="text " value=" "/>
-                            <div class="searchbtn-wrap ">
-                                <input class="searchbtn " id="j-topSearchBtn " mon="element=search_button " type="submit " value=" "/>
-                                <span class="search-text ">
-                                    搜 索
-                                </span>
-                                <div class="btn-shadow ">
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
-                            <input id="j-top-input-hidden " name="rid " type="hidden " value="5e11a75122df4436dce95dd5720e3270 "/>
-                        </form>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <input id="j-input-city-up " type="hidden " value="bj "/>
-        </div>
-    </div>
-</div>
-<div class="re-footer-content ">
-@include('layouts._foot')
-   
+                <div class="w-top-search-box-revision ">
+                    <div class="top-search-bg " id="j-top-search-bg ">
+                    </div>
+                    <div class="top-search-content " id="j-top-search-content ">
+                        <div class="search-container ">
+                            <div class="top-search-logo ">
+                                <i class="new-logo ">
+                </i>
+                            </div>
+                            <div class="top-search " id="j-top-search ">
+                                <div class="search-area clearfix ">
+                                    <div class="form-wrap clearfix " data-ui-id="top-searcher ">
+                                        <form action="//www.nuomi.com/search " id="j-top-searchForm " method="get ">
+                                            <input autocomplete="off " class="searchinput " data-placeholder=" " id="j-topSearchInput " mon="element=search_input " name="k " placeholder="搜索商家/地点 " type="text " value=" " />
+                                            <div class="searchbtn-wrap ">
+                                                <input class="searchbtn " id="j-topSearchBtn " mon="element=search_button " type="submit " value=" " />
+                                                <span class="search-text ">
+                                    搜 索
+                                </span>
+                                                <div class="btn-shadow ">
+                                                </div>
+                                            </div>
+                                            <input id="j-top-input-hidden " name="rid " type="hidden " value="5e11a75122df4436dce95dd5720e3270 " />
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <input id="j-input-city-up " type="hidden " value="bj " />
+                        </div>
+                    </div>
+                </div>
+                <div class="re-footer-content ">
+                    @include('layouts._foot')

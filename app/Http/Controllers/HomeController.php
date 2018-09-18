@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Industry;
+use App\Link;
 use App\Order;
 use App\Setting;
+use App\Shopping;
 use App\User;
+use App\shopuser;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use App\Link;
 class HomeController extends Controller
 {
 
@@ -17,8 +19,28 @@ class HomeController extends Controller
 
     public function index()
     {
-        $industry = Industry::get();
-    	return view('home.index',compact('industry'));
+        $industry = Industry::all();
+        $meishi = Shopuser::OrderBy('id','desc')
+                -> where('industry_id','2')
+                ->take(3)
+                -> get();
+
+        $marry = Shopuser::OrderBy('id','desc')
+                -> where('industry_id','4')
+                ->take(3)
+                -> get();
+
+        $hotel = Shopuser::OrderBy('id','desc')
+                -> where('industry_id','1')
+                ->take(3)
+                -> get();
+
+        $play = Shopuser::OrderBy('id','desc')
+                -> where('industry_id','3')
+                ->take(5)
+                -> get();
+
+    	return view('home.index',compact('industry','meishi','marry','hotel','play'));
        
         
     }
@@ -93,13 +115,10 @@ class HomeController extends Controller
     	 
 
     //购物车
-    public function show()
+    public function show($id,$counts)
     {
-        //dd('aa');
-
-
-        $order = Order::all();
-        return view('home.gwc',compact('order'));
+        $shopping = Shopping::find($id);
+        return view('home.gwc',compact('shopping','counts'));
     }
 
 

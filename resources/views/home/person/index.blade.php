@@ -98,31 +98,12 @@
                             <ul class="w-nav clearfix" id="j-uc-nav" mon="element_type=nav" alog-alias="bainuo-user-pagetab" alog-group="bainuo-user-pagetab">
                                 <li class="nav-active nav-current">
                                     <a class="nav-txt j-nav" href="/person" style="color: #666">我的订单</a>
-                                    <ul class="sub-nav" mon="area=subNav">
-                                     
-                                        <li>
-                                            <a href="" class="">
-												<span class="sub-nav-ico">&#149;</span>储值卡
-											</a>
-                                        </li>
-                                    </ul>
                                 </li>
                                 <li class="nav-active">
                                     <a class="nav-txt j-nav" href="/hcomment">
 										我的评价
 									</a>
-                                    <ul class="sub-nav" mon="area=subNav">
-                                        <li>
-                                            <a href="/uc/comment/not" class="">
-                                                <span class="sub-nav-ico">&#149;</span>待评价
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/uc/comment/already" class="">
-                                                <span class="sub-nav-ico">&#149;</span>已评价
-                                            </a>
-                                        </li>
-                                    </ul>
+                                   
                                 </li>
                                 <li class="nav-active">
                                     <a class="nav-txt nav-link" href="/uc/collection/online">
@@ -137,11 +118,6 @@
                                         <li>
                                             <a href="/uc/user/userinfo" class="">
                                                 <span class="sub-nav-ico">&#149;</span>账户设置
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="/uc/hongbao/list?status=1&type=2" class="">
-                                                <span class="sub-nav-ico">&#149;</span>余额(充值卡兑换)
                                             </a>
                                         </li>
                                         <li>

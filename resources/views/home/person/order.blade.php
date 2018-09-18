@@ -14,8 +14,6 @@
                                     </tr>
                                     <tr>
                                     @foreach($order as $v)
-                                   @if(Session::get('id') == $v['user_id'])
-                                        
                                         <td class="goods-info left">
                                             <div class="goods-img fl">
                                                 <img src="{{$v->shopping->img}}" title="{{$v->shopping->name}}" />
@@ -45,7 +43,6 @@
                                             </script>
                                         </td>
                                     </tr>
-                                             @endif
                                     @endforeach
                                    
                                 </table>
