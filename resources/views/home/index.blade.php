@@ -156,14 +156,9 @@
                     background-color: #ccc;
                     cursor: pointer;
                 }
-<<<<<<< HEAD
-                li:hover{background-color:#ccc;}
 
                 </style>
 
-=======
-                </style>
->>>>>>> 967aa09d1eec0543af0d7adb6eaa1b8a2472a8e9
                 <div class="left-menu clearfix" id="j-catg-list">
                     <div class="right-sidebar-re">
                         <div class="right-ad">
@@ -636,15 +631,6 @@
                         </div>
                     </div>
                 </div>
-<<<<<<< HEAD
-            </div>
-            <input id="j-input-city-up " type="hidden " value="bj "/>
-        </div>
-    </div>
-</div>
-<div class="re-footer-content ">
-@include('layouts._foot')
-=======
+
                 <div class="re-footer-content ">
                     @include('layouts._foot')
->>>>>>> 967aa09d1eec0543af0d7adb6eaa1b8a2472a8e9
