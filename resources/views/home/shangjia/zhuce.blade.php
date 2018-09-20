@@ -26,6 +26,7 @@
                         <input name="password" type="password" class="kuang_txt email" placeholder="密码" style="width:270px;"><span class="remind"></span>
                         <input name="repassword" type="password" class="kuang_txt email" placeholder="确认密码" style="width:270px;"><span class="remind"></span>
                         <input name="phone" type="text" class="kuang_txt possword" placeholder="手机号" style="width:270px;"><span class="remind"></span>
+                         <input name="renprice" type="text" class="kuang_txt possword" placeholder="人均价格" style="width:270px;">
                         <br>
                         <br> {{csrf_field()}}
                         <div class="am-form-group">

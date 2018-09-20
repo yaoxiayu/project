@@ -1,3 +1,4 @@
+
 <?php
 
 /*
@@ -66,8 +67,6 @@ Route::get('/cunshoucang/delete/{id}','ShoucangController@shanchu');
 /**
  * 后台
  */
-//后台首页
-Route::get('/houtai', 'AdminController@show');
 
 //后台登录
 Route::get('/admin/login','AdminController@login');
@@ -75,6 +74,14 @@ Route::get('/admin/login','AdminController@login');
 //登陆操作
 Route::post('/admin/login','AdminController@dologin');
 
+
+
+//后台路由
+Route::group(['middleware'=>'admin'],function(){
+
+//后台首页
+Route::get('/houtai', 'AdminController@show');
+	
 //退出
 Route::get('/admin/logout','AdminController@logout');
 
@@ -120,7 +127,7 @@ Route::post('/admin/setting','AdminController@update');
 
 //超级管理员
 Route::resource('administrator','AdministratorController');
-
+});
 
 /**
  * 商家管理前台

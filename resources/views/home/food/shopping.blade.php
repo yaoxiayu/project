@@ -65,7 +65,7 @@
             <div class="w-item-info clearfix">
                 <h2>{{$shopping['name']}}</h2>
                 <div class="item-title">
-                    <span class="text-main">仅元{{$shopping['price']}}！最高价值198元，四人普间/大床房2选1。</span>
+                    <span class="text-main">仅{{$shopping['price']}}元！ 最高价值198元，四人普间/大床房2选1。</span>
                     <span class="hot hide">优惠内容</span>
                 </div>
                 <div class="ii-images clearfix static-hook-real static-hook-id-6">
@@ -176,11 +176,10 @@
                                     })
                                 </script>
 
-<<<<<<< HEAD
+
                                 </form>
 
-=======
->>>>>>> 967aa09d1eec0543af0d7adb6eaa1b8a2472a8e9
+
 
                             </div>
                         </div>
@@ -239,7 +238,7 @@
                                     </a>
                                 </li>
                             </ul>
-<<<<<<< HEAD
+
 
 
 
@@ -255,8 +254,7 @@
 
 
 
-=======
->>>>>>> 967aa09d1eec0543af0d7adb6eaa1b8a2472a8e9
+
                         <div class="ceiling-buy clearfix static-hook-real static-hook-id-17">
                             <div class="pic-price-area"><span class="unit">&yen;</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 50px;line-height:35px;">{{$shopping['price']}}</span></div>
                             <a mon="area=buyCell" href="//www.nuomi.com/buy/beijing/t00qpcidc?s=a816c32acc2bd60c8ade97fa9907cf13" class="btn-buy btn-buy-s j-btn-buy " mon="area=buy&element=buyCell&element_type=nav" id="pc-buy-spec-nav-id-for-hmt">
@@ -376,7 +374,7 @@
                                                 </div>
                                                 <div style="float:left;line-height:80px;">{{$v->user->username}}
                                                 </div>
-                                                <div style="float:left;width: 360px;height:20px;margin-left:20px;padding-top: 20px">{{$v->content}}
+                                                <div style="float:left;width: 360px;height:20px;margin-left:20px;padding-top: 20px">{!!$v->content!!}
                                                 </div>
                                                 <div style="padding-top: 20px;color:#ff658e">评价时间
                                                 {{$v['updated_at']}}
@@ -669,6 +667,7 @@
                 var output = base.output;
                 var itemIntro = data.dtail_attr;
                 if (has('data.t10.total') && data.t10.total > 0) {
+                if (has('data.t10.total') && data.t10.total > 0) {
                     require.async('detail:widget/item_info/item_intro/item_intro.js', function(Jx) {
                         var marketingData = {
                             marketing_price: data.t10.preHotPrice,
@@ -947,8 +946,8 @@
     <script>
     var _trace_page_logid = 1463053361;
     </script>
-<<<<<<< HEAD
-=======
+
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script>
         var shop_id = {{$shopping['id']}};
@@ -1007,4 +1006,4 @@
     </script>
 
 
->>>>>>> 967aa09d1eec0543af0d7adb6eaa1b8a2472a8e9
+

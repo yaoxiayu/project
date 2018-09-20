@@ -63,7 +63,13 @@ class HomeController extends Controller
         $user -> username = $request->username;
         $user -> password = Hash::make($request->password);
         $user -> phone = $request->phone;
+        $user -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request->address;
 
+
+        //检测是否有文件上传
+         if ($request->hasFile('pic')) {
+            $user-> pic = '/'.$request->pic->store('uploads/'.date('Ymd'));
+         }
 
         if($user -> save()){
             return redirect('/login')->with('success','注册成功');
