@@ -9,6 +9,7 @@ use App\Setting;
 use App\Shopping;
 use App\User;
 use App\shopuser;
+use App\Ad;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -41,7 +42,12 @@ class HomeController extends Controller
                 ->take(5)
                 -> get();
 
-    	return view('home.index',compact('industry','meishi','marry','hotel','play'));
+        $shopuser = Shopuser::OrderBy('id','desc')
+                ->where('name','like', '%'.request()->keywords.'%');
+
+        $ad = Ad::all();
+
+    	return view('home.index',compact('industry','meishi','marry','hotel','play','shopuser','ad'));
 
     }
 

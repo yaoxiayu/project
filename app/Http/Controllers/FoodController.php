@@ -9,6 +9,7 @@ use App\Session;
 use App\Shopping;
 use App\Shopuser;
 use App\Tag;
+use App\Ad;
 use App\shop_user_tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -126,7 +127,9 @@ class FoodController extends Controller
         $shopping = Shopping::all();
         $comment = Comment::all();
         $industry = Industry::all();
-        return view('home.food.shopuser',compact('shopuser','shopping','comment','tag','industry'));
+        $ad = Ad::all()
+                ->take(3);
+        return view('home.food.shopuser',compact('shopuser','shopping','comment','tag','industry','ad'));
     }
 
     public function shopping($id)
