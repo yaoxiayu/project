@@ -90,32 +90,36 @@ class FoodController extends Controller
         //
     }
     //第一页面 店铺遍历
-    public function meishi($id)
+    public function meishi($id, Request $request)
     {
-        $id = $id;
+        $name = $request->name;
+        $min = $request->min;
+        $max = $request->max;
+
         $order = Order::all();
         $shopping = Shopping::all();
         $comment = Comment::all()->count();
         $tag = Tag::get()->where('industry_id','=',$id);
         $industry = Industry::all();
+        if($name){
 
-        $shop_user_tag = shop_user_tag::get()
-                         ->where('tag_id',request()->name)
-                         ->pluck('shop_user_id');
-
-        $shopUser_id = json_decode($shop_user_tag);
-        // var_dump($shopUser_id);echo '<br>';
-        if(request()->name){
-            $shopuser = Shopuser::whereIn('id',$shopUser_id)
-
-                            ->paginate(2);
+          $shopuser_id = json_decode(shop_user_tag::get()
+                              ->where('tag_id',$name)
+                              ->pluck('shop_user_id'));
+          $shopuser = Shopuser::orderBy('id','desc')
+                      ->where('industry_id',$id)
+                      ->whereIn('id',$shopuser_id)
+                      ->paginate(5);
+        }else if($min&&$max){
+            $shopuser = Shopuser::where('industry_id',$id)
+                        ->whereBetween('renprice',[(int)($min),(int)($max)])
+                        ->paginate(5);
         }else{
-             $shopuser = Shopuser::where('industry_id',$id)
-                            ->paginate(2);
-
+            $shopuser = Shopuser::orderBy('id','desc')
+                        ->where('industry_id',$id)
+                        ->paginate(5);
         }
-        $industry_id = request()->name;
-        return view('home.food.index',compact('shopping','shopuser','order','comment','asd','tag','id','industry','industry_id'));
+        return view('home.food.index',compact('shopping','shopuser','order','comment','asd','tag','id','industry','name'));
     }
 
      public function shopuser($id)

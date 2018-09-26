@@ -33,12 +33,19 @@ Route::resource('person','PersonController');
 Route::resource('hcomment','HcommentController');
 //账户设置
 Route::resource('zhanghu','ZhanghuController');
+//优惠券
+Route::get('mycoupon','CouponController@mycoupon');
 //购物车
 Route::get('/shopcart/{id}&{counts}','HomeController@show');
 //评价删除
 Route::get('/hcomment/delete/{id}','CommentController@shanchu');
 //友情链接
 Route::get('/links','HomeController@link');
+//领券中心
+Route::get('/coupon/all','HomeController@all');
+//领取券
+Route::get('/coupon/gai/{coupon_id}&{user_id}','HomeController@gai');
+Route::post('/coupon/del','HomeController@shanchu');
 
 //美食 娱乐 结婚 酒店
 Route::get('/food/{id}','FoodController@meishi');
@@ -81,7 +88,7 @@ Route::group(['middleware'=>'admin'],function(){
 
 //后台首页
 Route::get('/houtai', 'AdminController@show');
-	
+
 //退出
 Route::get('/admin/logout','AdminController@logout');
 
@@ -171,5 +178,4 @@ Route::get('/logout','ShangjiaController@logout');
 //订单修改
 Route::get('/order/gai/{id}','OrderController@gai');
 //优惠券管理
-
 Route::resource('coupon','CouponController');

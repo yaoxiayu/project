@@ -114,7 +114,7 @@
                                                         分类
                                                     </h5>
                                                     <span class="filter-all-ab">
-                                                    <a class="w-filter-item-ab item-all-auto-ab" href="/food/{{$id}}?name=0" mon="element=0&element_type=filter&position=1">
+                                                    <a class="w-filter-item-ab item-all-auto-ab" href="/food/{{$id}}" mon="element=0&element_type=filter&position=1">
                                                         <span class="item-content filter-active-all-ab ">
                                                             全部
                                                         </span>
@@ -139,29 +139,22 @@
                                                     <div class="j-filter-items-wrap-ab filter-items-wrap-ab">
                                                         <div class="j-filter-items-ab filter-items-ab filter-content-ab">
                                                             @foreach($tag as $v)
-                                                            <a class="w-filter-item-ab " mon="element=1000002&element_type=filter&position=1">
-                                                                <div class="tag" id="sou{{$v['id']}}" @if($v[ 'id']==$industry_id) style="color:#ff318c" @endif>
+                                                            <a class="w-filter-item-ab tag" tag="{{$v['id']}}">
+                                                                <div @if($v['id']==$name) style="color:#ff318c" @endif>
                                                                     <b>{{$v['name']}}</b>
-                                                                    <form action="/food/{{$id}}" method="get">
-                                                                        <div class="am-input-group am-input-group-sm yellow" style="display: none;z-index: 1;">
-                                                                            <input type="text" name="name" class="am-form-field" value="{{$v['id']}}" style="display:none;">
-                                                                            <span class="am-input-group-btn">
-                                                                            <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" style="display:none" id="suo{{$v['id']}}"></button>
-                                                                          </span>
-                                                                        </div>
-                                                                    </form>
                                                                 </div>
                                                             </a>
-                                                            <script src="/js/jquery.min.js"></script>
-                                                            <script>
-                                                            $('#sou{{$v['
-                                                                id ']}}').click(function() {
-                                                                $('#suo{{$v['
-                                                                    id ']}}').trigger('click');
-                                                            })
-                                                            </script>
                                                             @endforeach
                                                         </div>
+                                                        <script src="/js/jquery.min.js"></script>
+                                                        <script>
+                                                            $('.tag').click(function(){
+                                                                var tag_id = $(this).attr('tag');
+
+                                                                location.href = "/food/{{$id}}?name="+tag_id+"";
+
+                                                            })
+                                                        </script>
                                                     </div>
                                                     <a class="show-more j-more-button" mon="element=showMore">
                                                         <span class="j-more-or-less more-or-less">
@@ -178,7 +171,7 @@
                                                         区域
                                                     </h5>
                                                     <div class="filter-all-ab" mon="area=filterAreaAll">
-                                                        <a class="w-filter-item-ab item-all-auto-ab" href="javascript:;" mon="element=0&element_type=filter&position=1">
+                                                        <a class="w-filter-item-ab item-all-auto-ab" href="/food/{{$id}}" mon="element=0&element_type=filter&position=1">
                                                             <span class="item-content filter-active-all-ab ">
                                                                 全部
                                                          </span>
@@ -231,80 +224,52 @@
                                                     <span class="filter-items-ab filter-content-ab">
 
                                                             <a class="w-filter-item-ab" mon="element=1&element_type=filter&position=1">
-                                                                <span class="item-content" min="0" max="49" id="price1">
+                                                                <span class="item-content price" min="1" max="50">
                                                                     50元以下
                                                                 </span>
                                                             </a>
                                                             <a class="w-filter-item-ab" mon="element=2&element_type=filter&position=1">
-                                                                <span class="item-content" min="50" max="100" id="price2">
+                                                                <span class="item-content price" min="51" max="100">
                                                                     50-100元
                                                                 </span>
                                                             </a>
                                                             <a class="w-filter-item-ab " mon="element=3&element_type=filter&position=1">
-                                                                <span class="item-content" min="100" max="200" id="price3">
+                                                                <span class="item-content price" min="101" max="200">
                                                                     100-200元
                                                                 </span>
                                                             </a>
                                                             <a class="w-filter-item-ab" mon="element=4&element_type=filter&position=1">
-                                                                <span class="item-content" min="200" max="300" id="price4">
+                                                                <span class="item-content price" min="201" max="300">
                                                                     200-300元
                                                                 </span>
                                                             </a>
                                                             <a class="w-filter-item-ab" mon="element=5&element_type=filter&position=1" >
-                                                                <span class="item-content" min="300" max="∞" id="price5">
+                                                                <span class="item-content price" min="301" max="9999">
                                                                     300元以上
                                                                 </span>
                                                             </a>
-
                                                     </span>
-                                                          <form action="/food/{{$id}}/name=&" method="get">
-                                                                        <div class="am-input-group am-input-group-sm yellow" style="display: none;z-index: 1;">
-                                                                            <input type="text" name="price" class="am-form-field" value="{{$v['id']}}" style="display:none;">
-                                                                            <span class="am-input-group-btn">
-                                                                            <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" style="display:none" id="suo{{$v['id']}}"></button>
-                                                                          </span>
-                                                                        </div>
-                                                                    </form>
+                                                    <style>
+                                                          .col{
+                                                            background-color: #ff318c;
+                                                          }
+                                                    </style>
+                                                            <script type="text/javascript">
 
+                                                                  $('.price').click(function(){
+                                                                      var min = $(this).attr("min");
+                                                                      var max = $(this).attr("max");
+                                                                      location.href = "/food/{{$id}}?min="+min+"&max="+max+"";
+
+                                                                  })
+                                                            </script>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div alog-alias="bainuo-sort-bar" alog-group="bainuo-sort-bar" class="w-sort-bar" id="j-sort-bar">
-                                 <div class="bar-area" id="j-bar-area">
-                                <span class="sort-area" mon="area=sort">
-                                <a class="sort-default sort-default-active" href="javascript:;" mon="element=default" rel="nofollow">
-                                    综合榜
-                                </a>
-                                <a class="sort-item sort-down" href="//bj.nuomi.com/326/hot#j-sort-bar" mon="element=sales" rel="nofollow" title="点击按销量降序排序">
-                                    热销榜
-                                </a>
-                                <a class="sort-item sort-up" href="//bj.nuomi.com/326/release#j-sort-bar" mon="element=lastest" rel="nofollow" title="发布时间由近到远">
-                                    新品榜
-                                </a>
-                                </span>
-                                        <div class="sortbar-right">
-                                            <div class="w-search" mon="area=search&element_type=nav">
-                                                <div class="search-wrap">
-                                                    <form action="//www.nuomi.com/search" class="j-searchForm" method="get" target="_blank">
-                                                        <input autocomplete="off" class="search-input placeholder j-searchInput" name="k" placeholder="艾灸" type="text" value="" />
-                                                        <input class="btn search-btn j-search-btn" mon="element=button" type="submit" value="">
-                                                        <input class="input-hidden j-input-hidden" name="rid" type="text" value="2113180bd5a56524f3b24fd64b5446d0">
-                                                        </input>
-                                                        </input>
-                                                    </form>
-                                                </div>
-                                                <div alog-alias="bainuo-header-hot-area" alog-group="bainuo-header-hot-area" class="hot-area">
-                                                </div>
-                                            </div>
-                                            <span class="page-area" mon="area=pageNum">
-                                    
-                                                </span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div style="margin:40px 0 0;"></div>
                             </div>
                         </div>
                         <script>
@@ -586,7 +551,7 @@
                 ! function() { require.async(['common:widget/static/init.js'], function(init) {}); }();
                 ! function() {
                     F.context('staticController').run(function(data, tools) {
-                        //   
+                        //
                     });
                 }();
                 ! function() {
@@ -603,8 +568,8 @@
                 ! function() { F.context('staticController').run(function() { require.async(['common:widget/new_header/nav/nav.js'], function(Nav) { var nav = new Nav({ selectedClass: 'selected', container: '#j-catg', navContainerClass: 'all-cate', navClass: 'j-catg-row' }); }); }); }();
                 ! function() {
                     F.context({
-                        isHotCity: '1', // 
-                        isIndex: '', // 
+                        isHotCity: '1', //
+                        isIndex: '', //
                         erweimaCurrentTime: new Date(1536236668 * 1000)
                     });
                     F.context('staticController').run(function() {
@@ -817,12 +782,12 @@
                                     });
                                 }
                             })(
-                                // 
+                                //
                                 { "staticData": { "page": "channel" }, "dynamicData": { "logInfoExt": { "search_key": "[{\"s\":\"eb3bb82691612092dac9dc3e2abccd32\",\"s_name\":\"defaultsearch\"}]" } } }
                             );
 
                             function handleBaiduid() {
-                                // 
+                                //
                                 var getBaiduidUrl = '//nuomipassport.baidu.com/getbdid';
                                 var retryCount = 1;
                                 getBaiduid();
@@ -897,4 +862,3 @@
                     <script>
                     var _trace_page_logid = 1467296935;
                     </script>
-

@@ -14,21 +14,10 @@
             <div class="am-u-sm-12 am-u-md-6">
                 <div class="am-btn-toolbar">
                     <div class="am-btn-group am-btn-group-xs">
-                        <a href="/shopping/create" type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</a>
+                        <a href="/coupon/create" type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</a>
                         <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
                     </div>
                 </div>
-            </div>
-
-            <div class="am-u-sm-12 am-u-md-3">
-                <form action="/coupon" method="get">
-                <div class="am-input-group am-input-group-sm">
-                    <input type="text" name="keywords" class="am-form-field" value="{{request()->keywords}}">
-                    <span class="am-input-group-btn">
-                        <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search"></button>
-                      </span>
-                </div>
-                </form>
             </div>
         </div>
         <div class="am-g">
@@ -43,6 +32,7 @@
                             <th class="table-title">优惠券面值</th>
                             <th class="table-title">优惠券满减</th>
                             <th class="table-title">优惠券总数</th>
+                            <th class="table-title">有效期</th>
                             <th class="table-title">创建时间</th>
                             <th class="table-title">修改时间</th>
                             <th class="table-set">操作</th>
@@ -58,6 +48,7 @@
                             <td>{{$v['min']}}</td>
                             <td>{{$v['max']}}</td>
                             <td>{{$v['counts']}}</td>
+                            <td>{{$v['time']}}</td>
                             <td>{{$v['created_at']}}</td>
                             <td>{{$v['updated_at']}}</td>
                             <td>

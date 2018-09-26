@@ -70,7 +70,7 @@
                 <div class="uc p-order-list clearfix" style="margin-left:100px">
                     <div class="w-user-info" style="margin-top:60px">
                         <div class="user-name-wrap fl">
-                            @if(Session::has('username'))   
+                            @if(Session::has('username'))
                             <span class="user-name">{{Session::get('username')}}</span>
                             <span class="tit">手机已绑定</span>
                             <span class="account-info-con">
@@ -103,7 +103,7 @@
                                     <a class="nav-txt j-nav" href="/hcomment">
 										我的评价
 									</a>
-                                   
+
                                 </li>
                                 <li class="nav-active">
                                     <a class="nav-txt nav-link" href="/cunshoucang">
@@ -111,17 +111,17 @@
                                     </a>
                                 </li>
                                 <li class="nav-active last">
-                                    <a class="nav-txt j-nav" href="/zhanghu">
+                                    <a class="nav-txt j-nav">
                                         我的账户
                                     </a>
                                     <ul class="sub-nav" mon="area=subNav">
                                         <li>
-                                            <a href="/uc/user/userinfo" class="">
+                                            <a href="/zhanghu" class="">
                                                 <span class="sub-nav-ico">&#149;</span>账户设置
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/uc/giftcard/find?status=1" class="">
+                                            <a href="/mycoupon" class="">
                                                 <span class="sub-nav-ico">&#149;</span>优惠券
                                             </a>
                                         </li>
@@ -141,14 +141,12 @@
                             </div>
                         </div>
                         @section('content')
-                     
+
                         @show
 
-    
+
                     </div>
                 </div>
-                
+
 
 @include('layouts._foot')
-
-                

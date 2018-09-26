@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Coupon;
+use App\Coupon_user;
 use Illuminate\Http\Request;
 
 class CouponController extends Controller
@@ -41,6 +42,7 @@ class CouponController extends Controller
        $coupon -> min = $request -> min;
        $coupon -> max = $request -> max;
        $coupon -> counts = $request -> counts;
+       $coupon -> time = $request -> time;
 
        //插入
        if($coupon->save()){
@@ -87,6 +89,7 @@ class CouponController extends Controller
        $coupon -> min = $request -> min;
        $coupon -> max = $request -> max;
        $coupon -> counts = $request -> counts;
+       $coupon -> time = $request -> time;
 
        //插入
        if($coupon->save()){
@@ -111,5 +114,15 @@ class CouponController extends Controller
       }else{
           return back()->with('error','删除失败!');
       }
+    }
+
+    public function mycoupon(){
+          $coupon_user = json_decode(Coupon_user::get()
+                                    ->where('user_id',\Session::get('id'))
+                                    ->where('state','1')
+                                    ->pluck('coupon_id'));
+          $coupon = Coupon::get()
+                    ->whereIn('id',$coupon_user);
+          return view('home.person.mycoupon',compact('coupon'));
     }
 }

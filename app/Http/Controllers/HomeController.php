@@ -9,6 +9,8 @@ use App\Setting;
 use App\Shopping;
 use App\User;
 use App\shopuser;
+use App\Coupon;
+use App\Coupon_user;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -134,5 +136,39 @@ class HomeController extends Controller
         $link = Link::all();
 
         return view('home.link',compact('link'));
+    }
+
+    //领券列表
+    public function all()
+    {
+      $coupon = Coupon::all();
+      $coupon_user = json_decode(Coupon_user::get()
+                                ->where('user_id',\Session::get('id'))
+                                ->pluck('coupon_id'));
+      return view('home.coupon.all',compact('coupon','coupon_user'));
+    }
+    //领取券
+    public function gai($coupon_id,$user_id){
+      $coupon = Coupon::find($coupon_id);
+      $coupon->counts=$coupon->counts-1;
+
+      $coupon_user = new Coupon_user;
+      $coupon_user->user_id = \Session::get('id');
+      $coupon_user->coupon_id = $coupon_id;
+      $coupon_user->state = 1;
+      if($coupon->save() && $coupon_user->save()){
+        return redirect('/coupon/all');
+      }
+
+    }
+
+    //删除我的券
+    public function shanchu(){
+      $couponId = $_POST['coupon_id'];
+      $coupon_user =Coupon_user::where('user_id',\Session::get('id'))
+                    ->where('coupon_id',$couponId)
+                    ->value('id');
+      $couponUser = Coupon_user::findOrFail($coupon_user);
+      $couponUser -> delete();
     }
 }

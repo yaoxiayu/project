@@ -271,7 +271,7 @@
             </h3>
                             <ul class="reco-words">
                                 <li class="link-all">
-                                    <a href="/home/{{$v['id']}}.html" mon="element=top_link" target="_blank">
+                                    <a href="/{{$v['id']}}.html" mon="element=top_link" target="_blank">
                         查看全部
                         <span class="all-arrow">
                         </span>
@@ -321,7 +321,7 @@
                         <ul class="item-list">
                             @foreach($hotel as $v)
                             <li class="ly-item">
-                                <a href="/home/{{$v['id']}}.html" target="_blank">
+                                <a href="/{{$v['id']}}.html" target="_blank">
                                                 <img src="{{$v['pic']}}" width="300" height="300">
                                                 <div class="lv-title">
                                                     <div class="word-main">
@@ -347,7 +347,7 @@
                         <ul class="item-list">
                             @foreach($meishi as $v)
                             <li class="ly-item">
-                                <a href="/home/{{$v['id']}}.html" target="_blank">
+                                <a href="/{{$v['id']}}.html" target="_blank">
                                     <img src="{{$v['pic']}}" width="300" height="300">
                                     <div class="lv-title">
                                         <div class="word-main">
@@ -373,7 +373,7 @@
                         <ul class="item-list">
                             @foreach($marry as $v)
                             <li class="ly-item">
-                                <a href="/home/{{$v['id']}}.html" target="_blank">
+                                <a href="/{{$v['id']}}.html" target="_blank">
                                     <img src="{{$v['pic']}}" width="300" height="300">
                                     <div class="lv-title">
                                         <div class="word-main">
