@@ -114,11 +114,6 @@
                 <li class="reg"><a href="/logoutt" class="pad-left">退出</a></li> @endif
             </ul>
             <ul class="right-util first-level">
-                <li><a href="/person" class="pad-right" mon="element=my_order">个人中心</a></li>
-                <li id="j-visitedArea" class="recent-view"><a href="" class="pad-right" mon="element=recent_view"><span class="j-visitedArea-title">温代推荐</span><span class="arrow-down-logo"></span></a><span class="sep-lines"></span>
-
-                </li>
-
             @if(!Session::has('username'))
                 <li style="display: none;"><a href="/person" class="pad-right" mon="element=my_order">个人中心</a></li>
             @endif

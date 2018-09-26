@@ -260,7 +260,9 @@
                     <div class="avatar"><img src="/business/img/avatar.jpg" alt="Avatar" /></div>
                     <div class="user">
                         <span class="hello">Welcome!</span>
+                        @if((Session::has('username')) && (Session::has('shopuseradmin')))
                         <span class="name">{{Session::get('username')}}</span>
+                        @endif
                     </div>
                 </a>
                 <ul class="dropdown-menu">

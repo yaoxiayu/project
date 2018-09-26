@@ -60,6 +60,9 @@
                                                 @endif
                                             </div>
                                         </td>
+                                        @endforeach
+                                    
+                                        
 
 
 .pagination {

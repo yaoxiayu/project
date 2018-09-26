@@ -101,7 +101,7 @@
                     <div class="page-body-container clearfix">
                         <div class="page-body-left">
                             <div class="filter-bg">
-                                <div alog-alias="bainuo-channel-filter-wrap" alog-group="bainuo-channel-filter-wrap" class="filter-wrap">
+                              
                                     <div class="w-filter-ab-test" style="position:relative">
                                         <div class="filter-breadcrumb">
                                         </div>
@@ -272,33 +272,11 @@
                                     </div>
                                 </div>
 
-                                <div alog-alias="bainuo-sort-bar" alog-group="bainuo-sort-bar" class="w-sort-bar" id="j-sort-bar">
-                                 <div class="bar-area" id="j-bar-area">
-                                <span class="sort-area" mon="area=sort">
-                                <a class="sort-default sort-default-active" href="javascript:;" mon="element=default" rel="nofollow">
-                                    综合榜
-                                </a>
-                                <a class="sort-item sort-down" href="//bj.nuomi.com/326/hot#j-sort-bar" mon="element=sales" rel="nofollow" title="点击按销量降序排序">
-                                    热销榜
-                                </a>
-                                <a class="sort-item sort-up" href="//bj.nuomi.com/326/release#j-sort-bar" mon="element=lastest" rel="nofollow" title="发布时间由近到远">
-                                    新品榜
-                                </a>
-                                </span>
+                                <div alog-alias="" alog-group="bainuo-sort-bar" class="w-sort-bar" id="j-sort-bar">
+                                
+                                
                                         <div class="sortbar-right">
-                                            <div class="w-search" mon="area=search&element_type=nav">
-                                                <div class="search-wrap">
-                                                    <form action="//www.nuomi.com/search" class="j-searchForm" method="get" target="_blank">
-                                                        <input autocomplete="off" class="search-input placeholder j-searchInput" name="k" placeholder="艾灸" type="text" value="" />
-                                                        <input class="btn search-btn j-search-btn" mon="element=button" type="submit" value="">
-                                                        <input class="input-hidden j-input-hidden" name="rid" type="text" value="2113180bd5a56524f3b24fd64b5446d0">
-                                                        </input>
-                                                        </input>
-                                                    </form>
-                                                </div>
-                                                <div alog-alias="bainuo-header-hot-area" alog-group="bainuo-header-hot-area" class="hot-area">
-                                                </div>
-                                            </div>
+                                            
                                             <span class="page-area" mon="area=pageNum">
                                     
                                                 </span>

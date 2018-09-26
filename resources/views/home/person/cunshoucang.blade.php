@@ -19,7 +19,7 @@
                                         <td class="font14 total-amount">{{$v->updated_at}}</td>
 
                                         <td class="blank-10">
-                                             <p class="del"><button id="del{{$v['id']}}" class="btn btn-danger">删除足迹</button></p>
+                                             <p class="del"><button id="del{{$v['id']}}" class="btn btn-danger">删除收藏</button></p>
                                             <script>
                                                 $('#del{{$v['id']}}').click(function()
                                                 {
