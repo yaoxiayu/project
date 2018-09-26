@@ -94,10 +94,9 @@
                     </li>
                     <li class="list_con">商品信息</li>
                     <li class="list_info">商品参数</li>
-                    <li class="list_price">单价</li>
+                    <li class="list_price" style="margin-left:80px">单价</li>
                     <li class="list_amount">数量</li>
-                    <li class="list_sum">金额</li>
-                    <li class="list_op">操作</li>
+                    <li class="list_sum" style="margin-left:80px">金额</li>
                 </ul>
             </div>
             <div class="cartBox">
@@ -117,7 +116,7 @@
                         <li class="list_info">
                             <p>{!!$shopping['content']!!}</p>
                         </li>
-                        <li class="list_price">
+                        <li class="list_price" style="margin-left:80px">
                             <p class="price">￥{{$shopping['price']}}</p>
                         </li>
                         <li class="list_amount">
@@ -128,11 +127,9 @@
                             </div>
                         </li>
                         <li class="list_sum">
-                            <p class="sum_price">￥{{($shopping['price'])*($counts)}}</p>
+                            <p class="sum_price" style="margin-left:80px">￥{{($shopping['price'])*($counts)}}</p>
                         </li>
-                        <li class="list_op">
-                            <p class="del"><button id="del{{$shopping['id']}}" class="btn btn-danger">移除商品</button></p>
-                        </li>
+                     
                     </ul>
                 </div>
             </div>

@@ -1,12 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="ie6"><![endif]-->
-<!--[if IE 7]><html class="ie7"><![endif]-->
-<!--[if IE 8]><html class="ie8"><![endif]-->
-<!--[if IE 9]><html class="ie9"><![endif]-->
-<!--[if !IE]><!-->
 <html>
-<!--<![endif]-->
-
 <head>
     <meta charset="utf-8">
 
@@ -78,29 +71,6 @@
         'sample_hit': '' //
     });
     </script>
-    <!--[if IE 6]>
-<div id="kie-bar" class="kie-bar">
-目前您正在使用ie6浏览器，该浏览器已经过时了，为了更加安全和方便地进行团购，温代推荐您使用以下浏览器：<a href="http://www.microsoft.com/china/windows/IE/upgrade/index.aspx" class="kie-setup-IE8"  target="_blank" title="免费升级至IE8浏览器">免费升级</a>或下载使用<a href="http://browser.baidu.com/" class="kie-setup-baidu" target="_blank" title="百度浏览器">百度浏览器</a>，体验极速浏览体验！</div>
-<style>
-        .kie-bar {
-            height: 24px;
-            line-height: 1.8;
-            font-weight:normal;
-            text-align: center;
-            border-bottom:1px solid #fce4b5;
-            background-color:#FFFF9B;
-            color:#e27839;
-            position: relative;
-            font-size: 14px;
-            text-shadow:  0 0  1px #efefef;
-            padding: 5px 0;
-        }
-        .kie-bar a {
-            color:#08c;
-            text-decoration: none;
-        }
-    </style>
-<![endif]-->
     <div class="header-bar static-hook-real static-hook-id-1" mon="area=navigation" id="header-bar">
         <div class="header-inner clearfix flexible ">
             <ul class="left-city first-level" id="j-ucLoginList">
@@ -168,10 +138,10 @@
         </div>
         <div class="search-area clearfix" >
             <div data-ui-id="main-searcher" class="form-wrap clearfix">
-                <form method="get" action="/shopuser" id="j-searchForm" >
-                    <input type="text" id="j-searchInput" class="searchinput" name="keyword" value="" data-placeholder="" placeholder="搜索商家/地点" autocomplete="off" mon="element=search_input" style="height:37.5px;padding:0px;">
+                <form method="get" action="/" id="j-searchForm" >
+                    <input type="text" id="j-searchInput" class="searchinput" name="keywords" value="" data-placeholder="" placeholder="搜索商家/地点" autocomplete="off" mon="element=search_input" style="height:37.5px;padding:0px;">
                     <div class="searchbtn-wrap">
-                        <input type="submit" class="searchbtn" id="j-searchBtn" value="" mon="element=search_button"><span class="search-text">搜&nbsp;索</span>
+                        <input type="submit" class="searchbtn" id="j-searchBtn" value="" mon="element=search_button" name="keywords"><span class="search-text">搜&nbsp;索</span>
                         <div class="btn-shadow"></div>
                     </div>
                     <input type="hidden" id="j-input-hidden" name="rid" value="5e11a75122df4436dce95dd5720e3270">
