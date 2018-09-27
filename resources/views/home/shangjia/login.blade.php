@@ -5,7 +5,7 @@
 <head>
     <!-- start: Meta -->
     <meta charset="utf-8" />
-    <title>SimpliQ - Flat & Responsive Bootstrap Admin Template</title>
+    <title>温代</title>
     <meta name="description" content="SimpliQ - Flat & Responsive Bootstrap Admin Template." />
     <meta name="author" content="Łukasz Holeczek" />
     <meta name="keyword" content="SimpliQ, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina" />

@@ -32,12 +32,12 @@
                                 </ul>
                             </div>
                             <div class="footer-size-3">
-                                <h3>400-9216-666</h3>
+                                <h3>400-8888-000</h3>
                                 <ul>
                                     <li>周一至周日&nbsp;9:00-22:00</li>
                                     <li>客服电话&nbsp;免长途费</li>
                                 </ul>
-                                <a href="//d.nuomi.com/inter/group?from=WebRootWord" class="mobile-btn">手机专享优惠</a>
+                                <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=360602624&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:360602624:52" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
                             </div>
                         </div>
                         <div class="footer-bottom">

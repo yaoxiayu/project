@@ -13,6 +13,81 @@
     <link rel="stylesheet" href="/css/carts.css">
     <script type="text/javascript" src="/home/gstatic/js/jquery.min.js"></script>
     <script type="text/javascript" src="/home/gstatic/js/jquery.qrcode.min.js"></script>
+    <style>
+      .stamp *{padding: 0;margin: 0;list-style:none;font-family:"Microsoft YaHei",'Source Code Pro', Menlo, Consolas, Monaco, monospace;}
+
+      .stamp {
+      width: 200px;
+      height: 100px;
+      padding: 0 10px;
+      margin-bottom: 20px;
+      margin-right: 10px;
+      position: relative;
+      overflow: hidden;
+      }
+      .stamp:before {
+      content: '';
+      position: absolute;
+      top:0;
+      bottom:0;
+      left:10px;
+      right:10px;
+
+      z-index: -1;
+      }
+      .stamp:after {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      right: 10px;
+      bottom: 10px;
+      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+      z-index: -2;
+      }
+
+      .stamp i{
+      position: absolute;
+      left: 20%;
+      top: 45px;
+      height: 190px;
+      width: 390px;
+      background-color: rgba(255,255,255,.15);
+      transform: rotate(-30deg);
+      }
+      .stamp .par{
+      float: left;
+      padding: 16px 15px;
+      width: 220px;
+      border-right:2px dashed rgba(255,255,255,.3);
+      text-align: left;
+      }
+      .stamp .par p{color:#fff;font-size: 16px;
+          line-height: 21px;}
+      .stamp .par span{
+      font-size: 50px;
+      color:#fff;
+      margin-right: 5px;
+      line-height: 65px;
+      }
+      .stamp .par .sign{font-size: 30px;}
+      .stamp .par sub{position: relative;top:-5px;
+      color:rgba(255,255,255,.8);
+      }
+      .stamp01{
+      background: #F39B00;
+      background: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 5px, #F39B00 5px);
+      background-size: 15px 15px;
+      background-position: 9px 3px;
+      }
+      .stamp01:before{
+      background-color:#F39B00;
+      }
+      .bg-ddd{
+        background:#ddd;
+      }
+    }
+    </style>
     <script type="text/javascript">
     $(document).ready(function() {
         function fixHeight() {
@@ -127,22 +202,72 @@
                             </div>
                         </li>
                         <li class="list_sum">
-                            <p class="sum_price" style="margin-left:80px">￥{{($shopping['price'])*($counts)}}</p>
+                            <p class="sum_price" style="margin-left:80px">¥{{($shopping['price'])*($counts)}}</p>
                         </li>
 
                     </ul>
+                    <ul class="order_lists">
+                      <li class="list_chk">
+                        <h5>优惠券:</h5>
+                      </li>
+                      @foreach($coupon as $v)
+                      <li id="sp{{$v['id']}}" min="{{$v['min']}}" max="{{$v['max']}}">
+                        <div class="stamp stamp01" style="float:left">
+                          <div class="par"><p>温代生活服务</p><sub class="sign">￥</sub><span>{{$v['min']}}</span><sub>优惠券</sub><p>订单满{{$v['max']}}元</p></div>
+
+                          <i></i>
+
+                          <meta name="csrf-token" content="{{ csrf_token() }}">
+                      </li>
+                      <script>
+                            $('#sp{{$v['id']}}').click(function(){
+                                $(this).children('.stamp').addClass('bg-ddd');
+                                $(this).siblings().children('.stamp').removeClass('bg-ddd');
+                                var min = $(this).attr('min');
+                                var max = $(this).attr('max');
+                                $('h5').attr('yhq','{{$v['id']}}');
+                                var sum = $('.sum_price').text().substring(1,20);
+                                if(sum>=max){
+                                  var zhi = '¥'+(sum-min);
+                                  $('.sum_price').text(zhi);
+                                }else{
+                                  $(this).children('.stamp').removeClass('bg-ddd');
+                                  alert('不支持使用该优惠券');
+                                }
+
+                            })
+
+
+                      </script>
+                      @endforeach
+
+                    </ul>
                 </div>
-                
-               
+
+
             </div>
             <!--底部-->
+
+
             <div class="bar-wrapper">
                 <div class="bar-right">
                     <div class="piece">已选商品<strong class="piece_num">0</strong>件</div>
                     <div class="totalMoney">共计: <strong class="total_text">0.00</strong></div>
-                    <div class="calBtn"><a href="javascript:;">结算</a></div>
+                    <div class="calBtn"><a id="mai">结算</a></div>
                 </div>
             </div>
+            <script>
+                $('#mai').click(function(){
+                  //订单金额
+                  var jiesuan =$('.total_text').text().substring(1,20);
+                  //商品数量
+                  var counts =$('.piece_num').text();
+                  //优惠券
+                  var yhq = $('h5').attr('yhq');
+                  window.location.href="/jiesuan/{{$shopping['id']}}/{{Session::get('id')}}/"+counts+'/'+jiesuan+'/'+yhq;
+                })
+            </script>
+
         </section>
         <section class="model_bg"></section>
 

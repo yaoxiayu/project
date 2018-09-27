@@ -132,7 +132,36 @@ class HomeController extends Controller
     public function show($id,$counts)
     {
         $shopping = Shopping::find($id);
-        return view('home.gwc',compact('shopping','counts'));
+        $coupon_id = json_decode(Coupon_user::get()
+                                ->where('user_id',\Session::get('id'))
+                                ->where('state','1')
+                                ->pluck('coupon_id'));
+        $coupon = Coupon::get()
+                  ->whereIn('id',$coupon_id);
+        // dd($coupon);
+        return view('home.gwc',compact('shopping','counts','coupon'));
+    }
+
+    //处理订单
+    public function chuli($shopping_id,$user_id,$counts,$jisuan,$yhq)
+    {
+        // dd($shopping_id,$user_id,$counts,$jiesuan,$yhq);
+        $order = new Order;
+        $order -> shopping_id = $shopping_id;
+        $order -> user_id = $user_id;
+        $order -> price = $jisuan;
+        $order -> counts = $counts;
+        $order -> state = '1';
+        $coupon_user_id = json_decode(Coupon_user::get()
+                      ->where('user_id',\Session::get('id'))
+                      ->where('coupon_id',$yhq));
+        $coupon_user=Coupon_user::find($coupon_user_id[0]->id);
+        if($order ->save()&&$coupon_user->delete()){
+          return redirect('/person')->with('success', '添加成功');
+        }else{
+          return back();
+        }
+
     }
 
 
