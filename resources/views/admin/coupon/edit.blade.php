@@ -37,6 +37,12 @@
                             <input type="text" name="counts" class="tpl-form-input"  placeholder="" value="{{$coupon['counts']}}">
                         </div>
                     </div>
+                    <div class="am-form-group">
+                        <label for="user-name" class="am-u-sm-3 am-form-label">有效期 <span class="tpl-form-line-small-title"></span></label>
+                        <div class="am-u-sm-9">
+                            <input type="text" name="time" class="tpl-form-input"  placeholder="" value="{{$coupon['time']}}">
+                        </div>
+                    </div>
 
 					               {{csrf_field()}}
                          {{method_field('PUT')}}

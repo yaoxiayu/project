@@ -1,19 +1,12 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="ie6"><![endif]-->
-<!--[if IE 7]><html class="ie7"><![endif]-->
-<!--[if IE 8]><html class="ie8"><![endif]-->
-<!--[if IE 9]><html class="ie9"><![endif]-->
-<!--[if !IE]><!-->
 <html>
-<!--<![endif]-->
-
 <head>
     <meta charset="utf-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit">
     <meta name="baidu_ssp_verify" content="8541ea43669332b498d0d46a88e31c5c">
-
+   
     <script>
     var F = {};
     (function() {
@@ -51,7 +44,12 @@
     <link rel="stylesheet" type="text/css" href="/home/static/css/header_8e018e5.css" />
     <link rel="stylesheet" type="text/css" href="/home/static/css/index_a4c176c.css" />
     <link rel="stylesheet" type="text/css" href="/home/static/css/list_a00e520.css" />
+    
 
+    
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
 
 </head>
 
@@ -78,29 +76,6 @@
         'sample_hit': '' //
     });
     </script>
-    <!--[if IE 6]>
-<div id="kie-bar" class="kie-bar">
-目前您正在使用ie6浏览器，该浏览器已经过时了，为了更加安全和方便地进行团购，温代推荐您使用以下浏览器：<a href="http://www.microsoft.com/china/windows/IE/upgrade/index.aspx" class="kie-setup-IE8"  target="_blank" title="免费升级至IE8浏览器">免费升级</a>或下载使用<a href="http://browser.baidu.com/" class="kie-setup-baidu" target="_blank" title="百度浏览器">百度浏览器</a>，体验极速浏览体验！</div>
-<style>
-        .kie-bar {
-            height: 24px;
-            line-height: 1.8;
-            font-weight:normal;
-            text-align: center;
-            border-bottom:1px solid #fce4b5;
-            background-color:#FFFF9B;
-            color:#e27839;
-            position: relative;
-            font-size: 14px;
-            text-shadow:  0 0  1px #efefef;
-            padding: 5px 0;
-        }
-        .kie-bar a {
-            color:#08c;
-            text-decoration: none;
-        }
-    </style>
-<![endif]-->
     <div class="header-bar static-hook-real static-hook-id-1" mon="area=navigation" id="header-bar">
         <div class="header-inner clearfix flexible ">
             <ul class="left-city first-level" id="j-ucLoginList">
@@ -114,6 +89,7 @@
                 <li class="reg"><a href="/logoutt" class="pad-left">退出</a></li> @endif
             </ul>
             <ul class="right-util first-level">
+
             @if(!Session::has('username'))
                 <li style="display: none;"><a href="/person" class="pad-right" mon="element=my_order">个人中心</a></li>
             @endif
@@ -123,6 +99,8 @@
                 <li class="qr-code j-bar-dropdown"><a href="//d.nuomi.com/?1009764s" class="pad-left pad-right" target="_blank">温代APP<span class="arrow-down-logo"></span></a>
                     <div class="header-dropmenu">
                         <div class="drop-block"></div><a class="img" href="//d.nuomi.com/?1009764s" target="_blank">二维码</a></div>
+                </li>
+                <li class="qr-code j-bar-dropdown"><a href="/coupon/all" class="pad-left pad-right" target="_blank">领券中心</a>
                 </li>
                 <li class="j-bar-dropdown"><a href="/shangjia" class="pad-right"><span>我是商家</span><span class="arrow-down-logo"></span></a><span class="sep-lines"></span>
                     <div class="merchant-list header-dropmenu">
@@ -167,14 +145,15 @@
         </div>
         <div class="search-area clearfix" >
             <div data-ui-id="main-searcher" class="form-wrap clearfix">
-                <form method="get" action="/shopuser" id="j-searchForm" >
-                    <input type="text" id="j-searchInput" class="searchinput" name="keyword" value="" data-placeholder="" placeholder="搜索商家/地点" autocomplete="off" mon="element=search_input" style="height:37.5px;padding:0px;">
+                <form action="/sosuo" method="get">
+                    <input type="text" class="searchinput"  name="k" value="{{request()->k}}" placeholder="搜索商家"  mon="element=search_input" style="height:37.5px;padding:0px;">
                     <div class="searchbtn-wrap">
-                        <input type="submit" class="searchbtn" id="j-searchBtn" value="" mon="element=search_button"><span class="search-text">搜&nbsp;索</span>
+                        <input type="submit" class="searchbtn" value=" " mon="element=search_button"><span class="search-text">搜&nbsp;索</span>
                         <div class="btn-shadow"></div>
                     </div>
-                    <input type="hidden" id="j-input-hidden" name="rid" value="5e11a75122df4436dce95dd5720e3270">
+                    
                 </form>
+
             </div>
 
         </div>

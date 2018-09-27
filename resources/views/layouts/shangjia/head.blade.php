@@ -6,7 +6,7 @@
                 </a>
     <a id="main-menu-toggle" class="hidden-phone open"><i class="icon-reorder"></i></a>
     <div class="row-fluid">
-        <a class="brand span2" href="/shangjia"><span>商家管理中心</span></a>
+        <a class="brand span2" href="/shangjia"><span  style="color:white;">商家管理中心</span></a>
     </div>
     <!-- start: Header Menu -->
     <div class="nav-no-collapse header-nav">

@@ -37,12 +37,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 
-<body style="height:1200px">
+<body style="height:1200px;">
     <!-- start: Header -->
     <div class="navbar">
     	<div class="navbar-inner">
 	        @section('head')
-				@include('layouts.shangjia.head')
+				     @include('layouts.shangjia.head')
 	        @show
 	    </div>
     </div>

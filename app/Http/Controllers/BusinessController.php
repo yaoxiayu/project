@@ -199,6 +199,7 @@ class BusinessController extends Controller
                      ->get()
                      ->pluck('id');
           $shop = json_decode($shopping);
+          // dd($shopping);
           //查找属于自己的评论
           $comment = Comment::orderBy('id','')
                   ->where('shopping_id',$shop)
