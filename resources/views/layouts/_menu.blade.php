@@ -54,14 +54,14 @@
                         <li>
                             <a href="#" class="dropdown-toggle"><i class="icon-list"></i><span class="menu-text"> 足迹管理 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">
-                                <li class="home"><a href="/zuji/create" name="transaction.html" title="交易信息" class="iframeurl"><i class="icon-double-angle-right"></i>足迹添加</a></li>
+                                
                                 <li class="home"><a href="/zuji" name="transaction.html" title="交易信息" class="iframeurl"><i class="icon-double-angle-right"></i>足迹列表</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="#" class="dropdown-toggle"><i class="icon-list"></i><span class="menu-text"> 收藏管理 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">
-                                <li class="home"><a href="/shoucang/create" name="transaction.html" title="交易信息" class="iframeurl"><i class="icon-double-angle-right"></i>收藏添加</a></li>
+                                
                                 <li class="home"><a href="/shoucang" name="transaction.html" title="交易信息" class="iframeurl"><i class="icon-double-angle-right"></i>收藏列表</a></li>
                             </ul>
                         </li>

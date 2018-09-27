@@ -67,9 +67,12 @@ Route::resource('/shoucang','ShoucangController');
 
 //前台收藏
 Route::post('/cunshoucang','ShoucangController@cunshoucang');
+Route::post('/shoucang','ShoucangController@shoucang');
 Route::get('/cunshoucang','ShoucangController@xianshi');
 Route::get('/cunshoucang/delete/{id}','ShoucangController@shanchu');
 
+//前台搜索
+Route::get('/sosuo','HomeController@sosuo');
 
 /**
  * 后台
@@ -84,7 +87,7 @@ Route::post('/admin/login','AdminController@dologin');
 
 
 //后台路由
-Route::group(['middleware'=>'admin'],function(){
+// Route::group(['middleware'=>'admin'],function(){
 
 //后台首页
 Route::get('/houtai', 'AdminController@show');
@@ -134,7 +137,7 @@ Route::post('/admin/setting','AdminController@update');
 
 //超级管理员
 Route::resource('administrator','AdministratorController');
-});
+// });
 
 /**
  * 商家管理前台

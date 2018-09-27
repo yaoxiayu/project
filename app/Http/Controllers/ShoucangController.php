@@ -121,6 +121,22 @@ class ShoucangController extends Controller
         return view('home.person.cunshoucang',compact('shoucang'));
     }
 
+    public function shoucang()
+    {
+        $shop_id = $_POST['shop_id'];
+        $user_id = \Session::get('id');
+        $res = Shoucang::where('user_id',$user_id)
+                    ->where('shopping_id',$shop_id)
+                    ->first();  
+        if(empty($res)){
+            echo '0';
+        }else{
+            echo '1';
+        } 
+        
+        
+    }
+
     public function shanchu($id)
     {
         $shoucang = Shoucang::findOrFail($id);

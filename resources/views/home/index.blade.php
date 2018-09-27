@@ -158,6 +158,7 @@
                 }
 
                 </style>
+
                 <div class="left-menu clearfix" id="j-catg-list">
                     <div class="right-sidebar-re">
                         <div class="right-ad">
@@ -205,13 +206,14 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
-                    <hr>
+                    <br>
+                    <br>
+                    
                     <div class="re-mid-content">
                         <div class="content-header clearfix">
                             <h3>
-                休闲娱乐
-            </h3>
+                                休闲娱乐
+                            </h3>
                             <ul class="reco-words">
                                 <li class="link-all">
                                     <a href="/{{$v['id']}}.html" mon="element=top_link" target="_blank">
@@ -341,18 +343,18 @@
                         <div class="search-container ">
                             <div class="top-search-logo ">
                                 <i class="new-logo ">
-                </i>
+                                </i>
                             </div>
                             <div class="top-search " id="j-top-search ">
                                 <div class="search-area clearfix ">
                                     <div class="form-wrap clearfix " data-ui-id="top-searcher ">
                                         <form action="/" id="j-top-searchForm " method="get ">
-                                            <input autocomplete="off " class="searchinput " data-placeholder=" " id="j-topSearchInput " mon="element=search_input " name="keywords" placeholder="搜索商家/地点 " type="text " value=" " />
+                                            <input autocomplete="off " class="searchinput " data-placeholder=" " id="j-topSearchInput " mon="element=search_input " name="keywords" placeholder="搜索商家 " type="text " value=" " />
                                             <div class="searchbtn-wrap ">
                                                 <input class="searchbtn " id="j-topSearchBtn " mon="element=search_button " type="submit " value=" " />
                                                 <span class="search-text ">
-                                    搜 索
-                                </span>
+                                                    搜 索
+                                                </span>
                                                 <div class="btn-shadow ">
                                                 </div>
                                             </div>
@@ -368,3 +370,4 @@
 
                 <div class="re-footer-content ">
                     @include('layouts._foot')
+

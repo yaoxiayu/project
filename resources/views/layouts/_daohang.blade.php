@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit">
     <meta name="baidu_ssp_verify" content="8541ea43669332b498d0d46a88e31c5c">
-
+   
     <script>
     var F = {};
     (function() {
@@ -44,7 +44,12 @@
     <link rel="stylesheet" type="text/css" href="/home/static/css/header_8e018e5.css" />
     <link rel="stylesheet" type="text/css" href="/home/static/css/index_a4c176c.css" />
     <link rel="stylesheet" type="text/css" href="/home/static/css/list_a00e520.css" />
+    
 
+    
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
 
 </head>
 
@@ -85,7 +90,9 @@
             </ul>
             <ul class="right-util first-level">
 
-
+            @if(!Session::has('username'))
+                <li style="display: none;"><a href="/person" class="pad-right" mon="element=my_order">个人中心</a></li>
+            @endif
             @if(Session::has('username'))
             <li><a href="/person" class="pad-right" mon="element=my_order">个人中心</a></li>
             @endif
@@ -138,14 +145,15 @@
         </div>
         <div class="search-area clearfix" >
             <div data-ui-id="main-searcher" class="form-wrap clearfix">
-                <form method="get" action="/" id="j-searchForm" >
-                    <input type="text" id="j-searchInput" class="searchinput" name="keywords" value="" data-placeholder="" placeholder="搜索商家/地点" autocomplete="off" mon="element=search_input" style="height:37.5px;padding:0px;">
+                <form action="/sosuo" method="get">
+                    <input type="text" class="searchinput"  name="k" value="{{request()->k}}" placeholder="搜索商家"  mon="element=search_input" style="height:37.5px;padding:0px;">
                     <div class="searchbtn-wrap">
-                        <input type="submit" class="searchbtn" id="j-searchBtn" value="" mon="element=search_button" name="keywords"><span class="search-text">搜&nbsp;索</span>
+                        <input type="submit" class="searchbtn" value=" " mon="element=search_button"><span class="search-text">搜&nbsp;索</span>
                         <div class="btn-shadow"></div>
                     </div>
-                    <input type="hidden" id="j-input-hidden" name="rid" value="5e11a75122df4436dce95dd5720e3270">
+                    
                 </form>
+
             </div>
 
         </div>

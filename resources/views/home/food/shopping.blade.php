@@ -323,7 +323,7 @@
 
                                     <div class="detail clearfix " style="min-height: 200px">
                                         <ul>
-                                            @if(json_decode($comment)!=null)
+                               @if(json_decode($comment)!=null)
                                                 @foreach($comment as $v) 
                                                 <div style="width: 720px;height: 80px">
                                                     <div style="float:left;"><img src="/home/static/images/icon_4e372f0.png" style="border-radius: 50%" width="60px" height="60px" style="float:left;">
@@ -397,5 +397,60 @@
         </div>
     </div>
     <div class="re-footer-content">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script>
+        var shop_id = {{$shopping['id']}};
+        $(window).load(function(){
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url:'/cunzuji',
+                type:'post',
+                data:{shop_id:shop_id},
+                success:function(data){
+                },
+                async:false
+            })
+            
+            $.ajax({
+                url:'/shoucang',
+                type:'post',
+                data:{shop_id:shop_id},
+                success:function(data){
+                    if(data == 1){
+                        $('#shou').html('已收藏');
+                    }
+                },               
+                async:false
+            })
 
+        })
+        $('#shou').click(function(){
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url:'/cunshoucang',
+                type:'post',
+                data:{shop_id:shop_id},
+                success:function(data){
+                    if(data == 0){
+                        alert('不可重复收藏');
+                    }else if(data == 1){
+                        alert('收藏成功');
+                    }else{
+                        alert('请先登录再收藏');
+                    }
+                },
+                async:false
+            })
+        })
+
+
+    </script>
 @include('layouts._foot')

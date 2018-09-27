@@ -18,7 +18,7 @@ class HcommentController extends Controller
         $order = order::all();
         $comment = Comment::orderBy('id','desc')
                     ->where('user_id',\Session::get('id'))
-                    ->paginate(3);
+                    ->paginate(5);
         return view('home.person.comment',compact('order','comment'));
     }
 

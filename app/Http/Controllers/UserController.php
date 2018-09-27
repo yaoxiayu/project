@@ -46,6 +46,7 @@ class UserController extends Controller
         $user -> password = Hash::make($request->password);
         $user -> phone = $request->phone;
         $user -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request-> address;
+        $user -> user = $request->user;
         // dd($request->hasFile('pic'));
          //文件上传
         if ($request->hasFile('pic')) {

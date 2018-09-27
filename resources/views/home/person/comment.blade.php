@@ -1,4 +1,4 @@
-@extends('home.person.index') 
+@extends('home.person.index')
 @section('content')
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 
@@ -9,8 +9,10 @@
         用户名 : <span class="name" style="color: black">{{$v->user->username}}</span>
         <div style="height:10px"></div>
 
+
          商品名称:<span style="color: black">{{$v->shopping->name}}</span>
          <div style="height:10px"></div>
+
 
          <div class="goods-img fl" style="color: #ff4883;">
             评论分值：<span style="color: black">
@@ -20,17 +22,22 @@
              @endif
             </span>
         </div>
-        
+
+
         <div style="height:10px"></div><br>
         评论内容 : <span class="desc" style="color: black">{!!$v['content']!!}</span>
         <span class="font14">{{$v->shopping->shopuser->img}}</span>
-        
+
+
         <div class="date" style="float: right;margin-top:25px;"><span>{{$v->created_at}}</span></div>
-       
+
+
     </div>
  <div style="width: 80px;height: 80px;float: left;margin-top: 25px;"><img src="/home/static/images/icon_4e372f0.png"></div>
 </div>
     @endforeach
+
+
 
 
 <style>
@@ -43,9 +50,11 @@
     padding: 0;
 }
 
+
 .pagination li {
     display: inline-block;
 }
+
 
 .pagination li a,
 .pagination li span {
@@ -62,6 +71,7 @@
     margin-bottom: 5px;
     margin-right: 5px;
 }
+
 
 .pagination .active span {
     color: #23abf0;
@@ -84,6 +94,7 @@
 .am-cf {
     float: right;
 }
+
 
 </style>
 <div class="am-cf">

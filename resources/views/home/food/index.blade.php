@@ -52,18 +52,14 @@
 
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="item new-item" href="http://waimai.baidu.com/?utm_source=bainuo&utm_medium=nav&utm_content=toububiaoqian&utm_term=default&utm_campaign=beijing&cid=PC_%E5%93%81%E7%89%8C%E6%8E%A8%E5%B9%BF_940766" mon="element=外卖" target="_blank">
-
-                    </a>
-                </li>
+               
                 <pre></pre>
                 @section('content')
                 <div class="page-body page-body-channel">
                     <div class="page-body-container clearfix">
                         <div class="page-body-left">
                             <div class="filter-bg">
-                                <div alog-alias="bainuo-channel-filter-wrap" alog-group="bainuo-channel-filter-wrap" class="filter-wrap">
+
                                     <div class="w-filter-ab-test" style="position:relative">
                                         <div class="filter-breadcrumb">
                                         </div>
@@ -223,10 +219,12 @@
                                                                       var max = $(this).attr("max");
                                                                       location.href = "/food/{{$id}}?min="+min+"&max="+max+"";
 
+
                                                                   })
                                                             </script>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
