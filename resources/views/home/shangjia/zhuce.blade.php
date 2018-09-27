@@ -27,6 +27,7 @@
                         <input name="repassword" type="password" class="kuang_txt email" placeholder="确认密码" style="width:270px;"><span class="remind"></span>
                         <input name="phone" type="text" class="kuang_txt possword" placeholder="手机号" style="width:270px;"><span class="remind"></span>
                          <input name="renprice" type="text" class="kuang_txt possword" placeholder="人均价格" style="width:270px;">
+                         <input name="name" type="text" class="kuang_txt possword" placeholder="店铺名称" id="user-name" style="width:270px;">
                         <br>
                         <br> {{csrf_field()}}
                         <div class="am-form-group">
@@ -57,7 +58,7 @@
                                     <div class="am-form-group am-form-file">
                                         <div class="tpl-form-file-img">
                                         </div>
-                                       
+
                                         <input id="doc-form-file" type="file" name="pic">
                                     </div>
                                 </div>
@@ -243,7 +244,7 @@
                         $('input').trigger('blur');
                         //console.log(CUSER);
                         //判断输入值是否都正确
-                        if (CUSER && CPASS && CPHONE && CREPASS) { 
+                        if (CUSER && CPASS && CPHONE && CREPASS) {
                            return true;
                         } else {
                             return false;

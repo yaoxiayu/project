@@ -42,7 +42,7 @@
     <div class="container-fluid-full">
         <div class="row-fluid">
             <div class="row-fluid">
-                <div class="login-box">
+                <div class="login-box" style="background-color:cadetblue;">
                     <h2>账号登录</h2>
                     <form class="form-horizontal" action="/shangjia" method="post">
                         <fieldset>
@@ -175,4 +175,3 @@
 </body>
 
 </html>
-

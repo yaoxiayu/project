@@ -78,9 +78,9 @@
     </script>
 
 </head>
- 
+
 <body id="by">
- 
+
     <div id="iframe-wrap">
 
         <section class="cartMain">
@@ -100,10 +100,10 @@
                 </ul>
             </div>
             <div class="cartBox">
-                
+
                 <div class="order_content">
 
-                  
+
                     <ul class="order_lists">
                         <li class="list_chk">
                             <input type="checkbox" id="{{$shopping['id']}}" class="son_check">
@@ -129,7 +129,7 @@
                         <li class="list_sum">
                             <p class="sum_price" style="margin-left:80px">￥{{($shopping['price'])*($counts)}}</p>
                         </li>
-                     
+
                     </ul>
                 </div>
             </div>
@@ -143,7 +143,7 @@
             </div>
         </section>
         <section class="model_bg"></section>
-       
+
         <script src="/js/jquery.min.js"></script>
         <script src="/js/carts.js"></script>
     </div>

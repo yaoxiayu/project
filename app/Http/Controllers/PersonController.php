@@ -17,7 +17,7 @@ class PersonController extends Controller
         $order = Order::orderBy('id','desc')
          ->where('user_id',\Session::get('id'))
          ->paginate(3);
-        
+
 
         return view('home.person.order',compact('order'));
     }
@@ -85,7 +85,18 @@ class PersonController extends Controller
      */
     public function destroy($id)
     {
-        
+
+        $order = Order::find($id);
+        if($order->delete()){
+            return redirect('/person')->with('success','删除成功');
+        }else{
+            return back()->with('error','删除失败');
+        }
+    }
+    
+    public function del($id)
+    {
+
         $order = Order::find($id);
         if($order->delete()){
             return redirect('/person')->with('success','删除成功');

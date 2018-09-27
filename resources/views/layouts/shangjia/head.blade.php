@@ -255,23 +255,32 @@
                             </a>
             </li>
             <!-- start: User Dropdown -->
+            @if(Session::has('shopAdmin'))
             <li class="dropdown">
                 <a class="btn account dropdown-toggle" data-toggle="dropdown" href="#">
                     <div class="avatar"><img src="/business/img/avatar.jpg" alt="Avatar" /></div>
                     <div class="user">
                         <span class="hello">Welcome!</span>
-                        <span class="name">{{Session::get('username')}}</span>
+                        <span class="name">{{Session::get('shopusername')}}</span>
                     </div>
                 </a>
                 <ul class="dropdown-menu">
                     <li class="dropdown-menu-title">
                     </li>
-                    <li><a href="#"><i class="icon-user"></i> Profile</a></li>
-                    <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
-                    <li><a href="#"><i class="icon-envelope"></i> Messages</a></li>
                     <li><a href="/shangjia/login"><i class="icon-off"></i>退出</a></li>
                 </ul>
             </li>
+            @endif
+            @if(!Session::has('shopAdmin'))
+            <li class="dropdown">
+                <a class="btn account dropdown-toggle" data-toggle="dropdown" href="#">
+                    <div class="avatar"><img src="/business/img/avatar.jpg" alt="Avatar" /></div>
+                    <div class="user">
+                        <span class="hello">Welcome!</span>
+                    </div>
+                </a>
+            </li>
+            @endif
             <!-- end: User Dropdown -->
         </ul>
     </div>
