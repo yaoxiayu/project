@@ -181,18 +181,20 @@
                         <div class="w-buy-2-buy-list" mon="area=recomBottom&s=364dd9f17f6db28a36cbab19078ce16a" bn_box="recomBottom&position" alog-alias="bainuo-detail-bye2bye" alog-group="bainuo-detail-bye2bye">
                             <div id="j-cellingRecent" class="clearfix">
                                 <div class="rcmd-title clearfix">
-                                    <h3>买了又买</h3><a href="javascript:;" mon="element=Buy2BuyChange" id="j-change-btn" class="change-btn">换一换<span>&nbsp;</span><span class="icon"></span></a></div>
+                                    <h3>看了又看</h3><span class="icon"></span></a></div>
                                 <div>
+                                @foreach($zuji as $v)
                                     <div class="j-buy2buy-page buy2buy-page show" index="0">
                                         <div class="buy2buy-item first">
-                                            <div class="w-goods-item-b2b"><a mon="element=40008047&position=1&element_type=item" href="//t10sc.nuomi.com/pc/goods/detail?tiny_url=j00unex76" data-item-st='{"s":"364dd9f17f6db28a36cbab19078ce16a"}' target="_blank"><img class="goods-img" src="/home/static/picture/b151f8198618367a8e22e49b25738bd4b21ce5c9.jpg" alt="大渔铁板烧500元储值卡" title="大渔铁板烧500元储值卡"></a><a mon="element=40008047&position=1&element_type=item" class="title" href="//t10sc.nuomi.com/pc/goods/detail?tiny_url=j00unex76" data-item-st='{"s":"364dd9f17f6db28a36cbab19078ce16a"}'>大渔铁板烧500元储值卡</a>
+                                            <div class="w-goods-item-b2b"><a mon="element=40008047&position=1&element_type=item"  href="/home/{{$v->shopping->id}}.html"data-item-st='{"s":"364dd9f17f6db28a36cbab19078ce16a"}' target="_blank"><img class="goods-img" src="{{$v->shopping->img}}" alt="{{$v->shopping->name}}" title="{{$v->shopping->name}}"></a><a  class="title" href="/home/{{$v->shopping->id}}.html" data-item-st='{"s":"364dd9f17f6db28a36cbab19078ce16a"}'>{{$v->shopping->name}}</a>
                                                 <div class="price-sold clearfix">
-                                                    <div class="price"><span class="current">&yen;450</span></div>
-                                                    <div class="sold"><span class="name">已售</span><span class="current">25759</span></div>
+                                                    <div class="price"><span class="current">&yen;{{$v->shopping->price}}</span></div>
+                                                   
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                @endforeach
                                 </div>
                             </div>
                         </div>
@@ -323,22 +325,23 @@
 
                                     <div class="detail clearfix " style="min-height: 200px">
                                         <ul>
-
-                                            @foreach($comment as $v) @if($v['shopping_id']==$shopping['id'] && $v['user_id']==$v->user->id)
-                                            <div style="width: 720px;height: 80px">
-                                                <div style="float:left;"><img src="/home/static/images/icon_4e372f0.png" style="border-radius: 50%" width="60px" height="60px" style="float:left;">
+                               @if(json_decode($comment)!=null)
+                                                @foreach($comment as $v) 
+                                                <div style="width: 720px;height: 80px">
+                                                    <div style="float:left;"><img src="/home/static/images/icon_4e372f0.png" style="border-radius: 50%" width="60px" height="60px" style="float:left;">
+                                                    </div>
+                                                    <div style="float:left;line-height:80px;">{{substr($v->user->username,0,8)}}
+                                                    </div>
+                                                    <div style="float:left;width: 360px;height:20px;margin-left:20px;padding-top: 20px">{!!$v->content!!}
+                                                    </div>
+                                                    <div style="padding-top: 20px;color:#ff658e">评价时间
+                                                    {{$v['updated_at']}}
+                                                    </div>
                                                 </div>
-                                                <div style="float:left;line-height:80px;">{{substr($v->user->username,0,8)}}
-                                                </div>
-                                                <div style="float:left;width: 360px;height:20px;margin-left:20px;padding-top: 20px">{!!$v->content!!}
-                                                </div>
-                                                <div style="padding-top: 20px;color:#ff658e">评价时间
-                                                {{$v['updated_at']}}
-                                                </div>
-                                            </div>
+                                                @endforeach
+                                            @else
+                                                <div style="color:#ff4883;font-size: 25px;margin:50px auto">暂无评价</div>
                                             @endif
-                                            @endforeach
-
 
                                         </ul>
                                     </div>

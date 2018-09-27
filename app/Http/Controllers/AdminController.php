@@ -28,7 +28,7 @@ class AdminController extends Controller
      //后台设置页面
     public function setting()
     {
-       
+
 
     }
 
@@ -56,7 +56,7 @@ class AdminController extends Controller
 
     }
 
-    
+
 
 
     //后台登录页面
@@ -69,7 +69,7 @@ class AdminController extends Controller
     //登录操作
     public function dologin(Request $request)
     {
-            
+
 
         //获取用户的数据
         $admin = Admin::where('username',$request->username)->first();
@@ -84,7 +84,7 @@ class AdminController extends Controller
         //校验密码
         if(Hash::check($request->password,$admin->password)){
             //写入session
-            session(['username'=>$admin->username,'id'=>$admin->id]);
+            session(['adminname'=>$admin->username,'aid'=>$admin->id,'admin'=>'admin']);
             return redirect('/houtai')->with('success','登录成功');
     }else{
 
@@ -103,5 +103,3 @@ class AdminController extends Controller
     }
 
 }
-
-

@@ -29,6 +29,8 @@ Route::post('/home/index','HomeController@dologin');
 Route::get('/logoutt/','HomeController@logoutt');
 //个人中心
 Route::resource('person','PersonController');
+//个人中心
+Route::get('/order/delete/{id}','PersonController@del');
 //前台评价
 Route::resource('hcomment','HcommentController');
 //账户设置

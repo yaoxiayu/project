@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Ad;
 use App\Comment;
 use App\Industry;
 use App\Order;
@@ -9,7 +10,7 @@ use App\Session;
 use App\Shopping;
 use App\Shopuser;
 use App\Tag;
-use App\Ad;
+use App\Zuji;
 use App\shop_user_tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -120,7 +121,11 @@ class FoodController extends Controller
                         ->where('industry_id',$id)
                         ->paginate(5);
         }
-        return view('home.food.index',compact('shopping','shopuser','order','comment','asd','tag','id','industry','name'));
+
+        //广告
+        $ad = Ad::all()
+            ->take(2);
+        return view('home.food.index',compact('shopping','shopuser','order','comment','asd','tag','id','industry','name','ad'));
     }
 
      public function shopuser($id)
@@ -138,12 +143,14 @@ class FoodController extends Controller
 
     public function shopping($id)
     {
-        $comment = Comment::all();
+        $comment = Comment::get()
+                ->where('shopping_id',$id);
         $shopping = Shopping::find($id);
         $shopuser = Shopuser::find($id);
         $industry = Industry::all();
-
-        return view('home.food.shopping',compact('shopping','shopuser','comment','industry'));
+        $zuji = Zuji::all()
+                ->take(4);
+        return view('home.food.shopping',compact('shopping','shopuser','comment','industry','zuji'));
     }
 
 

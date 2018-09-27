@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title> 黑米</title>
-    <meta name="keywords" content="黑米">
-    <meta name="content" content="黑米">
+    <title> 温代</title>
+    <meta name="keywords" content="温代">
+    <meta name="content" content="温代">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <link type="text/css" rel="stylesheet" href="/shangjiazhuce/css/login.css">
     <script type="text/javascript" src="/shangjiazhuce/js/jquery.min.js"></script>
@@ -19,7 +19,7 @@
         <div class="logo"><a href="#"></a></div>
         <div class="zhuce_kong">
             <div class="zc">
-                <div class="bj_bai" style="height:1000px;">
+                <div class="bj_bai" style="min-height:850px">
                     <h3>欢迎注册</h3>
                     <form action="/shangjia/zhuce" method="post" enctype="multipart/form-data">
                         <input name="username" type="text" class="kuang_txt phone" placeholder="用户名" style="width:270px;"><span class="remind"></span>
@@ -27,51 +27,35 @@
                         <input name="repassword" type="password" class="kuang_txt email" placeholder="确认密码" style="width:270px;"><span class="remind"></span>
                         <input name="phone" type="text" class="kuang_txt possword" placeholder="手机号" style="width:270px;"><span class="remind"></span>
                          <input name="renprice" type="text" class="kuang_txt possword" placeholder="人均价格" style="width:270px;">
-                        <br>
-                        <br> {{csrf_field()}}
-                        <div class="am-form-group">
-                            <label for="user-name" class="am-u-sm-3 am-form-label">店铺名称 <span class="tpl-form-line-small-title"></span></label>
-                            <div class="am-u-sm-9">
-                                <input type="text" name="name" class="tpl-form-input" id="user-name" placeholder="">
-                            </div>
-                            <div class="am-form-group">
-                                <label for="user-phone" class="am-u-sm-3 am-form-label">行业分类</label>
+                         <input name="name" type="text" class="kuang_txt possword" placeholder="店铺名称" style="width:270px;">
+                         <div class="am-form-group">
+
                                 <div class="am-u-sm-9">
-                                    <select data-am-selected="{searchBox: 1}" name="industry_id">
+                                    行业分类：<select data-am-selected="{searchBox: 1}" name="industry_id" style="width:235px;height: 30px">
                                         @foreach($industry as $v)
                                         <option value="{{$v['id']}}">{{$v['name']}}</option>
                                         @endforeach
                                     </select>
                                 </div>
                             </div>
-                            <div class="am-form-group">
-                                <label for="user-name" class="am-u-sm-3 am-form-label">商家简介 <span class="tpl-form-line-small-title"></span></label>
-                                <div class="am-u-sm-9">
-                                    <input type="text" name="intro" class="tpl-form-input" id="user-name" placeholder="">
-                                    <small>介绍一下你的店铺吧</small>
-                                </div>
-                            </div>
-                            <div class="am-form-group">
-                                <label for="user-weibo" class="am-u-sm-3 am-form-label">主图 </label>
-                                <div class="am-u-sm-9">
-                                    <div class="am-form-group am-form-file">
-                                        <div class="tpl-form-file-img">
-                                        </div>
-                                       
-                                        <input id="doc-form-file" type="file" name="pic">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="am-form-group">
-                                <label for="user-name" class="am-u-sm-3 am-form-label">商家地址 <span class="tpl-form-line-small-title"></span></label>
+
+                        <br>
+                        <input name="intro" type="text" class="kuang_txt possword" placeholder="介绍一下你的店铺吧" style="width:270px;">
+                        <div class="form-group">
+                            <input type="file" id="exampleInputFile" style="width: 160px">
+                            <p class="help-block" style="color: #37b5f9">为您的店铺选张主图吧</p>
+                        </div>
+
+                        <div class="am-form-group">
+
                                 <div class="am-u-sm-9">
                                     <div class="info">
                                         <div>
-                                            <div style="width: 150px;">
-                                                <select id="s_province" name="s_province"></select>
-                                                <select id="s_city" name="s_city"></select>
-                                                <select id="s_county" name="s_county"></select>
-                                                <textarea cols="5" rows="1" name="address"></textarea>
+                                            <div>
+                                                商家地址:<select id="s_province" name="s_province" style="width:60px"></select >
+                                                <select id="s_city" name="s_city" style="width:70px"></select>
+                                                <select id="s_county" name="s_county" style="width:80px"></select><br>
+                                                详细地址<textarea cols="30" rows="2" name="address"></textarea>
                                             </div>
                                             <script class="resources library" src="http://sandbox.runjs.cn/uploads/rs/267/g3ugugjp/area.js" type="text/javascript"></script>
                                             <script type="text/javascript">
@@ -82,6 +66,9 @@
                                     </div>
                                 </div>
                             </div>
+                            {{csrf_field()}}
+
+
                             <input type="submit" class="btn_zhuce" value="注册">
                             <!-- <button class="btn_zhuce" value="注册">注册</button> -->
                     </form>
@@ -89,12 +76,12 @@
                     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
                     <script>
                     /**
-                                                    1. 布局
-                                                    2. 绑定事件
-                                                        获得焦点
-                                                        丧失焦点事件
-                                                        表单提交事件
-                                                */
+                    1. 布局
+                    2. 绑定事件
+                        获得焦点
+                        丧失焦点事件
+                        表单提交事件
+                */
                     var CUSER = false;
                     var CPHONE = false;
                     var CPASS = false;
@@ -243,7 +230,7 @@
                         $('input').trigger('blur');
                         //console.log(CUSER);
                         //判断输入值是否都正确
-                        if (CUSER && CPASS && CPHONE && CREPASS) { 
+                        if (CUSER && CPASS && CPHONE && CREPASS) {
                            return true;
                         } else {
                             return false;

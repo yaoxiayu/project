@@ -18,7 +18,7 @@ class HcommentController extends Controller
         $order = order::all();
         $comment = Comment::orderBy('id','desc')
                     ->where('user_id',\Session::get('id'))
-                    ->paginate(3);
+                    ->paginate(5);
         return view('home.person.comment',compact('order','comment'));
     }
 
@@ -86,12 +86,13 @@ class HcommentController extends Controller
     public function destroy($id)
     {
 
-        $comment = Comment::find($id);
+        /*$comment = Comment::find($id);
 
         if($comment->delete()){
             return redirect('/hcomment')->with('success','删除成功');
         }else{
             return back()->with('error','删除失败');
-        }
+        }*/
+        return 222;
     }
 }

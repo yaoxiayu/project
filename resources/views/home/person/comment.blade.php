@@ -1,15 +1,17 @@
-@extends('home.person.index') 
+@extends('home.person.index')
 @section('content')
 <script type="text/javascript" src="/js/jquery.min.js"></script>
-
+@foreach($comment as $v)
 <div class="uc-main fr" >
-   @foreach($comment as $v)
+
     <div style="width: 580px;float: right;margin-top:25px;color: #ff4883">
         用户名 : <span class="name" style="color: black">{{$v->user->username}}</span>
         <div style="height:10px"></div>
 
+
          商品名称:<span style="color: black">{{$v->shopping->name}}</span>
          <div style="height:10px"></div>
+
 
          <div class="goods-img fl" style="color: #ff4883;">
             评论分值：<span style="color: black">
@@ -19,52 +21,21 @@
              @endif
             </span>
         </div>
-        
+
         <div style="height:10px"></div><br>
         评论内容 : <span class="desc" style="color: black">{!!$v['content']!!}</span>
         <span class="font14">{{$v->shopping->shopuser->img}}</span>
-        
+
         <div class="date" style="float: right;margin-top:25px;"><span>{{$v->created_at}}</span></div>
-       
+
     </div>
  <div style="width: 80px;height: 80px;float: left;margin-top: 25px;"><img src="/home/static/images/icon_4e372f0.png"></div>
 </div>
-
-
-<style>
-.am-cf {
-    float: right;
-}
-
-       <div class="uc-main fr">
-                            <div class="w-list" id="J-orders-wrap">
-                                <table class="order-list" mon="area=orderList">
-                                    <tr>
-                                        <th width="70">商品名称</th>
-                                        <th width="70">商家名称</th>
-                                        <th width="70">评论分值</th>                                 
-                                        <th width="120">评论内容</th>
-                                        <th width="70">评论人</th>
-                                        <th style="padding-left:80px">操作</th>
-                                    </tr>
-                                    <tr>
-                                        @foreach($comment as $v)
-
-                                        <td class="font14 total-amount">{{$v->shopping->name}}</td>
-                                        <td>
-                                            <span class="font14">{{$v->shopping->shopuser->username}}</span>
-                                        </td>
-                                        <td>
-                                            <div class="goods-img fl">
-                                                @if($v['values']==1) 🌹好评
-                                                @elseif($v['values']==2) 😫中评
-                                                @elseif($v['values']==3) 💣差评
-                                                @endif
-                                            </div>
-                                        </td>
-                                        @endforeach
-                                    
     @endforeach
+
+
+
+
 <style>
 .pagination {
     padding-left: 0;
@@ -75,9 +46,11 @@
     padding: 0;
 }
 
+
 .pagination li {
     display: inline-block;
 }
+
 
 .pagination li a,
 .pagination li span {
@@ -94,6 +67,7 @@
     margin-bottom: 5px;
     margin-right: 5px;
 }
+
 
 .pagination .active span {
     color: #23abf0;
@@ -116,6 +90,7 @@
 .am-cf {
     float: right;
 }
+
 
 </style>
 <div class="am-cf">

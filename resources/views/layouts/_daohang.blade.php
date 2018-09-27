@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit">
     <meta name="baidu_ssp_verify" content="8541ea43669332b498d0d46a88e31c5c">
-   
+
     <script>
     var F = {};
     (function() {
@@ -44,17 +44,16 @@
     <link rel="stylesheet" type="text/css" href="/home/static/css/header_8e018e5.css" />
     <link rel="stylesheet" type="text/css" href="/home/static/css/index_a4c176c.css" />
     <link rel="stylesheet" type="text/css" href="/home/static/css/list_a00e520.css" />
-    
 
-    
-    
+
+
+
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    
+
 
 </head>
 
 <body mon="page=index_new" class="gl-big-screen">
-
     <script>
     F.context({
         'channel': 'zhifang', //
@@ -79,21 +78,21 @@
     <div class="header-bar static-hook-real static-hook-id-1" mon="area=navigation" id="header-bar">
         <div class="header-inner clearfix flexible ">
             <ul class="left-city first-level" id="j-ucLoginList">
-                @if(!Session::has('username'))
+
+                @if(!Session::has('user'))
+
                 <li class="welcome-text"><span class="welcome-tag" id="j-welcomeTag">Hi，欢迎来到温代</span></li>
                 <li class="login"><a href="/login" id="j-barLoginBtn" class="pad-left">请登录</a></li>
                 <li class="reg"><a href="/home/zhuce" class="pad-left">免费注册</a></li>
                 @endif
-                @if(Session::has('username'))
+                @if(Session::has('user'))
                 <li class="welcome-text"><span class="welcome-tag" id="j-welcomeTag">Hi，{{Session::get('username')}}</span></li>
                 <li class="reg"><a href="/logoutt" class="pad-left">退出</a></li> @endif
             </ul>
             <ul class="right-util first-level">
 
-            @if(!Session::has('username'))
-                <li style="display: none;"><a href="/person" class="pad-right" mon="element=my_order">个人中心</a></li>
-            @endif
-            @if(Session::has('username'))
+
+            @if(Session::has('user'))
             <li><a href="/person" class="pad-right" mon="element=my_order">个人中心</a></li>
             @endif
                 <li class="qr-code j-bar-dropdown"><a href="//d.nuomi.com/?1009764s" class="pad-left pad-right" target="_blank">温代APP<span class="arrow-down-logo"></span></a>
@@ -140,7 +139,7 @@
                         <li class="no-right-margin"><a href="//sy.nuomi.com">沈阳</a></li>
                         <li><a href="//jn.nuomi.com">济南</a></li>
                         <li><a href="//hrb.nuomi.com">哈尔滨</a></li>
-                    </ul><a href="//www.nuomi.com/changecity" class="link morelink">更多城市 &gt;</a></div>
+                    </ul></div>
             </div>
         </div>
         <div class="search-area clearfix" >
@@ -151,7 +150,7 @@
                         <input type="submit" class="searchbtn" value=" " mon="element=search_button"><span class="search-text">搜&nbsp;索</span>
                         <div class="btn-shadow"></div>
                     </div>
-                    
+
                 </form>
 
             </div>

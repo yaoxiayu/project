@@ -16,7 +16,7 @@ class BusinessController extends Controller
     {
       //获取登录商家的商品ID
       $shopping = Shopping::orderBy('id','')
-                 ->where('shopUser_id',[\Session::get('id')])
+                 ->where('shopUser_id',[\Session::get('sid')])
                  ->get()
                  ->pluck('id');
       //php对象转换数组
@@ -37,7 +37,7 @@ class BusinessController extends Controller
      {
        $shopping = Shopping::orderBy('id','desc')
                   ->where('name','like', '%'.request()->keywords.'%')
-                  ->where('shopUser_id',[\Session::get('id')])
+                  ->where('shopUser_id',[\Session::get('sid')])
                   ->paginate(1);
        return view('/business.shopping.index',compact('shopping'));
      }
@@ -57,7 +57,7 @@ class BusinessController extends Controller
         $shopping -> name = $request -> name;
         $shopping -> price = $request -> price;
         $shopping -> counts = $request -> counts;
-        $shopping -> shopUser_id = \Session::get('id');
+        $shopping -> shopUser_id = \Session::get('sid');
         $shopping -> content = $request -> content;
 
         // dd($request->tag_id);
@@ -93,7 +93,7 @@ class BusinessController extends Controller
          $shopping -> name = $request -> name;
          $shopping -> price = $request -> price;
          $shopping -> counts = $request -> counts;
-         $shopping -> shopUser_id = \Session::get('id');
+         $shopping -> shopUser_id = \Session::get('sid');
          $shopping -> content = $request -> content;
 
          // dd($request->tag_id);
@@ -133,7 +133,7 @@ class BusinessController extends Controller
       {
         //获取登录商家的商品ID
         $shopping = Shopping::orderBy('id','')
-                   ->where('shopUser_id',[\Session::get('id')])
+                   ->where('shopUser_id',[\Session::get('sid')])
                    ->get()
                    ->pluck('id');
         $shop = json_decode($shopping);
@@ -149,7 +149,7 @@ class BusinessController extends Controller
       public function oindex1()
       {
         $shopping = Shopping::orderBy('id','')
-                   ->where('shopUser_id',[\Session::get('id')])
+                   ->where('shopUser_id',[\Session::get('sid')])
                    ->get()
                    ->pluck('id');
         $shop = json_decode($shopping);
@@ -170,7 +170,7 @@ class BusinessController extends Controller
        {
          //获取登录商家的商品ID
          $shopping = Shopping::orderBy('id','')
-                    ->where('shopUser_id',[\Session::get('id')])
+                    ->where('shopUser_id',[\Session::get('sid')])
                     ->get()
                     ->pluck('id');
          $shop = json_decode($shopping);
@@ -195,7 +195,7 @@ class BusinessController extends Controller
         {
           //获取登录商家的商品ID
           $shopping = Shopping::orderBy('id','')
-                     ->where('shopUser_id',[\Session::get('id')])
+                     ->where('shopUser_id',[\Session::get('sid')])
                      ->get()
                      ->pluck('id');
           $shop = json_decode($shopping);
@@ -212,7 +212,7 @@ class BusinessController extends Controller
         */
         public function set()
         {
-          $shopuser = Shopuser::find(\Session::get('id'));
+          $shopuser = Shopuser::find(\Session::get('sid'));
           return view('business.set.edit',compact('shopuser'));
         }
         public function xiugai(Request $request,$id)
@@ -223,7 +223,7 @@ class BusinessController extends Controller
           $shopuser -> name = $request -> name;
           $shopuser -> renprice = $request -> renprice;
           $shopuser -> username = $request -> username;
-          $shopuser -> id = \Session::get('id');
+          $shopuser -> id = \Session::get('sid');
           $shopuser -> phone = $request -> phone;
           $shopuser -> intro = $request -> intro;
 

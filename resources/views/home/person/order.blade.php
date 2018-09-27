@@ -20,7 +20,7 @@
                                             </div>
                                             <div class="goods-name fl">
                                                 <h6>
-                                                    <a href="//www.nuomi.com/deal/y00vah1a3.html" target="_blank" mon="element=2282279537&element_type=nav"><p style="margin-top: 5px">{{$v->shopping->content}}</p></a>
+                                                    <a href="/home/{{$v['shopping_id']}}.html" target="_blank"><p style="margin-top: 5px">{{$v->shopping->content}}</p></a>
                                                 </h6>
                                             </div>
                                         </td>
@@ -44,12 +44,12 @@
                                         </td>
                                     </tr>
                                     @endforeach
-                                   
+
                                 </table>
                                 <div id="J-pager" class="uc-pager" data-p="1" data-pn="20" data-total="1" data-status="all" mon="area=pageNum"></div>
                             </div>
                         </div>
-    
+
                 <style>
                     .am-cf{
                         float: right;
