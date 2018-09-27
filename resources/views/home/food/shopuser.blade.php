@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" href="/home/static/css/dialog_206ad62.css" />
 <link rel="stylesheet" type="text/css" href="/home/static/css/credentials_img_719f906.css" />
 <link rel="stylesheet" type="text/css" href="/home/static/css/detail_old_acd0c5d.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
 <div class="nav-bar-header nav-area-index static-hook-real static-hook-id-3">
     <div class="nav-inner flexible clearfix">
         <ul class="nav-list clearfix" id="j-catg" mon="area=nav&element_type=nav">
@@ -104,12 +105,10 @@
                                     <span>
                                         {{$shopuser['address']}}
                                     </span>
-                                    <span class="map" id="map-view">
-                                        <i class="iconfont">
-                                            
-                                        </i>
-                                        <a href="">查看地图</a>
-                                    </span>
+                                    <div class="newsview" style="padding:20px;float:right">
+                                                   <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+                                        <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+                                            </div>
                                 </p>
                             </li>
                             <li class="item">
