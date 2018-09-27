@@ -57,7 +57,7 @@
                             <td>{{$v->shopping->name}}</td>
                             <td>{{$v['price']}}</td>
                             <td>{{$v['counts']}}</td>
-                            <td>{{$v['state']}}</td>
+                            <td>@if($v['state']==1) 未使用 @elseif($v['state']==2) 已使用 @endif</td>
                             <td>
                                 <div class="am-btn-toolbar">
                                     <div class="am-btn-group am-btn-group-xs">

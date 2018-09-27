@@ -177,4 +177,12 @@ class HomeController extends Controller
       $couponUser = Coupon_user::findOrFail($coupon_user);
       $couponUser -> delete();
     }
+
+    public function sosuo()
+    {
+        $shopuser = Shopuser::orderBy('id','desc')
+        ->where('username', 'like' , '%'.request()->k.'%')
+        ->paginate(15);
+        return view('home.sosuo',compact('shopuser'));
+    }
 }

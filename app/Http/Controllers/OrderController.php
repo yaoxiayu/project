@@ -18,7 +18,7 @@ class OrderController extends Controller
     {
         $orders = Order::orderBy('id','desc')
             ->where('price','like', '%'.request()->keywords.'%')
-            ->paginate(3);
+            ->paginate(6);
         $users = User::all();
         $shoppings = Shopping::all();
         //解析模板显示用户数据

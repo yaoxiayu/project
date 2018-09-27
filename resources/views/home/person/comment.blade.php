@@ -8,8 +8,10 @@
         用户名 : <span class="name" style="color: black">{{$v->user->username}}</span>
         <div style="height:10px"></div>
 
+
          商品名称:<span style="color: black">{{$v->shopping->name}}</span>
          <div style="height:10px"></div>
+
 
          <div class="goods-img fl" style="color: #ff4883;">
             评论分值：<span style="color: black">
@@ -32,6 +34,8 @@
     @endforeach
 
 
+
+
 <style>
 .pagination {
     padding-left: 0;
@@ -42,9 +46,11 @@
     padding: 0;
 }
 
+
 .pagination li {
     display: inline-block;
 }
+
 
 .pagination li a,
 .pagination li span {
@@ -61,6 +67,7 @@
     margin-bottom: 5px;
     margin-right: 5px;
 }
+
 
 .pagination .active span {
     color: #23abf0;
@@ -83,6 +90,7 @@
 .am-cf {
     float: right;
 }
+
 
 </style>
 <div class="am-cf">

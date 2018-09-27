@@ -1,5 +1,6 @@
 <?php
 
+
 	//获取请求的参数
 	$username = $_POST['username'];
 

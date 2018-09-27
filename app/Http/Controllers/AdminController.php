@@ -45,7 +45,7 @@ class AdminController extends Controller
         $setting-> title = $request->title;
         $setting-> logo = 1;
         $setting-> keywords = $request->keywords;
-
+        
         if($setting->save()){
             return back()->with('success','设置成功');
         }else{

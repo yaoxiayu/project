@@ -16,7 +16,7 @@ class CommentTableSeeder extends Seeder
         	$comment = new Comment;
 
         	$comment -> user_id = rand(1,22);
-        	$comment -> shopping_id = rand(1,10);
+        	$comment -> shopping_id = rand(1,30);
 	        $comment -> content = $faker->realText();
 	        $comment -> values =  rand(1,3);
 	        $comment -> save();

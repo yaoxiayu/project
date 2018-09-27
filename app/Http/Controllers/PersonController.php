@@ -93,7 +93,7 @@ class PersonController extends Controller
             return back()->with('error','删除失败');
         }
     }
-    
+
     public function del($id)
     {
 
