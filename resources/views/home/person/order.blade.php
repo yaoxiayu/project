@@ -44,12 +44,12 @@
                                         </td>
                                     </tr>
                                     @endforeach
-                                   
+
                                 </table>
                                 <div id="J-pager" class="uc-pager" data-p="1" data-pn="20" data-total="1" data-status="all" mon="area=pageNum"></div>
                             </div>
                         </div>
-    
+
                 <style>
                     .am-cf{
                         float: right;

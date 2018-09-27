@@ -18,7 +18,7 @@
         酒店
     </a>
                 </li>
-     
+
                 <li class="nav-item">
                     <a class="item new-item" href="/food/4" mon="element=结婚" target="_top">
         结婚
@@ -37,7 +37,7 @@
                 <div class="uc p-order-list clearfix" style="margin-left:100px">
                     <div class="w-user-info" style="margin-top:60px">
                         <div class="user-name-wrap fl">
-                            @if(Session::has('username'))
+                            @if(Session::has('user'))
                             <span class="user-name">{{Session::get('username')}}</span>
                             <span class="tit">手机已绑定</span>
                             <span class="account-info-con">
@@ -46,18 +46,6 @@
                             @endif
                         </div>
                         <ul class="user-money-wrap fr">
-                            <li>
-                                <span class="tit">我的余额</span>
-                                <span class="org">
-                                &nbsp;&yen;0
-                                </span>
-                            </li>
-                            <li class="last">
-                                <span class="tit">优惠券</span>
-                                <span class="org">
-                                    &nbsp;0
-                                </span>
-                            </li>
                         </ul>
                     </div>
                     <div class="uc-wrap">

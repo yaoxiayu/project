@@ -44,7 +44,7 @@
                             <th class="table-title">价格</th>
                             <th class="table-title">商家ID</th>
                             <th class="table-title">商品主图</th>
-                            <th class="table-title">商品详情</th>
+                            <th class="table-title" style="width:200px">商品详情</th>
                             <th class="table-title">商品总数</th>
                             <th class="table-title">上传时间</th>
                             <th class="table-title">修改时间</th>
@@ -62,8 +62,8 @@
                             <td>{{$v['price']}}</td>
                             <td>{{$v->shopuser->name}}</td>
                             <td><img src="{{$v['img']}}" width="80" alt=""></td>
-                            <td>
-                              {{$v['content']}}
+                            <td style="width:200px">
+                              {{substr($v->content,0,30)}}
                             </td>
                             <td>{{$v['counts']}}</td>
                             <td>{{$v['created_at']}}</td>

@@ -92,7 +92,7 @@ class HomeController extends Controller
     //登录界面
     public function login()
     {
-        $user = User::all();
+      $user = User::all();
     	return view('home.login',compact('user'));
     }
 
@@ -108,7 +108,7 @@ class HomeController extends Controller
         //校验密码
         if(Hash::check($request->password,$user->password)){
             //写入session
-            \session(['username'=>$user->username,'id'=>$user->id,'phone'=>$user->phone]);
+            \session(['username'=>$user->username,'id'=>$user->id,'phone'=>$user->phone,'user'=>'user']);
             return redirect('/')->with('success','登录成功');
         }else{
              return back()->with('error','登录失败');

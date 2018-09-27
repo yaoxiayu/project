@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 
 class ShangjiaController extends Controller
 {
-    
+
 
     //注册
 
@@ -22,7 +22,7 @@ class ShangjiaController extends Controller
 
    public function zhucewan(Request $request)
     {
-                   
+
        // dd('aaa');
         $shopuser = new Shopuser;
 
@@ -34,7 +34,7 @@ class ShangjiaController extends Controller
         $shopuser -> renprice = $request->renprice;
         $shopuser -> phone = $request ->phone;
         $shopuser -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request->address;
- 
+
 
  		 if($request->hasFile('pic')){
             $shopuser -> pic = '/'.$request->pic->store('uploads/'.date('Ymd'));
@@ -74,7 +74,7 @@ class ShangjiaController extends Controller
         //校验密码
         if(Hash::check($request->password,$shopuser->password)){
             //写入session
-            \session(['username'=>$shopuser->username,'id'=>$shopuser->id,'phone'=>$shopuser->phone]);
+            \session(['shopusername'=>$shopuser->username,'sid'=>$shopuser->id,'phone'=>$shopuser->phone,'shopAdmin'=>'shopAdmin']);
             return redirect('/shangjia')->with('success','登录成功');
         }else{
              return back()->with('error','登录失败');
@@ -89,5 +89,3 @@ class ShangjiaController extends Controller
 
     }
 }
-
-

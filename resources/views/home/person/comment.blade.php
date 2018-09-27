@@ -1,10 +1,9 @@
 @extends('home.person.index')
 @section('content')
 <script type="text/javascript" src="/js/jquery.min.js"></script>
-
 @foreach($comment as $v)
 <div class="uc-main fr" >
-   
+
     <div style="width: 580px;float: right;margin-top:25px;color: #ff4883">
         用户名 : <span class="name" style="color: black">{{$v->user->username}}</span>
         <div style="height:10px"></div>
@@ -23,14 +22,11 @@
             </span>
         </div>
 
-
         <div style="height:10px"></div><br>
         评论内容 : <span class="desc" style="color: black">{!!$v['content']!!}</span>
         <span class="font14">{{$v->shopping->shopuser->img}}</span>
 
-
         <div class="date" style="float: right;margin-top:25px;"><span>{{$v->created_at}}</span></div>
-
 
     </div>
  <div style="width: 80px;height: 80px;float: left;margin-top: 25px;"><img src="/home/static/images/icon_4e372f0.png"></div>

@@ -138,7 +138,7 @@ class ShopuserController extends Controller
         $shopuser -> phone = $request -> phone;
         $shopuser -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request-> address;
 
-        
+
         //文件上传
         if($request->hasFile('pic')){
             $shopuser ->pic = '/'.$request->pic->store('uploads/'.date('Ymd'));
@@ -165,7 +165,7 @@ class ShopuserController extends Controller
     {
         //
         $shopuser = Shopuser::find($id);
-        
+
         $shop_user_tag = Shop_user_tag::all();
         foreach ($shop_user_tag as $key => $value) {
             if($id == $value['shop_user_id']){

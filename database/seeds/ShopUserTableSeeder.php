@@ -13,7 +13,7 @@ class ShopUserTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for ($i=0; $i < 20; $i++) { 
+        for ($i=0; $i < 20; $i++) {
         	$shopuser = new ShopUser;
 
         	$shopuser -> username = $faker -> name;
@@ -24,7 +24,7 @@ class ShopUserTableSeeder extends Seeder
 	        $shopuser -> intro = '欢迎光临我的小店';
 	        $shopuser -> industry_id = rand(1,4);
 	        $shopuser -> name = $faker -> name;
-            $shopuser -> renprice = rand(10,1000);
+          $shopuser -> renprice = rand(10,1000);
 	        $shopuser -> save();
         }
     }

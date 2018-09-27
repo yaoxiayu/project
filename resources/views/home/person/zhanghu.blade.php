@@ -6,8 +6,8 @@
                 <th width="70" style="padding-left: 120px">用户名</th>
                 <th width="70" style="padding-left: 80px">手机号</th>
                 <th width="70" style="padding-left:80px">操作</th>
-            </tr> 
-        @if(Session::has('username'))    
+            </tr>
+        @if(Session::has('user'))    
             <tr style="height: 60px">
                 <td class="font14 total-amount">{{Session::get('username')}}</td>
                 <td>

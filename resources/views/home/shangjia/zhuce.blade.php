@@ -29,7 +29,7 @@
                          <input name="renprice" type="text" class="kuang_txt possword" placeholder="人均价格" style="width:270px;">
                          <input name="name" type="text" class="kuang_txt possword" placeholder="店铺名称" style="width:270px;">
                          <div class="am-form-group">
-                               
+
                                 <div class="am-u-sm-9">
                                     行业分类：<select data-am-selected="{searchBox: 1}" name="industry_id" style="width:235px;height: 30px">
                                         @foreach($industry as $v)
@@ -38,6 +38,7 @@
                                     </select>
                                 </div>
                             </div>
+
                         <br>
                         <input name="intro" type="text" class="kuang_txt possword" placeholder="介绍一下你的店铺吧" style="width:270px;">
                         <div class="form-group">
@@ -46,6 +47,7 @@
                         </div>
 
                         <div class="am-form-group">
+
                                 <div class="am-u-sm-9">
                                     <div class="info">
                                         <div>
@@ -65,8 +67,8 @@
                                 </div>
                             </div>
                             {{csrf_field()}}
-                        
-                            
+
+
                             <input type="submit" class="btn_zhuce" value="注册">
                             <!-- <button class="btn_zhuce" value="注册">注册</button> -->
                     </form>
@@ -228,7 +230,7 @@
                         $('input').trigger('blur');
                         //console.log(CUSER);
                         //判断输入值是否都正确
-                        if (CUSER && CPASS && CPHONE && CREPASS) { 
+                        if (CUSER && CPASS && CPHONE && CREPASS) {
                            return true;
                         } else {
                             return false;
