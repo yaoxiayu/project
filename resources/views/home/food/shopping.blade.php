@@ -183,16 +183,18 @@
                                 <div class="rcmd-title clearfix">
                                     <h3>看了又看</h3><span class="icon"></span></a></div>
                                 <div>
+                                @foreach($zuji as $v)
                                     <div class="j-buy2buy-page buy2buy-page show" index="0">
                                         <div class="buy2buy-item first">
-                                            <div class="w-goods-item-b2b"><a mon="element=40008047&position=1&element_type=item" href="//t10sc.nuomi.com/pc/goods/detail?tiny_url=j00unex76" data-item-st='{"s":"364dd9f17f6db28a36cbab19078ce16a"}' target="_blank"><img class="goods-img" src="/home/static/picture/b151f8198618367a8e22e49b25738bd4b21ce5c9.jpg" alt="大渔铁板烧500元储值卡" title="大渔铁板烧500元储值卡"></a><a mon="element=40008047&position=1&element_type=item" class="title" href="//t10sc.nuomi.com/pc/goods/detail?tiny_url=j00unex76" data-item-st='{"s":"364dd9f17f6db28a36cbab19078ce16a"}'>大渔铁板烧500元储值卡</a>
+                                            <div class="w-goods-item-b2b"><a mon="element=40008047&position=1&element_type=item"  href="/home/{{$v->shopping->id}}.html"data-item-st='{"s":"364dd9f17f6db28a36cbab19078ce16a"}' target="_blank"><img class="goods-img" src="{{$v->shopping->img}}" alt="{{$v->shopping->name}}" title="{{$v->shopping->name}}"></a><a  class="title" href="/home/{{$v->shopping->id}}.html" data-item-st='{"s":"364dd9f17f6db28a36cbab19078ce16a"}'>{{$v->shopping->name}}</a>
                                                 <div class="price-sold clearfix">
-                                                    <div class="price"><span class="current">&yen;450</span></div>
-                                                    <div class="sold"><span class="name">已售</span><span class="current">25759</span></div>
+                                                    <div class="price"><span class="current">&yen;{{$v->shopping->price}}</span></div>
+                                                   
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                @endforeach
                                 </div>
                             </div>
                         </div>

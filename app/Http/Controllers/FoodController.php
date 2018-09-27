@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Ad;
 use App\Comment;
 use App\Industry;
 use App\Order;
@@ -9,7 +10,7 @@ use App\Session;
 use App\Shopping;
 use App\Shopuser;
 use App\Tag;
-use App\Ad;
+use App\Zuji;
 use App\shop_user_tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -147,8 +148,9 @@ class FoodController extends Controller
         $shopping = Shopping::find($id);
         $shopuser = Shopuser::find($id);
         $industry = Industry::all();
-
-        return view('home.food.shopping',compact('shopping','shopuser','comment','industry'));
+        $zuji = Zuji::all()
+                ->take(4);
+        return view('home.food.shopping',compact('shopping','shopuser','comment','industry','zuji'));
     }
 
 
