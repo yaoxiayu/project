@@ -1,5 +1,9 @@
 ﻿@include('layouts._daohang')
+<div style="position:absolute;top:70px;right:-20px;">
+        <iframe frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=36&icon=5&num=1"></iframe>
+</div>
 <div class="nav-bar-header nav-area-index static-hook-real static-hook-id-3">
+
     <div class="nav-inner flexible clearfix">
         <ul class="nav-list clearfix" mon="area=nav&element_type=nav" id="j-catg">
             <li class="nav-item cate-row all-cate deep">
@@ -208,7 +212,7 @@
                     </div>
                     <br>
                     <br>
-                    
+
                     <div class="re-mid-content">
                         <div class="content-header clearfix">
                             <h3>
@@ -370,4 +374,3 @@
 
                 <div class="re-footer-content ">
                     @include('layouts._foot')
-
