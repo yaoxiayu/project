@@ -2,8 +2,9 @@
 @section('content')
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 
+@foreach($comment as $v)
 <div class="uc-main fr" >
-   @foreach($comment as $v)
+   
     <div style="width: 580px;float: right;margin-top:25px;color: #ff4883">
         用户名 : <span class="name" style="color: black">{{$v->user->username}}</span>
         <div style="height:10px"></div>

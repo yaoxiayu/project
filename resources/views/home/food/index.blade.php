@@ -68,8 +68,8 @@
                                         <div class="filter-breadcrumb">
                                         </div>
                                         <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208" / style="position:absolute;right:20px;height: 120px">
-                                        <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208" / style="position:absolute;right:20px;top:150px;height: 120px">
-                                        <div class="filter-wrapper" style="margin-bottom: 50px">
+                                        <img class="page-body-right-img " src="/home/static/picture/search_active_ba4697e.png" width="208" / style="position:absolute;right:20px;top:190px;height: 120px">
+                                        <div class="filter-wrapper" >
                                             <div class="normal-filter ">
                                                 <div alog-alias="bainuo-filter-section" alog-group="bainuo-filter-section" class="w-filter-normal-ab filter-list-ab clearfix" mon="area=filterCatg">
                                                     <h5 class="filter-label-ab">

@@ -86,11 +86,12 @@ class PersonController extends Controller
     public function destroy($id)
     {
         
-        $order = Order::find($id);
+       /* $order = Order::find($id);
         if($order->delete()){
             return redirect('/person')->with('success','删除成功');
         }else{
             return back()->with('error','删除失败');
-        }
+        }*/
+        return 222;
     }
 }

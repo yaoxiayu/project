@@ -86,12 +86,13 @@ class HcommentController extends Controller
     public function destroy($id)
     {
 
-        $comment = Comment::find($id);
+        /*$comment = Comment::find($id);
 
         if($comment->delete()){
             return redirect('/hcomment')->with('success','删除成功');
         }else{
             return back()->with('error','删除失败');
-        }
+        }*/
+        return 222;
     }
 }

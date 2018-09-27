@@ -120,7 +120,11 @@ class FoodController extends Controller
                         ->where('industry_id',$id)
                         ->paginate(5);
         }
-        return view('home.food.index',compact('shopping','shopuser','order','comment','asd','tag','id','industry','name'));
+
+        //广告
+        $ad = Ad::all()
+            ->take(2);
+        return view('home.food.index',compact('shopping','shopuser','order','comment','asd','tag','id','industry','name','ad'));
     }
 
      public function shopuser($id)
@@ -138,7 +142,8 @@ class FoodController extends Controller
 
     public function shopping($id)
     {
-        $comment = Comment::all();
+        $comment = Comment::get()
+                ->where('shopping_id',$id);
         $shopping = Shopping::find($id);
         $shopuser = Shopuser::find($id);
         $industry = Industry::all();
