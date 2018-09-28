@@ -16,7 +16,7 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(\Session::has('id')){
+        if(\Session::has('aid')){
           return $next($request);
         }else{
             return redirect('/admin/login')->with('error','您还没有登录,请登录');

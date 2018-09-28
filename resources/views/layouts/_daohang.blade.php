@@ -101,7 +101,7 @@
                 </li>
                 <li class="qr-code j-bar-dropdown"><a href="/coupon/all" class="pad-left pad-right" target="_blank">领券中心</a>
                 </li>
-                <li class="j-bar-dropdown"><a href="/shangjia" class="pad-right"><span>我是商家</span><span class="arrow-down-logo"></span></a><span class="sep-lines"></span>
+                <li class="j-bar-dropdown"><a class="pad-right"><span>我是商家</span><span class="arrow-down-logo"></span></a><span class="sep-lines"></span>
                     <div class="merchant-list header-dropmenu">
                         <div class="drop-block"></div><a href="/shangjia/login" class="link" target="_blank">登录</a><a href="/shangjia/zhuce" class="link" target="_blank">注册</a></div>
                 </li>

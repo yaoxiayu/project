@@ -269,7 +269,7 @@
                                                 <span>
                                                     <i class="icon-tuan icon-tuan-adjust">
                                                     </i>
-                                                    40元代金券！免费WiFi！
+                                                    代金券！免费WiFi！
                                                 </span>
                                             </a>
                                         <a class="shop-infoo-list-item-line shop-infoo-list-item-detail shop-infoo-list-item-gray" href="/{{$v['id']}}.html">

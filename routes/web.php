@@ -89,7 +89,7 @@ Route::post('/admin/login','AdminController@dologin');
 
 
 //后台路由
-// Route::group(['middleware'=>'admin'],function(){
+Route::group(['middleware'=>'admin'],function(){
 
 //后台首页
 Route::get('/houtai', 'AdminController@show');
@@ -139,7 +139,7 @@ Route::post('/admin/setting','AdminController@update');
 
 //超级管理员
 Route::resource('administrator','AdministratorController');
-// });
+});
 
 /**
  * 商家管理前台
