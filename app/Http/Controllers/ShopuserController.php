@@ -65,6 +65,7 @@ class ShopuserController extends Controller
         $shopuser -> password = Hash::make($request -> password);
         $shopuser -> phone = $request -> phone;
         $shopuser -> address = $request->s_province.'-'.$request->s_city.'-'.$request->s_county.'-'.$request-> address;
+
         $address = new Address;
 
 

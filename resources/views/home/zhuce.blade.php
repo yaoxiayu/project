@@ -19,7 +19,7 @@
         <div class="logo"><a href="#"></a></div>
         <div class="zhuce_kong">
             <div class="zc">
-                <div class="bj_bai" style="height:1000px;">
+                <div class="bj_bai" style="height:650px;">
                     <h3>欢迎注册</h3>
                     <form action="/home/zhuce" method="post" enctype="multipart/form-data">
                         <input name="username" type="text" class="kuang_txt phone" placeholder="用户名" style="width:270px;"><span class="remind"></span>
@@ -231,7 +231,7 @@
                     });
                     </script>
                
-                <div class="bj_right" style="height:1000px;">
+                <div class="bj_right" style="height:650px;">
                     <p>使用以下账号直接登录</p>
                     <a href="/home/zhuce" class="zhuce_qq">QQ注册</a>
                     <a href="/home/zhuce" class="zhuce_wb">微博注册</a>

@@ -19,7 +19,7 @@
         <div class="logo"><a href="#"></a></div>
         <div class="zhuce_kong">
             <div class="zc">
-                <div class="bj_bai" style="min-height:850px">
+                <div class="bj_bai" style="min-height:780px">
                     <h3>欢迎注册</h3>
                     <form action="/shangjia/zhuce" method="post" enctype="multipart/form-data">
                         <input name="username" type="text" class="kuang_txt phone" placeholder="用户名" style="width:270px;"><span class="remind"></span>

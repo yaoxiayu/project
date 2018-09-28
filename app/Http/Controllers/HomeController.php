@@ -57,9 +57,7 @@ class HomeController extends Controller
     //注册
 
     public function zhuce(Request $request)
-
     {
-
         return view('home.zhuce');
     }
 
@@ -120,7 +118,7 @@ class HomeController extends Controller
     //退出
     public function logoutt(Request $request)
     {
-         $request->session()->flush();
+         $request->session()->forget('id');
          return redirect('/login')->with('success','退出成功');
 
     }
@@ -209,12 +207,22 @@ class HomeController extends Controller
       $couponUser = Coupon_user::findOrFail($coupon_user);
       $couponUser -> delete();
     }
-
+    /**
+     * 搜索
+     * @return [type] [description]
+     */
     public function sosuo()
     {
         $shopuser = Shopuser::orderBy('id','desc')
         ->where('name', 'like' , '%'.request()->k.'%')
         ->paginate(15);
         return view('home.sosuo',compact('shopuser'));
+    }
+    /**
+     * 安全
+     */
+    public function anquan()
+    {
+        return view('home.anquan');
     }
 }

@@ -96,26 +96,25 @@
     <div class="p-login">
         <div class="header">
             <div class="wrap clearfix">
-                <div class="logo"><a href="/"></a></div>
-                <div class="login-text">登录</div>
+                <a href="/"><img src="/admin/images/wen.png" style="width:150px; height:70px;" alt=""></a>
+                
                 <div class="reg-area">还没有温代帐号<a href="/home/zhuce" class="reg-btn">注册</a></div>
             </div>
         </div>
         <div class="body">
             <div class="wrap clearfix">
                 <div class="login-logo"></div>
-                <div class="login-area" id="j-loginArea">
+                <div class="login-area" id="j-loginArea" style="background:#ddd;">
                     <div class="title">登录温代</div>
                     <br>
                     <br>
-                    <div class="login tang-pass-login" id="j-login">
+                    <div class="login tang-pass-login" id="j-login" >
                         <form id="TANGRAM__PSP_4__form" class="pass-form pass-form-normal" method="POST" action="/home/index" autocomplete="off">
                             <p id="TANGRAM__PSP_4__errorWrapper" class="pass-generalErrorWrapper"><span id="TANGRAM__PSP_4__error" class="pass-generalError pass-generalError-error"></span></p>
                             <p id="TANGRAM__PSP_4__MakeTextWrapper" class="pass-make-text" style="display:none;"></p>
                             <p id="TANGRAM__PSP_4__userNameWrapper" class="pass-form-item pass-form-item-userName" style="display:">
-                           
                                 <input type="text" style="display:none;">
-                                <input id="TANGRAM__PSP_4__userName" type="text" name="username" class="pass-text-input pass-text-input-userName" autocomplete="off" value="" placeholder="手机/邮箱/用户名/温代帐号">
+                                <input id="TANGRAM__PSP_4__userName" type="text"  name="username" class="pass-text-input pass-text-input-userName" autocomplete="off" value="" placeholder="手机/邮箱/用户名/温代帐号">
                             </p>
                             <br>
                             <br>
@@ -124,10 +123,22 @@
                                 <input id="TANGRAM__PSP_4__password" type="password" name="password" class="pass-text-input pass-text-input-password" autocomplete="off" value="" placeholder="密码"><span id="TANGRAM__PSP_4__password_clearbtn" class="pass-clearbtn pass-clearbtn-password" style="display:none;"></span><span id="TANGRAM__PSP_4__passwordTip" class="pass-item-tip pass-item-tip-password" style="display:none"><span id="TANGRAM__PSP_4__passwordTipText" class="pass-item-tiptext pass-item-tiptext-password"></span></span>
                             </p>
                             <br>
-                            <br>
-                            {{csrf_field()}}
+                            <br> {{csrf_field()}}
                             <p id="TANGRAM__PSP_4__submitWrapper" class="pass-form-item pass-form-item-submit">
                                 <input id="TANGRAM__PSP_4__submit" type="submit" value="登录" class="pass-button pass-button-submit">
+                                 @if(Session::has('success'))
+                                <div class=" am-u-sm-12" style="padding:0px;margin:0px;">
+                                    <div class="dashboard-stat green">
+                                        <div class="desc" style="text-align: center;line-height:20px;color:red">{{Session::get('success')}} </div>
+                                    </div>
+                                </div>
+                                @endif @if(Session::has('error'))
+                                <div class=" am-u-sm-12" style="padding:0px;margin:0px;">
+                                    <div class="dashboard-stat red">
+                                        <div class="desc" style="text-align: center;line-height:20px;color:red">{{Session::get('error')}} </div>
+                                    </div>
+                                </div>
+                                @endif
                         </form>
                     </div>
                     <div id="pass-phoenix-login" class="tang-pass-login-phoenix">
