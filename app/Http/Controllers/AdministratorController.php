@@ -54,7 +54,7 @@ class AdministratorController extends Controller
         //$admin -> pic = $request ->pic;
         $admin -> phone = $request ->phone;
         //dd($admin);
-        $admin -> admin = $request -> admin;
+        
 
         //检测是否有文件上传
          if ($request->hasFile('pic')) {

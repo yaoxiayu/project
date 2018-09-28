@@ -4,8 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-
-class AdminMiddleware
+class ShangjiaMiddleware
 {
     /**
      * Handle an incoming request.
@@ -16,11 +15,10 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(\Session::has('aid')){
+        if(\Session::has('sid')){
           return $next($request);
         }else{
-            return redirect('/admin/login')->with('error','您还没有登录,请登录');
+            return redirect('/shangjia/login')->with('error','您还没有登录,请登录');
         }
-        
     }
 }

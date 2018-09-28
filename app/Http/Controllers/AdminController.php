@@ -97,7 +97,7 @@ class AdminController extends Controller
     //退出登录
     public function logout(Request $request)
     {
-        $request->session()->flush();
+        $request->session()->forget('aid');
         return redirect('/admin/login/')->with('success','退出成功');
 
     }

@@ -104,12 +104,12 @@
                                     <span>
                                         {{$shopuser['address']}}
                                     </span>
-                                    <span class="map" id="map-view">
+                                    <!-- <span class="map" id="map-view">
                                         <i class="iconfont">
                                             
                                         </i>
                                         <a href="">查看地图</a>
-                                    </span>
+                                    </span> -->
                                 </p>
                             </li>
                             <li class="item">

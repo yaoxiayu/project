@@ -26,7 +26,7 @@
                         <li><a href="/admin/setting" title="系统设置" class="iframeurl"><i class="icon-cog"></i>网站设置</a></li>
                         <li><a href="/admin/geren" name="admin_info.html" title="个人信息" class="iframeurl"><i class="icon-user"></i>个人资料</a></li>
                         <li class="divider"></li>
-                        <li><a href="#" id="Exit_system">退出</a></li>
+                        <li><a href="/admin/logout">退出</a></li>
                     </ul>
 
                     <script>

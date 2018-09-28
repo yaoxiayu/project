@@ -76,6 +76,9 @@ Route::get('/cunshoucang/delete/{id}','ShoucangController@shanchu');
 //前台搜索
 Route::get('/sosuo','HomeController@sosuo');
 
+//前台安全
+Route::get('/anquan','HomeController@anquan');
+
 /**
  * 后台
  */
@@ -89,7 +92,7 @@ Route::post('/admin/login','AdminController@dologin');
 
 
 //后台路由
-// Route::group(['middleware'=>'admin'],function(){
+Route::group(['middleware'=>'admin'],function(){
 
 //后台首页
 Route::get('/houtai', 'AdminController@show');
@@ -139,7 +142,9 @@ Route::post('/admin/setting','AdminController@update');
 
 //超级管理员
 Route::resource('administrator','AdministratorController');
-// });
+});
+
+
 
 /**
  * 商家管理前台
@@ -151,6 +156,9 @@ Route::post('/shangjia','ShangjiaController@dologin');
 //商家注册
 Route::get('/shangjia/zhuce','ShangjiaController@zhuce');
 Route::post('/shangjia/zhuce','ShangjiaController@zhucewan');
+
+Route::group(['middleware'=>'shangjia'],function(){
+
 
 //商家首页
 Route::get('/shangjia','BusinessController@index');
@@ -178,9 +186,18 @@ Route::get('/business/order/1','BusinessController@oindex1');
 Route::get('/business/vip','BusinessController@vindex');
 //评论列表
 Route::get('/business/comment','BusinessController@cindex');
+
 //退出
 Route::get('/logout','ShangjiaController@logout');
+});
 //订单修改
 Route::get('/order/gai/{id}','OrderController@gai');
 //优惠券管理
 Route::resource('coupon','CouponController');
+
+// 引导用户到新浪微博的登录授权页面
+Route::get('auth/weibo', 'Auth\AuthController@weibo');
+// 用户授权后新浪微博回调的页面
+Route::get('auth/callback', 'Auth\AuthController@callback');
+
+
