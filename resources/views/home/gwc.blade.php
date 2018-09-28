@@ -168,7 +168,7 @@
                         全选
                     </li>
                     <li class="list_con">商品信息</li>
-                    <li class="list_info">商品参数</li>
+                    <li class="list_info">商品主图</li>
                     <li class="list_price" style="margin-left:80px">单价</li>
                     <li class="list_amount">数量</li>
                     <li class="list_sum" style="margin-left:80px">金额</li>
@@ -185,11 +185,11 @@
                             <label for="{{$shopping['id']}}"></label>
                         </li>
                         <li class="list_con">
-                            <div class="list_img" style="margin-left: 40px"><a href="javascript:;"><img src="{{$shopping['img']}}" alt="" width="50px" height="70px"></a></div>
+                            <div class="list_img" style="margin-left: 40px"><a href="javascript:;"></a></div>
                             <div class="list_text"><a href="javascript:;">{{$shopping['name']}}</a></div>
                         </li>
                         <li class="list_info">
-                            <p>{!!$shopping['content']!!}</p>
+                            <img src="{{$shopping['img']}}" alt="" width="120px" height="80px">
                         </li>
                         <li class="list_price" style="margin-left:80px">
                             <p class="price">￥{{$shopping['price']}}</p>

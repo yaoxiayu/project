@@ -157,29 +157,7 @@
 
         </div>
         <input type="hidden" id="j-input-city-fix" value="bj">
-        <div class="utils clearfix">
-            <a href="//www.nuomi.com/pcindex/about/promise" mon="element=just_retire" target="_blank">
-                <div class="util-item refund">
-                    <div class="u-icon refund">
-                        <div class="drop-block"></div>
-                    </div>
-                    <div class="util-tip">未消费，随便退！</div>
-                </div>
-                <div class="util-item mid">
-                    <div class="u-icon pei">
-                        <div class="drop-block"></div>
-                    </div>
-                    <div class="util-tip">消费不满意先行赔付！</div>
-                </div>
-                <div class="util-item last">
-                    <div class="u-icon money">
-                        <div class="drop-block"></div>
-                    </div>
-                    <div class="util-tip">过期自动退！</div>
-                </div>
-            </a>
-        </div>
-        
+
 
     </div>
     <script type="text/template" id="autocomplete-template">

@@ -151,12 +151,15 @@ class HomeController extends Controller
         $order -> user_id = $user_id;
         $order -> price = $jisuan;
         $order -> counts = $counts;
-        $order -> state = '1';
-        $coupon_user_id = json_decode(Coupon_user::get()
-                      ->where('user_id',\Session::get('id'))
-                      ->where('coupon_id',$yhq));
-        $coupon_user=Coupon_user::find($coupon_user_id[0]->id);
-        if($order ->save()&&$coupon_user->delete()){
+        $order -> state = '2';
+        $coupon_user_id =Coupon_user::where('user_id',\Session::get('id'))
+                      ->where('coupon_id',$yhq)
+                      ->value('id');
+        if($coupon_user=Coupon_user::find($coupon_user_id)){
+            $coupon_user->delete();
+        }
+        
+        if($order ->save()){
           return redirect('/person')->with('success', '添加成功');
         }else{
           return back();
