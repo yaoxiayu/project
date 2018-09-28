@@ -73,8 +73,7 @@ class AdminController extends Controller
 
         //获取用户的数据
         $admin = Admin::where('username',$request->username)->first();
-
-        //dd($admin);
+        // dd(Hash::check($request->password,$admin->password));
 
          if(!$admin){
             return back()->with('error','登录失败');
@@ -99,7 +98,6 @@ class AdminController extends Controller
     {
         $request->session()->forget('aid');
         return redirect('/admin/login/')->with('success','退出成功');
-
     }
 
 }

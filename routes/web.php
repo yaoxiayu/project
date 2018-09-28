@@ -39,6 +39,7 @@ Route::resource('zhanghu','ZhanghuController');
 Route::get('mycoupon','CouponController@mycoupon');
 //购物车
 Route::get('/shopcart/{id}&{counts}','HomeController@show');
+Route::get('/jiesuan/{shopping_id}/{user_id}/{counts}/{jiesuan}/{yhq}','HomeController@chuli');
 //评价删除
 Route::get('/hcomment/delete/{id}','CommentController@shanchu');
 //友情链接
@@ -143,7 +144,6 @@ Route::post('/admin/setting','AdminController@update');
 //超级管理员
 Route::resource('administrator','AdministratorController');
 });
-
 
 
 /**

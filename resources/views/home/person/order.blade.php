@@ -16,11 +16,11 @@
                                     @foreach($order as $v)
                                         <td class="goods-info left">
                                             <div class="goods-img fl">
-                                                <img src="{{$v->shopping->img}}" title="{{$v->shopping->name}}" />
+                                                <img src="{{$v->shopping->img}}" title="{!!$v->shopping->name!!}" />
                                             </div>
                                             <div class="goods-name fl">
                                                 <h6>
-                                                    <a href="/home/{{$v['shopping_id']}}.html" target="_blank"><p style="margin-top: 5px">{{$v->shopping->content}}</p></a>
+                                                    <a href="/home/{{$v['shopping_id']}}.html" target="_blank"><p style="margin-top: 5px">{!!$v->shopping->name!!}</p></a>
                                                 </h6>
                                             </div>
                                         </td>
@@ -29,7 +29,7 @@
                                         </td>
                                         <td class="font14 total-amount">{{$v['counts']}}</td>
                                         <td style="margin-top: 0px">
-                                            @if($v['state']==1) 未使用 @elseif($v['state']==2) 已使用 @endif
+                                            @if($v['state']==1) 已使用 @elseif($v['state']==2) 未使用 @endif
                                         </td>
                                         <td class="blank-10">
                                             <p class="del"><button id="del{{$v['id']}}" class="btn btn-danger">删除订单</button></p>
