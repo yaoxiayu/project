@@ -17,7 +17,6 @@
 						<th>商品名</th>
 						<th>商品图片</th>
 						<th>价格</th>
-						<th>商家</th>
 						<th>商品详情</th>
 						<th>上架时间</th>
 						<th>操作</th>
@@ -39,9 +38,7 @@
 	  						<td>
 	                ¥{{$v['price']}}
 	  						</td>
-                <td>
-                  {{\Session::get('username')}}
-                </td>
+                
 	  						<td>
 	                请在编辑页面查看
 	  						</td>

@@ -31,7 +31,7 @@
                         <li class="home"><a href="/houtai"class="iframeurl" title=""><i class="icon-home"></i><span class="menu-text"> 系统首页 </span></a></li>
                         <li><a href="#" class="dropdown-toggle"><i class="icon-desktop"></i><span class="menu-text"> 商品管理 </span><b class="arrow icon-angle-down"></b></a>
                             <ul class="submenu">
-                                <li class="home"><a href="/shopping" title="产品类表" class="iframeurl"><i class="icon-double-angle-right"></i>商品类表</a></li>
+                                <li class="home"><a href="/shopping" title="产品类表" class="iframeurl"><i class="icon-double-angle-right"></i>商品列表</a></li>
                                 <li class="home"><a href="/shopping/create" title="分类管理" class="iframeurl"><i class="icon-double-angle-right"></i>商品添加</a></li>
                             </ul>
                         </li>
