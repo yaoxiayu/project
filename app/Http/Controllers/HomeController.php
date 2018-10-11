@@ -48,7 +48,6 @@ class HomeController extends Controller
                 ->where('name','like', '%'.request()->keywords.'%');
 
         $ad = Ad::all();
-
     	return view('home.index',compact('industry','meishi','marry','hotel','play','shopuser','ad'));
 
     }

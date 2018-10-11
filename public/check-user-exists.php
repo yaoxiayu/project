@@ -5,7 +5,7 @@
 	$username = $_POST['username'];
 
 	//数据库检测
-	$pdo = new PDO('mysql:host=localhost;dbname=project;charset=utf8','root','');
+	$pdo = new PDO('mysql:host=localhost;dbname=nuomi;charset=utf8','root','');
 
 
 

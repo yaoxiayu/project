@@ -150,9 +150,10 @@ Route::resource('administrator','AdministratorController');
  * 商家管理前台
  */
 //商家登录
-Route::get('/shangjia/login','ShangjiaController@login');
+Route::get('/shangjia/login1','ShangjiaController@login');
 Route::post('/shangjia','ShangjiaController@dologin');
 
+Route::get('/shangjia/logout','ShangjiaController@logout');
 //商家注册
 Route::get('/shangjia/zhuce','ShangjiaController@zhuce');
 Route::post('/shangjia/zhuce','ShangjiaController@zhucewan');

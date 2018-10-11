@@ -103,7 +103,7 @@
                 </li>
                 <li class="j-bar-dropdown"><a class="pad-right"><span>我是商家</span><span class="arrow-down-logo"></span></a><span class="sep-lines"></span>
                     <div class="merchant-list header-dropmenu">
-                        <div class="drop-block"></div><a href="/shangjia/login" class="link" target="_blank">登录</a><a href="/shangjia/zhuce" class="link" target="_blank">注册</a></div>
+                        <div class="drop-block"></div><a href="/shangjia/login1" class="link" target="_blank">登录</a><a href="/shangjia/zhuce" class="link" target="_blank">注册</a></div>
                 </li>
                
                 <li><a href="/anquan" class="pad-left" mon="element=help_foodsafe">食品安全</a></li>

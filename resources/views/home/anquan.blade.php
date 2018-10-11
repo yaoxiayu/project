@@ -1,11 +1,12 @@
 @include('layouts._daohang')
 	<style>
 		#tab{
-			width:1400px;
+			width:100%;
 			min-height:800px;
 			border:solid 1px #aaa;
 			margin:50px auto;
 			overflow-y: auto;
+			 
 		}
 		#up	{
 			height:80px;
@@ -72,7 +73,7 @@
 	</style>
 
 
-
+<div style="padding:20px 150px;">
 		<div id="tab">
 		<div id="up">
 			<div class="abc item active zi">关于我们</div>
@@ -85,29 +86,29 @@
 
 
 
-			还窝在家里，做别人眼中的宅男宅女吗？为什么不走出家门去攀岩、去K歌、去享受一顿丰盛的大餐？
-			还在遗憾工作太忙，没时间和死党们欢聚吗？
-			为什么不和闺蜜一起去做个SPA，或者干脆去拍套个性写还真？
-			在纠结口袋里的银子，总觉得做个头发或美甲太贵吗？为什么不找机会跟朋友们团购，杀出个痛快的价格出来？
-				
-			我们提供的解决方案是：每天把超值的团购消费带到您身边！
-	
-			百度糯米，致力于通过团购的方式向消费者推荐高折扣的本地精品生活服务。
+	还窝在家里，做别人眼中的宅男宅女吗？为什么不走出家门去攀岩、去K歌、去享受一顿丰盛的大餐？
+	还在遗憾工作太忙，没时间和死党们欢聚吗？
+	为什么不和闺蜜一起去做个SPA，或者干脆去拍套个性写还真？
+	在纠结口袋里的银子，总觉得做个头发或美甲太贵吗？为什么不找机会跟朋友们团购，杀出个痛快的价格出来？
 		
-			<span style="font-weight:bold;">对于消费者</span>：
-			我们帮您寻找值得信赖的商家，让您享受到超低折扣的优质服务
-			我们希望帮助你发现新鲜有趣的消费方式，不断发现新的惊喜
-			<span style="font-weight:bold;">对于商家</span>：
-			我们为您寻找热爱尝试的消费者，消费能力有所保障
-			我们的推广合作方式低成本，效果显著
-			我们的推广合作方式对商家的利益会进行更好的保障
-			<span style="font-weight:bold;">用户帮助</span>
-			如果您付款或消费遇到问题，请联系客服人员：
-			邮箱：nuomihelp@baidu.com
-			电话：400-9216-666
-			<span style="font-weight:bold;">商务合作</span>
-			如果您希望在百度糯米组织团购，请在线提交团购信息。
-		
+	我们提供的解决方案是：每天把超值的团购消费带到您身边！
+
+	百度糯米，致力于通过团购的方式向消费者推荐高折扣的本地精品生活服务。
+
+	<span style="font-weight:bold;">对于消费者</span>：
+	我们帮您寻找值得信赖的商家，让您享受到超低折扣的优质服务
+	我们希望帮助你发现新鲜有趣的消费方式，不断发现新的惊喜
+	<span style="font-weight:bold;">对于商家</span>：
+	我们为您寻找热爱尝试的消费者，消费能力有所保障
+	我们的推广合作方式低成本，效果显著
+	我们的推广合作方式对商家的利益会进行更好的保障
+	<span style="font-weight:bold;">用户帮助</span>
+	如果您付款或消费遇到问题，请联系客服人员：
+	邮箱：nuomihelp@baidu.com
+	电话：400-9216-666
+	<span style="font-weight:bold;">商务合作</span>
+	如果您希望在百度糯米组织团购，请在线提交团购信息。
+
 				</pre>
 			</div>
 			<div class="item green zizi">
@@ -504,5 +505,5 @@
 
 
 	</script>
-
+</div>
 @include('layouts._foot')

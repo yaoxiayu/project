@@ -57,7 +57,7 @@ class ShangjiaController extends Controller
 
 
         $shopuser = Shopuser::all();
-    	return view('home.shangjia.login',compact('shopuser'));
+    	return view('home.shangjia.login1',compact('shopuser'));
     }
 
 
@@ -85,7 +85,7 @@ class ShangjiaController extends Controller
     public function logout(Request $request)
     {
         $request->session()->forget('sid');
-        return redirect('/shangjia/login/')->with('success','退出成功');
+        return redirect('/shangjia/login1/')->with('success','退出成功');
 
     }
 }

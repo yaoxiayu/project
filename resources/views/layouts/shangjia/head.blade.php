@@ -267,7 +267,7 @@
                 <ul class="dropdown-menu">
                     <li class="dropdown-menu-title">
                     </li>
-                    <li><a href="/shangjia/login"><i class="icon-off"></i>退出</a></li>
+                    <li><a href="/shangjia/logout"><i class="icon-off"></i>退出</a></li>
                 </ul>
             </li>
             @endif

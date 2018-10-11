@@ -7,7 +7,7 @@
 
 
 
-	$pdo = new PDO('mysql:host=localhost;dbname=lamp0;charset=utf8','root','');
+	$pdo = new PDO('mysql:host=localhost;dbname=nuomi;charset=utf8','root','');
 
 	$stmt = $pdo -> prepare('select * from shop_users where username =  ?');
 
